@@ -1,11 +1,11 @@
 import React from 'react';
 
-const App = () =>{
+const About = () =>{
     return (
         <React.Fragment>
-            <h3>Welcome App</h3>
+            <h3>Welcome About</h3>
         </React.Fragment>
     )
 }
 
-export default App;
+export default About;

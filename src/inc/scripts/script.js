@@ -4,5 +4,5 @@ jQuery(($)=>{
     $.noConflict();
 
     //remove the loader on page load
-   //$("#spinner").css({"display":"none"});
+   $("#spinner").css({"display":"none"});
 });

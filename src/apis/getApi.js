@@ -1,6 +1,6 @@
 import jQuery from "jquery";
 
-const Load =  () =>{
+
     jQuery(($)=>{
         $.noConflict();
     
@@ -19,6 +19,3 @@ const Load =  () =>{
             }
        })
     });
-}
-
-export default Load;

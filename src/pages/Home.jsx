@@ -12,6 +12,10 @@ const Home = () =>{
    
     }
 
+    function click(){
+       navigate(weather);
+    }
+
     return (
         <React.Fragment>
             <Spinner/>
@@ -29,7 +33,7 @@ const Home = () =>{
                 <br/><br/><br/>
                 <br/><br/>
 
-                <Button text="today's weather" style={customBtnStyle} className=" brand-btn m-auto my-5 width-toggle"/>
+                <Button text="today's weather" style={customBtnStyle} className="brand-btn m-auto my-5 width-toggle" onClick={(event)=>{click(event)}}/>
            </div>
            
         </React.Fragment>

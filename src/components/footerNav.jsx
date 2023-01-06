@@ -2,8 +2,7 @@ import React from 'react';
 
 const FooterNav = () =>{
     return (
-        <React.Fragment>
-            
+        <React.Fragment>   
             <section className="footer-nav container-fluid">
 
                 <div className="section-1">

@@ -19,6 +19,7 @@
     --brand-primary-color:rgb(83, 166, 250);
     --brand-white-color:#ffffff;
     --brand-secondary-color:rgb(124, 183, 241);
+    --footer-nav-border-radius:10px;
 }
 
 #spinner{
@@ -54,6 +55,32 @@
     cursor:pointer;
 }
 
+
+/* styles for the footer navigation */
+.footer-nav{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+    justify-content: space-around;
+    color:white;
+    width:100%;
+    padding:20px;
+    margin:0;
+    
+}
+
+.footer-nav-container{
+    background:dodgerblue;
+    width:100%;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius:var(--footer-nav-border-radius) var(--footer-nav-border-radius)  0px 0px;
+    position:fixed;
+    bottom:0;
+}
 
 /* media queries */
 

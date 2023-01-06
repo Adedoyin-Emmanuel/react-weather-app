@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./../components/button";
+import Footer from "../components/footer";
 const WeatherApp = () =>{
     return (
         <React.Fragment>
@@ -10,6 +11,8 @@ const WeatherApp = () =>{
                 <Button text="today's weather"className="brand-btn m-auto my-5 width-toggle" onClick={(event)=>{console.log("how far")}}/>
 
             </div>
+            <Footer/>
+
         </React.Fragment>
     )
 }

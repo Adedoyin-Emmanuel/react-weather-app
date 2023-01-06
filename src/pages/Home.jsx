@@ -3,7 +3,7 @@ import "./../apis/getApi.js";
 import Button from "./../components/button";
 import Img_1 from "./../assets/pic_1.png";
 import Spinner from "./../components/spinner";
-import "./../inc/scripts/utilities";
+import navigate from "./../inc/scripts/utilities";
 
 const Home = () =>{
 
@@ -13,7 +13,7 @@ const Home = () =>{
     }
 
     function click(){
-       navigate(weather);
+       navigate("weather");
     }
 
     return (

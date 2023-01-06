@@ -17,7 +17,7 @@ const Home = () =>{
 
 
                 <section className="m-auto text-center img-container" id="img-container">
-                    <img src={Img_1} className="img-fluid m-auto" height="600" width="500"/>
+                    <img src={Img_1} className="img-fluid m-auto preloader-img" height="700" width="550"/>
                 </section>
 
            </div>

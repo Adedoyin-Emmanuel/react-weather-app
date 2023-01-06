@@ -6,7 +6,7 @@ const UtilityComponent = () =>{
             <section className="utility-component align-items-center justify-content-around">
                     <div className="utility-notch"></div>
                     <div className="d-flex align-items-center justify-content-center text-center">
-                        <h5 className=" m-auto text-center  text-capitalize ">sign up or login</h5>
+                        <p className=" m-auto text-center  text-capitalize ">search result not found!</p>
                         {/* <span>{"X"}</span> */}
                     </div>
                     <section className="jumbotron">

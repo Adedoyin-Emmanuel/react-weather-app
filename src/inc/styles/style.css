@@ -72,7 +72,7 @@
 }
 
 .footer-nav-container{
-    background:dodgerblue;
+    background:var(--brand-primary-color);
     width:100%;
     margin:0;
     display: flex;

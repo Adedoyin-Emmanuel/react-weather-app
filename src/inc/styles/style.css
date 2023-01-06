@@ -14,17 +14,51 @@
     font-family: poppins;;
 }
 
+
+:root{
+    --brand-primary-color:rgb(83, 166, 250);
+    --brand-white-color:#ffffff;
+    --brand-secondary-color:rgb(124, 183, 241);
+}
+
 #spinner{
     background:ghostwhite;
     height: 100vh;
     width: 100%;
     position: fixed;
     top:0;
-    
-
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
    
+}
+
+.brand-btn{
+    border-radius:30px;
+    background:var(--brand-primary-color);
+    transition: .9s;
+    padding:15px;
+    margin:auto;
+    text-align:center;
+    text-transform: capitalize;
+    border:none;
+    outline:none;
+    width:75%;
+    color:var(--brand-white-color);
+}
+
+.brand-btn:hover{
+    background:var(--brand-secondary-color);
+    cursor:pointer;
+}
+
+
+/* media queries */
+
+@media (min-width:667.98px){
+    .width-toggle{
+        width:35%
+    }
+
 }

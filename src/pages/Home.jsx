@@ -3,12 +3,14 @@ import "./../apis/getApi.js";
 import Header from "./../components/header";
 import Button from "./../components/button";
 import Img_1 from "./../assets/pic_1.png";
+import Spinner from "./../components/spinner";
 
 
 const Home = () =>{
 
     return (
         <React.Fragment>
+            <Spinner/>
            <div className="weather-preloader container-fluid">
 
                 <main className="my-5 preloader-weather-heading" >

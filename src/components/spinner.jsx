@@ -2,7 +2,7 @@ const Spinner = () =>{
     return (
         <div id="spinner" className = "spinner">
 
-                <div class="dot-pulse text-danger"></div>
+                <div className="dot-windmill"></div>
                 
         </div>
     );

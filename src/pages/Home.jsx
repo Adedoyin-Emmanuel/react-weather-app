@@ -27,7 +27,7 @@ const Home = () =>{
                 </section>
 
                 <br/><br/><br/>
-
+                <br/><br/>
 
                 <Button text="today's weather" style={customBtnStyle} className=" brand-btn m-auto my-5 width-toggle"/>
            </div>

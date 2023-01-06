@@ -26,7 +26,8 @@ const Home = () =>{
                     <img src={Img_1} className="img-fluid m-auto preloader-img" height="700" width="550" alt="current-weather-status"/>
                 </section>
 
-                <br/>
+                <br/><br/><br/>
+
 
                 <Button text="today's weather" style={customBtnStyle} className=" brand-btn m-auto my-5 width-toggle"/>
            </div>

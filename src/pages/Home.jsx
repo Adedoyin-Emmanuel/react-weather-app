@@ -18,7 +18,7 @@ const Home = () =>{
            <div className="weather-preloader container-fluid d-flex align-items-center flex-column">
 
                 <main className="my-5 preloader-weather-heading" >
-                    <h2 className="text-center text-capitalize m-auto fw-bold">How's today weather?</h2>
+                    <h2 className="text-center text-capitalize m-auto fw-bold fs-2">How's today weather?</h2>
                 </main>
 
 

@@ -1,0 +1,5 @@
+# Redirects from what the browser requests to what we serve
+/home              /
+/contact           /contact
+/weather            /weather
+/about            /about

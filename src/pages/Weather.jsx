@@ -10,9 +10,18 @@ const WeatherApp = () =>{
             $.noConflict();
 
             let $toggle = false;
+
+            $(".utility-component").toggleClass("d-flex");
+
             
-            if(toggle)
-            $(".utility-component").css({"display":"flex"});
+            // if($toggle == false){
+            //     $(".utility-component").css({"display":"flex"});
+            //     $toggle = true;
+            // }else{
+            //     $(".utility-component").css({"display":"none"});
+            //     $toggle = false;
+
+            // }
             
         })
     }

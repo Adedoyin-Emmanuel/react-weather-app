@@ -10,7 +10,7 @@ const UtilityComponent = () =>{
                         {/* <span>{"X"}</span> */}
                     </div>
                     <section className="jumbotron">
-                        {/* <p>i am a high jumbotron</p> */}
+                     
                     </section>
 
             </section>

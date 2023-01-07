@@ -8,7 +8,10 @@ const WeatherApp = () =>{
         jQuery(($)=>{
 
             $.noConflict();
+
+            let $toggle = false;
             
+            if(toggle)
             $(".utility-component").css({"display":"flex"});
             
         })

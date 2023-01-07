@@ -112,6 +112,10 @@
     
 }
 
+.utility-component-slide-down{
+    animation: moveDown .2s linear 1;
+}
+
 @keyframes moveUp{
     from{
         transform:translateY(300px);
@@ -120,6 +124,13 @@
     }
 }
 
+@keyframes moveDown{
+    from{
+        transform: translateY(0);
+    }to{
+        transform: translateY(-300px);
+    }
+}
 /* media queries */
 
 @media (min-width:667.98px){

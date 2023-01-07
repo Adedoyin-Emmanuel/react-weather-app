@@ -9,19 +9,11 @@ const WeatherApp = () =>{
 
             $.noConflict();
 
-            let $toggle = false;
-
+            
+            //utility-component-slide-down
             $(".utility-component").toggleClass("d-flex");
 
-            
-            // if($toggle == false){
-            //     $(".utility-component").css({"display":"flex"});
-            //     $toggle = true;
-            // }else{
-            //     $(".utility-component").css({"display":"none"});
-            //     $toggle = false;
-
-            // }
+           
             
         })
     }

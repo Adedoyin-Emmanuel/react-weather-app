@@ -5,9 +5,7 @@ const FooterNav = () =>{
         <React.Fragment>   
             <section className="footer-nav">
 
-                <div className="section-1">
-                        Home
-                </div>
+               
 
                 <div className="section-2">
                         App

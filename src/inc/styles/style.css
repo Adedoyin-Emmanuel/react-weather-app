@@ -22,6 +22,7 @@
     --footer-nav-border-radius:30px;
     --footer-notch-border-radius:60px;
     --footer-notch-background-color:rgb(255, 255, 255);
+    --brand-mute-color:rgb(196, 191, 191);
 }
 
 #spinner{
@@ -38,6 +39,7 @@
 }
 
 
+/* utility classes */
 .brand-btn{
     border-radius:30px;
     background:var(--brand-primary-color);
@@ -55,6 +57,14 @@
 .brand-btn:hover{
     background:var(--brand-secondary-color);
     cursor:pointer;
+}
+
+.brand-text-mute{
+    color:var(--brand-mute-color);
+}
+
+.brand-bg-mute{
+    background:var(--brand-mute-color);
 }
 
 

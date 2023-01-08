@@ -6,19 +6,19 @@ const FooterNav = () =>{
             <section className="footer-nav">
 
                 <div className="section-1">
-                        test
+                        Home
                 </div>
 
                 <div className="section-2">
-                        test
+                        App
                 </div>
 
                 <div className="section-3">
-                        test
+                        Settings
                 </div>
 
                 <div className="section-4">
-                        test
+                        About
                 </div>
             </section>
 

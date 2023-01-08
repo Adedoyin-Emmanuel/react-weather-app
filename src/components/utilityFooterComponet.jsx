@@ -11,7 +11,7 @@ const UtilityComponent = () =>{
     }
     return (
         <React.Fragment>
-            <section className="utility-component align-items-center justify-content-around m-auto width-toggle-3">
+            <section className="utility-component align-items-center justify-content-around m-auto width-toggle-2">
                     <div className="utility-notch" onClick={closeUtilityComponent}></div>
                     <div className="d-flex align-items-center justify-content-center text-center">
                         <p className=" m-auto text-center  text-capitalize ">search result not found!</p>

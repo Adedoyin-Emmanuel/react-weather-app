@@ -9,12 +9,8 @@ const WeatherApp = () =>{
 
             $.noConflict();
 
-            
-            //utility-component-slide-down
-            $(".utility-component").toggleClass("d-flex");
+            $(".utility-component").toggleClass("add-utility-component-height");
 
-           
-            
         })
     }
     return (
@@ -23,7 +19,7 @@ const WeatherApp = () =>{
                 <h2 className="fs-2 text-capitalize text-center my-3">Zedd-weather app</h2>
 
                 <p>Getting weather information comrade </p>
-                <Button text="search weather"className="brand-btn m-auto my-5 width-toggle" onClick={()=>{show()}}/>
+                <Button text="search weather"className="brand-btn m-auto my-5 width-toggle" onClick={show}/>
 
             </div>
             <Footer/>

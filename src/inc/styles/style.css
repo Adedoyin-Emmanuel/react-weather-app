@@ -110,7 +110,7 @@
 .utility-component .utility-notch{
     background:var(--footer-notch-background-color);
     width:15%;
-    height: 5px;
+    height:7px;
     border-radius:var(--footer-notch-border-radius);
     transform:translateY(-50px);    
     

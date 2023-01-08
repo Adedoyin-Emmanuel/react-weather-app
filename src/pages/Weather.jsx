@@ -20,9 +20,9 @@ const WeatherApp = () =>{
 
                 <p>Getting weather information comrade </p>
                 <Button text="search weather"className="brand-btn m-auto my-5 width-toggle" onClick={show}/>
+                <Footer/>
 
             </div>
-            <Footer/>
 
         </React.Fragment>
     )

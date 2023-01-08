@@ -5,12 +5,13 @@ import UtilityComponent from "./utilityFooterComponet";
 
 const Footer = () =>{
     return (
-    <React.Fragment>
+
+        <div className = "m-auto d-flex align-items-center justify-content-center">
         <UtilityComponent/>
-        <footer className="container-fluid footer-nav-container">
+        <footer className="d-flex align-items-center justify-content-center footer-nav-container">
             <FooterNav/>
         </footer>
-    </React.Fragment>
+        </div>
     )
 }
 

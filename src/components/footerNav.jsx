@@ -3,7 +3,7 @@ import React from 'react';
 const FooterNav = () =>{
     return (
         <React.Fragment>   
-            <section className="footer-nav container-fluid">
+            <section className="footer-nav">
 
                 <div className="section-1">
                         test

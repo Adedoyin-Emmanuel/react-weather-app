@@ -67,14 +67,13 @@
     color:white;
     width:100%;
     padding:20px;
-    margin:0;
+
     
 }
 
 .footer-nav-container{
     background:var(--brand-primary-color);
     width:100%;
-    margin:0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,6 +123,14 @@
 @media (min-width:667.98px){
     .width-toggle{
         width:35%
+    }
+    .width-toggle-2{
+        width:75%;
+        margin: auto;
+    }
+
+    .width-toggle-3{
+        width:50%;
     }
 
 }

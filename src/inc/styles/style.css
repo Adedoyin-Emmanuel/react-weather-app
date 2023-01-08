@@ -97,7 +97,7 @@
     flex-direction:column;
     width:100%;
     margin:auto;
-    transition:.2s;
+    transition:.3s;
     border-radius:var(--footer-nav-border-radius) var(--footer-nav-border-radius) 0px 0px;
     height:0;
 }

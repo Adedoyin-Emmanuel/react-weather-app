@@ -3,6 +3,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import {Routes, Route, BrowserRouter} from  "react-router-dom";
 import WeatherApp from "./pages/Weather";
+import Settings from "./pages/Settings";
 import "./autoload";
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
               <Route path= "contact" element = {<Contact/>} />
               <Route path="about" element = {<About/>}/>
               <Route path="weather" element={<WeatherApp/>}/>
+              <Route path="settings" element = {<Settings/>}/>
           </Routes>
       </BrowserRouter>
   );

@@ -24,6 +24,7 @@
     --footer-notch-background-color:rgb(255, 255, 255);
     --brand-mute-color:rgb(211, 205, 205);
     --brand-footer-nav-fontsize: .8rem;
+    --brand-weather-value-font-size:4rem;
 }
 
 #spinner{
@@ -74,6 +75,10 @@
 
 .brand-small-text{
     font-size: var(--brand-footer-nav-fontsize);
+}
+
+.brand-large-text{
+    font-size: var(--brand-weather-value-font-size);
 }
 
 
@@ -144,6 +149,10 @@ section.footer-nav > section{
     display:inline-block;
     transform:translateX(-15px) scale(0.7);
     
+}
+
+.current-weather-icon{
+    transform:scale(3.0);
 }
 /* media queries */
 

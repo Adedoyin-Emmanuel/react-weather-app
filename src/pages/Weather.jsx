@@ -31,7 +31,7 @@ const WeatherApp = () =>{
                     </div> 
                 </section>
 
-            <section className="current-weather-container d-flex">
+            <section className="current-weather-container d-flex justify-content-between">
                 <section className="current-weather-value-container">
                     <h1 className="current-weather-value fw-bold display-1">
                         18 <sup className="fw-bold current-weather-unit">0</sup>
@@ -43,7 +43,9 @@ const WeatherApp = () =>{
                         xmlns="http://www.w3.org/2000/svg"
                         width="64"
                         height="64"
-                        viewBox="0 0 64 64">
+                        viewBox="0 0 64 64"
+                        
+                        >
                         <defs>
                             <filter id="blur" width="200%" height="200%">
                                 <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>

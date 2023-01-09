@@ -77,6 +77,14 @@
     font-size: var(--brand-footer-nav-fontsize);
 }
 
+.brand-primary-color{
+    background-color: var(--brand-primary-color);
+}
+
+.brand-secondary-color{
+    background-color:var(--brand-secondary-color);
+}
+
 .brand-large-text{
     font-size: var(--brand-weather-value-font-size);
 }
@@ -152,7 +160,7 @@ section.footer-nav > section{
 }
 
 .current-weather-icon{
-    transform:scale(3.0);
+    transform:scale(2.8);
 }
 /* media queries */
 

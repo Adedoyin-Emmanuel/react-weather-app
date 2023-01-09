@@ -18,7 +18,7 @@ const WeatherApp = () =>{
     }
     return (
         <React.Fragment>
-            <div className="container-fluid d-flex flex-column my-2">
+            <div className="container-fluid d-flex flex-column my-2 brand-bg-color">
              
                 <section className="app-header d-flex justify-content-between">
                     <section className="city-locaton">
@@ -33,11 +33,11 @@ const WeatherApp = () =>{
 
             <section className="current-weather-container d-flex justify-content-between">
                 <section className="current-weather-value-container">
-                    <h1 className="current-weather-value fw-bold display-1">
+                    <h1 className="current-weather-value fw-bold brand-large-text">
                         18 <sup className="fw-bold current-weather-unit">0</sup>
                     </h1>
                 </section>
-                <section className="current-weather-icon">   
+                <section className="current-weather-icon my-2 mx-3">   
                     <svg
                         version="1.1"
                         xmlns="http://www.w3.org/2000/svg"

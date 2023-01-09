@@ -23,7 +23,7 @@
     --footer-notch-border-radius:60px;
     --footer-notch-background-color:rgb(255, 255, 255);
     --brand-mute-color:rgb(196, 191, 191);
-    --brand-footer-nav
+    --brand-footer-nav-fontsize: .8rem;
 }
 
 #spinner{
@@ -93,13 +93,11 @@
 }
 
 
-section.footer-nav section{
-    background:lightskyblue;
-}
-
 
 section.footer-nav > section{
-    font-size:1rem;
+    font-size:var(--brand-footer-nav-fontsize);
+
+    
 }   
 /* utility component */
 

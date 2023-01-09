@@ -79,6 +79,16 @@ const WeatherApp = () =>{
                 </section>
             </section>
 
+            <section className="current-weather-assets">
+                
+                <section className="current-weather-wind-speed">
+
+                </section>
+
+                
+
+            </section>
+
                 <section className="d-flex align-items-center justify-content-center">
 
 <Button text="search weather"className="brand-btn m-auto my-5 width-toggle" onClick={show}/>

@@ -67,6 +67,10 @@
     background:var(--brand-mute-color);
 }
 
+.brand-bg-white{
+    background:var(--brand-white-color);
+}
+
 
 /* styles for the footer navigation */
 .footer-nav{
@@ -77,7 +81,7 @@
     color:white;
     width:100%;
     padding:5px;
-    
+
 }
 
 .footer-nav-container{

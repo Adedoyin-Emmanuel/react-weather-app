@@ -6,6 +6,7 @@ import Footer from "../components/footer";
 
 const WeatherApp = () =>{
 
+
     function show(){
         jQuery(($)=>{
 
@@ -30,12 +31,16 @@ const WeatherApp = () =>{
                     </section>
                     <div className="toggle-btn">
 
-                        <svg  height={"20px"} width={"20px"} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M96 288H32c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zm160 0h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zm160 0h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zM96 96H32c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zm160 0h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zm160 0h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32z"/></svg>
-
+                        <svg xmlns="http://www.w3.org/2000/svg" width={"24px"} height={"24px"} viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M4 13h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1zm0 8h6c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm10 0h6c.55 0 1-.45 1-1v-8c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1zM13 4v4c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1z"/></svg>
                     </div> 
                 </section>
 
-
+            <section className="current-weather-container">
+                <section className="current-weather-value-container">
+                    <h1 className="current-weather-value fw-bold display-1">
+                        18 <sup className="fw-bold current-weather-unit">0</sup>
+                    </h1>
+                </section>
                 <section className="current-weather-icon">   
                     <svg
                         version="1.1"
@@ -72,6 +77,8 @@ const WeatherApp = () =>{
                     </svg>
                    
                 </section>
+            </section>
+
                 <section className="d-flex align-items-center justify-content-center">
 
 <Button text="search weather"className="brand-btn m-auto my-5 width-toggle" onClick={show}/>

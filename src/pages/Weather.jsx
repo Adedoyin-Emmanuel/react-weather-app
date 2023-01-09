@@ -83,9 +83,24 @@ const WeatherApp = () =>{
                 
                 <section className="current-weather-wind-speed">
 
+                <section className="wind-icon">
+
+                </section>
+                <p className="wind-value"></p>
+
                 </section>
 
-                
+                <section className="current-weather-humidity-degree">
+
+                    <section className="humidity-icon">
+
+                    </section>
+                    <p className="humidity-value"></p>
+                </section>
+
+                <section className="current-weather-">
+
+                </section>
 
             </section>
 

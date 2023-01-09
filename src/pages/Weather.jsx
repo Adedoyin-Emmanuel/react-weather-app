@@ -20,10 +20,10 @@ const WeatherApp = () =>{
         <React.Fragment>
             <div className="container-fluid d-flex flex-column my-2">
              
-                <section className="app-header">
+                <section className="app-header d-flex justify-content-between">
                     <section className="city-locaton">
                         <h5 className="fw-bold fs-5">Lagos, 9ja</h5>
-                         <p className="date-time text-muted brand-small-text">Today, Jan 9 5:49AM</p>
+                         <p className="date-time text-muted brand-small-text text-capitalize">10 january tuesday</p>
                     </section>
                     <div className="toggle-btn">
 
@@ -31,7 +31,7 @@ const WeatherApp = () =>{
                     </div> 
                 </section>
 
-            <section className="current-weather-container">
+            <section className="current-weather-container d-flex">
                 <section className="current-weather-value-container">
                     <h1 className="current-weather-value fw-bold display-1">
                         18 <sup className="fw-bold current-weather-unit">0</sup>

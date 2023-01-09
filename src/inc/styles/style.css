@@ -95,6 +95,14 @@
 }
 
 
+.footer-nav-active{
+    background:lightskyblue;
+}
+
+
+section.footer-nav > section{
+    font-size:.9rem;
+}   
 /* utility component */
 
 .utility-component{

@@ -98,7 +98,12 @@ const WeatherApp = () =>{
                     <p className="humidity-value"></p>
                 </section>
 
-                <section className="current-weather-">
+                <section className="current-weather-rain-degree">
+
+                <section className="rain-icon">
+
+                </section>
+                <p className="rain-value"></p>
 
                 </section>
 

@@ -72,6 +72,10 @@
     background:var(--brand-white-color);
 }
 
+.brand-small-text{
+    font-size: var(--brand-footer-nav-fontsize);
+}
+
 
 /* styles for the footer navigation */
 .footer-nav{

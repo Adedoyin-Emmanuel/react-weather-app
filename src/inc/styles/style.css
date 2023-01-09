@@ -139,6 +139,12 @@ section.footer-nav > section{
 
 
 /* weather app styling */
+
+.current-weather-unit{
+    display:inline-block;
+    transform:translateX(-15px) scale(0.7);
+    
+}
 /* media queries */
 
 @media (min-width:667.98px){

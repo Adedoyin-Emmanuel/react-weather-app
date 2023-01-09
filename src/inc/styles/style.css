@@ -23,6 +23,7 @@
     --footer-notch-border-radius:60px;
     --footer-notch-background-color:rgb(255, 255, 255);
     --brand-mute-color:rgb(196, 191, 191);
+    --brand-footer-nav
 }
 
 #spinner{
@@ -92,7 +93,7 @@
 }
 
 
-.footer-nav-active{
+section.footer-nav section{
     background:lightskyblue;
 }
 

@@ -1,7 +1,9 @@
 import React from "react";
+import jQuery from "jquery";
 import Button from "./../components/button";
 import Footer from "../components/footer";
-import jQuery from "jquery";
+
+
 const WeatherApp = () =>{
 
     function show(){

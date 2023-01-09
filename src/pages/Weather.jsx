@@ -59,7 +59,11 @@ const WeatherApp = () =>{
                         </g>
                     </g>
                     </svg>
+                    <section className="d-flex m-auto align-items-center justify-content-center">
 
+                            <Button text="search weather"className="brand-btn m-auto my-5 width-toggle" onClick={show}/>
+
+                    </section>
 
                 </section>
                 <Footer/>

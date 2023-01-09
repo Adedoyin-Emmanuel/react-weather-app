@@ -62,7 +62,7 @@ const WeatherApp = () =>{
 
 
                 </section>
-
+                <Footer/>
             </div>
 
         </React.Fragment>

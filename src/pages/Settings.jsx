@@ -9,3 +9,6 @@ const Settings = () =>{
         </React.Fragment>
     )
 }
+
+
+export default Settings;

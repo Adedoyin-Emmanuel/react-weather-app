@@ -81,35 +81,35 @@ const WeatherApp = () =>{
 
             <section className="my-4 current-weather-assets d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0">
                 
-                <section className="current-weather-wind-speed">
+                <section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center ">
 
                 <section className="wind-icon">
                             <img src={windIcon} height={"30"} width={"30"}/>
                 </section>
-                <p className="wind-value fw-bold">10 m/s</p>
-                <p className="wind-text text-muted text-capitalize">wind</p>
+                <p className="wind-value fw-bold text-light py-1">10 m/s</p>
+                <p className="wind-text text-muted text-capitalize brand-small-text">wind</p>
                 </section>
 
-                <section className="current-weather-humidity-degree">
+                <section className="current-weather-humidity-degree d-flex flex-column align-items-center">
 
                     <section className="humidity-icon">
 
                           <img src={humidity} height={"30"} width={"30"}/>
                         
                     </section>
-                    <p className="humidity-value fw-bold">98%</p>
-                    <p className="humidity-text text-muted text-capitalize">humidity</p>
+                    <p className="humidity-value fw-bold text-light p-1 text-center">98%</p>
+                    <p className="humidity-text text-muted text-capitalize text-center brand-small-text">humidity</p>
                 </section>
 
-                <section className="current-weather-rain-degree">
+                <section className="current-weather-rain-degree d-flex flex-column align-items-center">
 
                 <section className="rain-icon">
 
                       <img src={rainIcon} height={"30"} width={"30"}/>
 
                 </section>
-                <p className="rain-value fw-bold">100%</p>
-                <p className="rain-text text-muted text-capitalize">rain</p>
+                <p className="rain-value fw-bold text-light p-1 text-center">100%</p>
+                <p className="rain-text text-muted text-capitalize text-center brand-small-text">rain</p>
                 </section>
 
             </section>

@@ -162,8 +162,18 @@ const WeatherApp = () =>{
                 </section>
 
             </section>
-
+            <section className="future-weather-days">
+                <section className="today-section">
+                    <p>today</p>
+                    <div className="future-weather-notch"></div>
+                </section>
+                <section className="tomorrow-section">
+                    <p>today</p>
+                    <div className="future-weather-notch"></div>
+                </section>
+            </section>
             <section className="future-weather-forecast my-4 d-flex align-items-center justify-content-between " style={{"overflowX":"scroll"}}>
+
                 {uiData}
             </section>
 

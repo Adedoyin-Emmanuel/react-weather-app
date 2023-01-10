@@ -9,15 +9,44 @@ import FutureWeatherComponent from "../components/futureWeatherComponent";
 
 const WeatherApp = () =>{
 
-    // const weatherData = {
-    //     "time" : ["10am","11am","12pm","1pm"],
-    //     "icon": [rainIcon,windIcon,humidity],
-    //     "unit": ["10","20","30","40"]
-    // }
+    let weatherData = [
+        {
+        "time" : ["10am"],
+        "icon": [windIcon],
+        "unit": ["10"]
 
-    // const uiData = weatherData.map((data)=>{
-    //     return <futureWeatherComponent time={data.time} icon={data.icon} weatherUnit={data.unit}/>
-    // });
+        },
+
+        {
+            "time" : ["11am"],
+            "icon": [rainIcon],
+            "unit": ["50"]
+    
+        },
+
+        {
+            "time" : ["12pm"],
+            "icon": [windIcon],
+            "unit": ["50"]
+    
+        },
+        {
+            "time" : ["1am"],
+            "icon": [humidity],
+            "unit": ["50"]
+    
+        }
+    ]
+
+
+    const uiData = weatherData.map((data,index)=>{
+        return <FutureWeatherComponent key={data.time} time={data.time} icon={data.icon} weatherUnit={data.unit}/>
+        
+    })
+
+    //console.log(uiData);
+
+ 
 
     function show(){
         jQuery(($)=>{
@@ -126,10 +155,8 @@ const WeatherApp = () =>{
 
             </section>
 
-            <section className="future-weather-forecast my-4">
-
-                {/* {uiData} */}
-                <FutureWeatherComponent time={"10pm"} icon={rainIcon} weatherUnit={"10"}/>
+            <section className="future-weather-forecast my-4 d-flex align-items-center justify-content-between">
+                {uiData}
             </section>
 
             <section className="d-flex align-items-center justify-content-center">

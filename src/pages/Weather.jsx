@@ -79,7 +79,7 @@ const WeatherApp = () =>{
                 </section>
             </section>
 
-            <section className="current-weather-assets">
+            <section className="my-4 current-weather-assets d-flex align-items-center justify-content-between">
                 
                 <section className="current-weather-wind-speed">
 

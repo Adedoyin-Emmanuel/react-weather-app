@@ -86,7 +86,7 @@ const WeatherApp = () =>{
             <section className="current-weather-container d-flex justify-content-between">
                 <section className="current-weather-value-container">
                     <h1 className="current-weather-value fw-bold brand-large-text">
-                        18 <sup className="fw-bold current-weather-unit">0</sup>
+                        18 <sup className="fw-bold current-weather-unit">o</sup>
                     </h1>
                     <p className="text-muted brand-small-text">Thunderstorm</p>
                 </section>

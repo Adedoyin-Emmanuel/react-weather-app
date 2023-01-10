@@ -18,7 +18,7 @@ const WeatherApp = () =>{
     }
     return (
         <React.Fragment>
-            <div className="container-fluid d-flex flex-column my-2 brand-bg-color">
+            <div className="container-fluid d-flex flex-column my-2 brand-bg-color" style={{"overflow-x":"hidden"}}>
              
                 <section className="app-header d-flex justify-content-between">
                     <section className="city-locaton">
@@ -111,8 +111,9 @@ const WeatherApp = () =>{
                 <section className="d-flex align-items-center justify-content-center">
 
 <Button text="search weather"className="brand-btn m-auto my-5 width-toggle" onClick={show}/>
-
+<br/>
 </section>
+<br/><br/>
 
                 <Footer/>
             </div>

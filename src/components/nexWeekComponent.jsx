@@ -11,6 +11,9 @@ const NextWeekComponent = prop =>{
                         <div className="next-week-notch"></div>
                         <p>22<sup>o</sup></p>
                     </section>
+                    <section className="next-week-weather-icon">
+
+                    </section>
                 </section>
             </section>
         </React.Fragment>

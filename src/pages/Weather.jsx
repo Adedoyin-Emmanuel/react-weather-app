@@ -9,15 +9,15 @@ import futureWeatherComponent from "../components/futureWeatherComponent";
 
 const WeatherApp = () =>{
 
-    const weatherData = {
-        "time" : ["10am","11am","12pm","1pm"],
-        "icon": [rainIcon,windIcon,humidity],
-        "unit": ["10","20","30","40"]
-    }
+    // const weatherData = {
+    //     "time" : ["10am","11am","12pm","1pm"],
+    //     "icon": [rainIcon,windIcon,humidity],
+    //     "unit": ["10","20","30","40"]
+    // }
 
-    const uiData = weatherData.map(index,data=>{
-        return <futureWeatherComponent time={data.time} icon={data.icon} weatherUnit={data.unit}/>
-    });
+    // const uiData = weatherData.map((data)=>{
+    //     return <futureWeatherComponent time={data.time} icon={data.icon} weatherUnit={data.unit}/>
+    // });
 
     function show(){
         jQuery(($)=>{
@@ -128,7 +128,8 @@ const WeatherApp = () =>{
 
             <section className="future-weather-forecast my-4">
 
-
+                {/* {uiData} */}
+                <FtureWeatherComponent time={"10pm"} icon={rainIcon} weatherunit={"10"}/>
             </section>
 
             <section className="d-flex align-items-center justify-content-center">

@@ -12,4 +12,4 @@ const NotFound = ()=>{
     )
 }
 
-export deafult NotFound;
+export default NotFound;

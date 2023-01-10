@@ -8,7 +8,7 @@ const futureWeatherComponent = props =>{
                 <section className="weather-wrapper">
                     <p className="brand-text-small text-muted">{props.time}</p>
                     <section className="weather-icon-section">
-                            {props.icon}
+                            <img src ={props.icon} height={"20"} width={"20"}/>
                     </section>
                     <p className="brand-text-small fw-bold"> {props.weatherUnit}<sup>o</sup></p>
                 </section>

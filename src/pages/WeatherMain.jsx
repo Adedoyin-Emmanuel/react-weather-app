@@ -23,9 +23,14 @@ const WeatherMain = props =>{
 
 
                         <section className="current-weather-value-container d-flex align-items-center justify-content-center flex-column my-4">
-                            <h1 className="current-weather-value fw-bold brand-large-text">
-                                25 
-                            </h1>
+                            <section  className="d-flex ">
+                                <h1 className="current-weather-value fw-bold brand-large-text">
+                                    25 
+                                </h1>
+
+                                <sup className="fw-bold">0</sup>
+                            </section>
+                            
                         <p className="text-muted text-start brand-small-text">Thunderstorm</p>
 
                       </section>

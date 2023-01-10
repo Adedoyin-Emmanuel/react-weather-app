@@ -12,7 +12,7 @@ const Footer = () =>{
         <div className = "m-auto d-flex align-items-center justify-content-center d-md-none" style={customFooterStyle}>
 
         <UtilityComponent/>
-        <footer className="d-flex align-items-center justify-content-center footer-nav-container">
+        <footer className="shadow-lg d-flex align-items-center justify-content-center footer-nav-container">
             <FooterNav/>
         </footer>
 

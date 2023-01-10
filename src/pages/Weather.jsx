@@ -84,7 +84,7 @@ const WeatherApp = () =>{
                 <section className="current-weather-wind-speed">
 
                 <section className="wind-icon">
-                            <img src={windIcon} height={"20"} width={"20"}/>
+                            <img src={windIcon} height={"30"} width={"30"}/>
                 </section>
                 <p className="wind-value fw-bold">10 m/s</p>
                 <p className="wind-text text-muted text-capitalize">wind</p>
@@ -94,7 +94,7 @@ const WeatherApp = () =>{
 
                     <section className="humidity-icon">
 
-                          <img src={humidity} height={"20"} width={"20"}/>
+                          <img src={humidity} height={"30"} width={"30"}/>
                         
                     </section>
                     <p className="humidity-value fw-bold">98%</p>
@@ -105,7 +105,7 @@ const WeatherApp = () =>{
 
                 <section className="rain-icon">
 
-                      <img src={rainIcon} height={"20"} width={"20"}/>
+                      <img src={rainIcon} height={"30"} width={"30"}/>
 
                 </section>
                 <p className="rain-value fw-bold">100%</p>

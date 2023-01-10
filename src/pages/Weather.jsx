@@ -6,6 +6,7 @@ import rainIcon from "./../assets/rain (1).png";
 import windIcon from "./../assets/windy.png";
 import humidity from "./../assets/humidity.png";
 import FutureWeatherComponent from "../components/futureWeatherComponent";
+import navigate from "../inc/scripts/utilities";
 
 const WeatherApp = () =>{
 
@@ -50,11 +51,13 @@ const WeatherApp = () =>{
     const uiData = weatherData.map((data,index)=>{
         return <FutureWeatherComponent key={data.time} time={data.time} icon={data.icon} weatherUnit={data.unit}/>
         
-    })
+    });
 
-    //console.log(uiData);
 
- 
+    const showMoreWeather = () =>{
+        navigate("weathermain");
+    }
+
 
     function show(){
         jQuery(($)=>{
@@ -127,7 +130,7 @@ const WeatherApp = () =>{
                 </section>
             </section>
 
-            <section className="my-4 current-weather-assets d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0">
+            <section className="my-4 current-weather-assets d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0" onClick={showMoreWeather}>
                 
                 <section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center">
 

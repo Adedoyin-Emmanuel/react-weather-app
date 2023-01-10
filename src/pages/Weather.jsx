@@ -2,7 +2,9 @@ import React from "react";
 import jQuery from "jquery";
 import Button from "./../components/button";
 import Footer from "../components/footer";
-import rainIcon from "./../assets/"
+import rainIcon from "./../assets/rain(1).png";
+import windIcon from "./../assets/windy.png";
+import humidity from "./../assets/humidity.png";
 
 const WeatherApp = () =>{
 

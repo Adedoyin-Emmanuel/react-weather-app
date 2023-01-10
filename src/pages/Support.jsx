@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Contact = () =>{
+const Support = () =>{
     return (
         <React.Fragment>
             <h3>Welcome Contact</h3>
@@ -8,4 +8,4 @@ const Contact = () =>{
     )
 }
 
-export default Contact;
+export default Support;

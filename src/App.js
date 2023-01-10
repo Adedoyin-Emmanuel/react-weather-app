@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import Contact from "./pages/Contact";
+import Support from "./pages/Support";
 import {Routes, Route, BrowserRouter} from  "react-router-dom";
 import WeatherApp from "./pages/Weather";
 import Settings from "./pages/Settings";
@@ -11,7 +11,7 @@ function App() {
           <Routes>
               <Route path="/" element = {<Home/>} />
               <Route index element = {<Home/>} />
-              <Route path= "contact" element = {<Contact/>} />
+              <Route path= "support" element = {<Support/>} />
               <Route path="weather" element={<WeatherApp/>}/>
               <Route path="settings" element = {<Settings/>}/>
           </Routes>

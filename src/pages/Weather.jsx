@@ -30,10 +30,18 @@ const WeatherApp = () =>{
             "unit": ["50"]
     
         },
+
         {
-            "time" : ["1am"],
+            "time" : ["1pm"],
             "icon": [humidity],
-            "unit": ["50"]
+            "unit": ["45"]
+    
+        },
+
+        {
+            "time" : ["2pm"],
+            "icon": [rainIcon],
+            "unit": ["80"]
     
         }
     ]

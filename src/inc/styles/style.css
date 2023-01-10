@@ -183,6 +183,7 @@ section.footer-nav > section{
     width:20px;
     height:5px;
     background:var(--brand-primary-color);
+    border-radius:var(--footer-notch-border-radius);
 }
 /* .current-weather-assets{
    height:50%;

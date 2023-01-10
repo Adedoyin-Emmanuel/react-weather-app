@@ -179,7 +179,11 @@ section.footer-nav > section{
     justify-content: center;
     transform: translateY(-5px);
 }
-
+.future-weather-notch{
+    width:20px;
+    height:5px;
+    background:var(--brand-primary-color);
+}
 /* .current-weather-assets{
    height:50%;
 } */

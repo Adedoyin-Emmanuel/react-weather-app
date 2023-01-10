@@ -1,7 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Button from "../components/button";
 import Footer from "../components/footer";
+import navigate from "../inc/scripts/utilities";
 const Settings = () =>{
+
+    const returnHome = ()=>{
+        navigate("/weather");
+    }
     return (
         <React.Fragment>
             <section className="container-fluid">

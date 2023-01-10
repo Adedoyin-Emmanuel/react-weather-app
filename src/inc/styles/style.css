@@ -26,7 +26,7 @@
     --brand-footer-nav-fontsize: .8rem;
     --brand-footer-nav-fontsize: .9rem;
     --brand-weather-value-font-size:4rem;
-    --brand-medium-font-size:1.3rem;
+    --brand-medium-font-size:1.6rem;
     --brand-tertiary-color:rgb(137, 190, 243);
 }
 
@@ -86,7 +86,7 @@
 .brand-tertiary-color{
     background:var(--brand-tertiary-color);
 }
-.brand-text-medium{
+.brand-medium-text{
     font-size:var(--brand-medium-font-size);
 }
 .brand-primary-color{
@@ -167,7 +167,7 @@ section.footer-nav > section{
 
 .current-weather-unit{
     display:inline-block;
-    transform:translateX(-15px) scale(0.7);
+    transform:translateY(20px);
     
 }
 

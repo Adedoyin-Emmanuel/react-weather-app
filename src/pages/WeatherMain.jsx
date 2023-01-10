@@ -28,7 +28,7 @@ const WeatherMain = props =>{
                                     25 
                                 </h1>
 
-                                <sup className="fw-bold">0</sup>
+                                <sup className="fw-bold brand-medium-text current-weather-unit">o</sup>
                             </section>
                             
                         <p className="text-muted text-start brand-small-text">Thunderstorm</p>

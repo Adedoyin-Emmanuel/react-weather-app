@@ -93,7 +93,7 @@ const WeatherApp = () =>{
                     <section className="humidity-icon">
 
                     </section>
-                    <p className="humidity-value"></p>
+                    <p className="humidity-value">98%</p>
                     <p className="humidity-text text-muted text-capitalize">humidity</p>
                 </section>
 
@@ -102,8 +102,8 @@ const WeatherApp = () =>{
                 <section className="rain-icon">
 
                 </section>
-                <p className="rain-value"></p>
-                <p className="rain-text"></p>
+                <p className="rain-value fw-bold">100%</p>
+                <p className="rain-text text-muted text-capitalize">rain</p>
                 </section>
 
             </section>

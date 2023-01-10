@@ -129,7 +129,7 @@ const WeatherApp = () =>{
             <section className="future-weather-forecast my-4">
 
                 {/* {uiData} */}
-                <FutureWeatherComponent time={"10pm"} icon={rainIcon} weatherunit={"10"}/>
+                <FutureWeatherComponent time={"10pm"} icon={rainIcon} weatherUnit={"10"}/>
             </section>
 
             <section className="d-flex align-items-center justify-content-center">

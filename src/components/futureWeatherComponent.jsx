@@ -10,7 +10,7 @@ const FutureWeatherComponent = props =>{
                     <section className="weather-icon-section">
                             <img src ={props.icon} height={"20"} width={"20"}/>
                     </section>
-                    <p className="brand-text-small fw-bold"> {props.weatherunit}<sup>o</sup></p>
+                    <p className="brand-text-small fw-bold"> {props.weatherUnit}<sup>o</sup></p>
                 </section>
             </section> 
        </React.Fragment>

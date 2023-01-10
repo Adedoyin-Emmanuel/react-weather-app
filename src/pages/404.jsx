@@ -11,3 +11,5 @@ const NotFound = ()=>{
         </React.Fragment>
     )
 }
+
+export deafult NotFound;

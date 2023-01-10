@@ -2,7 +2,7 @@ import React from "react";
 import jQuery from "jquery";
 import Button from "./../components/button";
 import Footer from "../components/footer";
-import rainIcon from "./../assets/rain(1).png";
+import rainIcon from "./../assets/rain (1).png";
 import windIcon from "./../assets/windy.png";
 import humidity from "./../assets/humidity.png";
 
@@ -84,7 +84,7 @@ const WeatherApp = () =>{
                 <section className="current-weather-wind-speed">
 
                 <section className="wind-icon">
-                            <img src={}/>
+                            <img src={windIcon} height={"20"} width={"20"}/>
                 </section>
                 <p className="wind-value fw-bold">10 m/s</p>
                 <p className="wind-text text-muted text-capitalize">wind</p>
@@ -94,6 +94,8 @@ const WeatherApp = () =>{
 
                     <section className="humidity-icon">
 
+                          <img src={humidity} height={"20"} width={"20"}/>
+                        
                     </section>
                     <p className="humidity-value fw-bold">98%</p>
                     <p className="humidity-text text-muted text-capitalize">humidity</p>
@@ -102,6 +104,8 @@ const WeatherApp = () =>{
                 <section className="current-weather-rain-degree">
 
                 <section className="rain-icon">
+
+                      <img src={rainIcon} height={"20"} width={"20"}/>
 
                 </section>
                 <p className="rain-value fw-bold">100%</p>

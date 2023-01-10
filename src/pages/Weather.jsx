@@ -2,7 +2,7 @@ import React from "react";
 import jQuery from "jquery";
 import Button from "./../components/button";
 import Footer from "../components/footer";
-
+import rainIcon from "./../assets/"
 
 const WeatherApp = () =>{
 
@@ -82,7 +82,7 @@ const WeatherApp = () =>{
                 <section className="current-weather-wind-speed">
 
                 <section className="wind-icon">
-
+                            <img src={}/>
                 </section>
                 <p className="wind-value fw-bold">10 m/s</p>
                 <p className="wind-text text-muted text-capitalize">wind</p>
@@ -93,7 +93,7 @@ const WeatherApp = () =>{
                     <section className="humidity-icon">
 
                     </section>
-                    <p className="humidity-value">98%</p>
+                    <p className="humidity-value fw-bold">98%</p>
                     <p className="humidity-text text-muted text-capitalize">humidity</p>
                 </section>
 

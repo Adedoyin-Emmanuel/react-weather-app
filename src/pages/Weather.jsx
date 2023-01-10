@@ -155,7 +155,7 @@ const WeatherApp = () =>{
 
             </section>
 
-            <section className="future-weather-forecast my-4 d-flex align-items-center justify-content-between">
+            <section className="future-weather-forecast my-4 d-flex align-items-center justify-content-between " style={{"overflowX":"scroll"}}>
                 {uiData}
             </section>
 

@@ -87,7 +87,7 @@ const WeatherApp = () =>{
                             <img src={windIcon} height={"30"} width={"30"}/>
                 </section>
                 <p className="wind-value fw-bold text-light py-1">10 m/s</p>
-                <p className="wind-text text-muted text-capitalize brand-small-text">wind</p>
+                <p className="wind-text text-muted text-capitalize brand-small-text weather-text">wind</p>
                 </section>
 
                 <section className="current-weather-humidity-degree d-flex flex-column align-items-center">
@@ -98,7 +98,7 @@ const WeatherApp = () =>{
                         
                     </section>
                     <p className="humidity-value fw-bold text-light p-1 text-center">98%</p>
-                    <p className="humidity-text text-muted text-capitalize text-center brand-small-text">humidity</p>
+                    <p className="humidity-text text-muted text-capitalize text-center brand-small-text weather-text">humidity</p>
                 </section>
 
                 <section className="current-weather-rain-degree d-flex flex-column align-items-center">
@@ -109,7 +109,7 @@ const WeatherApp = () =>{
 
                 </section>
                 <p className="rain-value fw-bold text-light p-1 text-center">100%</p>
-                <p className="rain-text text-muted text-capitalize text-center brand-small-text">rain</p>
+                <p className="rain-text text-muted text-capitalize text-center brand-small-text weather-text">rain</p>
                 </section>
 
             </section>

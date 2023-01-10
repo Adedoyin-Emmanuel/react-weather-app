@@ -167,6 +167,9 @@ section.footer-nav > section{
 .current-weather-icon{
     transform:scale(2.8);
 }
+
+/* weather panel icons and text */
+
 /* media queries */
 
 @media (min-width:667.98px){

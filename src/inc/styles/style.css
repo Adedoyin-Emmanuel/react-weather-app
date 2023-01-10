@@ -180,7 +180,20 @@ section.footer-nav > section{
    height:50%;
 } */
 /* media queries */
-
+    /* Carousel base class */
+    .carousel {
+        margin-bottom: 4rem;
+      }
+      /* Since positioning the image, we need to help out the caption */
+      .carousel-caption {
+        bottom: 3rem;
+        z-index: 10;
+      }
+  
+      /* Declare heights because of positioning of img element */
+      .carousel-item {
+        height: 32rem;
+      }
 @media (min-width:667.98px){
     .width-toggle{
         width:35%

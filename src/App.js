@@ -4,6 +4,7 @@ import {Routes, Route, BrowserRouter} from  "react-router-dom";
 import WeatherApp from "./pages/Weather";
 import Settings from "./pages/Settings";
 import WeatherMain from "./pages/WeatherMain";
+import NotFound from "./pages/404";
 import "./autoload";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
               <Route path="weather" element={<WeatherApp/>}/>
               <Route path="settings" element = {<Settings/>}/>
               <Route path="weathermain" element={<WeatherMain/>}/>
+              <Route path="*" element={<NotFound/>}/>
           </Routes>
       </BrowserRouter>
   );

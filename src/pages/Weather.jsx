@@ -85,7 +85,7 @@ const WeatherApp = () =>{
                     <h1 className="current-weather-value fw-bold brand-large-text">
                         18 <sup className="fw-bold current-weather-unit">0</sup>
                     </h1>
-                    <p className="text-muted">Thunderstorm</p>
+                    <p className="text-muted brand-small-text">Thunderstorm</p>
                 </section>
                 <section className="current-weather-icon my-4 mx-3">   
                     <svg

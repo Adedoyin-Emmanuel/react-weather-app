@@ -172,7 +172,7 @@ const WeatherApp = () =>{
                     <div className="future-weather-notch"></div>
                 </section>
                 <section className="week-section d-flex mx-2 flex-column align-items-center justify-content-center">
-                    <p className="brand-small-text-2 text-capitalize">7days</p>
+                    <p className="brand-small-text-2 text-capitalize">next 10 days</p>
                     <div className="future-weather-notch"></div>
                 </section>
             </section>

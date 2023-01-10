@@ -16,3 +16,5 @@ const NextWeekComponent = prop =>{
         </React.Fragment>
     )
 }
+
+export default NextWeekComponent;

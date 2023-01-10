@@ -20,7 +20,7 @@ const WeatherApp = () =>{
     }
     return (
         <React.Fragment>
-            <div className="container-fluid d-flex flex-column my-2 brand-bg-color" style={{"overflowX":"hidden"}}>
+            <div className="container-fluid d-flex flex-column my-2 " style={{"overflowX":"hidden"}}>
              
                 <section className="app-header d-flex justify-content-between">
                     <section className="city-locaton">
@@ -81,13 +81,13 @@ const WeatherApp = () =>{
 
             <section className="my-4 current-weather-assets d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0">
                 
-                <section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center ">
+                <section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center">
 
                 <section className="wind-icon">
                             <img src={windIcon} height={"30"} width={"30"}/>
                 </section>
-                <p className="wind-value fw-bold text-light py-1">10 m/s</p>
-                <p className="wind-text text-muted text-capitalize brand-small-text weather-text">wind</p>
+                <p className="wind-value fw-bold text-light text-center py-1">10 m/s</p>
+                <p className="wind-text text-muted text-capitalize brand-small-text weather-text text-center">wind</p>
                 </section>
 
                 <section className="current-weather-humidity-degree d-flex flex-column align-items-center">
@@ -97,32 +97,34 @@ const WeatherApp = () =>{
                           <img src={humidity} height={"30"} width={"30"}/>
                         
                     </section>
-                    <p className="humidity-value fw-bold text-light p-1 text-center">98%</p>
+                    <p className="humidity-value fw-bold text-light  text-center py-1">98%</p>
                     <p className="humidity-text text-muted text-capitalize text-center brand-small-text weather-text">humidity</p>
                 </section>
 
+              
+
                 <section className="current-weather-rain-degree d-flex flex-column align-items-center">
 
-                <section className="rain-icon">
+                        <section className="rain-icon d-flex align-items-center justify-content-center">
 
-                      <img src={rainIcon} height={"30"} width={"30"}/>
+                            <img src={rainIcon} height={"30"} width={"30"}/>
 
-                </section>
-                <p className="rain-value fw-bold text-light p-1 text-center">100%</p>
-                <p className="rain-text text-muted text-capitalize text-center brand-small-text weather-text">rain</p>
+                        </section>
+                        <p className="rain-value fw-bold text-light text-center py-1">100%</p>
+                        <p className="rain-text text-muted text-capitalize text-center brand-small-text weather-text">rain</p>
                 </section>
 
             </section>
 
-                <section className="d-flex align-items-center justify-content-center">
+            <section className="d-flex align-items-center justify-content-center">
 
-<Button text="search weather"className="brand-btn m-auto my-5 width-toggle" onClick={show}/>
-<br/>
-</section>
-<br/><br/>
+                        <Button text="search weather"className="brand-btn m-auto my-5 width-toggle" onClick={show}/>
+                        <br/>
+            </section>
+            <br/><br/>
 
                 <Footer/>
-            </div>
+        </div>
 
         </React.Fragment>
     )

@@ -175,6 +175,12 @@ section.footer-nav > section{
     justify-content: center;
     transform: translateY(-10px);
 }
+/* 
+.current-weather-assets{
+    display: flex;
+    align-items: center;
+    align-content: center;
+} */
 /* media queries */
 
 @media (min-width:667.98px){

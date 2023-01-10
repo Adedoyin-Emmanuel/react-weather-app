@@ -4,7 +4,7 @@ const WeatherMain = props =>{
     return (
         <React.Fragment>
             <section className="container-fluid">
-                    what's popping
+                    <h3>what's popping</h3>
                 <Footer/>
             </section>
         </React.Fragment>

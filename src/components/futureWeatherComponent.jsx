@@ -18,4 +18,4 @@ const FutureWeatherComponent = props =>{
 }
 
 
-export default futureWeatherComponent;
+export default FutureWeatherComponent;

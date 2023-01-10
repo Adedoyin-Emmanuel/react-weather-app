@@ -5,7 +5,7 @@ import Footer from "../components/footer";
 import rainIcon from "./../assets/rain (1).png";
 import windIcon from "./../assets/windy.png";
 import humidity from "./../assets/humidity.png";
-import futureWeatherComponent from "../components/futureWeatherComponent";
+import FutureWeatherComponent from "../components/futureWeatherComponent";
 
 const WeatherApp = () =>{
 
@@ -129,7 +129,7 @@ const WeatherApp = () =>{
             <section className="future-weather-forecast my-4">
 
                 {/* {uiData} */}
-                <FtureWeatherComponent time={"10pm"} icon={rainIcon} weatherunit={"10"}/>
+                <FutureWeatherComponent time={"10pm"} icon={rainIcon} weatherunit={"10"}/>
             </section>
 
             <section className="d-flex align-items-center justify-content-center">

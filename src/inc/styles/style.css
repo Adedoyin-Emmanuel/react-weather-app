@@ -173,13 +173,11 @@ section.footer-nav > section{
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translateY(-10px);
+    transform: translateY(-5px);
 }
-/* 
-.current-weather-assets{
-    display: flex;
-    align-items: center;
-    align-content: center;
+
+/* .current-weather-assets{
+   height:50%;
 } */
 /* media queries */
 

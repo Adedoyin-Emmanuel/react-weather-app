@@ -162,13 +162,17 @@ const WeatherApp = () =>{
                 </section>
 
             </section>
-            <section className="future-weather-days">
+            <section className="future-weather-days d-flex align-items-center justify-content-between">
                 <section className="today-section">
-                    <p>today</p>
+                    <p className="brand-small-text-2 text-capitalize">today</p>
                     <div className="future-weather-notch"></div>
                 </section>
                 <section className="tomorrow-section">
-                    <p>today</p>
+                    <p className="brand-small-text-2 text-capitalize">tomorrow</p>
+                    <div className="future-weather-notch"></div>
+                </section>
+                <section className="week-section">
+                    <p className="brand-small-text-2 text-capitalize">7days</p>
                     <div className="future-weather-notch"></div>
                 </section>
             </section>

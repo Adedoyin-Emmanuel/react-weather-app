@@ -11,7 +11,7 @@ const Settings = () =>{
         <React.Fragment>
             <section className="container-fluid">
                   
-                    <h3 className="text-center">change settings</h3>
+                    <h3 className="text-center my-3 text-capitalize ">change settings</h3>
                     <section className="d-flex align-items-center justify-content-center">
                         <Button text="Home" className="brand-btn m-auto my-5 width-toggle" onClick={returnHome}/>
                     </section>

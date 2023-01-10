@@ -25,6 +25,7 @@
     --brand-mute-color:rgb(211, 205, 205);
     --brand-footer-nav-fontsize: .8rem;
     --brand-weather-value-font-size:4rem;
+    --brand-tertiary-color:rgb(143, 186, 229);
 }
 
 #spinner{
@@ -75,6 +76,10 @@
 
 .brand-small-text{
     font-size: var(--brand-footer-nav-fontsize);
+}
+
+.brand-tertiary-color{
+    background:var(--brand-tertiary-color);
 }
 
 .brand-primary-color{

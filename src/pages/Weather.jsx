@@ -85,7 +85,7 @@ const WeatherApp = () =>{
 
                 </section>
                 <p className="wind-value"></p>
-
+                <p className="wind-text text-muted">wind</p>
                 </section>
 
                 <section className="current-weather-humidity-degree">

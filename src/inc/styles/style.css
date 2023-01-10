@@ -24,6 +24,7 @@
     --footer-notch-background-color:rgb(255, 255, 255);
     --brand-mute-color:rgb(211, 205, 205);
     --brand-footer-nav-fontsize: .8rem;
+    --brand-footer-nav-fontsize: .9rem;
     --brand-weather-value-font-size:4rem;
     --brand-tertiary-color:rgb(137, 190, 243);
 }
@@ -78,6 +79,9 @@
     font-size: var(--brand-footer-nav-fontsize);
 }
 
+.brand-small-text-2{
+    font-size: var(--brand-footer-nav-fontsize-2);
+}
 .brand-tertiary-color{
     background:var(--brand-tertiary-color);
 }

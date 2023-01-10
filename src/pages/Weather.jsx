@@ -20,7 +20,7 @@ const WeatherApp = () =>{
     }
     return (
         <React.Fragment>
-            <div className="container-fluid d-flex flex-column my-2 brand-bg-color" style={{"overflow-x":"hidden"}}>
+            <div className="container-fluid d-flex flex-column my-2 brand-bg-color" style={{"overflowX":"hidden"}}>
              
                 <section className="app-header d-flex justify-content-between">
                     <section className="city-locaton">

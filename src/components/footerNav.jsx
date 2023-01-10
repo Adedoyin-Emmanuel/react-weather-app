@@ -1,5 +1,4 @@
 import React from 'react';
-import jQuery from 'jquery';
 import navigate from "./../inc/scripts/utilities";
 
 const FooterNav = () =>{

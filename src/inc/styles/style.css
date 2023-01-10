@@ -169,7 +169,12 @@ section.footer-nav > section{
 }
 
 /* weather panel icons and text */
-
+.weather-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-10px);
+}
 /* media queries */
 
 @media (min-width:667.98px){

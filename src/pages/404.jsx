@@ -4,7 +4,7 @@ import navigate from "../inc/scripts/utilities";
 const NotFound = ()=>{
     
     const returnHome = ()=>{
-        navigate("/");
+        navigate("/weather");
     }
     return (
         <React.Fragment>
@@ -14,7 +14,7 @@ const NotFound = ()=>{
                     <p className="text-muted text-capitalize">the page requested for was not found!</p>
 
                     <section className="d-flex align-items-center justify-content-center">
-                        <Button text="search weather"className="brand-btn m-auto my-5 width-toggle" onClick={returnHome}/>
+                        <Button text="Home" className="brand-btn m-auto my-5 width-toggle" onClick={returnHome}/>
                     </section>
             </section>
         </React.Fragment>

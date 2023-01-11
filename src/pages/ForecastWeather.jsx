@@ -1,5 +1,9 @@
 import React from "react";
+import rainIcon from "./../assets/rain (1).png";
+import windIcon from "./../assets/windy.png";
+import humidity from "./../assets/humidity.png";
 import NextWeekComponent from "../components/nextWeekComponent";
+import Footer from "../components/footer";
 const ForecastWeather = () => {
   const weekData = [
     {

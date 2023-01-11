@@ -1,29 +1,13 @@
-import React from 'react';
-import jQuery from 'jquery';
+import React from "react";
 
-const UtilityComponent = () =>{
-    function closeUtilityComponent(){
-        jQuery(($)=>{
-            $.noConflict();
-
-            $(".utility-component").removeClass("add-utility-component-height");
-        })
-    }
-    return (
-        <React.Fragment>
-            <section className="utility-component align-items-center justify-content-around m-auto width-toggle-2">
-                    <div className="utility-notch" onClick={closeUtilityComponent}></div>
-                    <div className="d-flex align-items-center justify-content-center text-center">
-                        <p className=" m-auto text-center  text-capitalize ">search result not found!</p>
-                      
-                    </div>
-                    <section className="jumbotron">
-                     
-                    </section>
-
-            </section>
-        </React.Fragment>
-    )
-}
+const UtilityComponent = (props) => {
+  return (
+    <React.Fragment>
+      <section className="utility-component align-items-center justify-content-around m-auto width-toggle-2">
+        {props.tags}
+      </section>
+    </React.Fragment>
+  );
+};
 
 export default UtilityComponent;

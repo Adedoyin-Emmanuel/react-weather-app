@@ -2,7 +2,7 @@ import React from "react";
 import FooterNav from "./footerNav";
 import UtilityComponent from "./utilityFooterComponet";
 
-const Footer = () => {
+const Footer = (props) => {
   const customFooterStyle = {
     zIndex: "10",
   };
@@ -11,7 +11,7 @@ const Footer = () => {
       className="m-auto d-flex align-items-center justify-content-center d-md-none"
       style={customFooterStyle}
     >
-      <UtilityComponent />
+      <UtilityComponent tags={props.utilityTags}/>
       <footer className="shadow-lg d-flex align-items-center justify-content-center footer-nav-container">
         <FooterNav />
       </footer>

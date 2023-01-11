@@ -1,13 +1,15 @@
 import jQuery from "jquery";
 
-const navigate = page =>{
+export function navigate(page){
     window.location.href=`${page}`;
 }
 
-jQuery(($)=>{
-    $.noConflict();
+function closeUtilityComponent(){
+    jQuery(($)=>{
+        $.noConflict();
 
-    
-});
+        $(".utility-component").removeClass("add-utility-component-height");
+    })
+}
 
 export default navigate;

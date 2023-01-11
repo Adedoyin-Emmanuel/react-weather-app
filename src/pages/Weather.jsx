@@ -9,6 +9,13 @@ import FutureWeatherComponent from "../components/futureWeatherComponent";
 import navigate from "../inc/scripts/utilities";
 
 const WeatherApp = () => {
+  function closeUtilityComponent() {
+    jQuery(($) => {
+      $.noConflict();
+
+      $(".utility-component").removeClass("add-utility-component-height");
+    });
+  }
   let weatherData = [
     {
       time: ["10am"],
@@ -41,6 +48,20 @@ const WeatherApp = () => {
     },
   ];
 
+  const UtilityTag = () => {
+    return (
+      <React.Fragment>
+        <div className="utility-notch" onClick={closeUtilityComponent}></div>
+        <div className="d-flex align-items-center justify-content-center text-center">
+          <p className=" m-auto text-center  text-capitalize ">
+            search result not found!
+          </p>
+        </div>
+        <section className="jumbotron"></section>
+      </React.Fragment>
+    );
+  };
+
   const uiData = weatherData.map((data, index) => {
     return (
       <FutureWeatherComponent
@@ -56,13 +77,30 @@ const WeatherApp = () => {
     navigate("weathermain");
   };
 
-  function show() {
+  const show = () => {
     jQuery(($) => {
       $.noConflict();
 
       $(".utility-component").toggleClass("add-utility-component-height");
     });
+  };
+
+  //create the weather forecast component
+
+  const UtilityForecastTags = ()=>{
+    return (
+        <React.Fragment>
+          
+        </React.Fragment>
+    )
   }
+
+  const beginWeatherForecast = () => {
+    jQuery(($) => {
+      $.noConflict();
+    });
+  };
+
   return (
     <React.Fragment>
       <div
@@ -76,7 +114,10 @@ const WeatherApp = () => {
               10 january tuesday
             </p>
           </section>
-          <div className="toggle-btn ">
+          <div
+            className="toggle-btn dashboard-icon"
+            onClick={beginWeatherForecast}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width={"24px"}
@@ -232,7 +273,7 @@ const WeatherApp = () => {
         <br />
         <br />
 
-        <Footer />
+        <Footer utilityTags={<UtilityTag />} />
       </div>
     </React.Fragment>
   );

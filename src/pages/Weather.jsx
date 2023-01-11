@@ -10,6 +10,7 @@ import navigate from "../inc/scripts/utilities";
 import ForecastWeatherItems from "../components/forecastWeatherItems";
 import Spinner from "../components/spinner";
 import Ripple1 from "./../assets/ripple1.gif";
+import Location from "./../assets/map.png";
 
 const WeatherApp = () => {
   let weatherData = [
@@ -281,13 +282,26 @@ const WeatherApp = () => {
           />
           <br />
         </section>
-        <section>
-          <section className="ripple-container">
-            <section className="ripple-section">
-              <img src={Ripple1} width={"300"} height={"300"} />
-            </section>
+        <section className="ripple-containerd-flex align-items-center justify-content-center">
+          <section className="map-container">
+            <img
+              src={Location}
+              alt={"google-map"}
+              height={"30"}
+              width={"30"}
+              className="map"
+            />
+          </section>
+          <section className="ripple-section">
+            <img
+              src={Ripple1}
+              width={"300"}
+              height={"300"}
+              alt={"ripple-efffect"}
+            />
           </section>
         </section>
+
         <br />
         <br />
         <br />

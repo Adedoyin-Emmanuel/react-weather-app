@@ -205,6 +205,10 @@ section.footer-nav > section {
     border-radius: var(--footer-notch-border-radius);
 	transform:translateY(-10px);
 }
+
+.map-container{
+	
+}
 @media (min-width: 667.98px) {
 	.width-toggle {
 		width: 35%;

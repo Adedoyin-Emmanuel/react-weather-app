@@ -3,10 +3,10 @@ import React from "react";
 const NextWeekComponent = (props) => {
 	return (
 		<React.Fragment>
-			<section className="next-week-component">
-				<section className="today-section d-flex">
-					<p className="text-start fw-bold">{props.day}</p>
-					<section>
+			<section className="next-week-component d-flex align-items-center justify-content-center flex-column px-5">
+				<section className="today-section d-flex align-items-center justify-content-between flex-row">
+					<p className="text-start fw-bold text-capitalize">{props.day}</p>
+					<section className="d-flex flex-row align-items-center justify-content-between mx-2">
 						<p className="text-muted">
 							{props.firstUnit}<sup>o</sup>
 						</p>
@@ -16,7 +16,7 @@ const NextWeekComponent = (props) => {
 						</p>
 					</section>
 					<section className="next-week-weather-icon">
-                        <img src={props.icon} height={"20"} width = {"30"}/>
+                        <img src={props.icon} height={"20"} width = {"30"} alt={"weather-icons"}/>
                     </section>
 				</section>
 			</section>

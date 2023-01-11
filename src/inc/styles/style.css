@@ -184,7 +184,7 @@ section.footer-nav > section {
 	background: var(--brand-primary-color);
 }
 .next-week-notch{
-    width:20px;
+    width:40px;
     height:5px;
     background:var(--brand-primary-color);
     border-radius: var(--footer-notch-border-radius);

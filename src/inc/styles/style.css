@@ -26,6 +26,7 @@
 	--brand-weather-value-font-size: 4rem;
 	--brand-medium-font-size: 1.6rem;
 	--brand-tertiary-color: rgb(137, 190, 243);
+    --brand-gradient-color:linear-gradient(240deg, var(var(--brand-primary-color)),var(var(--brand-secondary-color)));
 }
 
 #spinner {
@@ -59,7 +60,9 @@
 	background: var(--brand-secondary-color);
 	cursor: pointer;
 }
-
+.brand-gradient{
+    background:var(--brand-gradient-color);
+}
 .brand-text-mute {
 	color: var(--brand-mute-color);
 }
@@ -180,23 +183,10 @@ section.footer-nav > section {
 .future-weather-notch-active {
 	background: var(--brand-primary-color);
 }
-/* .current-weather-assets{
-   height:50%;
-} */
-/* media queries */
-/* Carousel base class */
-.carousel {
-	margin-bottom: 4rem;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-	bottom: 3rem;
-	z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-	height: 32rem;
+.next-week-notch{
+    width:20px;
+    height:5px;
+    background:var(--brand-gradient-color);
 }
 @media (min-width: 667.98px) {
 	.width-toggle {

@@ -3,7 +3,11 @@ import rainIcon from "./../assets/rain (1).png";
 import windIcon from "./../assets/windy.png";
 import humidity from "./../assets/humidity.png";
 import Footer from "../components/footer";
+import NextWeekComponent from "../components/nexWeekComponent";
 const WeatherMain = (props) => {
+
+    const getWeekWeatherData ==
+    
 	return (
 		<React.Fragment>
 			<section

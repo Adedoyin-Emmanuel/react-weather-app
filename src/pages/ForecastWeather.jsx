@@ -4,7 +4,12 @@ import windIcon from "./../assets/windy.png";
 import humidity from "./../assets/humidity.png";
 import NextWeekComponent from "../components/nextWeekComponent";
 import Footer from "../components/footer";
+import navigate from "../inc/scripts/utilities";
 const ForecastWeather = () => {
+
+  const navigateHome = ()=>{
+    navigate("/");
+  }
   const weekData = [
     {
       day: ["today"],
@@ -59,7 +64,7 @@ const ForecastWeather = () => {
       <section className="container-fluid">
       <section className="app-header d-flex justify-content-between">
 					<div className="toggle-btn my-3">
-         <svg height={"30"} id="Layer_1" version="1.1" viewBox="0 0 512 512" width={"30"} xmlns="http://www.w3.org/2000/svg" ><polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "/></svg>
+         <svg height={"30"} id="Layer_1" version="1.1" onClick={navigateHome}viewBox="0 0 512 512" width={"30"} xmlns="http://www.w3.org/2000/svg" ><polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "/></svg>
 					</div>
 					<section className="city-locaton">
 						<h5 className="fw-bold fs-5 my-3">Lagos, 9ja</h5>

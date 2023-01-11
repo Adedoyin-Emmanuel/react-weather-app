@@ -212,7 +212,7 @@ section.footer-nav > section {
 }
 
 .ripple-container{
-	transform: translateX(-18px);
+	transform: translateX(-17px);
 }
 @media (min-width: 667.98px) {
 	.width-toggle {

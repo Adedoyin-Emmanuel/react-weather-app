@@ -188,6 +188,7 @@ section.footer-nav > section {
     height:5px;
     background:var(--brand-primary-color);
     border-radius: var(--footer-notch-border-radius);
+	transform:translateY(-10px);
 }
 @media (min-width: 667.98px) {
 	.width-toggle {

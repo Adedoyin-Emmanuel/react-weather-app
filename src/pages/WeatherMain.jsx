@@ -142,7 +142,7 @@ const WeatherMain = (props) => {
 						</p>
 					</section>
 				</section>
-                <section className="next-week-component-container d-flex align-items-center justify-content-center flex-column">
+                <section className="brand-tertiary-color m-0 p-2 next-week-component-container d-flex align-items-center justify-content-center flex-column">
                         {uiData}
                 </section>
 				<Footer />

@@ -292,7 +292,7 @@ const WeatherApp = () => {
               className="map"
             />
           </section>
-          <section className="ripple-section">
+          <section className="ripple-section d-flex align-items-center justify-content-center">
             <img
               src={Ripple1}
               width={"300"}

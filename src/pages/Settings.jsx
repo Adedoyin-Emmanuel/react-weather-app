@@ -2,6 +2,7 @@ import React from "react";
 import Button from "../components/button";
 import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
+import Spinner from "../components/spinner";
 const Settings = () =>{
 
     const returnHome = ()=>{
@@ -9,6 +10,7 @@ const Settings = () =>{
     }
     return (
         <React.Fragment>
+            <Spinner/>
             <section className="container-fluid">
                   
                     <h3 className="text-center my-3 text-capitalize ">change settings</h3>

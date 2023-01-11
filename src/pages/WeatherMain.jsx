@@ -4,15 +4,17 @@ import windIcon from "./../assets/windy.png";
 import humidity from "./../assets/humidity.png";
 import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
+import Spinner from "../components/spinner";
 
 const WeatherMain = (props) => {
 
 	const navigateHome = () =>{
-		navigate("/");
+		navigate("/weather");
 	}
     
 	return (
 		<React.Fragment>
+			<Spinner/>
 			<section
 				className="container-fluid d-flex flex-column py-2 "
 				style={{ overflowX: "hidden" }}>

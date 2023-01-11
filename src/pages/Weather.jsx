@@ -8,6 +8,7 @@ import humidity from "./../assets/humidity.png";
 import FutureWeatherComponent from "../components/futureWeatherComponent";
 import navigate from "../inc/scripts/utilities";
 import ForecastWeatherItems from "../components/forecastWeatherItems";
+import Spinner from "../components/spinner";
 
 const WeatherApp = () => {
   let weatherData = [
@@ -70,14 +71,6 @@ const WeatherApp = () => {
     navigate("weathermain");
   };
 
-  const show = () => {
-    jQuery(($) => {
-      $.noConflict();
-      $(".cmp").removeClass("d-none");
-      $(".utility-component").toggleClass("add-utility-component-height");
-    });
-  };
-
   const uiForeCastData = forecastData.map((data, index) => {
     return (
       <ForecastWeatherItems
@@ -113,11 +106,14 @@ const WeatherApp = () => {
   const beginWeatherForecast = () => {
     jQuery(($) => {
       $.noConflict();
+      $(".cmp").removeClass("d-none");
+      $(".utility-component").toggleClass("add-utility-component-height");
     });
   };
 
   return (
     <React.Fragment>
+      <Spinner/>
       <div
         className="container-fluid d-flex flex-column py-2 "
         style={{ overflowX: "hidden" }}
@@ -281,7 +277,6 @@ const WeatherApp = () => {
           <Button
             text="search weather"
             className="brand-btn m-auto my-5 width-toggle"
-            onClick={show}
           />
           <br />
         </section>

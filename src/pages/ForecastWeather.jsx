@@ -5,10 +5,11 @@ import humidity from "./../assets/humidity.png";
 import NextWeekComponent from "../components/nextWeekComponent";
 import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
+import Spinner from "../components/spinner";
 const ForecastWeather = () => {
 
   const navigateHome = ()=>{
-    navigate("/");
+    navigate("/weather");
   }
   const weekData = [
     {
@@ -61,6 +62,7 @@ const ForecastWeather = () => {
 
   return (
     <React.Fragment>
+      <Spinner/>
       <section className="container-fluid">
       <section className="app-header d-flex justify-content-between">
 					<div className="toggle-btn my-3">

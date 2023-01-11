@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "../components/button";
 import navigate from "../inc/scripts/utilities";
+import Spinner from "../components/spinner";
 const NotFound = ()=>{
     
     const returnHome = ()=>{
@@ -8,6 +9,7 @@ const NotFound = ()=>{
     }
     return (
         <React.Fragment>
+            <Spinner/>
             <section className="container-fluid">
                     <h2 className="text-capitalize my-3 fs-3 fw-bold">not found!</h2>
 

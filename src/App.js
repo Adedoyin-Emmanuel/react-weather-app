@@ -18,6 +18,7 @@ function App() {
               <Route path="weather" element={<WeatherApp/>}/>
               <Route path="settings" element = {<Settings/>}/>
               <Route path="weathermain" element={<WeatherMain/>}/>
+              <Route path="forecast" element={<ForecastWeather/>}/>
               <Route path="*" element={<NotFound/>}/>
           </Routes>
       </BrowserRouter>

@@ -5,6 +5,7 @@ import WeatherApp from "./pages/Weather";
 import Settings from "./pages/Settings";
 import WeatherMain from "./pages/WeatherMain";
 import NotFound from "./pages/404";
+import ForecastWeather from "./pages/ForecastWeather";
 import "./autoload";
 
 function App() {

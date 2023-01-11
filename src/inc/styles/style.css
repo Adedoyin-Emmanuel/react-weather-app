@@ -70,6 +70,7 @@
 	width:100%;
 }
 
+
 .brand-btn:hover {
 	background: var(--brand-secondary-color);
 	cursor: pointer;
@@ -208,6 +209,10 @@ section.footer-nav > section {
 
 .map-container{
 	transform: translate(160px,-5px);
+}
+
+.ripple-container{
+	transform: translateX(-18px);
 }
 @media (min-width: 667.98px) {
 	.width-toggle {

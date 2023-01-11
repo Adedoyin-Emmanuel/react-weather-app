@@ -302,6 +302,14 @@ const WeatherApp = () => {
           </section>
         </section>
 
+        <section className="d-flex align-items-center justify-content-center">
+          <Button
+            text="current location"
+            className="brand-btn my-5 width-toggle"
+          />
+          <br />
+        </section>
+
         <br />
         <br />
         <br />

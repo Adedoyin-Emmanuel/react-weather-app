@@ -1,227 +1,213 @@
 @font-face {
-    font-family: poppins;
-    src: url("./../../fonts/poppins.ttf");
+	font-family: poppins;
+	src: url("./../../fonts/poppins.ttf");
 }
 
 @font-face {
-    font-family:poppins ;
-    src: url("./../../fonts/poppins_bold.ttf");
-    font-weight: bold;
-
+	font-family: poppins;
+	src: url("./../../fonts/poppins_bold.ttf");
+	font-weight: bold;
 }
 
-*{
-    font-family: poppins;;
+* {
+	font-family: poppins;
 }
 
-
-:root{
-    --brand-primary-color:rgb(83, 166, 250);
-    --brand-white-color:#ffffff;
-    --brand-secondary-color:rgb(124, 183, 241);
-    --footer-nav-border-radius:30px;
-    --footer-notch-border-radius:60px;
-    --footer-notch-background-color:rgb(255, 255, 255);
-    --brand-mute-color:rgb(211, 205, 205);
-    --brand-footer-nav-fontsize: .8rem;
-    --brand-footer-nav-fontsize: .9rem;
-    --brand-weather-value-font-size:4rem;
-    --brand-medium-font-size:1.6rem;
-    --brand-tertiary-color:rgb(137, 190, 243);
+:root {
+	--brand-primary-color: rgb(83, 166, 250);
+	--brand-white-color: #ffffff;
+	--brand-secondary-color: rgb(124, 183, 241);
+	--footer-nav-border-radius: 30px;
+	--footer-notch-border-radius: 60px;
+	--footer-notch-background-color: rgb(255, 255, 255);
+	--brand-mute-color: rgb(211, 205, 205);
+	--brand-footer-nav-fontsize: 0.8rem;
+	--brand-footer-nav-fontsize: 0.9rem;
+	--brand-weather-value-font-size: 4rem;
+	--brand-medium-font-size: 1.6rem;
+	--brand-tertiary-color: rgb(137, 190, 243);
 }
 
-#spinner{
-    background:ghostwhite;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    top:0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
+#spinner {
+	background: ghostwhite;
+	height: 100vh;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
-
 
 /* utility classes */
-.brand-btn{
-    border-radius:30px;
-    background:var(--brand-primary-color);
-    transition: .9s;
-    padding:15px;
-    margin:auto;
-    text-align:center;
-    text-transform: capitalize;
-    border:none;
-    outline:none;
-    width:75%;
-    color:var(--brand-white-color);
+.brand-btn {
+	border-radius: 30px;
+	background: var(--brand-primary-color);
+	transition: 0.9s;
+	padding: 15px;
+	margin: auto;
+	text-align: center;
+	text-transform: capitalize;
+	border: none;
+	outline: none;
+	width: 75%;
+	color: var(--brand-white-color);
 }
 
-.brand-btn:hover{
-    background:var(--brand-secondary-color);
-    cursor:pointer;
+.brand-btn:hover {
+	background: var(--brand-secondary-color);
+	cursor: pointer;
 }
 
-.brand-text-mute{
-    color:var(--brand-mute-color);
+.brand-text-mute {
+	color: var(--brand-mute-color);
 }
 
-.brand-bg-mute{
-    background:var(--brand-mute-color);
+.brand-bg-mute {
+	background: var(--brand-mute-color);
 }
 
-.brand-bg-white{
-    background:var(--brand-white-color);
+.brand-bg-white {
+	background: var(--brand-white-color);
 }
 
-.brand-small-text{
-    font-size: var(--brand-footer-nav-fontsize);
+.brand-small-text {
+	font-size: var(--brand-footer-nav-fontsize);
 }
 
-.brand-small-text-2{
-    font-size: var(--brand-footer-nav-fontsize-2);
+.brand-small-text-2 {
+	font-size: var(--brand-footer-nav-fontsize-2);
 }
-.brand-tertiary-color{
-    background:var(--brand-tertiary-color);
+.brand-tertiary-color {
+	background: var(--brand-tertiary-color);
 }
-.brand-medium-text{
-    font-size:var(--brand-medium-font-size);
+.brand-medium-text {
+	font-size: var(--brand-medium-font-size);
 }
-.brand-primary-color{
-    background-color: var(--brand-primary-color);
-}
-
-.brand-secondary-color{
-    background-color:var(--brand-secondary-color);
+.brand-primary-color {
+	background-color: var(--brand-primary-color);
 }
 
-.brand-large-text{
-    font-size: var(--brand-weather-value-font-size);
+.brand-secondary-color {
+	background-color: var(--brand-secondary-color);
 }
 
+.brand-large-text {
+	font-size: var(--brand-weather-value-font-size);
+}
 
 /* styles for the footer navigation */
-.footer-nav{
-    color:white;
-    width:100%;
-    padding:3px;
+.footer-nav {
+	color: white;
+	width: 100%;
+	padding: 3px;
 }
 
-
-
-.footer-nav-container{
-    background:var(--brand-primary-color);
-    width:100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position:fixed;
-    bottom:0;
+.footer-nav-container {
+	background: var(--brand-primary-color);
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	bottom: 0;
 }
 
-
-
-section.footer-nav > section{
-    font-size:var(--brand-footer-nav-fontsize);
-
-    
-}   
+section.footer-nav > section {
+	font-size: var(--brand-footer-nav-fontsize);
+}
 /* utility component */
 
-.utility-component{
-    background:var(--brand-primary-color);
-    color:white;
-    padding:20px;
-    position:fixed;
-    bottom:0;
-    display:flex;
-    align-items:start;
-    height:300px;
-    flex-direction:column;
-    width:100%;
-    margin:auto;
-    transition:.3s;
-    border-radius:var(--footer-nav-border-radius) var(--footer-nav-border-radius) 0px 0px;
-    height:0;
+.utility-component {
+	background: var(--brand-primary-color);
+	color: white;
+	padding: 20px;
+	position: fixed;
+	bottom: 0;
+	display: flex;
+	align-items: start;
+	height: 300px;
+	flex-direction: column;
+	width: 100%;
+	margin: auto;
+	transition: 0.3s;
+	border-radius: var(--footer-nav-border-radius) var(--footer-nav-border-radius)
+		0px 0px;
+	height: 0;
 }
 
-.add-utility-component-height{
-    height:55%;
-    z-index:100;
+.add-utility-component-height {
+	height: 55%;
+	z-index: 100;
 }
 
-
-.utility-component .utility-notch{
-    background:var(--footer-notch-background-color);
-    width:15%;
-    height:7px;
-    border-radius:var(--footer-notch-border-radius);
-    transform:translateY(-50px);    
-    
+.utility-component .utility-notch {
+	background: var(--footer-notch-background-color);
+	width: 15%;
+	height: 7px;
+	border-radius: var(--footer-notch-border-radius);
+	transform: translateY(-50px);
 }
-
 
 /* weather app styling */
 
-.current-weather-unit{
-    display:inline-block;
-    transform:translateY(20px);
-    
+.current-weather-unit {
+	display: inline-block;
+	transform: translateY(20px);
 }
 
-.current-weather-icon{
-    transform:scale(2.8);
+.current-weather-icon {
+	transform: scale(2.8);
 }
 
 /* weather panel icons and text */
-.weather-text{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform: translateY(-5px);
+.weather-text {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateY(-5px);
 }
-.future-weather-notch,.future-weather-notch-active{
-    width:20px;
-    height:5px;
-    background:var(--brand-secondary-color);
-    border-radius:var(--footer-notch-border-radius);
-    transform: translateY(-15px);
+.future-weather-notch,
+.future-weather-notch-active {
+	width: 20px;
+	height: 5px;
+	background: var(--brand-secondary-color);
+	border-radius: var(--footer-notch-border-radius);
+	transform: translateY(-15px);
 }
 
-.future-weather-notch-active{
-    background: var(--brand-primary-color);
+.future-weather-notch-active {
+	background: var(--brand-primary-color);
 }
 /* .current-weather-assets{
    height:50%;
 } */
 /* media queries */
-    /* Carousel base class */
-    .carousel {
-        margin-bottom: 4rem;
-      }
-      /* Since positioning the image, we need to help out the caption */
-      .carousel-caption {
-        bottom: 3rem;
-        z-index: 10;
-      }
-  
-      /* Declare heights because of positioning of img element */
-      .carousel-item {
-        height: 32rem;
-      }
-@media (min-width:667.98px){
-    .width-toggle{
-        width:35%
-    }
-    .width-toggle-2{
-        width:75%;
-        margin: auto;
-    }
+/* Carousel base class */
+.carousel {
+	margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+	bottom: 3rem;
+	z-index: 10;
+}
 
-    .width-toggle-3{
-        width:50%;
-    }
+/* Declare heights because of positioning of img element */
+.carousel-item {
+	height: 32rem;
+}
+@media (min-width: 667.98px) {
+	.width-toggle {
+		width: 35%;
+	}
+	.width-toggle-2 {
+		width: 75%;
+		margin: auto;
+	}
 
+	.width-toggle-3 {
+		width: 50%;
+	}
 }

@@ -186,7 +186,8 @@ section.footer-nav > section {
 .next-week-notch{
     width:20px;
     height:5px;
-    background:var(--brand-gradient-color);
+    background:var(--brand-primary-color);
+    border-radius: var(--footer-notch-border-radius);
 }
 @media (min-width: 667.98px) {
 	.width-toggle {

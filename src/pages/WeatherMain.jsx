@@ -3,11 +3,63 @@ import rainIcon from "./../assets/rain (1).png";
 import windIcon from "./../assets/windy.png";
 import humidity from "./../assets/humidity.png";
 import Footer from "../components/footer";
-import NextWeekComponent from "../components/nexWeekComponent";
+import NextWeekComponent from "../components/nextWeekComponent";
 const WeatherMain = (props) => {
 
-    const getWeekWeatherData ==
-    
+    const weekData = [
+        {
+            day:["today"],
+            firstUnit:13,
+            secondUnit:22,
+            icon:rainIcon
+        },
+
+        {
+            day:["tuesday"],
+            firstUnit:13,
+            secondUnit:22,
+            icon:windIcon
+        },
+
+        {
+            day:["wednesday"],
+            firstUnit:13,
+            secondUnit:22,
+            icon:humidity
+        },
+
+        {
+            day:["thursday"],
+            firstUnit:13,
+            secondUnit:22,
+            icon:rainIcon
+        },
+
+        {
+            day:["friday"],
+            firstUnit:13,
+            secondUnit:22,
+            icon:rainIcon
+        },
+
+        {
+            day:["saturday"],
+            firstUnit:13,
+            secondUnit:22,
+            icon:rainIcon
+        },
+
+        {
+            day:["sunday"],
+            firstUnit:13,
+            secondUnit:22,
+            icon:rainIcon
+        }
+    ];
+
+    const uiData = weekData.map((data,index)=>{
+        return <NextWeekComponent day={data.day} firstUnit={data.firstUnit} secondUnit = {data.secondUnit} icon={data.icon}/>
+    });
 	return (
 		<React.Fragment>
 			<section
@@ -90,7 +142,9 @@ const WeatherMain = (props) => {
 						</p>
 					</section>
 				</section>
-
+                <section className="next-week-component-container d-flex align-items-center justify-content-center flex-column">
+                        {uiData}
+                </section>
 				<Footer />
 			</section>
 		</React.Fragment>

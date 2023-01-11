@@ -9,7 +9,7 @@ import FutureWeatherComponent from "../components/futureWeatherComponent";
 import navigate from "../inc/scripts/utilities";
 import ForecastWeatherItems from "../components/forecastWeatherItems";
 import Spinner from "../components/spinner";
-import Ripple1 from "./../assets/ripple2.gif";
+import Ripple1 from "./../assets/ripple1.gif";
 
 const WeatherApp = () => {
   let weatherData = [
@@ -114,7 +114,7 @@ const WeatherApp = () => {
 
   return (
     <React.Fragment>
-      <Spinner/>
+      <Spinner />
       <div
         className="container-fluid d-flex flex-column py-2 "
         style={{ overflowX: "hidden" }}
@@ -281,16 +281,16 @@ const WeatherApp = () => {
           />
           <br />
         </section>
-        <br />
-        <br />
         <section>
-            <section className="ripple-container">
-                <section className="ripple-section">
-                  <img src={Ripple1} width={"40"} height={"40"}/>
-                </section>
+          <section className="ripple-container">
+            <section className="ripple-section">
+              <img src={Ripple1} width={"300"} height={"300"} />
             </section>
+          </section>
         </section>
-
+        <br />
+        <br />
+        <br />
         <Footer utilityTags={<UtilityForecastTags />} />
       </div>
     </React.Fragment>

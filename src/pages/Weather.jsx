@@ -282,8 +282,8 @@ const WeatherApp = () => {
           />
           <br />
         </section>
-        <section className="ripple-containerd-flex align-items-center justify-content-center">
-          <section className="map-container">
+        <section className="ripple-container d-flex align-items-center justify-content-center">
+          <section className="map-container d-flex align-items-center justify-content-center">
             <img
               src={Location}
               alt={"google-map"}

@@ -207,7 +207,7 @@ section.footer-nav > section {
 }
 
 .map-container{
-	
+	transform: translate(160px,-5px);
 }
 @media (min-width: 667.98px) {
 	.width-toggle {

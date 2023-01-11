@@ -12,7 +12,7 @@ const UtilityComponent = (props) => {
   return (
     <React.Fragment>
       <section className="utility-component align-items-center justify-content-around m-auto width-toggle-2">
-      <div className="utility-notch my-3" onClick={closeUtilityComponent}></div>
+      <div className="utility-notch my-2" onClick={closeUtilityComponent}></div>
 
         {props.tags}
       </section>

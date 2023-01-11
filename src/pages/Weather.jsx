@@ -55,7 +55,6 @@ const WeatherApp = () => {
     },
   ];
 
-
   const uiData = weatherData.map((data, index) => {
     return (
       <FutureWeatherComponent
@@ -79,7 +78,6 @@ const WeatherApp = () => {
     });
   };
 
-
   const uiForeCastData = forecastData.map((data, index) => {
     return (
       <ForecastWeatherItems
@@ -90,26 +88,24 @@ const WeatherApp = () => {
       />
     );
   });
-  const showForecastWeather = ()=>{
+  const showForecastWeather = () => {
     navigate("/forecast");
-  }
+  };
   //create the weather forecast component
   const UtilityForecastTags = () => {
     return (
-      <React.Fragment>
-        <section className="d-flex flex-row align-items-center justify-content-between d-none cmp cmp-1">
+      <section className=" d-flex align-items-center justify-content-center flex-column my-5">
+        <section className="d-flex flex-row align-items-center justify-content-center d-none cmp cmp-1 my-5">
           {uiForeCastData}
-
-          <section className="d-flex align-items-center justify-content-center">
+        </section>
+        <section className="d-flex align-items-center justify-content-center">
           <Button
-            text="search weather"
-            className="brand-btn m-auto my-5 width-toggle"
-            onClick={}
+            text="forecast weather"
+            className="shadow brand-btn-2 toggle-width-3 my-5 width-toggle"
+            onClick={showForecastWeather}
           />
-          <br />
         </section>
-        </section>
-      </React.Fragment>
+      </section>
     );
   };
 
@@ -270,7 +266,7 @@ const WeatherApp = () => {
             <div className="future-weather-notch"></div>
           </section>
           <section className="week-section d-flex mx-2 flex-column align-items-center justify-content-center">
-            <p className="brand-small-text-2 text-capitalize">next 10 days</p>
+            <p className="brand-small-text-2 text-capitalize">next</p>
             <div className="future-weather-notch"></div>
           </section>
         </section>

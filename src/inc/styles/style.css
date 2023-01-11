@@ -56,6 +56,20 @@
 	color: var(--brand-white-color);
 }
 
+.brand-btn-2{
+	padding:13px;
+	padding-left: 20px;
+	padding-right:20px;
+	border-radius:30px;
+	border:0;
+	outline:0;
+	background:var(--brand-white-color);
+	text-align:center;
+	color:#000;
+	text-transform: capitalize;
+	width:100%;
+}
+
 .brand-btn:hover {
 	background: var(--brand-secondary-color);
 	cursor: pointer;
@@ -141,7 +155,7 @@ section.footer-nav > section {
 }
 
 .add-utility-component-height {
-	height: 55%;
+	height: 60%;
 	z-index: 100;
 }
 
@@ -150,7 +164,8 @@ section.footer-nav > section {
 	width: 15%;
 	height: 7px;
 	border-radius: var(--footer-notch-border-radius);
-	transform: translateY(-50px);
+	position:absolute;
+	top:0;
 }
 
 /* weather app styling */

@@ -10,13 +10,6 @@ import navigate from "../inc/scripts/utilities";
 import ForecastWeatherItems from "../components/forecastWeatherItems";
 
 const WeatherApp = () => {
-  function closeUtilityComponent() {
-    jQuery(($) => {
-      $.noConflict();
-
-      $(".utility-component").removeClass("add-utility-component-height");
-    });
-  }
   let weatherData = [
     {
       time: ["10am"],
@@ -59,18 +52,9 @@ const WeatherApp = () => {
       name: ["Sango"],
       icon: [rainIcon],
       unit: ["50"],
-    }
+    },
   ];
 
-  const uiForeCastData = forecastData.map((data, index) => {
-    return (
-      <ForecastWeatherItems
-        name={data.name}
-        icon={data.icon}
-        weatherUnit={data.unit}
-      />
-    );
-  });
 
   const uiData = weatherData.map((data, index) => {
     return (
@@ -90,24 +74,46 @@ const WeatherApp = () => {
   const show = () => {
     jQuery(($) => {
       $.noConflict();
-      $(".cmp-1").removeClass("d-none");
+      $(".cmp").removeClass("d-none");
       $(".utility-component").toggleClass("add-utility-component-height");
     });
   };
 
-  //create the weather forecast component
 
-  const UtilityForecastTags = ()=>{
+  const uiForeCastData = forecastData.map((data, index) => {
     return (
-        <React.Fragment>
-          <section className="d-flex flex-row align-items-center justify-content-between d-none cmp cmp-1">
-           {uiForeCastData}
-            
-          </section>          
-        </React.Fragment>
-    )
+      <ForecastWeatherItems
+        key={data.name}
+        name={data.name}
+        icon={data.icon}
+        weatherUnit={data.unit}
+      />
+    );
+  });
+  const showForecastWeather = ()=>{
+    navigate("/forecast");
   }
+  //create the weather forecast component
+  const UtilityForecastTags = () => {
+    return (
+      <React.Fragment>
+        <section className="d-flex flex-row align-items-center justify-content-between d-none cmp cmp-1">
+          {uiForeCastData}
 
+          <section className="d-flex align-items-center justify-content-center">
+          <Button
+            text="search weather"
+            className="brand-btn m-auto my-5 width-toggle"
+            onClick={}
+          />
+          <br />
+        </section>
+        </section>
+      </React.Fragment>
+    );
+  };
+
+  //function to check if the dashboard icon was clicked
   const beginWeatherForecast = () => {
     jQuery(($) => {
       $.noConflict();

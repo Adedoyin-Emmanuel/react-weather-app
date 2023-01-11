@@ -274,14 +274,6 @@ const WeatherApp = () => {
         >
           {uiData}
         </section>
-
-        <section className="d-flex align-items-center justify-content-center">
-          <Button
-            text="search weather"
-            className="brand-btn m-auto my-5 width-toggle"
-          />
-          <br />
-        </section>
         <section className="ripple-container d-flex align-items-center justify-content-center">
           <section className="map-container d-flex align-items-center justify-content-center">
             <img

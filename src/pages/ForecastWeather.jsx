@@ -73,6 +73,8 @@ const ForecastWeather = () => {
         <section className="brand-tertiary-color m-0 p-2 next-week-component-container d-flex align-items-center justify-content-center flex-column">
           {uiData}
         </section>
+        <Footer/>
+        <br/><br/><br/>
       </section>
     </React.Fragment>
   );

@@ -9,6 +9,7 @@ import FutureWeatherComponent from "../components/futureWeatherComponent";
 import navigate from "../inc/scripts/utilities";
 import ForecastWeatherItems from "../components/forecastWeatherItems";
 import Spinner from "../components/spinner";
+import Ripple1 from "./../assets/ripple2.gif";
 
 const WeatherApp = () => {
   let weatherData = [
@@ -282,6 +283,13 @@ const WeatherApp = () => {
         </section>
         <br />
         <br />
+        <section>
+            <section className="ripple-container">
+                <section className="ripple-section">
+                  <img src={Ripple1} width={"40"} height={"40"}/>
+                </section>
+            </section>
+        </section>
 
         <Footer utilityTags={<UtilityForecastTags />} />
       </div>

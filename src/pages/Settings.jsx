@@ -45,6 +45,12 @@ const Settings = () => {
               onChange={(e)=>{setDefaultLocation(e.target.value)}}
             />
 
+           
+          </form>
+
+          <section className="factory-settings">
+            <label htmlFor="factory-settings-reset " className="text-capitalize">restore factory settings</label>
+
             <section className="d-flex align-items-center justify-content-center">
               <Button
                 text="save location"
@@ -52,7 +58,18 @@ const Settings = () => {
                
               />
             </section>
-          </form>
+          </section>
+
+
+
+
+          <section className="d-flex align-items-center justify-content-center">
+              <Button
+                text="save location"
+                className="shadow brand-btn toggle-width-3 my-5 width-toggle"
+               
+              />
+            </section>
         </section>
 
         <Footer />

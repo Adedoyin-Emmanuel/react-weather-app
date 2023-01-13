@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import jQuery from "jquery";
 import Button from "./../components/button";
 import Footer from "../components/footer";
@@ -12,10 +12,10 @@ import Spinner from "../components/spinner";
 import Ripple1 from "./../assets/ripple1.gif";
 import Location from "./../assets/map.png";
 
+
 const WeatherApp = () => {
   //holds the current component to insert into the utility footer component
-  let componentToInsert;
-
+  const [componentToInsert, setComponentToInsert] = useState("");
 
   const  addUtilityComponentHeight = ()=>{
     jQuery(($) => {
@@ -120,20 +120,26 @@ const WeatherApp = () => {
   const beginWeatherForecast = () => {
     addUtilityComponentHeight();
     //change the variable to hold the current component to insert
-    componentToInsert = <UtilityForecastTags/>
+
+    setComponentToInsert(<UtilityForecastTags/>);
   };
 
   const SearchComponent = () => {
     return (
       <section className=" d-flex align-items-center justify-content-center flex-column my-5">
-        <h4>hello suckers hahah!</h4>
+       <form>
+          <label htmlFor="searchWeather" className="py-2 text-capitalize">search weather</label>
+          <input type="text" name="searchWeather" id="" className="form-control" />
+
+          
+       </form>
       </section>
     );
   };
   //load the search component into the utility component
   const testSearch = () => {
     addUtilityComponentHeight();
-    componentToInsert = <SearchComponent/>
+    setComponentToInsert(<SearchComponent/>)
   };  
 
   return (

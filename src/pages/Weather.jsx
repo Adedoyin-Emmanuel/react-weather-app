@@ -113,6 +113,18 @@ const WeatherApp = () => {
     });
   };
 
+  const searchComponent = ()=>{
+    return (
+      <section className=" d-flex align-items-center justify-content-center flex-column my-5">
+
+      </section>
+    )
+  }
+  //load the search component into the utility component
+  const testSearch = ()=>{
+    console.log("hello you clicked me ");
+  }
+
   return (
     <React.Fragment>
       <Spinner />
@@ -305,7 +317,7 @@ const WeatherApp = () => {
         <br />
         <br />
         <br />
-        <Footer utilityTags={<UtilityForecastTags />} />
+        <Footer utilityTags={<UtilityForecastTags />} onClick = {testSearch}/>
       </div>
     </React.Fragment>
   );

@@ -37,7 +37,7 @@ const FooterNav = (props) => {
         </section>
         <section
           className="footer-settings-section  brand-text-mute"
-          onClick={props.onClickSearch}
+          onClick={props.onClick}
         >
           <section className="footer-icons footer-settings-svg-section d-flex align-items-center justify-content-center my-2">
             <svg

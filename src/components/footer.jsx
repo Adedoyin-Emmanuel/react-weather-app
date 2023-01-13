@@ -13,7 +13,7 @@ const Footer = (props) => {
     >
       <UtilityComponent tags={props.utilityTags}/>
       <footer className="shadow-lg d-flex align-items-center justify-content-center footer-nav-container">
-        <FooterNav onClickSearch={props.onClick}/>
+        <FooterNav onClick={props.onClick}/>
       </footer>
     </div>
   );

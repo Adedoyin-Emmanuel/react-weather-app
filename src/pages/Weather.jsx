@@ -11,7 +11,7 @@ import ForecastWeatherItems from "../components/forecastWeatherItems";
 import Spinner from "../components/spinner";
 import Ripple1 from "./../assets/ripple1.gif";
 import Location from "./../assets/map.png";
-
+import "./../apis/getApi.js";
 
 const WeatherApp = () => {
   //holds the current component to insert into the utility footer component

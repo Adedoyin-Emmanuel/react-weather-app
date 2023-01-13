@@ -57,7 +57,7 @@ const FooterNav = () => {
 
         <section
           className="footer-settings-section  brand-text-mute"
-          onClick={settingsNavigation}
+          onClick={props.onClickSearch}
         >
           <section className="footer-icons footer-settings-svg-section d-flex align-items-center justify-content-center my-2">
             <svg

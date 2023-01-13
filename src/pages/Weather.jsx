@@ -15,6 +15,16 @@ import Location from "./../assets/map.png";
 const WeatherApp = () => {
   //holds the current component to insert into the utility footer component
   let componentToInsert;
+
+
+  const  addUtilityComponentHeight = ()=>{
+    jQuery(($) => {
+      $.noConflict();
+      $(".cmp").removeClass("d-none");
+      $(".utility-component").toggleClass("add-utility-component-height");
+    });
+  }
+
   let weatherData = [
     {
       time: ["10am"],
@@ -108,16 +118,12 @@ const WeatherApp = () => {
 
   //function to check if the dashboard icon was clicked
   const beginWeatherForecast = () => {
-    jQuery(($) => {
-      $.noConflict();
-      $(".cmp").removeClass("d-none");
-      $(".utility-component").toggleClass("add-utility-component-height");
-    });
+    addUtilityComponentHeight();
     //change the variable to hold the current component to insert
     componentToInsert = <UtilityForecastTags/>
   };
 
-  const searchComponent = () => {
+  const SearchComponent = () => {
     return (
       <section className=" d-flex align-items-center justify-content-center flex-column my-5">
         <h4>hello suckers hahah!</h4>
@@ -126,8 +132,9 @@ const WeatherApp = () => {
   };
   //load the search component into the utility component
   const testSearch = () => {
-    console.log("hello you clicked me ");
-  };
+    addUtilityComponentHeight();
+    componentToInsert = <SearchComponent/>
+  };  
 
   return (
     <React.Fragment>

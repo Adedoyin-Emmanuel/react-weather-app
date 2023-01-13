@@ -142,7 +142,7 @@ const WeatherApp = () => {
             id="searchWeather"
             placeholder="Enter the name of city"
             value={weatherInput}
-            className="form-control search-input p-2 brand-small-text"
+            className="form-control search-input p-3 brand-small-text w-100"
             onChange={(e) => {
               setWeatherInput(e.target.value);
             }}

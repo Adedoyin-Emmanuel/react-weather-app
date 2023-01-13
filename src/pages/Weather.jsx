@@ -131,7 +131,13 @@ const WeatherApp = () => {
           <label htmlFor="searchWeather" className="py-2 text-capitalize">search weather</label>
           <input type="text" name="searchWeather" id="" className="form-control" />
 
-          
+          <section className="d-flex align-items-center justify-content-center">
+          <Button
+            text="forecast weather"
+            className="shadow brand-btn-2 toggle-width-3 my-5 width-toggle"
+            onClick={showForecastWeather}
+          />
+        </section>
        </form>
       </section>
     );

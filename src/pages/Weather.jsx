@@ -13,6 +13,8 @@ import Ripple1 from "./../assets/ripple1.gif";
 import Location from "./../assets/map.png";
 
 const WeatherApp = () => {
+  //holds the current component to insert into the utility footer component
+  let componentToInsert;
   let weatherData = [
     {
       time: ["10am"],
@@ -111,19 +113,21 @@ const WeatherApp = () => {
       $(".cmp").removeClass("d-none");
       $(".utility-component").toggleClass("add-utility-component-height");
     });
+    //change the variable to hold the current component to insert
+    componentToInsert = <UtilityForecastTags/>
   };
 
-  const searchComponent = ()=>{
+  const searchComponent = () => {
     return (
       <section className=" d-flex align-items-center justify-content-center flex-column my-5">
-
+        <h4>hello suckers hahah!</h4>
       </section>
-    )
-  }
+    );
+  };
   //load the search component into the utility component
-  const testSearch = ()=>{
+  const testSearch = () => {
     console.log("hello you clicked me ");
-  }
+  };
 
   return (
     <React.Fragment>
@@ -317,7 +321,7 @@ const WeatherApp = () => {
         <br />
         <br />
         <br />
-        <Footer utilityTags={<UtilityForecastTags />} onClick = {testSearch}/>
+        <Footer utilityTags={componentToInsert} onClick={testSearch} />
       </div>
     </React.Fragment>
   );

@@ -11,7 +11,7 @@ import ForecastWeatherItems from "../components/forecastWeatherItems";
 import Spinner from "../components/spinner";
 import Ripple1 from "./../assets/ripple1.gif";
 import Location from "./../assets/map.png";
-import "./../apis/getApi.js";
+import handleFormSubmit from "./../apis/getApi";
 
 const WeatherApp = () => {
   //holds the current component to insert into the utility footer component
@@ -125,10 +125,11 @@ const WeatherApp = () => {
     setComponentToInsert(<UtilityForecastTags/>);
   };
 
+
   const SearchComponent = () => {
     return (
       <section className=" d-flex align-items-center justify-content-center flex-column my-5">
-       <form id="searchWeatherForm">
+       <form onSubmit={(e)=>{handleFormSubmit(e)}}>
           <label htmlFor="searchWeather" className="py-2 text-capitalize ">search city</label>
           <input type="text" name="searchWeather" id="" value={weatherInput} className="form-control search-input p-2" onChange={(e)=>{setWeatherInput(e.target.value)}}/>
 
@@ -136,7 +137,7 @@ const WeatherApp = () => {
           <Button
             text="search city"
             className="shadow brand-btn-2 toggle-width-3 my-5 width-toggle text-muted" 
-            onClick={showForecastWeather}
+           
           />
         </section>
        </form>

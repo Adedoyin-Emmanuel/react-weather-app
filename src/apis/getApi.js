@@ -1,11 +1,11 @@
 import jQuery from "jquery";
 
 
-    jQuery(($)=>{
-        $.noConflict();
-        
-        $("#getweatherForm").onSubmit((e)=>{
-            console.log(e)
-        });
-        
-    });
+const handleFormSubmit = (e) =>{
+
+        e.preventDefault();
+        console.log("The form was submitted");
+
+}
+
+export default handleFormSubmit;

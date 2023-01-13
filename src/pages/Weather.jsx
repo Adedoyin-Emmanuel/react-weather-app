@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import jQuery from "jquery";
 import Button from "./../components/button";
 import Footer from "../components/footer";
@@ -18,13 +18,13 @@ const WeatherApp = () => {
   const [componentToInsert, setComponentToInsert] = useState("");
   const [weatherInput, setWeatherInput] = useState();
 
-  const  addUtilityComponentHeight = ()=>{
+  const addUtilityComponentHeight = () => {
     jQuery(($) => {
       $.noConflict();
       $(".cmp").removeClass("d-none");
       $(".utility-component").toggleClass("add-utility-component-height");
     });
-  }
+  };
 
   let weatherData = [
     {
@@ -122,27 +122,43 @@ const WeatherApp = () => {
     addUtilityComponentHeight();
     //change the variable to hold the current component to insert
 
-    setComponentToInsert(<UtilityForecastTags/>);
+    setComponentToInsert(<UtilityForecastTags />);
   };
-
 
   const SearchComponent = () => {
     return (
       <section className=" d-flex align-items-center justify-content-center flex-column my-5">
-       <form onSubmit={(e)=>{formHandler.getCurrentWeather(e)}}>
-          <label htmlFor="searchWeather" className="py-2 text-capitalize ">search city</label>
-          <input type="text" name="searchWeather" id="searchWeather" value={weatherInput} className="form-control search-input p-2" onChange={(e)=>{setWeatherInput(e.target.value)}} onKeyDown={(e)=>{formHandler.getCurrentWeather(e)}}/>
+        <form
+          onSubmit={(e) => {
+            formHandler.getCurrentWeather(e);
+          }}
+        >
+          <label htmlFor="searchWeather" className="py-2 text-capitalize ">
+            search city
+          </label>
+          <input
+            type="text"
+            name="searchWeather"
+            id="searchWeather"
+            value={weatherInput}
+            className="form-control search-input p-2"
+            onChange={(e) => {
+              setWeatherInput(e.target.value);
+            }}
+            onKeyDown={(e) => {
+              formHandler.getCurrentWeather(e);
+            }}
+          />
           {/* <p className="error-holder text-danger py-2 brand-small-text text-center">city not found</p> */}
-   
-       </form>
+        </form>
       </section>
     );
   };
   //load the search component into the utility component
   const testSearch = () => {
     addUtilityComponentHeight();
-    setComponentToInsert(<SearchComponent/>)
-  };  
+    setComponentToInsert(<SearchComponent />);
+  };
 
   return (
     <React.Fragment>

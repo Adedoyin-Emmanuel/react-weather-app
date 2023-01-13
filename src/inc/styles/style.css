@@ -27,6 +27,7 @@
 	--brand-medium-font-size: 1.6rem;
 	--brand-tertiary-color: rgb(137, 190, 243);
     --brand-gradient-color:linear-gradient(240deg, var(var(--brand-primary-color)),var(var(--brand-secondary-color)));
+	--brand-input-border-radius:20px;
 }
 
 #spinner {
@@ -213,6 +214,13 @@ section.footer-nav > section {
 
 .ripple-container{
 	transform: translateX(-17px);
+}
+
+.search-input{
+	border-radius:var(--brand-input-border-radius);
+	border:0;
+	outline:0;
+	cursor:pointer;
 }
 @media (min-width: 667.98px) {
 	.width-toggle {

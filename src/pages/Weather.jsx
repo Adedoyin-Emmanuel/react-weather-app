@@ -128,7 +128,7 @@ const WeatherApp = () => {
   const SearchComponent = () => {
     return (
       <section className=" d-flex align-items-center justify-content-center flex-column my-5">
-       <form>
+       <form id="searchWeatherForm">
           <label htmlFor="searchWeather" className="py-2 text-capitalize ">search city</label>
           <input type="text" name="searchWeather" id="" value={weatherInput} className="form-control search-input p-2" onChange={(e)=>{setWeatherInput(e.target.value)}}/>
 

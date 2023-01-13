@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from 'react';
 import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
 import Button from "../components/button";
@@ -6,6 +6,8 @@ const Settings = () => {
   const navigateHome = () => {
     navigate("./weather");
   };
+
+  const [defaultLocation, setDefaultLocation] = useState("");
   return (
     <React.Fragment>
       <section className="container-fluid">
@@ -39,6 +41,8 @@ const Settings = () => {
               name="defaultLocation"
               id="defaultLocation"
               className="form-control p-2 "
+              value={defaultLocation}
+              onChange={(e)=>{setDefaultLocation(e.target.value)}}
             />
 
             <section className="d-flex align-items-center justify-content-center">

@@ -11,7 +11,7 @@ import ForecastWeatherItems from "../components/forecastWeatherItems";
 import Spinner from "../components/spinner";
 import Ripple1 from "./../assets/ripple1.gif";
 import Location from "./../assets/map.png";
-import handleFormSubmit from "./../apis/getApi";
+import * as formHandler from "./../apis/getApi";
 
 const WeatherApp = () => {
   //holds the current component to insert into the utility footer component
@@ -129,17 +129,11 @@ const WeatherApp = () => {
   const SearchComponent = () => {
     return (
       <section className=" d-flex align-items-center justify-content-center flex-column my-5">
-       <form onSubmit={(e)=>{handleFormSubmit(e)}}>
+       <form onSubmit={(e)=>{formHandler.getCurrentWeather(e)}}>
           <label htmlFor="searchWeather" className="py-2 text-capitalize ">search city</label>
-          <input type="text" name="searchWeather" id="searchWeather" value={weatherInput} className="form-control search-input p-2" onChange={(e)=>{setWeatherInput(e.target.value)}}/>
-
-          <section className="d-flex align-items-center justify-content-center">
-          <Button
-            text="search city"
-            className="shadow brand-btn-2 toggle-width-3 my-5 width-toggle text-muted" 
-           
-          />
-        </section>
+          <input type="text" name="searchWeather" id="searchWeather" value={weatherInput} className="form-control search-input p-2" onChange={(e)=>{setWeatherInput(e.target.value)}} onKeyDown={(e)=>{formHandler.getCurrentWeather(e)}}/>
+          {/* <p className="error-holder text-danger py-2 brand-small-text text-center">city not found</p> */}
+   
        </form>
       </section>
     );

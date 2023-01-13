@@ -1,14 +1,13 @@
 import jQuery from "jquery";
 
+export const getCurrentWeather = () =>{
 
-const handleFormSubmit = (e) =>{
+        jQuery(($)=>{
+                let userSearch = $("#searchWeather").val();
 
-        e.preventDefault();
-        
-        let userSearch = $("#searchWeather").val();
-
-        console.log(userSearch);
-
+                console.log(userSearch);
+                
+        });
 }
 
-export default handleFormSubmit;
+// export default handleFormSubmit;

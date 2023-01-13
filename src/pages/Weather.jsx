@@ -16,6 +16,7 @@ import Location from "./../assets/map.png";
 const WeatherApp = () => {
   //holds the current component to insert into the utility footer component
   const [componentToInsert, setComponentToInsert] = useState("");
+  const [weatherInput, setWeatherInput] = useState();
 
   const  addUtilityComponentHeight = ()=>{
     jQuery(($) => {
@@ -128,13 +129,13 @@ const WeatherApp = () => {
     return (
       <section className=" d-flex align-items-center justify-content-center flex-column my-5">
        <form>
-          <label htmlFor="searchWeather" className="py-2 text-capitalize">search weather</label>
-          <input type="text" name="searchWeather" id="" className="form-control" />
+          <label htmlFor="searchWeather" className="py-2 text-capitalize ">search city</label>
+          <input type="text" name="searchWeather" id="" value={weatherInput} className="form-control search-input p-2" onChange={(e)=>{setWeatherInput(e.target.value)}}/>
 
           <section className="d-flex align-items-center justify-content-center">
           <Button
             text="search city"
-            className="shadow brand-btn-2 toggle-width-3 my-5 width-toggle"
+            className="shadow brand-btn-2 toggle-width-3 my-5 width-toggle text-muted" 
             onClick={showForecastWeather}
           />
         </section>

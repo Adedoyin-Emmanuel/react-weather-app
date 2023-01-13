@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
+import Button from "../components/button";
 const Settings = () => {
   const navigateHome = () => {
     navigate("./weather");
@@ -29,9 +30,25 @@ const Settings = () => {
         </section>
 
         <section className="settings">
-           <form action="">
-                <label htmlFor="defaultLocation brand-small-text py-2">Enter your default location</label>
-           </form>
+          <form action="">
+            <label htmlFor="defaultLocation " className="brand-small-text py-2">
+              Enter your default location
+            </label>
+            <input
+              type="text"
+              name="defaultLocation"
+              id="defaultLocation"
+              className="form-control p-2 "
+            />
+
+            <section className="d-flex align-items-center justify-content-center">
+              <Button
+                text="save location"
+                className="shadow brand-btn toggle-width-3 my-5 width-toggle"
+               
+              />
+            </section>
+          </form>
         </section>
 
         <Footer />

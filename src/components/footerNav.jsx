@@ -1,7 +1,7 @@
 import React from "react";
 import navigate from "./../inc/scripts/utilities";
 
-const FooterNav = () => {
+const FooterNav = (props) => {
   const appNavigation = () => {
     navigate("weather");
   };

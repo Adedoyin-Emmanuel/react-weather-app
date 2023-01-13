@@ -14,7 +14,6 @@ const FooterNav = (props) => {
     navigate("support");
   };
 
-  
   return (
     <React.Fragment>
       <section className="footer-nav d-flex flex-row align-items-center justify-content-between">
@@ -38,7 +37,7 @@ const FooterNav = (props) => {
         </section>
         <section
           className="footer-settings-section  brand-text-mute"
-          onClick={settingsNavigation}
+          onClick={props.onClickSearch}
         >
           <section className="footer-icons footer-settings-svg-section d-flex align-items-center justify-content-center my-2">
             <svg
@@ -57,7 +56,7 @@ const FooterNav = (props) => {
 
         <section
           className="footer-settings-section  brand-text-mute"
-          onClick={props.onClickSearch}
+          onClick={settingsNavigation}
         >
           <section className="footer-icons footer-settings-svg-section d-flex align-items-center justify-content-center my-2">
             <svg

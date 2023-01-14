@@ -35,7 +35,8 @@ const Settings = () => {
         </section>
         <section className="d-flex align-items-start justify-content-center w-100">
         <section className="settings">
-          <form action="">
+          <form action="" id="">
+
             <label htmlFor="defaultLocation " className="brand-small-text py-3">
               Enter your default location
             </label>
@@ -50,7 +51,6 @@ const Settings = () => {
                 setDefaultLocation(e.target.value);
               }}
             />
-
             <section className="d-md-flex align-items-center justify-content-md-center d-lg-block">
               <Button
                 text="save location"

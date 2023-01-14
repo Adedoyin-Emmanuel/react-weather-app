@@ -48,16 +48,31 @@ export const restoreFactorySettings = () => {
 export const trackSavedLocationWeather = () => {
   jQuery(($) => {
     $.noConflict();
-    const $toggleBtn =document.getElementById("flexSwitchCheckDefault");
+    const $toggleBtn = document.getElementById("flexSwitchCheckDefault");
 
     if ($toggleBtn.checked) {
-        //check if the value is in the database, then update it
-        if(db.get("TRACK_SAVED_LOCATION_WEATHER")){
-           db.update("TRACK_SAVED_LOCATION_WEATHER",true);
-
-        }
+      //check if the value is in the database, then update it
+      if (db.get("TRACK_SAVED_LOCATION_WEATHER")) {
+        db.update("TRACK_SAVED_LOCATION_WEATHER", true);
+        Swal.fire({
+          text: "Settings updated successfully!",
+          icon: "success",
+          toast: true,
+          position: "top",
+          showConfirmButton: false,
+          timer: 3000,
+        });
+      }
     } else {
-        db.create("TRACK_SAVED_LOCATION_WEATHER",true);
+      Swal.fire({
+        text: "Settings saved successfully!",
+        icon: "success",
+        toast: true,
+        position: "top",
+        showConfirmButton: false,
+        timer: 3000,
+      });
+      db.create("TRACK_SAVED_LOCATION_WEATHER", true);
     }
   });
 };

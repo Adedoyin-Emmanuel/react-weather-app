@@ -132,6 +132,10 @@
 	font-size: var(--brand-weather-value-font-size);
 }
 
+.brand-primary-text{
+	color:var(--brand-primary-color);
+}
+
 /* styles for the footer navigation */
 .footer-nav {
 	color: white;

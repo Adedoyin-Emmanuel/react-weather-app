@@ -62,7 +62,7 @@ const Settings = () => {
                 htmlFor="factory-settings-reset "
                 className="text-capitalize d-block"
               >
-                clear local data
+                restore factory settings
               </label>
             <section className="d-flex align-items-center justify-content-center">
 

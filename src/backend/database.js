@@ -25,6 +25,10 @@ class Database {
       this.addItem(key, value);
     };
 
+    this.get = key =>{
+        return localStorage.getItem(key);
+    }
+
     this.countItems = () => {
       return localStorage.length;
     };

@@ -25,5 +25,5 @@ yarn-error.log*
 
 #personal
 
-.vscode
+/.vscode
 .prettierrc

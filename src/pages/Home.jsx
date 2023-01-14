@@ -5,39 +5,61 @@ import Spinner from "./../components/spinner";
 import navigate from "./../inc/scripts/utilities";
 import db from "./../backend/app_backend";
 
-const Home = () =>{
+const Home = () => {
+  const customBtnStyle = {
+    fontSize: "18px",
+  };
 
-    const customBtnStyle = {
-        "fontSize":"18px"
-   
-    }
+  function click() {
+    /**
+     * Default App page
+     * The user wouldn't be redirected here on next visit
+     *
+     */
+    db.create("HOME_PAGE_SEEN",true);
+    navigate("weather");
+  }
 
-    function click(){
-       navigate("weather");
-    }
+  return (
+    <React.Fragment>
+      <Spinner />
+      <div className="weather-preloader container-fluid d-flex align-items-center flex-column">
+        <main className="my-5 preloader-weather-heading">
+          <h2 className="text-center text-capitalize m-auto fw-bold fs-2">
+            How's today weather?
+          </h2>
+        </main>
 
-    return (
-        <React.Fragment>
-            <Spinner/>
-           <div className="weather-preloader container-fluid d-flex align-items-center flex-column">
+        <section
+          className="m-auto text-center img-container my-md-4 my-3"
+          id="img-container"
+        >
+          <img
+            src={Img_1}
+            className="img-fluid m-auto preloader-img"
+            height="700"
+            width="550"
+            alt="current-weather-status"
+          />
+        </section>
 
-                <main className="my-5 preloader-weather-heading" >
-                    <h2 className="text-center text-capitalize m-auto fw-bold fs-2">How's today weather?</h2>
-                </main>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-
-                <section className="m-auto text-center img-container my-md-4 my-3" id="img-container">
-                    <img src={Img_1} className="img-fluid m-auto preloader-img" height="700" width="550" alt="current-weather-status"/>
-                </section>
-
-                <br/><br/><br/>
-                <br/><br/>
-
-                <Button text="today's weather" style={customBtnStyle} className="brand-btn m-auto my-5 width-toggle" onClick={(event)=>{click(event)}}/>
-           </div>
-           
-        </React.Fragment>
-    )
-}
+        <Button
+          text="today's weather"
+          style={customBtnStyle}
+          className="brand-btn m-auto my-5 width-toggle"
+          onClick={(event) => {
+            click(event);
+          }}
+        />
+      </div>
+    </React.Fragment>
+  );
+};
 
 export default Home;

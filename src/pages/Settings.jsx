@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
 import Button from "../components/button";
@@ -42,34 +42,42 @@ const Settings = () => {
               id="defaultLocation"
               className="form-control p-2 "
               value={defaultLocation}
-              onChange={(e)=>{setDefaultLocation(e.target.value)}}
+              onChange={(e) => {
+                setDefaultLocation(e.target.value);
+              }}
             />
-
-           
-          </form>
-
-          <section className="factory-settings">
-            <label htmlFor="factory-settings-reset " className="text-capitalize">restore factory settings</label>
 
             <section className="d-flex align-items-center justify-content-center">
               <Button
                 text="save location"
-                className="shadow brand-btn-3 toggle-width-3 my-5 width-toggle text-light" 
-               
+                className="shadow brand-btn-3 toggle-width-3 my-5 width-toggle text-light text-capitalize"
               />
             </section>
-          </section>
 
-
-
-
-          <section className="d-flex align-items-center justify-content-center">
-              <Button
-                text="save location"
-                className="shadow brand-btn toggle-width-3 my-5 width-toggle"
-               
-              />
+            <section className="factory-settings">
+              <label
+                htmlFor="factory-settings-reset "
+                className="text-capitalize"
+              >
+                restore factory settings
+              </label>
             </section>
+
+            <section className="form-check form-switch">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+              />
+              <label
+                className="form-check-label"
+                htmlFor="flexSwitchCheckDefault"
+              >
+                Default switch checkbox input
+              </label>
+            </section>
+          </form>
         </section>
 
         <Footer />

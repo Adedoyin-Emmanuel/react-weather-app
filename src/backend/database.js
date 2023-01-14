@@ -3,7 +3,7 @@
  * Backend localstorage connector
  */
 
-class Database {
+export default class Database {
   constructor() {
     this.dbName = "weather-app";
 
@@ -38,3 +38,4 @@ class Database {
     };
   }
 }
+

@@ -56,7 +56,7 @@ const Settings = () => {
             people would be able to learn and use the things I build.
             <section className="d-md-flex align-items-center justify-content-center">
               <Button
-                text="suport on github"
+                text="support on github"
                 className="shadow brand-btn-3-secondary my-5 text-dark p-2 text-capitalize"
               />
             </section>
@@ -77,21 +77,16 @@ const Settings = () => {
                 support the development!
               </p>
             </section>
-            You can view the source codes of this project, star the project, find bugs and contribute a fix, you could also suggest pickup development of new feature
-
+            You can view the source codes of this project, star the project,
+            find bugs and contribute a fix. You can also suggest pickup
+            development of new feature
             <section className="d-md-flex align-items-center justify-content-center">
               <Button
                 text="view github repository"
                 className="shadow brand-btn-3-secondary my-5 text-dark p-2 text-capitalize"
               />
             </section>
-          </section>
-
-          <section className="d-md-flex align-items-center justify-content-center d-lg-block">
-            <Button
-              text="restore settings"
-              className="shadow brand-btn-3-secondary toggle-width-3 my-5 text-dark text-capitalize p-2"
-            />
+            <br/><br/>
           </section>
         </section>
         <Footer />

@@ -49,7 +49,7 @@ const Home = () => {
               toast: true,
               position: "top",
               showConfirmButton: false,
-              timer: 2000,
+              timer: 3000,
             });
 
             //create a database attribute and save it

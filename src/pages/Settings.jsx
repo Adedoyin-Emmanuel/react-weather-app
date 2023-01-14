@@ -54,15 +54,22 @@ const Settings = () => {
               />
             </section>
 
-            <section className="factory-settings">
+             <hr className="horizontal-line py-3 w-50 m-auto "/>
+
+            <section className="factory-settings my-3 row">
               <label
                 htmlFor="factory-settings-reset "
-                className="text-capitalize"
+                className="text-capitalize d-block brand-small-text col"
               >
-                restore factory settings
+                clear local data
               </label>
+              <Button
+                text="restore settings"
+                className="col mx-2  shadow brand-btn-3 toggle-width-3 my-5 width-toggle text-light text-capitalize"
+              />
             </section>
 
+         
             <section className="form-check form-switch">
               <input
                 className="form-check-input"

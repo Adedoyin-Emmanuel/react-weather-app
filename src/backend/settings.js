@@ -51,9 +51,13 @@ export const trackSavedLocationWeather = () => {
     const $toggleBtn =document.getElementById("flexSwitchCheckDefault");
 
     if ($toggleBtn.checked) {
-      console.log("button is checked");
+        //check if the value is in the database, then update it
+        if(db.get("TRACK_SAVED_LOCATION_WEATHER")){
+           db.update("TRACK_SAVED_LOCATION_WEATHER",true);
+
+        }
     } else {
-      console.log("button is not checked");
+        db.create("TRACK_SAVED_LOCATION_WEATHER",true);
     }
   });
 };

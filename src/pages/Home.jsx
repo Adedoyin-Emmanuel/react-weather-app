@@ -17,7 +17,7 @@ const Home = () => {
      * The user wouldn't be redirected here on next visit
      *
      */
-    
+
     Swal.fire({
       title: "Default Location",
       html: "<input type='text' placeholder='Enter location' class='form-control border-1 p-3 brand-small-text w-100' id='defaultLocation'>",
@@ -53,8 +53,8 @@ const Home = () => {
             });
 
             //create a database attribute and save it
-            db.create("HOME_PAGE_SEEN",true);
-            db.create("USER_DEFAULT_LOCATION",$defaultLocation);
+            db.create("HOME_PAGE_SEEN", true);
+            db.create("USER_DEFAULT_LOCATION", $defaultLocation);
             navigate("weather");
           }
         });

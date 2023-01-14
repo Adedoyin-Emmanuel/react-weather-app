@@ -3,6 +3,7 @@ import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
 import Button from "../components/button";
 import Spinner from "../components/spinner";
+import { db } from "../backend/app_backend";
 const Settings = () => {
   const navigateHome = () => {
     navigate("./weather");

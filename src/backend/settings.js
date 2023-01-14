@@ -44,3 +44,8 @@ export const restoreFactorySettings = ()=>{
     db.destroy();
     navigate("/");
 }
+
+
+export const trackSavedLocationWeather = ()=>{
+    console.log("hello");
+}

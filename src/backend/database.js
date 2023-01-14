@@ -7,22 +7,26 @@ class Database {
   constructor() {
     this.dbName = "weather-app";
 
-    this.addItem = (key, value) => {
+    this.create = (key, value) => {
       if (key === undefined || value === undefined) {
         throw new Error("Database key and value must be declared");
       }
       localStorage.setItem(key, value);
     };
 
-    this.removeItem = (key) => {
+    this.delete = (key) => {
       if (key === undefined) {
         throw new Error("Database key and value must be declared");
       }
       localStorage.removeItem(key);
     };
 
-    this.updateItem = (key, value) => {
+    this.update = (key, value) => {
       this.addItem(key, value);
+    };
+
+    this.countItems = () => {
+      return localStorage.length;
     };
 
     this.destroy = () => {

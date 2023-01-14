@@ -55,8 +55,18 @@ export const trackSavedLocationWeather = () => {
       if (db.get("TRACK_SAVED_LOCATION_WEATHER")) {
         db.update("TRACK_SAVED_LOCATION_WEATHER", true);
         Swal.fire({
-          text: "Settings updated successfully!",
+          text: "Saved location would be tracked!",
           icon: "success",
+          toast: true,
+          position: "top",
+          showConfirmButton: false,
+          timer: 3000,
+        });
+      }else{
+        db.create("TRACK_SAVED_LOCATION_WEATHER", true);
+        Swal.fire({
+          text: "Saved location would be tracked!",
+          icon: "info",
           toast: true,
           position: "top",
           showConfirmButton: false,
@@ -64,15 +74,17 @@ export const trackSavedLocationWeather = () => {
         });
       }
     } else {
-      Swal.fire({
-        text: "Settings saved successfully!",
-        icon: "success",
-        toast: true,
-        position: "top",
-        showConfirmButton: false,
-        timer: 3000,
-      });
-      db.create("TRACK_SAVED_LOCATION_WEATHER", true);
+      if (db.get("TRACK_SAVED_LOCATION_WEATHER")) {
+        db.update("TRACK_SAVED_LOCATION_WEATHER", false);
+        Swal.fire({
+          text: "Saved location would not be tracked!",
+          icon: "warning",
+          toast: true,
+          position: "top",
+          showConfirmButton: false,
+          timer: 3000,
+        });
+      }
     }
   });
 };

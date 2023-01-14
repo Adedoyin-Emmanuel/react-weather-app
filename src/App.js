@@ -12,15 +12,15 @@ import "./autoload";
 
 function App() {
   let homePageSeen = db.get("HOME_PAGE_SEEN");
-  let defaultRoutePage;
+  let DEFAULT_ROUTE_PAGE;
   homePageSeen
-    ? (defaultRoutePage = <WeatherApp />)
-    : (defaultRoutePage = <Home />);
+    ? (DEFAULT_ROUTE_PAGE = <WeatherApp />)
+    : (DEFAULT_ROUTE_PAGE = <Home />);
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={defaultRoutePage} />
+        <Route index element={DEFAULT_ROUTE_PAGE} />
         <Route path="support" element={<Support />} />
         <Route path="weather" element={<WeatherApp />} />
         <Route path="weathermain" element={<WeatherMain />} />

@@ -29,6 +29,7 @@
     --brand-gradient-color:linear-gradient(240deg, var(var(--brand-primary-color)),var(var(--brand-secondary-color)));
 	--brand-input-border-radius:5px;
 	--brand-button-3-border-radius:5px;
+	--brand-small-text-2:0.5rem;
 }
 
 #spinner {
@@ -112,6 +113,11 @@
 
 .brand-small-text-2 {
 	font-size: var(--brand-footer-nav-fontsize-2);
+}
+
+
+.brand-small-text-3{
+	font-size: var(--brand-small-text-2);
 }
 .brand-tertiary-color {
 	background: var(--brand-tertiary-color);

@@ -165,10 +165,10 @@ const WeatherApp = () => {
     <React.Fragment>
       <Spinner />
       <div
-        className="container-fluid d-flex flex-column py-2 "
+        className="container-fluid d-flex flex-column py-2 px-0"
         style={{ overflowX: "hidden" }}
       >
-        <section className="app-header d-flex justify-content-between">
+        <section className="app-header d-flex justify-content-between px-2">
           <section className="city-locaton">
             <h5 className="fw-bold fs-5">Lagos, 9ja</h5>
             <p className="date-time text-muted brand-small-text text-capitalize">
@@ -191,7 +191,7 @@ const WeatherApp = () => {
           </div>
         </section>
 
-        <section className="current-weather-container d-flex justify-content-between">
+        <section className="current-weather-container d-flex justify-content-between px-2">
           <section className="current-weather-value-container">
             <section className="d-flex ">
               <h1 className="current-weather-value fw-bold brand-large-text">
@@ -261,44 +261,44 @@ const WeatherApp = () => {
             </svg>
           </section>
         </section>
-
+        {/* d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0" */}
         <section
-          className="my-4 current-weather-assets d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0"
+          className="mx-2 rounded-3 shadow my-5 py-2 current-weather-assets brand-primary-color d-flex align-items-center justify-content-around"
           onClick={showMoreWeather}
         >
           <section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center">
             <section className="wind-icon">
-              <img src={windIcon} height={"30"} width={"30"} />
+              <img src={windIcon} height={"50"} width={"50"} />
             </section>
             <p className="wind-value fw-bold text-light text-center py-1">
-              10 m/s
+              100%
             </p>
-            <p className="wind-text text-muted text-capitalize brand-small-text weather-text text-center">
-              wind
+            <p className="m-0 wind-text text-muted text-capitalize brand-small-text weather-text text-center">
+              humidity
             </p>
           </section>
 
-          <section className="current-weather-humidity-degree d-flex flex-column align-items-center">
+          <section className=" current-weather-humidity-degree d-flex flex-column align-items-center ">
             <section className="humidity-icon">
-              <img src={humidity} height={"30"} width={"30"} />
+              <img src={humidity} height={"50"} width={"50"} />
             </section>
-            <p className="humidity-value fw-bold text-light  text-center py-1">
+            <p className="humidity-value fw-bold text-light  text-center">
               98%
             </p>
-            <p className="humidity-text text-muted text-capitalize text-center brand-small-text weather-text">
+            <p className="m-0 humidity-text text-muted text-capitalize text-center brand-small-text weather-text">
               humidity
             </p>
           </section>
 
           <section className="current-weather-rain-degree d-flex flex-column align-items-center">
-            <section className="rain-icon d-flex align-items-center justify-content-center">
-              <img src={rainIcon} height={"30"} width={"30"} />
+            <section className="rain-icon">
+              <img src={rainIcon} height={"50"} width={"50"} />
             </section>
-            <p className="rain-value fw-bold text-light text-center py-1">
+            <p className="rain-value fw-bold text-light text-center ">
               100%
             </p>
-            <p className="rain-text text-muted text-capitalize text-center brand-small-text weather-text">
-              rain
+            <p className="m-0 rain-text text-muted text-capitalize text-center brand-small-text weather-text">
+              humidity
             </p>
           </section>
         </section>

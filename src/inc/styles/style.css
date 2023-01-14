@@ -49,7 +49,6 @@
 	background: var(--brand-primary-color);
 	transition: 0.9s;
 	padding: 15px;
-	margin: auto;
 	text-align: center;
 	text-transform: capitalize;
 	border: none;
@@ -86,7 +85,7 @@
 	border:2px solid var(--brand-primary-color);
 	outline:0;
 	width:100%;
-	padding: 10px;
+	
 }
 .brand-btn:hover {
 	background: var(--brand-secondary-color);
@@ -253,5 +252,8 @@ section.footer-nav > section {
 
 	.width-toggle-3 {
 		width: 50%;
+	}
+	.width-toggle-4{
+		width:35%;
 	}
 }

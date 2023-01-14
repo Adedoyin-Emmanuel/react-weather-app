@@ -204,7 +204,7 @@ const WeatherApp = () => {
             </section>
             <p className="text-muted brand-small-text">Thunderstorm</p>
           </section>
-          <section className="current-weather-icon my-4 mx-3">
+          <section className="current-weather-icon my-4 mx-4">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"

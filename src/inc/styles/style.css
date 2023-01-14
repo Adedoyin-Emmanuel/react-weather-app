@@ -21,7 +21,7 @@
 	--footer-notch-border-radius: 60px;
 	--footer-notch-background-color: rgb(255, 255, 255);
 	--brand-mute-color: rgb(211, 205, 205);
-	--brand-footer-nav-fontsize: 0.8rem;
+	--brand-footer-nav-fontsize-2: 0.8rem;
 	--brand-footer-nav-fontsize: 0.9rem;
 	--brand-weather-value-font-size: 4rem;
 	--brand-medium-font-size: 1.6rem;
@@ -29,7 +29,7 @@
     --brand-gradient-color:linear-gradient(240deg, var(var(--brand-primary-color)),var(var(--brand-secondary-color)));
 	--brand-input-border-radius:5px;
 	--brand-button-3-border-radius:5px;
-	--brand-small-text-2:0.5rem;
+	--brand-small-text-2:0.7rem;
 }
 
 #spinner {

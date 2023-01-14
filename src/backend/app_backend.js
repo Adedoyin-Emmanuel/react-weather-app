@@ -1,5 +1,5 @@
 import Database from "./database";
 
-const db = new Database();
+export const db = new Database();
 
 console.log(db);

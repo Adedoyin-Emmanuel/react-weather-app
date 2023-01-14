@@ -62,10 +62,10 @@ export const trackSavedLocationWeather = () => {
           showConfirmButton: false,
           timer: 3000,
         });
-      }else{
+      } else {
         db.create("TRACK_SAVED_LOCATION_WEATHER", true);
         Swal.fire({
-          text: "Saved location would be tracked!",
+          text: "Saved location would be tracked by default!",
           icon: "info",
           toast: true,
           position: "top",
@@ -88,3 +88,7 @@ export const trackSavedLocationWeather = () => {
     }
   });
 };
+
+export const checkTrackedLocation = () => {
+  return db.get("TRACK_SAVED_LOCATION_WEATHER") ? true : false;
+}

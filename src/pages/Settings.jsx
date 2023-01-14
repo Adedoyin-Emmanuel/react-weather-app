@@ -9,10 +9,13 @@ const Settings = () => {
     navigate("./weather");
   };
 
-  const [defaultLocation, setDefaultLocation] = useState(settings.getDefaultLocation());
+
+  const [defaultLocation, setDefaultLocation] = useState(
+    settings.getDefaultLocation()
+  );
   return (
     <React.Fragment>
-      <Spinner/>
+      <Spinner />
       <section className="container-fluid">
         <section className="app-header d-flex justify-content-between my-3">
           <div className="toggle-btn ">
@@ -34,74 +37,83 @@ const Settings = () => {
           <div className="toggle-btn "></div>
         </section>
         <section className="d-flex align-items-start justify-content-center w-100">
-        <section className="settings">
-          <form action="" id="settingsForm" onSubmit={(e)=>{settings.saveLocation(e)}}>
-
-            <label htmlFor="defaultLocation " className="brand-small-text py-3">
-              Update your default location
-            </label>
-            <input
-              type="text"
-              name="defaultLocation"
-              id="defaultLocation"
-              className="form-control p-3 my-1 brand-small-text "
-              value={ defaultLocation}
-              placeholder={"Enter your default location to track.."}
-              onChange={(e) => {
-                setDefaultLocation(e.target.value);
+          <section className="settings">
+            <form
+              action=""
+              id="settingsForm"
+              onSubmit={(e) => {
+                settings.saveLocation(e);
               }}
-            />
-            <section className="d-md-flex align-items-center justify-content-md-center d-lg-block">
-              <Button
-                text="save location"
-                className="shadow brand-btn-3  my-5 text-light text-capitalize"
-               
-              />
-            </section>
-
-            <hr className="horizontal-line py-3 w-75 m-auto " />
-
-            <section className="factory-settings my-3">
+            >
               <label
-                htmlFor="factory-settings-reset "
-                className="text-capitalize"
+                htmlFor="defaultLocation "
+                className="brand-small-text py-3"
               >
-                restore factory settings
+                Update your default location
               </label>
-              <section className="d-md-flex align-items-center justify-content-center d-lg-block">
+              <input
+                type="text"
+                name="defaultLocation"
+                id="defaultLocation"
+                className="form-control p-3 my-1 brand-small-text "
+                value={defaultLocation}
+                placeholder={"Enter your default location to track.."}
+                onChange={(e) => {
+                  setDefaultLocation(e.target.value);
+                }}
+              />
+              <section className="d-md-flex align-items-center justify-content-md-center d-lg-block">
                 <Button
-                  text="restore settings"
-                  className="shadow brand-btn-3-secondary toggle-width-3 my-5 text-dark text-capitalize p-2"
-                  onClick={settings.restoreFactorySettings}
+                  text="save location"
+                  className="shadow brand-btn-3  my-5 text-light text-capitalize"
                 />
               </section>
-              <p className="text-muted brand-small-text">
-                Restoring factory settings removes all the data stored on this device. You would be taken to the setup screen.
-              </p>
-            </section>
 
-            <section className="form-check form-switch my-3">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                role="switch"
-                id="flexSwitchCheckDefault"
-                onClick={settings.trackSavedLocationWeather}
-              />
-              <label
-                className="form-check-label text-capitalize"
-                htmlFor="flexSwitchCheckDefault"
-              >
-                track saved location weather
-              </label>
-            </section>
+              <hr className="horizontal-line py-3 w-75 m-auto " />
+
+              <section className="factory-settings my-3">
+                <label
+                  htmlFor="factory-settings-reset "
+                  className="text-capitalize"
+                >
+                  restore factory settings
+                </label>
+                <section className="d-md-flex align-items-center justify-content-center d-lg-block">
+                  <Button
+                    text="restore settings"
+                    className="shadow brand-btn-3-secondary toggle-width-3 my-5 text-dark text-capitalize p-2"
+                    onClick={settings.restoreFactorySettings}
+                  />
+                </section>
+                <p className="text-muted brand-small-text">
+                  Restoring factory settings removes all the data stored on this
+                  device. You would be taken to the setup screen.
+                </p>
+              </section>
+
+              <section className="form-check form-switch my-3">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  role="switch"
+                  id="flexSwitchCheckDefault"
+                  onClick={settings.trackSavedLocationWeather}
+                  checked={settings.checkTrackedLocation}
+                />
+                <label
+                  className="form-check-label text-capitalize"
+                  htmlFor="flexSwitchCheckDefault"
+                >
+                  track saved location weather
+                </label>
+              </section>
+              <br />
+              <br />
+            </form>
             <br />
             <br />
-          </form>
-          <br />
-          <br />
+          </section>
         </section>
-        </section> 
 
         <br />
         <br />

@@ -90,5 +90,13 @@ export const trackSavedLocationWeather = () => {
 };
 
 export const checkTrackedLocation = () => {
-  return db.get("TRACK_SAVED_LOCATION_WEATHER") ? true : false;
-}
+  let value = db.get("TRACK_SAVED_LOCATION_WEATHER");
+  console.log("value is " + value);
+  if (value === true) {
+    console.log("value is now" + value);
+
+    return true;
+  } else {
+    return false;
+  }
+};

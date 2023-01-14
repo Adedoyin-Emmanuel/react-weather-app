@@ -3,6 +3,7 @@ import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
 import Button from "../components/button";
 import Spinner from "../components/spinner";
+import { db } from "../backend/app_backend";
 import * as settings from "./../backend/settings";
 const Settings = () => {
   const navigateHome = () => {
@@ -13,6 +14,10 @@ const Settings = () => {
   const [defaultLocation, setDefaultLocation] = useState(
     settings.getDefaultLocation()
   );
+  //database returns a string
+  let trackedLocation = db.get("TRACK_SAVED_LOCATION_WEATHER");
+  let trackedLocationLegit = (trackedLocation == "true") ? true : false;
+ 
   return (
     <React.Fragment>
       <Spinner />
@@ -98,7 +103,7 @@ const Settings = () => {
                   role="switch"
                   id="flexSwitchCheckDefault"
                   onClick={settings.trackSavedLocationWeather}
-                  checked={settings.checkTrackedLocation}
+                  defaultChecked={trackedLocationLegit}
                 />
                 <label
                   className="form-check-label text-capitalize"

@@ -3,7 +3,6 @@ import Button from "./../components/button";
 import Img_1 from "./../assets/pic_1.png";
 import Spinner from "./../components/spinner";
 import navigate from "./../inc/scripts/utilities";
-import db from "./../backend/app_backend";
 
 const Home = () => {
   const customBtnStyle = {

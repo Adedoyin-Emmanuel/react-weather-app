@@ -8,11 +8,11 @@ import ForecastWeather from "./pages/ForecastWeather";
 import Settings from "./pages/Settings";
 import "./autoload";
 
+
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
         <Route index element={<Home />} />
         <Route path="support" element={<Support />} />
         <Route path="weather" element={<WeatherApp />} />

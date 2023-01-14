@@ -8,6 +8,14 @@ const Settings = () => {
     navigate("./weather");
   };
 
+  const navigateToProject = ()=>{
+    navigate("https://github.com/Adedoyin-Emmanuel/react-weather-app");
+  }
+
+  const navigateToGithub = () =>{
+    navigate("https://github.com/Adedoyin-Emmanuel");
+  }
+
   const [defaultLocation, setDefaultLocation] = useState("");
   return (
     <React.Fragment>
@@ -58,6 +66,7 @@ const Settings = () => {
               <Button
                 text="support on github"
                 className="shadow brand-btn-3-secondary my-5 text-dark p-2 text-capitalize"
+                onClick={navigateToGithub}
               />
             </section>
           </section>
@@ -84,6 +93,7 @@ const Settings = () => {
               <Button
                 text="view github repository"
                 className="shadow brand-btn-3-secondary my-5 text-dark p-2 text-capitalize"
+                onClick={navigateToProject}
               />
             </section>
             <br/><br/>

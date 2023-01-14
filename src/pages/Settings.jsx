@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
 import Button from "../components/button";
+import Spinner from "../components/spinner";
 const Settings = () => {
   const navigateHome = () => {
     navigate("./weather");
@@ -10,6 +11,7 @@ const Settings = () => {
   const [defaultLocation, setDefaultLocation] = useState("");
   return (
     <React.Fragment>
+      <Spinner/>
       <section className="container-fluid">
         <section className="app-header d-flex justify-content-between my-3">
           <div className="toggle-btn ">

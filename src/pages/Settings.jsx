@@ -38,7 +38,7 @@ const Settings = () => {
           <form action="" id="">
 
             <label htmlFor="defaultLocation " className="brand-small-text py-3">
-              Enter your default location
+              Update your default location
             </label>
             <input
               type="text"

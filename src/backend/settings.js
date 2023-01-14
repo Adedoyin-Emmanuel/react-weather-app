@@ -34,3 +34,8 @@ export const saveLocation = () => {
     }
   });
 };
+
+
+export const getDefaultLocation = () =>{
+    return db.get("USER_DEFAULT_LOCATION");
+}

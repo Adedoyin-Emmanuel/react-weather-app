@@ -40,12 +40,20 @@ export const getDefaultLocation = () => {
   return db.get("USER_DEFAULT_LOCATION");
 };
 
-export const restoreFactorySettings = ()=>{
-    db.destroy();
-    navigate("/");
-}
+export const restoreFactorySettings = () => {
+  db.destroy();
+  navigate("/");
+};
 
+export const trackSavedLocationWeather = () => {
+  jQuery(($) => {
+    $.noConflict();
+    const $toggleBtn =document.getElementById("flexSwitchCheckDefault");
 
-export const trackSavedLocationWeather = ()=>{
-    console.log("hello");
-}
+    if ($toggleBtn.checked) {
+      console.log("button is checked");
+    } else {
+      console.log("button is not checked");
+    }
+  });
+};

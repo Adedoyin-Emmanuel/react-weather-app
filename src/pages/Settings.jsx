@@ -86,7 +86,7 @@ const Settings = () => {
                 type="checkbox"
                 role="switch"
                 id="flexSwitchCheckDefault"
-                onClick={settings.hello}
+                onClick={settings.trackSavedLocationWeather}
               />
               <label
                 className="form-check-label text-capitalize"

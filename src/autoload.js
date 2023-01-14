@@ -12,4 +12,3 @@ import "./inc/scripts/script.js";
 import "./inc/styles/three-dots.css";
 
 //database scripts
-import db from "./../backend/app_backend";

@@ -7,6 +7,7 @@ import NotFound from "./pages/404";
 import ForecastWeather from "./pages/ForecastWeather";
 import Settings from "./pages/Settings";
 import useState from "react";
+import db from "./backend/app_backend";
 import "./autoload";
 
 function App() {

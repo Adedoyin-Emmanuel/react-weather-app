@@ -1,3 +1,5 @@
 import Database from "./database";
 
-export const db = new Database();
+export let db = new Database();
+
+

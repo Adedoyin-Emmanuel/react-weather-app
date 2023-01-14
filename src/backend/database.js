@@ -3,7 +3,7 @@
  * Backend localstorage connector
  */
 
-export default class Database {
+class Database {
   constructor() {
     this.dbName = "weather-app";
 
@@ -25,9 +25,9 @@ export default class Database {
       this.addItem(key, value);
     };
 
-    this.get = key =>{
-        return localStorage.getItem(key);
-    }
+    this.get = key => {
+      return localStorage.getItem(key);
+    };
 
     this.countItems = () => {
       return localStorage.length;
@@ -39,3 +39,5 @@ export default class Database {
   }
 }
 
+
+export default Database;

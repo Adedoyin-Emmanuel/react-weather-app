@@ -6,21 +6,21 @@ import WeatherMain from "./pages/WeatherMain";
 import NotFound from "./pages/404";
 import ForecastWeather from "./pages/ForecastWeather";
 import Settings from "./pages/Settings";
-import useState from "react";
-import db from "./backend/app_backend";
+import { useState } from "react";
+import { db } from "./backend/app_backend";
 import "./autoload";
 
 function App() {
   let homePageSeen = db.get("HOME_PAGE_SEEN");
-  const [DEFAULT_ROUTE_PAGE, setDefaultRoutePage] = useState("");
+  let defaultRoutePage;
   homePageSeen
-    ? setDefaultRoutePage(<WeatherApp />)
-    : setDefaultRoutePage(<Home />);
+    ? (defaultRoutePage = <WeatherApp />)
+    : (defaultRoutePage = <Home />);
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={DEFAULT_ROUTE_PAGE} />
+        <Route index element={defaultRoutePage} />
         <Route path="support" element={<Support />} />
         <Route path="weather" element={<WeatherApp />} />
         <Route path="weathermain" element={<WeatherMain />} />

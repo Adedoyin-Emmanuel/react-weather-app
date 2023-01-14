@@ -2,11 +2,11 @@ import { db } from "../backend/app_backend";
 import jQuery from "jquery";
 import Swal from "sweetalert2";
 
-export const saveLocation = () => {
+export const saveLocation = (e) => {
+  e.preventDefault();
+
   jQuery(($) => {
     $.noConflict();
-
-    $("#settingsForm").
 
     const $defaultLocation = $("#defaultLocation").val().trim();
 
@@ -22,7 +22,6 @@ export const saveLocation = () => {
         timer: 4000,
       });
     } else {
-
       db.update("USER_DEFAULT_LOCATION", $defaultLocation);
       Swal.fire({
         text: "Location updated successfully!",
@@ -39,3 +38,7 @@ export const saveLocation = () => {
 export const getDefaultLocation = () => {
   return db.get("USER_DEFAULT_LOCATION");
 };
+
+export const restoreFactorySettings = ()=>{
+    
+}

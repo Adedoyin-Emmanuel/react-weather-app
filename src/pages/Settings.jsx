@@ -35,7 +35,7 @@ const Settings = () => {
         </section>
         <section className="d-flex align-items-start justify-content-center w-100">
         <section className="settings">
-          <form action="" id="">
+          <form action="" id="settingsForm" onSubmit={(e)=>{settings.saveLocation(e)}}>
 
             <label htmlFor="defaultLocation " className="brand-small-text py-3">
               Update your default location
@@ -55,7 +55,7 @@ const Settings = () => {
               <Button
                 text="save location"
                 className="shadow brand-btn-3  my-5 text-light text-capitalize"
-                onClick={settings.saveLocation}
+               
               />
             </section>
 

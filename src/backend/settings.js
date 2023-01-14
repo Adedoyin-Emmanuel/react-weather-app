@@ -6,6 +6,8 @@ export const saveLocation = () => {
   jQuery(($) => {
     $.noConflict();
 
+    $("#settingsForm").
+
     const $defaultLocation = $("#defaultLocation").val().trim();
 
     //check if the location is empty

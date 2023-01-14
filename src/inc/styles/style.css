@@ -86,6 +86,7 @@
 	border:2px solid var(--brand-primary-color);
 	outline:0;
 	width:100%;
+	padding: 10px;
 }
 .brand-btn:hover {
 	background: var(--brand-secondary-color);

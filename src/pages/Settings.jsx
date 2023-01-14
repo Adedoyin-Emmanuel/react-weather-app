@@ -33,15 +33,16 @@ const Settings = () => {
 
         <section className="settings">
           <form action="">
-            <label htmlFor="defaultLocation " className="brand-small-text py-2">
+            <label htmlFor="defaultLocation " className="brand-small-text py-3">
               Enter your default location
             </label>
             <input
               type="text"
               name="defaultLocation"
               id="defaultLocation"
-              className="form-control p-2 "
+              className="form-control p-3 my-1 brand-small-text"
               value={defaultLocation}
+              placeholder={"Enter your default location.."}
               onChange={(e) => {
                 setDefaultLocation(e.target.value);
               }}
@@ -56,17 +57,20 @@ const Settings = () => {
 
              <hr className="horizontal-line py-3 w-50 m-auto "/>
 
-            <section className="factory-settings my-3 row">
+            <section className="factory-settings my-2 row">
               <label
                 htmlFor="factory-settings-reset "
-                className="text-capitalize d-block brand-small-text col"
+                className="text-capitalize d-block"
               >
                 clear local data
               </label>
+            <section className="d-flex align-items-center justify-content-center">
+
               <Button
                 text="restore settings"
-                className="col mx-2  shadow brand-btn-3 toggle-width-3 my-5 width-toggle text-light text-capitalize"
+                className="shadow brand-btn-3-secondary toggle-width-3 my-5 width-toggle text-dark text-capitalize"
               />
+              </section>
             </section>
 
          

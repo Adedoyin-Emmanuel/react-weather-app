@@ -80,7 +80,13 @@
 	padding:10px;
 	background:var(--brand-primary-color);
 }
-
+.brand-btn-3-secondary{
+	border-radius:var(--brand-button-3-border-radius);
+	background:var(--brand-white-color);
+	border:2px solid var(--brand-primary-color);
+	outline:0;
+	width:100%;
+}
 .brand-btn:hover {
 	background: var(--brand-secondary-color);
 	cursor: pointer;

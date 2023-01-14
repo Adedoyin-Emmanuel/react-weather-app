@@ -28,6 +28,7 @@
 	--brand-tertiary-color: rgb(137, 190, 243);
     --brand-gradient-color:linear-gradient(240deg, var(var(--brand-primary-color)),var(var(--brand-secondary-color)));
 	--brand-input-border-radius:5px;
+	--brand-button-3-border-radius:5px;
 }
 
 #spinner {
@@ -71,6 +72,14 @@
 	width:100%;
 }
 
+.brand-btn-3{
+	border-radius: var(--brand-button-3-border-radius);
+	width:100%;
+	outline:0;
+	border:0;
+	padding:10px;
+	background:var(--brand-primary-color);
+}
 
 .brand-btn:hover {
 	background: var(--brand-secondary-color);

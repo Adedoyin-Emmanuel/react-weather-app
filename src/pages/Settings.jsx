@@ -54,7 +54,7 @@ const Settings = () => {
             <section className="d-flex align-items-center justify-content-center">
               <Button
                 text="save location"
-                className="shadow brand-btn toggle-width-3 my-5 width-toggle"
+                className="shadow brand-btn-3 toggle-width-3 my-5 width-toggle text-light" 
                
               />
             </section>

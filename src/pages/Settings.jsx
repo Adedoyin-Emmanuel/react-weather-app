@@ -30,7 +30,7 @@ const Settings = () => {
           </section>
           <div className="toggle-btn "></div>
         </section>
-
+        <section className="d-flex align-items-start justify-content-center w-100">
         <section className="settings">
           <form action="">
             <label htmlFor="defaultLocation " className="brand-small-text py-3">
@@ -40,7 +40,7 @@ const Settings = () => {
               type="text"
               name="defaultLocation"
               id="defaultLocation"
-              className="form-control p-3 my-1 brand-small-text width-toggle-4"
+              className="form-control p-3 my-1 brand-small-text "
               value={defaultLocation}
               placeholder={"Enter your default location to track.."}
               onChange={(e) => {
@@ -48,18 +48,31 @@ const Settings = () => {
               }}
             />
 
-            <section className="d-sm-flex align-items-center justify-content-md-center d-md-block">
+            <section className="d-md-flex align-items-center justify-content-md-center d-lg-block">
               <Button
                 text="save location"
-                className="shadow brand-btn-3 toggle-width-3 my-5 width-toggle text-light text-capitalize"
+                className="shadow brand-btn-3  my-5 text-light text-capitalize"
               />
             </section>
 
-             <hr className="horizontal-line py-3 w-50 m-auto "/>
+            <hr className="horizontal-line py-3 w-75 m-auto " />
 
+            <section className="factory-settings my-3">
+              <label
+                htmlFor="factory-settings-reset "
+                className="text-capitalize"
+              >
+                restore factory settings
+              </label>
+              <section className="d-md-flex align-items-center justify-content-center d-lg-block">
+                <Button
+                  text="restore settings"
+                  className="shadow brand-btn-3-secondary toggle-width-3 my-5 text-dark text-capitalize p-2"
+                />
+              </section>
+            </section>
 
-             <section className="form-check form-switch my-3">
-        
+            <section className="form-check form-switch my-3">
               <input
                 className="form-check-input"
                 type="checkbox"
@@ -70,30 +83,19 @@ const Settings = () => {
                 className="form-check-label text-capitalize"
                 htmlFor="flexSwitchCheckDefault"
               >
-                track saved location weather 
+                track saved location weather
               </label>
             </section>
-
-            <section className="factory-settings my-3 row">
-              <label
-                htmlFor="factory-settings-reset "
-                className="text-capitalize"
-              >
-                restore factory settings
-              </label>
-            <section className="d-sm-flex align-items-center justify-content-center d-md-block">
-
-              <Button
-                text="restore settings"
-                className="shadow brand-btn-3-secondary toggle-width-3 my-5 width-toggle text-dark text-capitalize p-2"
-              />
-              </section>
-              <br/><br/>
-            </section>
+            <br />
+            <br />
           </form>
-          <br/><br/>
+          <br />
+          <br />
         </section>
-        <br/><br/>
+        </section> 
+
+        <br />
+        <br />
 
         <Footer />
       </section>

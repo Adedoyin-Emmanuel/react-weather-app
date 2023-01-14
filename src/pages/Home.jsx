@@ -3,9 +3,9 @@ import Button from "./../components/button";
 import Img_1 from "./../assets/pic_1.png";
 import Spinner from "./../components/spinner";
 import navigate from "./../inc/scripts/utilities";
-import {db} from "./../backend/app_backend";
-
-
+import { db } from "./../backend/app_backend";
+import Swal from "sweetalert2";
+import jQuery from "jquery";
 const Home = () => {
   const customBtnStyle = {
     fontSize: "18px",
@@ -17,8 +17,49 @@ const Home = () => {
      * The user wouldn't be redirected here on next visit
      *
      */
-    db.create("HOME_PAGE_SEEN",true);
-    //navigate("weather");
+    
+    Swal.fire({
+      title: "Default Location",
+      html: "<input type='text' placeholder='Enter location' class='form-control border-1 p-3 brand-small-text w-100' id='defaultLocation'>",
+      confirmButtonText: "Save Location",
+      confirmButtonColor: "rgb(83, 166, 250)",
+      allowOutsideClick: false,
+      allowEscapeKey: false,
+      allowEnterKey: false,
+    }).then((willProceed) => {
+      if (willProceed.isConfirmed) {
+        jQuery(($) => {
+          $.noConflict();
+          const $defaultLocation = $("#defaultLocation").val().trim();
+
+          if ($defaultLocation === undefined || $defaultLocation == "") {
+            Swal.fire({
+              title: "Invalid Location!",
+              html: "<p class=' text-center text-danger'>Please enter a valid location</p>",
+              confirmButtonColor: "rgb(83, 166, 250)",
+              allowOutsideClick: false,
+              allowEscapeKey: false,
+              allowEnterKey: false,
+              timer: 4000,
+            });
+          } else {
+            Swal.fire({
+              text: "Location saved successfully!",
+              icon: "success",
+              toast: true,
+              position: "top",
+              showConfirmButton: false,
+              timer: 2000,
+            });
+
+            //create a database attribute and save it
+            db.create("HOME_PAGE_SEEN",true);
+            db.create("USER_DEFAULT_LOCATION",$defaultLocation);
+            navigate("weather");
+          }
+        });
+      }
+    });
   }
 
   return (

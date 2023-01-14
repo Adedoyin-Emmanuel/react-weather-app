@@ -1,6 +1,7 @@
 import { db } from "../backend/app_backend";
 import jQuery from "jquery";
 import Swal from "sweetalert2";
+import navigate from "../inc/scripts/utilities";
 
 export const saveLocation = (e) => {
   e.preventDefault();
@@ -40,5 +41,6 @@ export const getDefaultLocation = () => {
 };
 
 export const restoreFactorySettings = ()=>{
-    
+    db.destroy();
+    navigate("/");
 }

@@ -24,6 +24,6 @@ yarn-error.log*
 
 
 #personal
-
 /.vscode
 .prettierrc
+_redirects

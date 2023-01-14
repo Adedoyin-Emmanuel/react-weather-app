@@ -72,6 +72,9 @@ const Settings = () => {
                   className="shadow brand-btn-3-secondary toggle-width-3 my-5 text-dark text-capitalize p-2"
                 />
               </section>
+              <p className="text-muted brand-small-text">
+                Restoring factory settings removes all the data stored on this device. You would be taken to the setup screen.
+              </p>
             </section>
 
             <section className="form-check form-switch my-3">

@@ -2,7 +2,7 @@ import { db } from "../backend/app_backend";
 import jQuery from "jquery";
 import Swal from "sweetalert2";
 
-const saveLocation = (location) => {
+export const saveLocation = (location) => {
   jQuery(($) => {
     $.noConflict();
 

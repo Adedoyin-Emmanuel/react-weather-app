@@ -55,6 +55,7 @@ const Settings = () => {
               <Button
                 text="save location"
                 className="shadow brand-btn-3  my-5 text-light text-capitalize"
+                onClick={}
               />
             </section>
 

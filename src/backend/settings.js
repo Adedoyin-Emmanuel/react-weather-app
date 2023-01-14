@@ -2,11 +2,11 @@ import { db } from "../backend/app_backend";
 import jQuery from "jquery";
 import Swal from "sweetalert2";
 
-export const saveLocation = (location) => {
+export const saveLocation = () => {
   jQuery(($) => {
     $.noConflict();
 
-    const $defaultLocation = location.trim();
+    const $defaultLocation = $("#defaultLocation").val().trim();
 
     //check if the location is empty
     if ($defaultLocation === undefined || $defaultLocation == "") {

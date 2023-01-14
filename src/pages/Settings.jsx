@@ -72,6 +72,7 @@ const Settings = () => {
                 <Button
                   text="restore settings"
                   className="shadow brand-btn-3-secondary toggle-width-3 my-5 text-dark text-capitalize p-2"
+                  onClick={settings.restoreFactorySettings}
                 />
               </section>
               <p className="text-muted brand-small-text">

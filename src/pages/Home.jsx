@@ -5,6 +5,7 @@ import Spinner from "./../components/spinner";
 import navigate from "./../inc/scripts/utilities";
 import {db} from "./../backend/app_backend";
 
+
 const Home = () => {
   const customBtnStyle = {
     fontSize: "18px",
@@ -17,7 +18,7 @@ const Home = () => {
      *
      */
     db.create("HOME_PAGE_SEEN",true);
-    navigate("weather");
+    //navigate("weather");
   }
 
   return (

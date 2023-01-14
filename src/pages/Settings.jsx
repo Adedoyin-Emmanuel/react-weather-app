@@ -9,7 +9,7 @@ const Settings = () => {
     navigate("./weather");
   };
 
-  const [defaultLocation, setDefaultLocation] = useState("");
+  const [defaultLocation, setDefaultLocation] = useState(settings.getDefaultLocation());
   return (
     <React.Fragment>
       <Spinner/>
@@ -45,7 +45,7 @@ const Settings = () => {
               name="defaultLocation"
               id="defaultLocation"
               className="form-control p-3 my-1 brand-small-text "
-              value={defaultLocation}
+              value={ defaultLocation}
               placeholder={"Enter your default location to track.."}
               onChange={(e) => {
                 setDefaultLocation(e.target.value);

@@ -22,7 +22,7 @@ class Database {
     };
 
     this.update = (key, value) => {
-      this.addItem(key, value);
+      this.create(key, value);
     };
 
     this.get = key => {

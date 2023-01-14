@@ -20,6 +20,8 @@ export const saveLocation = () => {
         timer: 4000,
       });
     } else {
+
+      db.update("USER_DEFAULT_LOCATION", $defaultLocation);
       Swal.fire({
         text: "Location updated successfully!",
         icon: "success",
@@ -28,14 +30,10 @@ export const saveLocation = () => {
         showConfirmButton: false,
         timer: 3000,
       });
-
-      db.update("USER_DEFAULT_LOCATION", $defaultLocation);
-      
     }
   });
 };
 
-
-export const getDefaultLocation = () =>{
-    return db.get("USER_DEFAULT_LOCATION");
-}
+export const getDefaultLocation = () => {
+  return db.get("USER_DEFAULT_LOCATION");
+};

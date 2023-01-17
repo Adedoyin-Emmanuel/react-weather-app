@@ -1,13 +1,13 @@
 import jQuery from "jquery";
+import { db } from "../backend/app_backend";
 
 const API_KEY = "cd34f692e856e493bd936095b256b337";
 
-export const handleWeatherForm = (e) =>{
-  e.preventDefault();
-  getCurrentWeather();
-}
+export const handleWeatherForm = (e) => {
+	e.preventDefault();
+	getCurrentWeather();
+};
 export const getCurrentWeather = () => {
-
 	jQuery(($) => {
 		let userSearch = $("#searchWeather").val();
 
@@ -16,14 +16,21 @@ export const getCurrentWeather = () => {
 		$.ajax({
 			url: SEARCH_URL,
 			processData: false,
-			success: (result, status, xhr) => {https://openweathermap.org/img//w/11d.png
-				if (xhr.status != 200) {
+			success: (result, status, xhr) => {
+				//openweathermap.org/img//w/11d.png
+				https: if (xhr.status != 200) {
 				} else {
 					//check if the API returned a legit response
-          if(result.cod === 200){
-            console.log(result);
-          }
+					if (result.cod === 200) {
+						$("#weatherLocation").html(result.name);
+						$("#searchErrorLog").addClass("d-none");
+					}
 				}
+			},
+			error: (xhr, status, error) => {
+				error != ""
+					? $("#searchErrorLog").removeClass("d-none").html(error)
+					: $("#searchErrorLog").addClass("d-none");
 			},
 		});
 	});

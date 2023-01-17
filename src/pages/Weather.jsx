@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useMemo} from "react";
 import jQuery from "jquery";
 import Button from "./../components/button";
 import Footer from "../components/footer";
@@ -12,6 +12,7 @@ import Spinner from "../components/spinner";
 import Ripple1 from "./../assets/ripple1.gif";
 import Location from "./../assets/map.png";
 import * as formHandler from "./../apis/getApi";
+import { db } from "../backend/app_backend";
 
 const WeatherApp = () => {
   //holds the current component to insert into the utility footer component
@@ -146,12 +147,14 @@ const WeatherApp = () => {
             onChange={(e) => {
               setWeatherInput(e.target.value);
             }}
-            onKeyUp={(e) => {
-              formHandler.getCurrentWeather(e);
-            }}
+            
             
           />
-          {/* <p className="error-holder text-danger py-2 brand-small-text text-center">city not found</p> */}
+          <p className="error-holder text-danger py-3 fs-6 brand-small-text text-center d-none" id="searchErrorLog">city not found</p>
+
+          <section className="d-none ">
+
+          </section>
         </form>
       </section>
     );
@@ -171,7 +174,7 @@ const WeatherApp = () => {
       >
         <section className="app-header d-flex justify-content-between px-2">
           <section className="city-locaton">
-            <h5 className="fw-bold fs-5">Lagos, 9ja</h5>
+            <h5 className="fw-bold fs-5" id="weatherLocation">Lagos 9ja</h5>
             <p className="date-time text-muted brand-small-text text-capitalize">
               10 january tuesday
             </p>

@@ -198,7 +198,7 @@ const WeatherApp = () => {
         <section className="current-weather-container d-flex justify-content-between px-2">
           <section className="current-weather-value-container">
             <section className="d-flex ">
-              <h1 className="current-weather-value fw-bold brand-large-text">
+              <h1 className="current-weather-value fw-bold brand-large-text" id="currentDeg">
                 18
               </h1>
 
@@ -206,7 +206,7 @@ const WeatherApp = () => {
                 o
               </sup>
             </section>
-            <p className="text-muted brand-small-text">Thunderstorm</p>
+            <p className="text-muted text-capitalize" id="weatherDes">Thunderstorm</p>
           </section>
           <section className="current-weather-icon my-4 mx-4">
             <svg

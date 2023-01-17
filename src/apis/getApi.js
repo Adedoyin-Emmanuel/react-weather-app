@@ -23,6 +23,8 @@ export const getCurrentWeather = () => {
 					//check if the API returned a legit response
 					if (result.cod === 200) {
 						$("#weatherLocation").html(result.name);
+						$("#currentDeg").html(Math.ceil(result.main.temp));
+						$("#weatherDes").html(result.weather[0].description);
 						$("#searchErrorLog").addClass("d-none");
 					}
 				}

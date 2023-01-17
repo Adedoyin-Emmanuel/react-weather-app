@@ -8,7 +8,10 @@ export const handleWeatherForm = (e) => {
 	getCurrentWeather();
 
 	//empty the search bar once data is fetched
-	$("#searchWeather").val(" ");
+
+	jQuery(($) => {
+		$("#searchWeather").val(" ");
+	});
 };
 export const getCurrentWeather = () => {
 	jQuery(($) => {
@@ -20,7 +23,7 @@ export const getCurrentWeather = () => {
 			url: SEARCH_URL,
 			processData: false,
 			success: (result, status, xhr) => {
-				 if (xhr.status != 200) {
+				if (xhr.status != 200) {
 				} else {
 					//check if the API returned a legit response
 					if (result.cod === 200) {

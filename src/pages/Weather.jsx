@@ -128,9 +128,9 @@ const WeatherApp = () => {
   const SearchComponent = () => {
     return (
       <section className=" d-flex align-items-center justify-content-center flex-column my-5">
-        <form
+        <form id="searchWeatherForm"
           onSubmit={(e) => {
-            formHandler.getCurrentWeather(e);
+            formHandler.handleWeatherForm(e);
           }}
         >
           <label htmlFor="searchWeather" className="py-2 text-capitalize ">

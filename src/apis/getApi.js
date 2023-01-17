@@ -6,6 +6,9 @@ const API_KEY = "cd34f692e856e493bd936095b256b337";
 export const handleWeatherForm = (e) => {
 	e.preventDefault();
 	getCurrentWeather();
+
+	//empty the search bar once data is fetched
+	$("#searchWeather").val(" ");
 };
 export const getCurrentWeather = () => {
 	jQuery(($) => {
@@ -17,8 +20,7 @@ export const getCurrentWeather = () => {
 			url: SEARCH_URL,
 			processData: false,
 			success: (result, status, xhr) => {
-				//openweathermap.org/img//w/11d.png
-				https: if (xhr.status != 200) {
+				 if (xhr.status != 200) {
 				} else {
 					//check if the API returned a legit response
 					if (result.cod === 200) {

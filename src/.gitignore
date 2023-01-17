@@ -1,3 +1,4 @@
 #personal
-/.prettierrc
-/_redirect
+*.prettierrc
+*_redirect
+/.vscode

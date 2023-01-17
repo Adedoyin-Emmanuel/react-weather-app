@@ -11,15 +11,18 @@ export const getCurrentWeather = () => {
 	jQuery(($) => {
 		let userSearch = $("#searchWeather").val();
 
-		const SEARCH_URL = `https://api.openweathermap.org/data/2.5/weather?q=${userSearch}&appid=${API_KEY}`;
+		const SEARCH_URL = `https://api.openweathermap.org/data/2.5/weather?q=${userSearch}&appid=${API_KEY}&units=metric`;
 
 		$.ajax({
 			url: SEARCH_URL,
 			processData: false,
-			success: (result, status, xhr) => {
+			success: (result, status, xhr) => {https://openweathermap.org/img//w/11d.png
 				if (xhr.status != 200) {
 				} else {
-					console.log(result);
+					//check if the API returned a legit response
+          if(result.cod === 200){
+            console.log(result);
+          }
 				}
 			},
 		});

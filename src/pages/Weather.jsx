@@ -146,9 +146,10 @@ const WeatherApp = () => {
             onChange={(e) => {
               setWeatherInput(e.target.value);
             }}
-            onKeyDown={(e) => {
+            onKeyUp={(e) => {
               formHandler.getCurrentWeather(e);
             }}
+            
           />
           {/* <p className="error-holder text-danger py-2 brand-small-text text-center">city not found</p> */}
         </form>

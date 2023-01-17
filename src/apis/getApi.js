@@ -10,8 +10,12 @@ export const getCurrentWeather = () => {
     $.ajax({
       url:SEARCH_URL,
       processData:false,
-      success: (result)=>{
-        console.log(result);
+      success: (result,status,xhr)=>{
+        if(xhr.status != 200){
+
+        }else{
+          console.log(result);  
+        }
       }
     })
   });

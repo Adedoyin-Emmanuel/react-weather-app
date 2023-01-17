@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/.vscode
 /.pnp
 .pnp.js
 
@@ -21,9 +22,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-
-#personal
-/.vscode
-.prettierrc
-_redirects

@@ -20,14 +20,19 @@ const WeatherApp = () => {
 	const [weatherInput, setWeatherInput] = useState();
 
 	const addUtilityComponentHeight = () => {
+    //if the component is opened already, then close it
 		if (db.get("UTILITY_CMP_DISPLAY") == "true") {
       closeUtilityComponent();
+
 		}else{
+      //else open the component
       jQuery(($) => {
 				$.noConflict();
 				$(".cmp").removeClass("d-none");
 				$(".utility-component").toggleClass("add-utility-component-height");
 				db.create("UTILITY_CMP_DISPLAY", true);
+
+        
 			});
     }
 	};
@@ -38,6 +43,7 @@ const WeatherApp = () => {
 			$(".cmp").addClass("d-none");
 			$(".utility-component").removeClass("add-utility-component-height");
       db.update("UTILITY_CMP_DISPLAY",false);
+      
 		});
 	};
 
@@ -124,7 +130,7 @@ const WeatherApp = () => {
 				<section className="d-flex align-items-center justify-content-center">
 					<Button
 						text="forecast weather"
-						className="shadow brand-btn-2 toggle-width-3 my-5 width-toggle"
+						className="shadow brand-btn-2 toggle-width-3 my-5 "
 						onClick={showForecastWeather}
 					/>
 				</section>
@@ -184,7 +190,7 @@ const WeatherApp = () => {
 			<div
 				className="container-fluid d-flex flex-column py-2 px-0"
 				style={{ overflowX: "hidden" }}>
-				<section className="app-header d-flex justify-content-between px-2 flex-row-reverse">
+				<section className="app-header d-flex justify-content-between px-2 flex-row-reverse " >
 					<section className="city-location">
 						<h5 className="fw-bold fs-5" id="weatherLocation">
 							Lagos 9ja

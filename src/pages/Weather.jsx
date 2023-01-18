@@ -20,22 +20,26 @@ const WeatherApp = () => {
 	const [weatherInput, setWeatherInput] = useState();
 
 	const addUtilityComponentHeight = () => {
-		jQuery(($) => {
-			$.noConflict();
-			$(".cmp").removeClass("d-none");
-			$(".utility-component").toggleClass("add-utility-component-height");
-		});
+		if (db.get("UTILITY_CMP_DISPLAY") == "true") {
+      closeUtilityComponent();
+		}else{
+      jQuery(($) => {
+				$.noConflict();
+				$(".cmp").removeClass("d-none");
+				$(".utility-component").toggleClass("add-utility-component-height");
+				db.create("UTILITY_CMP_DISPLAY", true);
+			});
+    }
 	};
 
-
-  const closeUtilityComponent = ()=> {
-    jQuery(($) => {
-      $.noConflict();
-      $(".cmp").addClass("d-none");
-      $(".utility-component").removeClass("add-utility-component-height");
-    
-    });
-  }
+	const closeUtilityComponent = () => {
+		jQuery(($) => {
+			$.noConflict();
+			$(".cmp").addClass("d-none");
+			$(".utility-component").removeClass("add-utility-component-height");
+      db.update("UTILITY_CMP_DISPLAY",false);
+		});
+	};
 
 	let weatherData = [
 		{
@@ -127,7 +131,7 @@ const WeatherApp = () => {
 			</section>
 		);
 	};
-	
+
 	//function to check if the dashboard icon was clicked
 	const beginWeatherForecast = () => {
 		addUtilityComponentHeight();
@@ -181,7 +185,6 @@ const WeatherApp = () => {
 				className="container-fluid d-flex flex-column py-2 px-0"
 				style={{ overflowX: "hidden" }}>
 				<section className="app-header d-flex justify-content-between px-2 flex-row-reverse">
-					
 					<section className="city-location">
 						<h5 className="fw-bold fs-5" id="weatherLocation">
 							Lagos 9ja
@@ -190,15 +193,14 @@ const WeatherApp = () => {
 							10 january tuesday
 						</p>
 					</section>
-          
-          <svg
+
+					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width={"35px"}
 						height={"35px"}
 						viewBox="0 0 24 24"
 						className="d-block"
-            onClick={beginWeatherForecast}
-            >
+						onClick={beginWeatherForecast}>
 						<path fill="white" d="M0 0h24v24H0V0z" />
 						<path
 							fill="lightskyblue"

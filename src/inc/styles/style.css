@@ -186,6 +186,14 @@ section.footer-nav > section {
 	z-index: 100;
 }
 
+.add-utility-component-height-2{
+	height:40%;
+}
+
+.add-utility-component-height-3{
+	height:30%;
+}
+
 .utility-component .utility-notch {
 	background: var(--footer-notch-background-color);
 	width: 15%;

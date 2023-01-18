@@ -63,7 +63,7 @@ export const getCurrentDate = () => {
 
     switch (DATE.getDay()) {
         case 0:
-            day = "Sunday";
+            day = "Sunday";Monday
             break;
         case 1:
             day = "Monday";
@@ -89,7 +89,9 @@ export const getCurrentDate = () => {
     }
 
 
-    return result = `${day}, ${date}th of ${month}`;
+     result = `${day}, ${date}th of ${month}`;
+
+     return result;
 
     
 };

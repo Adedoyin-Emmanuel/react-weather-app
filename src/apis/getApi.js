@@ -1,6 +1,7 @@
 import jQuery from "jquery";
 import { db } from "../backend/app_backend";
 
+
 const API_KEY = "cd34f692e856e493bd936095b256b337";
 
 export const handleWeatherForm = (e) => {

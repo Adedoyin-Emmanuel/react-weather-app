@@ -11,7 +11,7 @@ import ForecastWeatherItems from "../components/forecastWeatherItems";
 import Spinner from "../components/spinner";
 import Ripple1 from "./../assets/ripple1.gif";
 import Location from "./../assets/map.png";
-import * as formHandler from "./../apis/getApi";
+import * as formHandler from "../apis/getCurrentWeather";
 import { db } from "../backend/app_backend";
 
 const WeatherApp = () => {

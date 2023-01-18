@@ -211,7 +211,7 @@ section.footer-nav > section {
 }
 
 .current-weather-icon {
-	transform: scale(4.0);
+	transform: scale(3.5);
 }
 
 /* weather panel icons and text */

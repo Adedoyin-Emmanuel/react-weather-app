@@ -12,6 +12,7 @@ import Spinner from "../components/spinner";
 import Ripple1 from "./../assets/ripple1.gif";
 import Location from "./../assets/map.png";
 import * as formHandler from "../apis/getCurrentWeather";
+import { getCurrentDate } from "../inc/scripts/utilities";
 import { db } from "../backend/app_backend";
 
 const WeatherApp = () => {
@@ -175,8 +176,8 @@ const WeatherApp = () => {
         <section className="app-header d-flex justify-content-between px-2">
           <section className="city-locaton">
             <h5 className="fw-bold fs-5" id="weatherLocation">Lagos 9ja</h5>
-            <p className="date-time text-muted brand-small-text text-capitalize">
-              10 january tuesday
+            <p className="date-time text-muted brand-small-text text-capitalize my-2" id="currentDate">
+             {getCurrentDate()}
             </p>
           </section>
           <div
@@ -208,7 +209,7 @@ const WeatherApp = () => {
             </section>
             <p className="text-muted text-capitalize" id="weatherDes">Thunderstorm</p>
           </section>
-          <section className="current-weather-icon my-4 mx-4">
+          <section className="current-weather-icon my-4 py-1 mx-4">
             <svg
               version="1.1"
               xmlns="http://www.w3.org/2000/svg"

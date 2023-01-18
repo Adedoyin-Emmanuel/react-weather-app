@@ -63,7 +63,7 @@ export const getCurrentDate = () => {
 
     switch (DATE.getDay()) {
         case 0:
-            day = "Sunday";Monday
+            day = "Sunday";
             break;
         case 1:
             day = "Monday";

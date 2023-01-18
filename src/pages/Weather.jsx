@@ -47,6 +47,11 @@ const WeatherApp = () => {
 		});
 	};
 
+
+  const getCurrentLocation = () =>{
+    console.log("leemao");
+  }
+
 	let weatherData = [
 		{
 			time: ["10am"],
@@ -370,6 +375,7 @@ const WeatherApp = () => {
 					<Button
 						text="current location"
 						className="brand-btn my-5 width-toggle"
+            onClick={getCurrentLocation}
 					/>
 					<br />
 				</section>

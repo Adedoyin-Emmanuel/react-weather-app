@@ -8,7 +8,7 @@ const getGeolocation = () => {
 		const OPTIONS = {
 			enableHighAccuracy: true,
 			maximumAge: 0,
-			timeout: 0,
+			timeout: Infinity,
 		};
 		const error = (error) => {
 			Swal.fire({
@@ -22,8 +22,8 @@ const getGeolocation = () => {
 		};
 		const TRACK_ID = navigator.geolocation.watchPosition(
 			(position) => {
-				console.log(position.coords.longitude);
-				console.log(position.coords.latitude);
+				//save the user's longitude and latitude
+                if(!db.get("USER_LONGITUDE"))
 			},
 			error,
 			OPTIONS

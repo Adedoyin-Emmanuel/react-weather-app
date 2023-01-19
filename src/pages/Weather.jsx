@@ -14,6 +14,7 @@ import Location from "./../assets/map.png";
 import * as formHandler from "./../apis/getCurrentWeather";
 import { db } from "../backend/app_backend";
 import getGeolocation from "../apis/getGeolocation";
+import { getCurrentDate } from "../inc/scripts/utilities";
 const WeatherApp = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
@@ -201,7 +202,7 @@ const WeatherApp = () => {
 							Lagos 9ja
 						</h5>
 						<p className="date-time text-muted brand-small-text text-capitalize">
-							10 january tuesday
+						{getCurrentDate()}
 						</p>
 					</section>
 

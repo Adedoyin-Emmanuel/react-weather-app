@@ -13,7 +13,7 @@ import Ripple1 from "./../assets/ripple1.gif";
 import Location from "./../assets/map.png";
 import * as formHandler from "./../apis/getCurrentWeather";
 import { db } from "../backend/app_backend";
-
+import getGeolocation from "../apis/getGeolocation";
 const WeatherApp = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
@@ -375,7 +375,7 @@ const WeatherApp = () => {
 					<Button
 						text="current location"
 						className="brand-btn my-5 width-toggle"
-            onClick={getCurrentLocation}
+            onClick={getGeolocation}
 					/>
 					<br />
 				</section>

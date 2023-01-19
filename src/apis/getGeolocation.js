@@ -49,10 +49,22 @@ const getGeolocation = () => {
 									timer:3000,
 			
 								});
+							}else{
+								//if API call was successful
+								if(result.cod == 200){
+									console.log(result);
+								}
 							}
 						},
 						error:(xhr,status,error)=>{
-
+							Swal.fire({
+								toast: true,
+								text: error,
+								icon: "warning",
+								timer: 3000,
+								position: "top",
+								showConfirmButton: false,
+							});
 						}
 					})
                 })

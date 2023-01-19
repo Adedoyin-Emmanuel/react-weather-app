@@ -13,6 +13,10 @@ export const closeUtilityComponent = () => {
 
 export const API_KEY = "cd34f692e856e493bd936095b256b337";
 
+export const scrollToElement = elementId =>{
+	document.getElementById(`${elementId}`).scrollIntoView({"behaviour":"smooth"});
+}
+
 export const handleWeatherForm = (e) => {
 	e.preventDefault();
 	getCurrentWeather();

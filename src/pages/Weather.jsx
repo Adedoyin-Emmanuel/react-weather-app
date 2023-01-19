@@ -44,8 +44,11 @@ const WeatherApp = () => {
 			$(".cmp").addClass("d-none");
 			$(".utility-component").removeClass("add-utility-component-height");
       db.update("UTILITY_CMP_DISPLAY",false);
-      
+      setComponentToInsert("");
 		});
+
+    //update the search component
+    //setWeatherInput("");
 	};
 
 
@@ -154,6 +157,8 @@ const WeatherApp = () => {
 					id="searchWeatherForm"
 					onSubmit={(e) => {
 						formHandler.handleWeatherForm(e);
+            setWeatherInput();
+           
 					}}>
 					<label htmlFor="searchWeather" className="py-2 text-capitalize ">
 						search city
@@ -168,6 +173,7 @@ const WeatherApp = () => {
 						onChange={(e) => {
 							setWeatherInput(e.target.value);
 						}}
+            autoComplete="off"
 					/>
 					<p
 						className="error-holder text-danger py-3 fs-6 brand-small-text text-center d-none"

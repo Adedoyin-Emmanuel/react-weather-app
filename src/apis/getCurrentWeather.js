@@ -1,6 +1,7 @@
 import jQuery from "jquery";
 import { db } from "../backend/app_backend";
 import { getCurrentDate } from "../inc/scripts/utilities";
+import Swal from "sweetalert2";
 
 const closeUtilityComponent = () => {
 	jQuery(($) => {
@@ -36,21 +37,27 @@ export const getCurrentWeather = () => {
 				} else {
 					//check if the API returned a legit response
 					if (result.cod === 200) {
-						$("#searchWeather").val("");
+						$("#searchWeather").val(" ");
 						closeUtilityComponent();
+
 						$("#weatherLocation").html(result.name);
 						$("#currentDeg").html(Math.ceil(result.main.temp));
 						$("#weatherDes").html(result.weather[0].description);
 						$("#currentDate").html(getCurrentDate());
-						//remove the searh error log if API call was successful
-						$("#searchErrorLog").addClass("d-none");
 					}
 				}
 			},
 			error: (xhr, status, error) => {
-				error != ""
-					? $("#searchErrorLog").removeClass("d-none").html(error)
-					: $("#searchErrorLog").addClass("d-none");
+				$("#searchWeather").val(" ");
+				closeUtilityComponent();
+				Swal.fire({
+					toast: true,
+					text: error,
+					icon: "warning",
+					timer: 3000,
+					position: "top",
+					showConfirmButton: false,
+				});
 			},
 		});
 	});

@@ -13,9 +13,11 @@ export const closeUtilityComponent = () => {
 
 export const API_KEY = "cd34f692e856e493bd936095b256b337";
 
-export const scrollToElement = elementId =>{
-	document.getElementById(`${elementId}`).scrollIntoView({"behaviour":"smooth"});
-}
+export const scrollToElement = (elementId) => {
+	document
+		.getElementById(`${elementId}`)
+		.scrollIntoView({ behaviour: "smooth" });
+};
 
 export const handleWeatherForm = (e) => {
 	e.preventDefault();
@@ -33,7 +35,7 @@ export const updateReactDom = (result) => {
 		$.noConflict();
 		$("#searchWeather").val(" ");
 		closeUtilityComponent();
-
+		scrollToElement("weatherContainer");
 		$("#weatherLocation").html(result.name);
 		$("#currentDeg").html(Math.ceil(result.main.temp));
 		$("#weatherDes").html(result.weather[0].description);
@@ -52,13 +54,12 @@ export const getCurrentWeather = () => {
 			success: (result, status, xhr) => {
 				if (xhr.status != 200) {
 					Swal.fire({
-						toast:true,
-						position:"top",
-						text:"Something went wrong!",
-						icon:"info",
-						showConfirmButton:false,
-						timer:3000,
-
+						toast: true,
+						position: "top",
+						text: "Something went wrong!",
+						icon: "info",
+						showConfirmButton: false,
+						timer: 3000,
 					});
 				} else {
 					//check if the API returned a legit response
@@ -78,6 +79,7 @@ export const getCurrentWeather = () => {
 					position: "top",
 					showConfirmButton: false,
 				});
+				scrollToElement("weatherContainer");
 			},
 		});
 	});

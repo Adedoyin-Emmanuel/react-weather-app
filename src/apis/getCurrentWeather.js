@@ -23,6 +23,19 @@ export const handleWeatherForm = (e) => {
 		$("#searchWeather").val(" ");
 	});
 };
+
+export const updateReactDom = (result) => {
+	jQuery(($) => {
+		$.noConflict();
+		$("#searchWeather").val(" ");
+		closeUtilityComponent();
+
+		$("#weatherLocation").html(result.name);
+		$("#currentDeg").html(Math.ceil(result.main.temp));
+		$("#weatherDes").html(result.weather[0].description);
+		$("#currentDate").html(getCurrentDate());
+	});
+};
 export const getCurrentWeather = () => {
 	jQuery(($) => {
 		let userSearch = $("#searchWeather").val();
@@ -34,16 +47,19 @@ export const getCurrentWeather = () => {
 			processData: false,
 			success: (result, status, xhr) => {
 				if (xhr.status != 200) {
+					Swal.fire({
+						toast:true,
+						position:"top",
+						text:"Something went wrong!",
+						icon:"info",
+						showConfirmButton:false,
+						timer:3000,
+
+					});
 				} else {
 					//check if the API returned a legit response
 					if (result.cod === 200) {
-						$("#searchWeather").val(" ");
-						closeUtilityComponent();
-
-						$("#weatherLocation").html(result.name);
-						$("#currentDeg").html(Math.ceil(result.main.temp));
-						$("#weatherDes").html(result.weather[0].description);
-						$("#currentDate").html(getCurrentDate());
+						updateReactDom(result);
 					}
 				}
 			},

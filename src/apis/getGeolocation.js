@@ -22,8 +22,14 @@ const getGeolocation = () => {
 		};
 		const TRACK_ID = navigator.geolocation.watchPosition(
 			(position) => {
-				//save the user's longitude and latitude
-               // if(!db.get("USER_LONGITUDE"))
+				//check if the user's position was saved before
+               if(!db.get("USER_LONGITUDE") && !db.get("USER_LATITUDE")){
+                    db.create("USER_LONGITUDE",position.coords.longitude);
+                    db.create("USER_LATITUDE",position.coords.latitude);
+               }else{
+                //if saved, then get the current weather using their coordinates
+                
+               }
 			},
 			error,
 			OPTIONS

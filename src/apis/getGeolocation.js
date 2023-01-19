@@ -53,7 +53,8 @@ const getGeolocation = () => {
 								//if API call was successful
 								if(result.cod == 200){
 									console.log(result);
-									
+									const weatherElem = document.getElementById("weatherContainer");
+									weatherElem.scrollIntoView({"behaviour":"smooth"});
 								}
 							}
 						},

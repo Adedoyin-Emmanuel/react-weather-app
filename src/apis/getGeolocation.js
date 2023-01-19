@@ -33,7 +33,28 @@ const getGeolocation = () => {
                     $.noConflict();
 
                     const longitude = db.get("USER_LONGITUDE"), latitude = db.get("USER_LATITUDE");
-                    const URL = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=${weatherAPI.API_KEY}`;
+                    const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherAPI.API_KEY}`;
+
+					$.ajax({
+						url:URL,
+						processData:false,
+						success:(result,status,xhr)=>{
+							if(xhr.status != 200){
+								Swal.fire({
+									toast:true,
+									position:"top",
+									text:"Something went wrong!",
+									icon:"info",
+									showConfirmButton:false,
+									timer:3000,
+			
+								});
+							}
+						},
+						error:(xhr,status,error)=>{
+
+						}
+					})
                 })
 
 

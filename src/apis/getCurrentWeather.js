@@ -3,7 +3,7 @@ import { db } from "../backend/app_backend";
 import { getCurrentDate } from "../inc/scripts/utilities";
 import Swal from "sweetalert2";
 
-const closeUtilityComponent = () => {
+export const closeUtilityComponent = () => {
 	jQuery(($) => {
 		$.noConflict();
 		$(".cmp").addClass("d-none");
@@ -11,7 +11,7 @@ const closeUtilityComponent = () => {
 	});
 };
 
-const API_KEY = "cd34f692e856e493bd936095b256b337";
+export const API_KEY = "cd34f692e856e493bd936095b256b337";
 
 export const handleWeatherForm = (e) => {
 	e.preventDefault();

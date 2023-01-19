@@ -200,7 +200,7 @@ const WeatherApp = () => {
 			<Spinner />
 			<div
 				className="container-fluid d-flex flex-column py-2 px-0"
-				style={{ overflowX: "hidden" }}>
+				style={{ overflowX: "hidden" }} id="weather-container">
 				<section className="app-header d-flex justify-content-between px-2 flex-row-reverse " >
 					<section className="city-location">
 						<h5 className="fw-bold fs-5" id="weatherLocation">

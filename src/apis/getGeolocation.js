@@ -53,6 +53,7 @@ const getGeolocation = () => {
 								//if API call was successful
 								if(result.cod == 200){
 									console.log(result);
+									
 								}
 							}
 						},

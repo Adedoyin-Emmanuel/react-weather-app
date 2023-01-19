@@ -33,7 +33,7 @@ const getGeolocation = () => {
                     $.noConflict();
 
                     const longitude = db.get("USER_LONGITUDE"), latitude = db.get("USER_LATITUDE");
-                    const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherAPI.API_KEY}`;
+                    const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherAPI.API_KEY}&units=metric`;
 
 					$.ajax({
 						url:URL,
@@ -52,7 +52,7 @@ const getGeolocation = () => {
 							}else{
 								//if API call was successful
 								if(result.cod == 200){
-									console.log(result);
+									weatherAPI.updateReactDom(result);
 									weatherAPI.scrollToElement("weatherContainer");
 								}
 							}

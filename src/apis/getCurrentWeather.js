@@ -20,7 +20,6 @@ export const handleWeatherForm = (e) => {
 
 	jQuery(($) => {
 		$("#searchWeather").val(" ");
-		closeUtilityComponent();
 	});
 };
 export const getCurrentWeather = () => {
@@ -37,6 +36,8 @@ export const getCurrentWeather = () => {
 				} else {
 					//check if the API returned a legit response
 					if (result.cod === 200) {
+						$("#searchWeather").val("");
+						closeUtilityComponent();
 						$("#weatherLocation").html(result.name);
 						$("#currentDeg").html(Math.ceil(result.main.temp));
 						$("#weatherDes").html(result.weather[0].description);

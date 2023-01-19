@@ -49,10 +49,6 @@ const WeatherApp = () => {
 	};
 
 
-  const getCurrentLocation = () =>{
-    console.log("leemao");
-  }
-
 	let weatherData = [
 		{
 			time: ["10am"],

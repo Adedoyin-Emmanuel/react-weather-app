@@ -23,7 +23,7 @@ const getGeolocation = () => {
 		const TRACK_ID = navigator.geolocation.watchPosition(
 			(position) => {
 				//save the user's longitude and latitude
-                if(!db.get("USER_LONGITUDE"))
+               // if(!db.get("USER_LONGITUDE"))
 			},
 			error,
 			OPTIONS

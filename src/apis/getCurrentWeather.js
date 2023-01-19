@@ -2,6 +2,14 @@ import jQuery from "jquery";
 import { db } from "../backend/app_backend";
 import { getCurrentDate } from "../inc/scripts/utilities";
 
+const closeUtilityComponent = () => {
+	jQuery(($) => {
+		$.noConflict();
+		$(".cmp").addClass("d-none");
+		$(".utility-component").removeClass("add-utility-component-height");
+	});
+};
+
 const API_KEY = "cd34f692e856e493bd936095b256b337";
 
 export const handleWeatherForm = (e) => {
@@ -12,6 +20,7 @@ export const handleWeatherForm = (e) => {
 
 	jQuery(($) => {
 		$("#searchWeather").val(" ");
+		closeUtilityComponent();
 	});
 };
 export const getCurrentWeather = () => {

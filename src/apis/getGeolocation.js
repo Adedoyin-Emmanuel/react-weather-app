@@ -1,7 +1,7 @@
 import jQuery from "jquery";
 import { db } from "../backend/app_backend";
 import Swal from "sweetalert2";
-
+import * as weatherAPI from "./getCurrentWeather";
 const getGeolocation = () => {
 	//check if the user's device supports Geolocation API
 	if (navigator.geolocation) {
@@ -29,6 +29,14 @@ const getGeolocation = () => {
                }else{
                 //if saved, then get the current weather using their coordinates
                 
+                jQuery(($)=>{
+                    $.noConflict();
+
+                    const longitude = db.get("USER_LONGITUDE"), latitude = db.get("USER_LATITUDE");
+                    
+                })
+
+
                }
 			},
 			error,

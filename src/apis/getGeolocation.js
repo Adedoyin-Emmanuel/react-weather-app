@@ -69,7 +69,10 @@ const getGeolocation = () => {
 									timer: 3000,
 									position: "top",
 									showConfirmButton: false,
-								});
+								}).then((willProceed)=>{
+									weatherAPI.scrollToElement("weatherContainer");
+									
+								})
 							},
 						});
 					});

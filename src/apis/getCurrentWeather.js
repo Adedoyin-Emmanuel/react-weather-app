@@ -59,7 +59,7 @@ export const getCurrentWeather = () => {
 						text: "Something went wrong!",
 						icon: "info",
 						showConfirmButton: false,
-						timer: 3000,
+						timer: 1000,
 					});
 				} else {
 					//check if the API returned a legit response
@@ -78,7 +78,7 @@ export const getCurrentWeather = () => {
 						toast: true,
 						text: "Network Error!",
 						icon: "info",
-						timer: 3000,
+						timer: 1000,
 						position: "top",
 						showConfirmButton: false,
 					}).then((willProceed) => {
@@ -90,7 +90,7 @@ export const getCurrentWeather = () => {
 						toast: true,
 						text: error,
 						icon: "warning",
-						timer: 3000,
+						timer: 1000,
 						position: "top",
 						showConfirmButton: false,
 					}).then((willProceed) => {

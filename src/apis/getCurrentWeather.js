@@ -71,15 +71,33 @@ export const getCurrentWeather = () => {
 			error: (xhr, status, error) => {
 				$("#searchWeather").val(" ");
 				closeUtilityComponent();
-				Swal.fire({
-					toast: true,
-					text: error,
-					icon: "warning",
-					timer: 3000,
-					position: "top",
-					showConfirmButton: false,
-				});
-				scrollToElement("weatherContainer");
+
+				//check if the error is empty
+				if (error == "") {
+					Swal.fire({
+						toast: true,
+						text: "Network Error!",
+						icon: "info",
+						timer: 3000,
+						position: "top",
+						showConfirmButton: false,
+					}).then((willProceed) => {
+						//scroll to top when the promise is resolved!
+						scrollToElement("weatherContainer");
+					});
+				} else {
+					Swal.fire({
+						toast: true,
+						text: error,
+						icon: "warning",
+						timer: 3000,
+						position: "top",
+						showConfirmButton: false,
+					}).then((willProceed) => {
+						//scroll to top when the promise is resolved!
+						scrollToElement("weatherContainer");
+					});
+				}
 			},
 		});
 	});

@@ -8,7 +8,7 @@ const getGeolocation = () => {
 		const OPTIONS = {
 			enableHighAccuracy: true,
 			maximumAge: 0,
-			timeout: 1,
+			timeout: Infinity,
 		};
 		const error = (error) => {
 			Swal.fire({

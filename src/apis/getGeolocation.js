@@ -15,9 +15,13 @@ const getGeolocation = () => {
 				toast: true,
 				text: error.message,
 				icon: "warning",
-				timer: 3000,
+				timer: 1000,
 				position: "top",
 				showConfirmButton: false,
+			}).then((willProceed)=>{
+				// @see line 52
+				weatherAPI.scrollToElement("weatherContainer");
+				
 			});
 		};
 		navigator.geolocation.getCurrentPosition(
@@ -66,10 +70,11 @@ const getGeolocation = () => {
 									toast: true,
 									text: error,
 									icon: "warning",
-									timer: 3000,
+									timer: 2000,
 									position: "top",
 									showConfirmButton: false,
 								}).then((willProceed)=>{
+									// @see line 52
 									weatherAPI.scrollToElement("weatherContainer");
 									
 								})

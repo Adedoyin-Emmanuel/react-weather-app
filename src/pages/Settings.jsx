@@ -44,9 +44,7 @@ const Settings = () => {
 						<form
 							action=""
 							id="settingsForm"
-							onSubmit={(e) => {
-								settings.saveLocation(e);
-							}}>
+							>
 							<label
 								htmlFor="defaultLocation "
 								className="brand-small-text py-3">
@@ -67,6 +65,9 @@ const Settings = () => {
 								<Button
 									text="save location"
 									className="shadow brand-btn-3  my-5 text-light text-capitalize"
+                  onClick={(e) => {
+                    settings.saveLocation(e);
+                  }}
 								/>
 							</section>
 
@@ -79,16 +80,13 @@ const Settings = () => {
 							<div className="mb-3">
 								<select className="form-select form-select my-2" name="" id="">
 									<option defaultValue="SELECT" className="text-capitalize">
-										Select Unit
+										Degree Celsius
 									</option>
 									<option defaultValue="" className="text-capitalize">
-										New Delhi
+										kelvin
 									</option>
 									<option defaultValue="" className="text-capitalize">
-										Istanbul
-									</option>
-									<option defaultValue="" className="text-capitalize">
-										Jakarta
+										Farenhei
 									</option>
 								</select>
 							</div>

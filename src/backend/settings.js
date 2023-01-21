@@ -97,3 +97,8 @@ export const checkTrackedLocation = () => {
 		return false;
 	}
 };
+
+
+export const changeWeatherUnit  = () =>{
+	console.log("hello world");
+}

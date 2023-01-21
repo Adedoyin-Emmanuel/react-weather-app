@@ -21,7 +21,19 @@ export const scrollToElement = (elementId) => {
 
 export const handleWeatherForm = (e, search) => {
 	e.preventDefault();
-	console.log(search);
+
+	if (!db.get("USER_DEFAULT_LOCATION")) {
+		Swal.fire({
+			text: "Please set default location to track",
+			icon: "info",
+			timer: 1500,
+			showConfirmButton: false,
+			position: "top",
+		}).then((willProceed) => {
+			scrollToElement("weatherContainer");
+		});
+	}
+
 	let userSearch = jQuery("#searchWeather").val() || search;
 	getCurrentWeather(userSearch);
 
@@ -60,7 +72,6 @@ export const getCurrentWeather = (location) => {
 						icon: "info",
 						showConfirmButton: false,
 						timer: 1000,
-						
 					});
 				} else {
 					//check if the API returned a legit response

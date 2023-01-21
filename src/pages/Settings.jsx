@@ -13,6 +13,7 @@ const Settings = () => {
 	const [defaultLocation, setDefaultLocation] = useState(
 		settings.getDefaultLocation()
 	);
+	const [weatherUnit, setWeatherUnit] = useState();;
 	//database returns a string
 	let trackedLocation = db.get("TRACK_SAVED_LOCATION_WEATHER");
 	let trackedLocationLegit = trackedLocation == "true" ? true : false;
@@ -86,7 +87,7 @@ const Settings = () => {
 										kelvin
 									</option>
 									<option defaultValue="" className="text-capitalize">
-										Farenhei
+										Farenheit
 									</option>
 								</select>
 							</div>

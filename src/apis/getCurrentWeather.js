@@ -36,6 +36,7 @@ export const handleWeatherForm = (e, search) => {
 	}
 
 	let userSearch = jQuery("#searchWeather").val() || search;
+
 	getCurrentWeather(userSearch);
 
 		scrollToElement("weatherContainer");

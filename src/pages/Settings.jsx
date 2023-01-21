@@ -85,6 +85,7 @@ const Settings = () => {
                   <option defaultValue="" className="text-capitalize">Jakarta</option>
                 </select>
               </div>
+              <br/>
 
               <hr className="horizontal-line py-3 w-75 m-auto " />
 

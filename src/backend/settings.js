@@ -104,12 +104,26 @@ export const changeWeatherUnit = (e) => {
 		const weatherUnit = $("#weatherUnitContainer").val();
 		let unitToStore;
 		switch (weatherUnit) {
-			case 0:
+			case "0":
 				unitToStore = "celsius";
-				console.log(unitToStore);
 				break;
-		
+			case "1":
+				unitToStore = "kelvin";
+				break;
+			case "2":
+				unitToStore = "farenheit";
+				break;
+			
 			default:
+				Swal.fire({
+					toast:true,
+					text:"Select a valid unit",
+					icon:"warning",
+					timer:1000,
+					position:"top",
+					showConfirmButton:false,
+					
+				})
 				break;
 		}
 		console.log(weatherUnit);

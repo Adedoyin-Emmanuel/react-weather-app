@@ -91,16 +91,17 @@ export const trackSavedLocationWeather = () => {
 
 export const checkTrackedLocation = () => {
 	let value = db.get("TRACK_SAVED_LOCATION_WEATHER");
-	if(value === true) {
+	if (value === true) {
 		return true;
 	} else {
 		return false;
 	}
 };
 
+export const changeWeatherUnit = () => {
+	jQuery(($) => {
+		const weatherUnit = $("#weatherUnitContainer").val();
 
-export const changeWeatherUnit  = () =>{
-	const weatherUnit = $("#weatherUnitContainer").val();
-
-	console.log(weatherUnit);
-}
+		console.log(weatherUnit);
+	});
+};

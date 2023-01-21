@@ -188,6 +188,7 @@ const WeatherApp = () => {
 						id="searchSavedLocationWeather"
 						onClick={(e) => {
 							formHandler.handleWeatherForm(e, savedLocation);
+							setWeatherInput();
 						}}
 					/>
 				</form>

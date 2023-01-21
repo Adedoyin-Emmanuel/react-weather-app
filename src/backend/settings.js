@@ -126,6 +126,27 @@ export const changeWeatherUnit = (e) => {
 				})
 				break;
 		}
-		console.log(weatherUnit);
+		//check if valuex exists in the DB
+		if(db.get("WEATHER_UNIT")){
+			db.update("WEATHER_UNIT",unitToStore);
+			Swal.fire({
+				toast:true,
+				text:"Weather unit updated successfully",
+				icon:"success",
+				timer:1500,
+				position:"top",
+				showConfirmButton:false
+			})
+		}else{
+			db.create("WEATHER_UNIT",unitToStore);
+			Swal.fire({
+				toast:true,
+				text:"Weather unit stored successfully",
+				icon:"info",
+				timer:1500,
+				position:"top",
+				showConfirmButton:false
+			})
+		}
 	});
 };

@@ -100,5 +100,7 @@ export const checkTrackedLocation = () => {
 
 
 export const changeWeatherUnit  = () =>{
-	console.log("hello world");
+	const weatherUnit = $("#weatherUnitContainer").val();
+
+	console.log(weatherUnit);
 }

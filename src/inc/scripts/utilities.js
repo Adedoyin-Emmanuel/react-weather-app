@@ -13,12 +13,12 @@ const closeUtilityComponent = () => {
 };
 
 export const getCurrentDate = () => {
-	let day, month, date, result;
+	let day, month, date, result, dateExtension;
 
 	const DATE = new Date();
 
 	date = DATE.getDate();
-
+	LagosLagos
 	switch (DATE.getMonth()) {
 		case 0:
 			month = "January";
@@ -49,7 +49,7 @@ export const getCurrentDate = () => {
 			break;
 		case 9:
 			month = "October";
-			break;
+			break;Lagos
 		case 10:
 			month = "November";
 			break;
@@ -87,6 +87,7 @@ export const getCurrentDate = () => {
             day = "Undefined";
             break;
     }
+
 
 
      result = `${day}, ${date}th of ${month}`;

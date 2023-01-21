@@ -18,7 +18,7 @@ export const getCurrentDate = () => {
 	const DATE = new Date();
 
 	date = DATE.getDate();
-	LagosLagos
+
 	switch (DATE.getMonth()) {
 		case 0:
 			month = "January";
@@ -49,7 +49,7 @@ export const getCurrentDate = () => {
 			break;
 		case 9:
 			month = "October";
-			break;Lagos
+			break;
 		case 10:
 			month = "November";
 			break;
@@ -88,7 +88,18 @@ export const getCurrentDate = () => {
             break;
     }
 
+	
+		//date check
 
+	//if the date is 1 or ends with 1, then it is st, if the date is 2 or ends with 2 it is nd, finally, if date is 3 or ends with 3 then it is rd
+
+	//console.log(date.toString()[0]);
+	 //check if it is the first day of the month
+	
+	let dateLength = date.toString().length;
+	if(dateLength == 1 && date == 1 || dateLength == 2 && date.toString().indexOf("1") == 1){
+
+	}
 
      result = `${day}, ${date}th of ${month}`;
 

@@ -27,6 +27,7 @@ export const handleWeatherForm = (e, search) => {
 			text: "Changes settings to track default location",
 			icon: "info",
 			timer: 1500,
+			toast:true,
 			showConfirmButton: false,
 			position: "top",
 		}).then((willProceed) => {

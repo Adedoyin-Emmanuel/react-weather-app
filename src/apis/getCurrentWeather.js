@@ -21,7 +21,7 @@ export const scrollToElement = (elementId) => {
 
 export const handleWeatherForm = (e, search) => {
 	e.preventDefault();
-	let userSearch = $("#searchWeather").val() || search;
+	let userSearch = jQuery("#searchWeather").val() || search;
 	getCurrentWeather(userSearch);
 
 	//empty the search bar once data is fetched
@@ -61,7 +61,7 @@ export const getCurrentWeather = (location) => {
 						icon: "info",
 						showConfirmButton: false,
 						timer: 1000,
-						searchSavedLocationWeather,
+						
 					});
 				} else {
 					//check if the API returned a legit response

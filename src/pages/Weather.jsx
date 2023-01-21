@@ -21,7 +21,7 @@ const WeatherApp = () => {
 	const [componentToInsert, setComponentToInsert] = useState("");
 	const [weatherInput, setWeatherInput] = useState();
 
-	
+	const savedlocation = db.get("")
 
 	const addUtilityComponentHeight = () => {
 		//if the component is opened already, then close it

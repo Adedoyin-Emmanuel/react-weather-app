@@ -97,7 +97,7 @@ const Settings = () => {
 								<Button
 									text="save unit"
 									className="shadow brand-btn-3-secondary toggle-width-3 my-5 text-dark text-capitalize p-2"
-									onClick={settings.changeWeatherUnit()}
+									onClick={e=>settings.changeWeatherUnit(e)}
 								/>
 							</section>
 

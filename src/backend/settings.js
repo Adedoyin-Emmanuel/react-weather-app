@@ -102,7 +102,16 @@ export const changeWeatherUnit = (e) => {
 	jQuery(($) => {
 		e.preventDefault();
 		const weatherUnit = $("#weatherUnitContainer").val();
-
+		let unitToStore;
+		switch (weatherUnit) {
+			case 0:
+				unitToStore = "celsius";
+				console.log(unitToStore);
+				break;
+		
+			default:
+				break;
+		}
 		console.log(weatherUnit);
 	});
 };

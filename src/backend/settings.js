@@ -99,10 +99,10 @@ export const checkTrackedLocation = () => {
 };
 
 export const changeWeatherUnit = (e) => {
-	e.preventDefault();
 	jQuery(($) => {
+		e.preventDefault();
 		const weatherUnit = $("#weatherUnitContainer").val();
-	
+
 		console.log(weatherUnit);
 	});
 };

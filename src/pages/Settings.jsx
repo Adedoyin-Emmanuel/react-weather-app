@@ -67,12 +67,14 @@ const Settings = () => {
                   setDefaultLocation(e.target.value);
                 }}
               />
-              <section className="d-md-flex align-items-center justify-content-md-center d-lg-block">
+              <section className="my-2 d-md-flex align-items-center justify-content-md-center d-lg-block">
                 <Button
                   text="save location"
                   className="shadow brand-btn-3  my-5 text-light text-capitalize"
                 />
               </section>
+
+              <label htmlFor="defaultWeatherUnit " className="text-capitalize py-2 my-2">select your default weather unit</label>
 
               <hr className="horizontal-line py-3 w-75 m-auto " />
 

@@ -13,7 +13,7 @@ const Settings = () => {
 	const [defaultLocation, setDefaultLocation] = useState(
 		settings.getDefaultLocation()
 	);
-	const [weatherUnit, setWeatherUnit] = useState();;
+	const [weatherUnit, setWeatherUnit] = useState();
 	//database returns a string
 	let trackedLocation = db.get("TRACK_SAVED_LOCATION_WEATHER");
 	let trackedLocationLegit = trackedLocation == "true" ? true : false;
@@ -79,14 +79,14 @@ const Settings = () => {
 							</label>
 
 							<div className="mb-3">
-								<select className="form-select form-select my-2" name="" id="">
-									<option defaultValue="SELECT" className="text-capitalize">
+								<select className="form-select form-select my-2" name="weatherUnit" id="weatherUnitContainer" value={weatherUnit} onChange={(e)=>setWeatherUnit(e.target.value)}>
+									<option defaultValue="SELECT" value={0} className="text-capitalize">
 										Degree Celsius
 									</option>
-									<option defaultValue="" className="text-capitalize">
+									<option defaultValue="" value={1} className="text-capitalize">
 										kelvin
 									</option>
-									<option defaultValue="" className="text-capitalize">
+									<option defaultValue="" value={2} className="text-capitalize">
 										Farenheit
 									</option>
 								</select>

@@ -21,6 +21,8 @@ const WeatherApp = () => {
 	const [componentToInsert, setComponentToInsert] = useState("");
 	const [weatherInput, setWeatherInput] = useState();
 
+	
+
 	const addUtilityComponentHeight = () => {
 		//if the component is opened already, then close it
 		if (db.get("UTILITY_CMP_DISPLAY") == "true") {

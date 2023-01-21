@@ -19,9 +19,10 @@ export const scrollToElement = (elementId) => {
 		.scrollIntoView({ behaviour: "smooth" });
 };
 
-export const handleWeatherForm = (e) => {
+export const handleWeatherForm = (e, search) => {
 	e.preventDefault();
-	getCurrentWeather();
+	let userSearch = $("#searchWeather").val() || search;
+	getCurrentWeather(userSearch);
 
 	//empty the search bar once data is fetched
 
@@ -42,9 +43,9 @@ export const updateReactDom = (result) => {
 		$("#currentDate").html(getCurrentDate());
 	});
 };
-export const getCurrentWeather = () => {
+export const getCurrentWeather = (location) => {
 	jQuery(($) => {
-		let userSearch = $("#searchWeather").val();
+		let userSearch = location;
 
 		const SEARCH_URL = `https://api.openweathermap.org/data/2.5/weather?q=${userSearch}&appid=${API_KEY}&units=metric`;
 
@@ -60,6 +61,7 @@ export const getCurrentWeather = () => {
 						icon: "info",
 						showConfirmButton: false,
 						timer: 1000,
+						searchSavedLocationWeather,
 					});
 				} else {
 					//check if the API returned a legit response

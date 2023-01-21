@@ -76,6 +76,16 @@ const Settings = () => {
 
               <label htmlFor="defaultWeatherUnit " className="text-capitalize py-2 my-2">select your default weather unit</label>
 
+              <div className="mb-3">
+               
+                <select className="form-select form-select my-2" name="" id="">
+                  <option defaultValue="SELECT" className="text-capitalize">Select Unit</option>
+                  <option defaultValue="" className="text-capitalize">New Delhi</option>
+                  <option defaultValue="" className="text-capitalize">Istanbul</option>
+                  <option defaultValue="" className="text-capitalize">Jakarta</option>
+                </select>
+              </div>
+
               <hr className="horizontal-line py-3 w-75 m-auto " />
 
               <section className="factory-settings my-3">

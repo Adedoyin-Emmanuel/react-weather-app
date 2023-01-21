@@ -88,35 +88,29 @@ export const getCurrentDate = () => {
 			break;
 	}
 
-	//date check
+	//date format check
 
-	//if the date is 1 or ends with 1, then it is st, if the date is 2 or ends with 2 it is nd, finally, if date is 3 or ends with 3 then it is rd
-
-	//console.log(date.toString()[0]);
-	//check if it is the first day of the month
-	date = 20;
 	let dateLength = date.toString().length;
 	if (
 		(dateLength == 1 && date == 1) ||
-		(dateLength == 2 && date.toString().lastIndexOf("1") == 1)
+		(dateLength == 2 && date.toString().indexOf	("1") == 1)
 	) {
 		dateExtension = "st";
 	} else if (
 		(dateLength == 1 && date == 2) ||
-		(dateLength == 2 && date.toString().lastIndexOf("2") == 1)
+		(dateLength == 2 && date.toString()[0] > 1 && date.toString().lastIndexOf("2") == 1)
 	) {
 		dateExtension = "nd";
 	} else if (
 		(dateLength == 1 && date == 3) ||
-		(dateLength == 2 && date.toString().lastIndexOf("3") == 1)
+		(dateLength == 2 && date.toString()[0] > 1 && date.toString().indexOf("3") == 1)
 	) {
 		dateExtension = "rd";
 	} else {
 		dateExtension = "th";
 	}
 
-	result = `${day}, ${date}${dateExtension} of ${month}`;
-
+	result = `${day}, ${date}${dateExtension} of ${month}`;	
 	return result;
 };
 

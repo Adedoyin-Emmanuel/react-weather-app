@@ -22,9 +22,9 @@ export const scrollToElement = (elementId) => {
 export const handleWeatherForm = (e, search) => {
 	e.preventDefault();
 
-	if (!db.get("USER_DEFAULT_LOCATION")) {
+	if (db.get("TRACK_SAVED_LOCATION_WEATHER") == "false") {
 		Swal.fire({
-			text: "Please set default location to track",
+			text: "Changes settings to track default location",
 			icon: "info",
 			timer: 1500,
 			showConfirmButton: false,
@@ -37,7 +37,8 @@ export const handleWeatherForm = (e, search) => {
 	let userSearch = jQuery("#searchWeather").val() || search;
 	getCurrentWeather(userSearch);
 
-	jQuery(($) => {
+		scrollToElement("weatherContainer");
+		jQuery(($) => {
 		$("#searchWeather").val(" ");
 	});
 };

@@ -21,9 +21,8 @@ const WeatherApp = () => {
 	const [componentToInsert, setComponentToInsert] = useState("");
 	const [weatherInput, setWeatherInput] = useState();
 	let savedLocation;
-	if (db.get("TRACK_SAVED_LOCATION_WEATHER") == "true") {
-		savedLocation = db.get("USER_DEFAULT_LOCATION");
-	}
+
+	savedLocation = db.get("USER_DEFAULT_LOCATION");
 
 	const addUtilityComponentHeight = () => {
 		//if the component is opened already, then close it
@@ -31,12 +30,12 @@ const WeatherApp = () => {
 		// 	closeUtilityComponent();
 		// } else {
 		// 	//else open the component
-			jQuery(($) => {
-				$.noConflict();
-				$(".cmp").removeClass("d-none");
-				$(".utility-component").toggleClass("add-utility-component-height");
-				//db.create("UTILITY_CMP_DISPLAY", true);
-			});
+		jQuery(($) => {
+			$.noConflict();
+			$(".cmp").removeClass("d-none");
+			$(".utility-component").toggleClass("add-utility-component-height");
+			//db.create("UTILITY_CMP_DISPLAY", true);
+		});
 		//}
 	};
 

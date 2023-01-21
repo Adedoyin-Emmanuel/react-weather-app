@@ -61,51 +61,63 @@ export const getCurrentDate = () => {
 			break;
 	}
 
-    switch (DATE.getDay()) {
-        case 0:
-            day = "Sunday";
-            break;
-        case 1:
-            day = "Monday";
-            break;
-        case 2:
-            day = "Tuesday";
-            break;
-        case 3:
-            day = "Wednesday";
-            break;
-        case 4:
-            day = "Thursday";
-            break;
-        case 5:
-            day = "Friday";
-            break;
-        case 6:
-            day = "Saturday";
-            break;
-        default:
-            day = "Undefined";
-            break;
-    }
+	switch (DATE.getDay()) {
+		case 0:
+			day = "Sunday";
+			break;
+		case 1:
+			day = "Monday";
+			break;
+		case 2:
+			day = "Tuesday";
+			break;
+		case 3:
+			day = "Wednesday";
+			break;
+		case 4:
+			day = "Thursday";
+			break;
+		case 5:
+			day = "Friday";
+			break;
+		case 6:
+			day = "Saturday";
+			break;
+		default:
+			day = "Undefined";
+			break;
+	}
 
-	
-		//date check
+	//date check
 
 	//if the date is 1 or ends with 1, then it is st, if the date is 2 or ends with 2 it is nd, finally, if date is 3 or ends with 3 then it is rd
 
 	//console.log(date.toString()[0]);
-	 //check if it is the first day of the month
-	
+	//check if it is the first day of the month
+	date = 20;
 	let dateLength = date.toString().length;
-	if(dateLength == 1 && date == 1 || dateLength == 2 && date.toString().indexOf("1") == 1){
-
+	if (
+		(dateLength == 1 && date == 1) ||
+		(dateLength == 2 && date.toString().lastIndexOf("1") == 1)
+	) {
+		dateExtension = "st";
+	} else if (
+		(dateLength == 1 && date == 2) ||
+		(dateLength == 2 && date.toString().lastIndexOf("2") == 1)
+	) {
+		dateExtension = "nd";
+	} else if (
+		(dateLength == 1 && date == 3) ||
+		(dateLength == 2 && date.toString().lastIndexOf("3") == 1)
+	) {
+		dateExtension = "rd";
+	} else {
+		dateExtension = "th";
 	}
 
-     result = `${day}, ${date}th of ${month}`;
+	result = `${day}, ${date}${dateExtension} of ${month}`;
 
-     return result;
-
-    
+	return result;
 };
 
 export default navigate;

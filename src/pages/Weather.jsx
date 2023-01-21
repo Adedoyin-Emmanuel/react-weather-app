@@ -16,29 +16,24 @@ import { db } from "../backend/app_backend";
 import getGeolocation from "../apis/getGeolocation";
 import { getCurrentDate } from "../inc/scripts/utilities";
 
-
-
 const WeatherApp = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
 	const [weatherInput, setWeatherInput] = useState();
 
 	const addUtilityComponentHeight = () => {
-    //if the component is opened already, then close it
+		//if the component is opened already, then close it
 		if (db.get("UTILITY_CMP_DISPLAY") == "true") {
-      closeUtilityComponent();
-
-		}else{
-      //else open the component
-      jQuery(($) => {
+			closeUtilityComponent();
+		} else {
+			//else open the component
+			jQuery(($) => {
 				$.noConflict();
 				$(".cmp").removeClass("d-none");
 				$(".utility-component").toggleClass("add-utility-component-height");
 				db.create("UTILITY_CMP_DISPLAY", true);
-
-        
 			});
-    }
+		}
 	};
 
 	const closeUtilityComponent = () => {
@@ -46,14 +41,13 @@ const WeatherApp = () => {
 			$.noConflict();
 			$(".cmp").addClass("d-none");
 			$(".utility-component").removeClass("add-utility-component-height");
-      db.update("UTILITY_CMP_DISPLAY",false);
-      setComponentToInsert("");
+			db.update("UTILITY_CMP_DISPLAY", false);
+			setComponentToInsert("");
 		});
 
-    //update the search component
-    //setWeatherInput("");
+		//update the search component
+		//setWeatherInput("");
 	};
-
 
 	let weatherData = [
 		{
@@ -160,8 +154,7 @@ const WeatherApp = () => {
 					id="searchWeatherForm"
 					onSubmit={(e) => {
 						formHandler.handleWeatherForm(e);
-            setWeatherInput();
-           
+						setWeatherInput();
 					}}>
 					<label htmlFor="searchWeather" className="py-2 text-capitalize ">
 						search city
@@ -176,7 +169,7 @@ const WeatherApp = () => {
 						onChange={(e) => {
 							setWeatherInput(e.target.value);
 						}}
-            autoComplete="off"
+						autoComplete="off"
 					/>
 					<p
 						className="error-holder text-danger py-3 fs-6 brand-small-text text-center d-none"
@@ -185,6 +178,11 @@ const WeatherApp = () => {
 					</p>
 
 					<section className="d-none "></section>
+					<Button
+						text="track saved location!"
+						className="shadow brand-btn-3-secondary toggle-width-3 my-5 text-dark text-capitalize p-2"
+						id="searchSavedLocationWeather"
+					/>
 				</form>
 			</section>
 		);
@@ -200,14 +198,15 @@ const WeatherApp = () => {
 			<Spinner />
 			<div
 				className="container-fluid d-flex flex-column py-2 px-0"
-				style={{ overflowX: "hidden" }} id="weatherContainer">
-				<section className="app-header d-flex justify-content-between px-2 flex-row-reverse " >
+				style={{ overflowX: "hidden" }}
+				id="weatherContainer">
+				<section className="app-header d-flex justify-content-between px-2 flex-row-reverse ">
 					<section className="city-location">
 						<h5 className="fw-bold fs-5" id="weatherLocation">
 							Lagos 9ja
 						</h5>
 						<p className="date-time text-muted brand-small-text text-capitalize">
-						{getCurrentDate()}
+							{getCurrentDate()}
 						</p>
 					</section>
 
@@ -381,7 +380,7 @@ const WeatherApp = () => {
 					<Button
 						text="current location"
 						className="brand-btn my-5 width-toggle"
-            onClick={getGeolocation}
+						onClick={getGeolocation}
 					/>
 					<br />
 				</section>

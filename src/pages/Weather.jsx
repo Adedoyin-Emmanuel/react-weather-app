@@ -20,30 +20,33 @@ const WeatherApp = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
 	const [weatherInput, setWeatherInput] = useState();
-
-	const savedlocation = db.get("")
+	let savedLocation;
+	if (db.get("TRACK_SAVED_LOCATION_WEATHER") == "true") {
+		savedLocation = db.get("USER_DEFAULT_LOCATION");
+	}
 
 	const addUtilityComponentHeight = () => {
 		//if the component is opened already, then close it
-		if (db.get("UTILITY_CMP_DISPLAY") == "true") {
-			closeUtilityComponent();
-		} else {
-			//else open the component
+		// if (db.get("UTILITY_CMP_DISPLAY") == "true") {
+		// 	closeUtilityComponent();
+		// } else {
+		// 	//else open the component
 			jQuery(($) => {
 				$.noConflict();
 				$(".cmp").removeClass("d-none");
 				$(".utility-component").toggleClass("add-utility-component-height");
-				db.create("UTILITY_CMP_DISPLAY", true);
+				//db.create("UTILITY_CMP_DISPLAY", true);
 			});
-		}
+		//}
 	};
 
 	const closeUtilityComponent = () => {
+		//db.update("UTILITY_CMP_DISPLAY", false);
+
 		jQuery(($) => {
 			$.noConflict();
 			$(".cmp").addClass("d-none");
 			$(".utility-component").removeClass("add-utility-component-height");
-			db.update("UTILITY_CMP_DISPLAY", false);
 			setComponentToInsert("");
 		});
 
@@ -127,7 +130,7 @@ const WeatherApp = () => {
 	//create the weather forecast component
 	const UtilityForecastTags = () => {
 		return (
-			<section className=" d-flex align-items-center justify-content-center flex-column my-5">
+			<section className="cmp d-flex align-items-center justify-content-center flex-column my-5">
 				<section className="d-flex flex-row align-items-center justify-content-center d-none cmp cmp-1 my-5">
 					{uiForeCastData}
 				</section>
@@ -151,7 +154,7 @@ const WeatherApp = () => {
 
 	const SearchComponent = () => {
 		return (
-			<section className=" d-flex align-items-center justify-content-center flex-column my-5">
+			<section className="cmp d-flex align-items-center justify-content-center flex-column my-5">
 				<form
 					id="searchWeatherForm"
 					onSubmit={(e) => {
@@ -184,6 +187,9 @@ const WeatherApp = () => {
 						text="track saved location!"
 						className="shadow brand-btn-3-secondary toggle-width-3 my-5 text-dark text-capitalize p-2"
 						id="searchSavedLocationWeather"
+						onClick={(e) => {
+							formHandler.handleWeatherForm(e, savedLocation);
+						}}
 					/>
 				</form>
 			</section>

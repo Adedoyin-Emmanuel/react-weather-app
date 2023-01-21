@@ -21,10 +21,9 @@ export const scrollToElement = (elementId) => {
 
 export const handleWeatherForm = (e, search) => {
 	e.preventDefault();
+	console.log(search);
 	let userSearch = jQuery("#searchWeather").val() || search;
 	getCurrentWeather(userSearch);
-
-	//empty the search bar once data is fetched
 
 	jQuery(($) => {
 		$("#searchWeather").val(" ");

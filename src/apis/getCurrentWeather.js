@@ -13,6 +13,8 @@ export const closeUtilityComponent = () => {
 
 export const API_KEY = "cd34f692e856e493bd936095b256b337";
 
+export const WEATHER_UNIT = db.get("WEATHER_UNIT");
+
 export const scrollToElement = (elementId) => {
 	document
 		.getElementById(`${elementId}`)
@@ -60,7 +62,8 @@ export const updateReactDom = (result) => {
 export const getCurrentWeather = (location) => {
 	jQuery(($) => {
 		let userSearch = location;
-
+		
+		
 		const SEARCH_URL = `https://api.openweathermap.org/data/2.5/weather?q=${userSearch}&appid=${API_KEY}&units=metric`;
 
 		$.ajax({

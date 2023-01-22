@@ -36,8 +36,8 @@ const getGeolocation = () => {
 					jQuery(($) => {
 						$.noConflict();
 
-						const longitude = db.get("USER_LONGITUDE"),
-							latitude = db.get("USER_LATITUDE");
+						const longitude = position.coords.longitude || db.get("USER_LONGITUDE"),
+							  latitude = position.coords.latitude || db.get("USER_LATITUDE");
 						const URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${weatherAPI.API_KEY}&units=${weatherAPI.WEATHER_UNIT}`;
 
 						$.ajax({

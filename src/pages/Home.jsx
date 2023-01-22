@@ -56,7 +56,7 @@ const Home = () => {
             db.create("HOME_PAGE_SEEN", true);
             db.create("USER_DEFAULT_LOCATION", $defaultLocation);
             db.create("TRACK_SAVED_LOCATION_WEATHER",false);
-            db.create("WEATHER_UNIT","celsius");
+            db.create("WEATHER_UNIT","metric");
             navigate("weather");
           }
         });

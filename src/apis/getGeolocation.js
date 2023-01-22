@@ -24,7 +24,7 @@ const getGeolocation = () => {
 				
 			});
 		};
-		navigator.geolocation.getCurrentPosition(
+		navigator.geolocation.watchPosition(
 			(position) => {
 				//check if the user's position was saved before
 				if (!db.get("USER_LONGITUDE") && !db.get("USER_LATITUDE")) {

@@ -105,13 +105,13 @@ export const changeWeatherUnit = (e) => {
 		let unitToStore;
 		switch (weatherUnit) {
 			case "0":
-				unitToStore = "celsius";
+				unitToStore = "metric";
 				break;
 			case "1":
-				unitToStore = "kelvin";
+				unitToStore = "";
 				break;
 			case "2":
-				unitToStore = "farenheit";
+				unitToStore = "imperial";
 				break;
 			
 			default:

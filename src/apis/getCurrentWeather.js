@@ -37,11 +37,11 @@ export const handleWeatherForm = (e, search) => {
 
 	let userSearch = jQuery("#searchWeather").val() || search;
 
-	getCurrentWeather(userSearch);
+	getCurrentWeather(userSearch.trim());
 
 		scrollToElement("weatherContainer");
 		jQuery(($) => {
-		$("#searchWeather").val(" ");
+		$("#searchWeather").val("");
 	});
 };
 

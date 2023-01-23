@@ -14,9 +14,11 @@ const UtilityComponent = (props) => {
 	const swipe = (direction) => {
 		alert(`you swipped ${direction}`);
 	};
+
+  const swipeable = useSwipeable({swipe});
 	return (
-		<useSwipeable onSwipe={swipe} className="d-flex align-items-center justify-content-center">
-			<section
+		
+			<section {...swipeable}
 				className="utility-component align-items-center justify-content-around m-auto width-toggle-2"
 				id="utilityComponent">
 				<div
@@ -25,7 +27,7 @@ const UtilityComponent = (props) => {
 
 				{props.tags}
 			</section>
-		</useSwipeable>
+	
 	);
 };
 

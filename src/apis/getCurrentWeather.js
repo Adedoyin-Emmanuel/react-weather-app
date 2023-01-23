@@ -54,7 +54,7 @@ export const updateReactDom = (result) => {
 		$("#searchWeather").val(" ");
 		closeUtilityComponent();
 		scrollToElement("weatherContainer");
-		$("#weatherLocation").html(result.name);
+		$("#weatherLocation").html(`${result.name} ${result.sys.country}`);
 		$("#currentDeg").html(Math.ceil(result.main.temp));
 		$("#weatherDes").html(result.weather[0].description);
 		$("#currentDate").html(getCurrentDate());
@@ -83,6 +83,7 @@ export const getCurrentWeather = (location) => {
 				} else {
 					//check if the API returned a legit response
 					if (result.cod === 200) {
+						console.log(result);
 						updateReactDom(result);
 					}
 				}

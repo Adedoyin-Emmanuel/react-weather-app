@@ -1,6 +1,5 @@
 import React from "react";
 import jQuery from "jquery";
-import { useSwipeable } from "react-swipeable";
 
 const UtilityComponent = (props) => {
 	const closeUtilityComponent = () => {
@@ -11,14 +10,10 @@ const UtilityComponent = (props) => {
 		});
 	};
 
-	const swipe = (direction) => {
-		alert(`you swipped ${direction}`);
-	};
 
-  const swipeable = useSwipeable({swipe});
 	return (
 		
-			<section {...swipeable}
+			<section
 				className="utility-component align-items-center justify-content-around m-auto width-toggle-2"
 				id="utilityComponent">
 				<div

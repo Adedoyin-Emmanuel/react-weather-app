@@ -59,19 +59,19 @@ export const handleWeatherForm = (e, search) => {
 export let weatherSvg;
 export const checkWeatherCode = (code) => {
 	//check the result code states and allocate different icon svg depending on the weather code
-	if (code >= 200 && code != 300) {
+	if (code >= 200 && !(code >= 300)) {
 		//Thunder weather status
 		weatherSvg = Thunder;
-	} else if (code >= 300 && code != 400) {
+	} else if (code >= 300 && !(code != 400)) {
 		//Drizzle weather status
 		weatherSvg = Drizzle;
-	} else if (code >= 500 && code != 511 && code != 600) {
+	} else if (code >= 500 && code != 511 && !(code >= 600)) {
 		//Rainy weather status
 		weatherSvg = Rainy;
-	} else if (code >= 700 && code != 800) {
+	} else if (code >= 700 && !(code >= 800)) {
 		//Mist weather status
 		weatherSvg = Misty;
-	} else if (code > 800 && code >= 804) {
+	} else if (code > 800 && !(code > 804)) {
 		//Cloudy weather status
 		weatherSvg = Cloudy;
 	} else if (code == 511) {
@@ -82,7 +82,7 @@ export const checkWeatherCode = (code) => {
 		weatherSvg = Day;
 	}else{
 		//weather code doesn't exist
-		weatherSvg = Cloudy;
+		weatherSvg = Misty;
 	}
 
 };
@@ -97,7 +97,9 @@ export const updateReactDom = (result) => {
 		$("#currentDeg").html(Math.ceil(result.main.temp));
 		$("#weatherDes").html(result.weather[0].description);
 		$("#currentDate").html(getCurrentDate());
-		checkWeatherCode(result.weather[0].code)
+		console.log(result.weather[0].id);
+		checkWeatherCode(result.weather[0].id);
+		console.log(weatherSvg);
 		$("#main-weather-icon-container").html(`<img src=${weatherSvg} alt="main-weather-icon" width="64" height="64"/>`);
 	});
 };

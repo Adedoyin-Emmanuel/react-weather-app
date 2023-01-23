@@ -53,6 +53,15 @@ export const handleWeatherForm = (e, search) => {
 export let weatherSvg = "hello";
 export const checkWeatherCode = code =>{
 
+	//check the result code states and allocate different icon svg depding on the weather code
+	if(code >= 200 && code != 300)
+	{
+		weatherSvg = "Thunder";
+
+	}else if (code >= 300 && code != 400)
+	{
+		
+	}
 }
 
 export const updateReactDom = (result) => {

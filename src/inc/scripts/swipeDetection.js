@@ -1,4 +1,4 @@
-import jQuery from "jquery";
+import jquery
 import "jquery-mobile";
 
 jQuery(($)=>{

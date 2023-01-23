@@ -238,7 +238,7 @@ const WeatherApp = () => {
 						/>
 					</svg>
 				</section>
-				<section className="current-weather-container d-flex justify-content-between px-2 my-2">
+				<section className="current-weather-container d-flex justify-content-between px-2 my-4">
 					<section className="current-weather-value-container">
 						<section className="d-flex ">
 							<h1
@@ -256,7 +256,7 @@ const WeatherApp = () => {
 						</p>
 					</section>
 					<section className="current-weather-icon my-4 mx-4">
-						<img src={Drizzle} width={64} height={64} alt="main weather icon"/>
+						<img src={Cloudy} width={64} height={64} alt="main weather icon"/>
 					</section>
 				</section>
 				{/* d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0" */}

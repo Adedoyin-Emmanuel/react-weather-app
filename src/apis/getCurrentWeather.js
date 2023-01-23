@@ -51,7 +51,9 @@ export const handleWeatherForm = (e, search) => {
 
 //function to determine custom icon packs to use
 
-export function u
+export function checkWeatherCode = code  => {
+
+}
 
 
 export const updateReactDom = (result) => {

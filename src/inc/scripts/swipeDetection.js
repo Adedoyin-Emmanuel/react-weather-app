@@ -1,4 +1,4 @@
-import $ from jQuery;
+import jQuery from "jquery";
 import "jquery-mobile";
 
 jQuery(($)=>{
@@ -6,6 +6,9 @@ jQuery(($)=>{
 
     const $utilityComponent = $("#utilityComponent");
     
+    $utilityComponent.on("swipeup",(e)=>{
+        console.log("you swiped up")
+    })
 
     //get the utility footer component
 })

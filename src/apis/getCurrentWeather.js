@@ -5,11 +5,11 @@ import Swal from "sweetalert2";
 import Thunder from "./../assets/static/thunder.svg";
 import Day from "./../assets/static/day.svg";
 import Drizzle from "./../assets/static/rainy-5.svg";
-import Rain from "./../assets/static/rainy-7.svg";
+import Rainy from "./../assets/static/rainy-7.svg";
 import Snowy from "./../assets/static/snowy-6.svg";
 import Cloudy from "./../assets/static/cloudy-day-2.svg";
 import FreezingRain from "./../assets/static/freezing-rain.svg";
-import Mist from "./../assets/static/mist.svg";
+import Misty from "./../assets/static/mist.svg";
 
 export const closeUtilityComponent = () => {
 	jQuery(($) => {
@@ -56,30 +56,33 @@ export const handleWeatherForm = (e, search) => {
 };
 
 //function to determine custom icon packs to use
-export let weatherSvg = "hello";
+export let weatherSvg;
 export const checkWeatherCode = (code) => {
 	//check the result code states and allocate different icon svg depding on the weather code
 	if (code >= 200 && code != 300) {
 		//Thunder weather status
-		weatherSvg = "Thunder";
+		weatherSvg = Thunder;
 	} else if (code >= 300 && code != 400) {
 		//Drizzle weather status
-		weatherSvg = "Drizzle";
+		weatherSvg = Drizzle;
 	} else if (code >= 500 && code != 511 && code != 600) {
 		//Rainy weather status
-		weatherSvg = "Rainy";
+		weatherSvg = Rainy;
 	} else if (code >= 700 && code != 800) {
 		//Mist weather status
-		weatherSvg = "Mist";
+		weatherSvg = Misty;
 	} else if (code > 800 && code >= 804) {
 		//Cloudy weather status
-		weatherSvg = "Cloudy";
+		weatherSvg = Cloudy;
 	} else if (code == 511) {
 		//Freezing rain weather status
-		weatherSvg = "FreezingRain";
+		weatherSvg = FreezingRain;
+	}else if (code == 800)
+	{
+		weatherSvg = Day;
 	}else{
 		//weather code doesn't exist
-		weatherSvg = " ";
+		weatherSvg = Cloudy;
 	}
 
 };
@@ -94,6 +97,7 @@ export const updateReactDom = (result) => {
 		$("#currentDeg").html(Math.ceil(result.main.temp));
 		$("#weatherDes").html(result.weather[0].description);
 		$("#currentDate").html(getCurrentDate());
+		$("#main-weather-icon-container").html(`<img src=${weatherSvg} />`)
 	});
 };
 export const getCurrentWeather = (location) => {

@@ -58,7 +58,7 @@ export const handleWeatherForm = (e, search) => {
 //function to determine custom icon packs to use
 export let weatherSvg;
 export const checkWeatherCode = (code) => {
-	//check the result code states and allocate different icon svg depding on the weather code
+	//check the result code states and allocate different icon svg depending on the weather code
 	if (code >= 200 && code != 300) {
 		//Thunder weather status
 		weatherSvg = Thunder;

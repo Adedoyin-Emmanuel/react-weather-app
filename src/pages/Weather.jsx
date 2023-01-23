@@ -22,6 +22,7 @@ import Rain from "./../assets/static/rainy-7.svg";
 import Snowy from "./../assets/static/snowy-6.svg";
 import Cloudy from "./../assets/static/cloudy-day-2.svg";
 import FreezingRain from "./../assets/static/freezing-rain.svg";
+import Mist from "./../assets/static/mist.svg";
 
 const WeatherApp = () => {
 	//holds the current component to insert into the utility footer component

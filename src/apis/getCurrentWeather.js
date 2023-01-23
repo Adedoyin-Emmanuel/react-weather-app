@@ -53,29 +53,6 @@ export const handleWeatherForm = (e, search) => {
 export let weatherSvg = "hello";
 export const checkWeatherCode = code =>{
 
-	switch(code)
-	{
-		case 200:
-			weatherSvg = "thunder.svg";
-			break;
-		
-		case 300:
-			weatherSvg = "drizzle.svg";
-            break;	
-
-		case 500:
-			weatherSvg = "rainy.svg";
-			break;
-		
-		case 511:
-			weatherSvg = "snowy.svg";
-            break;
-		
-		case 600:
-			weatherSvg = "";
-
-		
-	}
 }
 
 export const updateReactDom = (result) => {

@@ -1,14 +1,16 @@
-import jquery
+import jQuery from "jquery";
 import "jquery-mobile";
 
-jQuery(($)=>{
-    $.noConflict();
+export const detectSwipe = () => {
+	jQuery(($) => {
+		$.noConflict();
 
-    const $utilityComponent = $("#utilityComponent");
-    
-    $utilityComponent.on("swipeup",(e)=>{
-        console.log("you swiped up")
-    })
+		const $utilityComponent = $("#utilityComponent");
 
-    //get the utility footer component
-})
+		$utilityComponent.on("swipeup", (e) => {
+			console.log("you swiped up");
+		});
+
+		//get the utility footer component
+	});
+};

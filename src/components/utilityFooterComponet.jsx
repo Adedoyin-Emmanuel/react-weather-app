@@ -1,5 +1,6 @@
 import React from "react";
 import jQuery from "jquery";
+
 const UtilityComponent = (props) => {
     const closeUtilityComponent = ()=> {
         jQuery(($) => {

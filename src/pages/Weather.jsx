@@ -256,7 +256,7 @@ const WeatherApp = () => {
 						</p>
 					</section>
 					<section className="current-weather-icon my-4 mx-4">
-						<img src={Snowy} width={64} height={64} alt="main weather icon"/>
+						<img src={Day} width={64} height={64} alt="main weather icon"/>
 					</section>
 				</section>
 				{/* d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0" */}

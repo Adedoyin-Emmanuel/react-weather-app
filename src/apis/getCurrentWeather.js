@@ -2,6 +2,14 @@ import jQuery from "jquery";
 import { db } from "../backend/app_backend";
 import { getCurrentDate } from "../inc/scripts/utilities";
 import Swal from "sweetalert2";
+import Thunder from "./../assets/static/thunder.svg";
+import Day from "./../assets/static/day.svg";
+import Drizzle from "./../assets/static/rainy-5.svg";
+import Rain from "./../assets/static/rainy-7.svg";
+import Snowy from "./../assets/static/snowy-6.svg";
+import Cloudy from "./../assets/static/cloudy-day-2.svg";
+import FreezingRain from "./../assets/static/freezing-rain.svg";
+import Mist from "./../assets/static/mist.svg";
 
 export const closeUtilityComponent = () => {
 	jQuery(($) => {

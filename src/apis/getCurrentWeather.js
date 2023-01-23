@@ -51,10 +51,9 @@ export const handleWeatherForm = (e, search) => {
 
 //function to determine custom icon packs to use
 
-export function checkWeatherCode = code  => {
-
+export default checkWeatherCode = (code) =>{
+	
 }
-
 
 export const updateReactDom = (result) => {
 	jQuery(($) => {

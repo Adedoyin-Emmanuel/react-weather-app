@@ -17,7 +17,7 @@ import getGeolocation from "../apis/getGeolocation";
 import { getCurrentDate } from "../inc/scripts/utilities";
 import Thunder from "./../assets/static/thunder.svg";
 import Day from "./../assets/static/day.svg";
-import Drizzle from "./../assets/static/rainy-4.svg"
+import Drizzle from "./../assets/static/rainy-5.svg";
 
 const WeatherApp = () => {
 	//holds the current component to insert into the utility footer component
@@ -253,7 +253,7 @@ const WeatherApp = () => {
 						</p>
 					</section>
 					<section className="current-weather-icon my-4 mx-4">
-						<img src={Day} width={64} height={64} alt={"main weather icon"}/>
+						<img src={Drizzle} width={64} height={64} alt="main weather icon"/>
 					</section>
 				</section>
 				{/* d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0" */}

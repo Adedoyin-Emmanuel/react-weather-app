@@ -13,7 +13,6 @@ export const closeUtilityComponent = () => {
 
 export const API_KEY = "cd34f692e856e493bd936095b256b337";
 
-
 export const WEATHER_UNIT = db.get("WEATHER_UNIT") || "metric";
 
 export const scrollToElement = (elementId) => {
@@ -30,7 +29,7 @@ export const handleWeatherForm = (e, search) => {
 			text: "Changes settings to track default location",
 			icon: "info",
 			timer: 1500,
-			toast:true,
+			toast: true,
 			showConfirmButton: false,
 			position: "top",
 		}).then((willProceed) => {
@@ -42,39 +41,40 @@ export const handleWeatherForm = (e, search) => {
 
 	getCurrentWeather(userSearch.trim());
 
-		scrollToElement("weatherContainer");
-		jQuery(($) => {
+	scrollToElement("weatherContainer");
+	jQuery(($) => {
 		$("#searchWeather").val("");
 	});
 };
 
-
 //function to determine custom icon packs to use
 export let weatherSvg = "hello";
-export const checkWeatherCode = code =>{
-
+export const checkWeatherCode = (code) => {
 	//check the result code states and allocate different icon svg depding on the weather code
-	if(code >= 200 && code != 300)
-	{
+	if (code >= 200 && code != 300) {
 		//Thunder weather status
 		weatherSvg = "Thunder";
-
-	}else if (code >= 300 && code != 400)
-	{
+	} else if (code >= 300 && code != 400) {
 		//Drizzle weather status
 		weatherSvg = "Drizzle";
-
-	}else if (code >= 500 && code != 511 && code != 600)
-	{
+	} else if (code >= 500 && code != 511 && code != 600) {
 		//Rainy weather status
 		weatherSvg = "Rainy";
-
-	}else if(code >= 700 && code != 800)
-	{
+	} else if (code >= 700 && code != 800) {
 		//Mist weather status
 		weatherSvg = "Mist";
+	} else if (code > 800 && code >= 804) {
+		//Cloudy weather status
+		weatherSvg = "Cloudy";
+	} else if (code == 511) {
+		//Freezing rain weather status
+		weatherSvg = "FreezingRain";
+	}else{
+		//weather code doesn't exist
+		weatherSvg = " ";
 	}
-}
+
+};
 
 export const updateReactDom = (result) => {
 	jQuery(($) => {
@@ -91,8 +91,7 @@ export const updateReactDom = (result) => {
 export const getCurrentWeather = (location) => {
 	jQuery(($) => {
 		let userSearch = location;
-		
-		
+
 		const SEARCH_URL = `https://api.openweathermap.org/data/2.5/weather?q=${userSearch}&appid=${API_KEY}&units=${WEATHER_UNIT}`;
 
 		$.ajax({

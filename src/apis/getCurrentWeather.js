@@ -48,6 +48,12 @@ export const handleWeatherForm = (e, search) => {
 	});
 };
 
+
+//function to determine custom icon packs to use
+
+export function u
+
+
 export const updateReactDom = (result) => {
 	jQuery(($) => {
 		$.noConflict();

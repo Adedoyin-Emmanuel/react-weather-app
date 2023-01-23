@@ -71,7 +71,7 @@ export const checkWeatherCode = (code) => {
 	} else if (code >= 700 && !(code >= 800)) {
 		//Mist weather status
 		weatherSvg = Misty;
-	} else if (code > 800 && !(code > 804)) {
+	} else if (code > 800 && code != 803 && code != 804) {
 		//Cloudy weather status
 		weatherSvg = Cloudy;
 	} else if (code == 511) {
@@ -80,9 +80,16 @@ export const checkWeatherCode = (code) => {
 	}else if (code == 800)
 	{
 		weatherSvg = Day;
-	}else{
+	}else if(code == 803)
+	{
+		weatherSvg = "Broken clouds";
+	}else if(code == 804)
+	{
+		weatherSvg = "overcast clouds";
+	}
+	else{
 		//weather code doesn't exist
-		weatherSvg = Misty;
+		weatherSvg = "";
 	}
 
 };

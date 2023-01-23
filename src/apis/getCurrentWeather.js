@@ -50,9 +50,21 @@ export const handleWeatherForm = (e, search) => {
 
 
 //function to determine custom icon packs to use
+export let weatherSvg = "hello";
+export default checkWeatherCode = code =>{
 
-export default checkWeatherCode = (code) =>{
-	
+	switch(code)
+	{
+		case 200:
+			weatherSvg = "thunder.svg";
+			break;
+		
+		case 300:
+			weatherSvg = "rain.svg";
+            break;	
+
+		
+	}
 }
 
 export const updateReactDom = (result) => {

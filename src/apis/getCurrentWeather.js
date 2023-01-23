@@ -63,9 +63,16 @@ export const checkWeatherCode = code =>{
 	{
 		//Drizzle weather status
 		weatherSvg = "Drizzle";
+
 	}else if (code >= 500 && code != 511 && code != 600)
 	{
 		//Rainy weather status
+		weatherSvg = "Rainy";
+
+	}else if(code >= 700 && code != 800)
+	{
+		//Mist weather status
+		weatherSvg = "Mist";
 	}
 }
 

@@ -16,6 +16,8 @@ import { db } from "../backend/app_backend";
 import getGeolocation from "../apis/getGeolocation";
 import { getCurrentDate } from "../inc/scripts/utilities";
 import Thunder from "./../assets/static/thunder.svg";
+import Day from "./../assets/static/day.svg";
+import Drizzle from "./../assets/static/rainy-4.svg"
 
 const WeatherApp = () => {
 	//holds the current component to insert into the utility footer component

@@ -257,7 +257,7 @@ const WeatherApp = () => {
 							Thunderstorm
 						</p>
 					</section>
-					<section className="current-weather-icon my-4 mx-4 px-3">
+					<section className="current-weather-icon my-4 mx-4 px-3" id="main-weather-icon-container">
 						<img src={Mist} width={64} height={64} alt="main weather icon" id="main-weather-icon"/>
 					</section>
 				</section>

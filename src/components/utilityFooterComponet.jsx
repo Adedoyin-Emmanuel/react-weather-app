@@ -13,6 +13,7 @@ const UtilityComponent = (props) => {
 
 	return (
 		
+    <React.Fragment>
 			<section
 				className="utility-component align-items-center justify-content-around m-auto width-toggle-2"
 				id="utilityComponent">
@@ -22,7 +23,7 @@ const UtilityComponent = (props) => {
 
 				{props.tags}
 			</section>
-	
+      </React.Fragment>
 	);
 };
 

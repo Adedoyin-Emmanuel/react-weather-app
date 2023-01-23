@@ -21,6 +21,7 @@ import Drizzle from "./../assets/static/rainy-5.svg";
 import Rain from "./../assets/static/rainy-7.svg";
 import Snowy from "./../assets/static/snowy-6.svg";
 import Cloudy from "./../assets/static/cloudy-day-2.svg";
+import FreezingRain from "./../assets/static/freezing-rain.svg";
 
 const WeatherApp = () => {
 	//holds the current component to insert into the utility footer component
@@ -255,8 +256,8 @@ const WeatherApp = () => {
 							Thunderstorm
 						</p>
 					</section>
-					<section className="current-weather-icon my-4 mx-4">
-						<img src={Day} width={64} height={64} alt="main weather icon"/>
+					<section className="current-weather-icon my-4 mx-4 px-3">
+						<img src={FreezingRain} width={64} height={64} alt="main weather icon"/>
 					</section>
 				</section>
 				{/* d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0" */}

@@ -20,11 +20,13 @@ import Day from "./../assets/static/day.svg";
 import Drizzle from "./../assets/static/rainy-5.svg";
 import Rainy from "./../assets/static/rainy-7.svg";
 import Snowy from "./../assets/static/snowy-6.svg";
-import Cloudy from "./../assets/static/cloudy-day-2.svg";
 import FreezingRain from "./../assets/static/freezing-rain.svg";
 import Misty from "./../assets/static/mist.svg";
 import BrokenClouds from "./../assets/static/broken-clouds.svg";
 import OvercastClouds from "./../assets/static/overcast-clouds.svg";
+import ScatteredClouds from "./../assets/static/scattered-clouds.svg";
+import FewClouds from "./../assets/static/few-clouds.svg";
+import Haze from "./../assets/static/haze.svg";
 
 const WeatherApp = () => {
 	//holds the current component to insert into the utility footer component
@@ -221,7 +223,7 @@ const WeatherApp = () => {
 				<section className="app-header d-flex justify-content-between px-2 flex-row-reverse ">
 					<section className="city-location">
 						<h5 className="fw-bold fs-5" id="weatherLocation">
-							Lagos 9ja
+							{db.get("WEATHER_LOCATION")}
 						</h5>
 						<p className="date-time text-muted brand-small-text text-capitalize">
 							{getCurrentDate()}
@@ -248,7 +250,7 @@ const WeatherApp = () => {
 							<h1
 								className="current-weather-value fw-bold brand-large-text"
 								id="currentDeg">
-								20
+								{Math.ceil(db.get("WEATHER_DEG"))}
 							</h1>
 
 							<sup className="fw-bold brand-medium-text current-weather-unit">
@@ -256,7 +258,7 @@ const WeatherApp = () => {
 							</sup>
 						</section>
 						<p className="text-muted text-capitalize" id="weatherDes">
-							Thunderstorm
+							{db.get("WEATHER_DESCRIPTION")}
 						</p>
 					</section>
 					<section

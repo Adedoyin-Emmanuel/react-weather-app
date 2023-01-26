@@ -7,7 +7,6 @@ import Day from "./../assets/static/day.svg";
 import Drizzle from "./../assets/static/rainy-5.svg";
 import Rainy from "./../assets/static/rainy-7.svg";
 import Snowy from "./../assets/static/snowy-6.svg";
-import Cloudy from "./../assets/static/cloudy-day-2.svg";
 import FreezingRain from "./../assets/static/freezing-rain.svg";
 import Misty from "./../assets/static/mist.svg";
 import BrokenClouds from "./../assets/static/broken-clouds.svg";

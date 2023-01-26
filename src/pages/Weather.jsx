@@ -15,7 +15,6 @@ import * as formHandler from "./../apis/getCurrentWeather";
 import { db } from "../backend/app_backend";
 import getGeolocation from "../apis/getGeolocation";
 import { getCurrentDate } from "../inc/scripts/utilities";
-import Day from "./../assets/static/day.svg";
 import Thunder from "./../assets/static/thunder.svg";
 import Day from "./../assets/static/day.svg";
 import Drizzle from "./../assets/static/rainy-5.svg";
@@ -255,6 +254,10 @@ const WeatherApp = () => {
 							<sup className="fw-bold brand-medium-text current-weather-unit">
 								o
 							</sup>
+							<sub>
+
+								{getWeatherUnitDeg()}
+							</sub>
 						</section>
 						<p className="text-muted text-capitalize" id="weatherDes">
 							Thunderstorm

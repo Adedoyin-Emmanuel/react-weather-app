@@ -31,9 +31,9 @@ import Haze from "./../assets/static/haze.svg";
 const WeatherApp = () => {
 
 	//check if the user navigated from the home page
-	// if(!db.get("")){
-	// 	navigate("/");
-	// }
+	if(!db.get("HOME_PAGE_SEEN")){
+		navigate("/");
+	}
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
 	const [weatherInput, setWeatherInput] = useState();

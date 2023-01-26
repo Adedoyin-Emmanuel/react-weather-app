@@ -23,9 +23,9 @@ import Snowy from "./../assets/static/snowy-6.svg";
 import Cloudy from "./../assets/static/cloudy-day-2.svg";
 import FreezingRain from "./../assets/static/freezing-rain.svg";
 import Misty from "./../assets/static/mist.svg";
-import BrokenClouds from "./..assets/static/broken-clouds.svg";
-import OvercastClouds from "./..assets/static/overcast-clouds.svg";
-import {getWeatherUnitDeg} from "./../apis/getCurrentWeather.js";
+import BrokenClouds from "./../assets/static/broken-clouds.svg";
+import OvercastClouds from "./../assets/static/overcast-clouds.svg";
+import { checkWeatherUnitDeg } from "./../apis/getCurrentWeather.js";
 const WeatherApp = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
@@ -254,17 +254,22 @@ const WeatherApp = () => {
 							<sup className="fw-bold brand-medium-text current-weather-unit">
 								o
 							</sup>
-							<sub>
-
-								{getWeatherUnitDeg()}
-							</sub>
 						</section>
+						<p className="deg-unit fw-bold">{checkWeatherUnitDeg()}</p>
 						<p className="text-muted text-capitalize" id="weatherDes">
 							Thunderstorm
 						</p>
 					</section>
-					<section className="current-weather-icon my-4 mx-4 px-3" id="main-weather-icon-container">
-						<img src={Day} width={64} height={64} alt="main weather icon" id="main-weather-icon"/>
+					<section
+						className="current-weather-icon my-4 mx-4 px-3"
+						id="main-weather-icon-container">
+						<img
+							src={Day}
+							width={64}
+							height={64}
+							alt="main weather icon"
+							id="main-weather-icon"
+						/>
 					</section>
 				</section>
 				{/* d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0" */}
@@ -273,7 +278,7 @@ const WeatherApp = () => {
 					onClick={showMoreWeather}>
 					<section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center">
 						<section className="wind-icon">
-							<img src={windIcon} height={"30"} width={"30"} alt="wind-icon"/>
+							<img src={windIcon} height={"30"} width={"30"} alt="wind-icon" />
 						</section>
 						<p className="wind-value fw-bold text-light text-center py-1 m-0">
 							100%
@@ -285,7 +290,12 @@ const WeatherApp = () => {
 
 					<section className=" current-weather-humidity-degree d-flex flex-column align-items-center ">
 						<section className="humidity-icon">
-							<img src={humidity} height={"30"} width={"30"} alt="humidity-icon"/>
+							<img
+								src={humidity}
+								height={"30"}
+								width={"30"}
+								alt="humidity-icon"
+							/>
 						</section>
 						<p className="humidity-value fw-bold text-light  text-center py-1 m-0">
 							98%
@@ -297,7 +307,7 @@ const WeatherApp = () => {
 
 					<section className="current-weather-rain-degree d-flex flex-column align-items-center">
 						<section className="rain-icon">
-							<img src={rainIcon} height={"30"} width={"30"} alt="rain-icon"/>
+							<img src={rainIcon} height={"30"} width={"30"} alt="rain-icon" />
 						</section>
 						<p className="rain-value fw-bold text-light text-center py-1 m-0">
 							100%

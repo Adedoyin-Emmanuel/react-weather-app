@@ -255,6 +255,8 @@ section.footer-nav > section {
 	outline:0;
 	cursor:pointer;
 }
+
+
 @media (min-width: 667.98px) {
 	.width-toggle {
 		width: 35%;

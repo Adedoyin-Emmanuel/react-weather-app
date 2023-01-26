@@ -33,36 +33,33 @@ export const scrollToElement = (elementId) => {
 		.scrollIntoView({ behaviour: "smooth" });
 };
 
-export const checkWeatherUnitDeg = () =>{
+export const checkWeatherUnitDeg = () => {
 	let result;
-	if(db.get("WEATHER_UNIT")){
-		switch (db.get("WEATHER_UNIT"))
-		{
+	if (db.get("WEATHER_UNIT")) {
+		switch (db.get("WEATHER_UNIT")) {
 			case "celsius":
 				result = "c";
 				break;
-			
+
 			case "farenheit":
 				result = "f";
 				break;
-			
+
 			case "kelvin":
 				result = "k";
 				break;
-			
+
 			default:
-				result =  "c";
-			
+				result = "c";
 		}
-	}
-	else 
-	{	//the weather unit it celsius if not defined
-		db.create("WEATHER_UNIT","celsius");
+	} else {
+		//the weather unit it celsius if not defined
+		db.create("WEATHER_UNIT", "celsius");
 		result = "c";
 	}
 
 	return result;
-}
+};
 
 export const handleWeatherForm = (e, search) => {
 	e.preventDefault();
@@ -103,27 +100,32 @@ export const checkWeatherCode = (code) => {
 	} else if (code >= 500 && code != 511 && !(code >= 600)) {
 		//Rainy weather status
 		weatherSvg = Rainy;
-	} else if (code >= 700 && !(code >= 800)) {
+	} else if (code >= 700 && code != 701 && !(code >= 800)) {
 		//Mist weather status
+		weatherSvg = Haze;
+	} else if (code == 701) {
 		weatherSvg = Misty;
 	} else if (code == 511) {
 		//Freezing rain weather status
 		weatherSvg = FreezingRain;
-	}else if (code == 800)
-	{
+	} else if (code == 800) {
 		weatherSvg = Day;
-	}else if(code == 803)
-	{
+	} else if (code == 803) {
+		//Broken clouds
 		weatherSvg = BrokenClouds;
-	}else if(code == 804)
-	{
+	} else if (code == 804) {
+		//overcast clouds
 		weatherSvg = OvercastClouds;
-	}
-	else{
+	} else if (code == 801) {
+		//few clouds
+		weatherSvg = FewClouds;
+	} else if (code == 802) {
+		//few clouds
+		weatherSvg = ScatteredClouds;
+	} else {
 		//weather code doesn't exist
 		weatherSvg = "";
 	}
-
 };
 
 export const updateReactDom = (result) => {
@@ -139,7 +141,9 @@ export const updateReactDom = (result) => {
 		console.log(result.weather[0].id);
 		checkWeatherCode(result.weather[0].id);
 		console.log(weatherSvg);
-		$("#main-weather-icon-container").html(`<img src=${weatherSvg} alt="main-weather-icon" width="64" height="64"/>`);
+		$("#main-weather-icon-container").html(
+			`<img src=${weatherSvg} alt="main-weather-icon" width="64" height="64"/>`
+		);
 
 		//create the database values for offline caching
 		db.create("WEATHER_LOCATION", `${result.name} ${result.sys.country}`);

@@ -30,7 +30,34 @@ export const scrollToElement = (elementId) => {
 };
 
 export const checkWeatherUnitDeg = () =>{
-	return (db.get("WEATHER_UNIT")) ? db.get("WEATHER_UNIT") : "C";
+	let result;
+	if(db.get("WEATHER_UNIT")){
+		switch (db.get("WEATHER_UNIT"))
+		{
+			case "celsius":
+				result = "c";
+				break;
+			
+			case "farenheit":
+				result = "f";
+				break;
+			
+			case "kelvin":
+				result = "k";
+				break;
+			
+			default:
+				result =  "c";
+			
+		}
+	}
+	else 
+	{	//the weather unit it celsius if not defined
+		db.create("WEATHER_UNIT","celsius");
+		result = "c";
+	}
+
+	return result;
 }
 
 export const handleWeatherForm = (e, search) => {

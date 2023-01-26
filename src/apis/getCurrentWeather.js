@@ -30,7 +30,7 @@ export const scrollToElement = (elementId) => {
 };
 
 export const checkWeatherUnitDeg = () =>{
-	
+	return (db.get("WEATHER_UNIT")) ? db.get("WEATHER_UNIT") : "C";
 }
 
 export const handleWeatherForm = (e, search) => {

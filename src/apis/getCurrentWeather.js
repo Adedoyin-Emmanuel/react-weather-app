@@ -106,9 +106,6 @@ export const checkWeatherCode = (code) => {
 	} else if (code >= 700 && !(code >= 800)) {
 		//Mist weather status
 		weatherSvg = Misty;
-	} else if (code > 800 && code != 803 && code != 804) {
-		//Cloudy weather status
-		weatherSvg = Cloudy;
 	} else if (code == 511) {
 		//Freezing rain weather status
 		weatherSvg = FreezingRain;

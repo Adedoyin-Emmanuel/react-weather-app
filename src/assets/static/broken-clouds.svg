@@ -4,7 +4,7 @@
  width="64" height="64" viewBox="0 0 50.000000 50.000000"
  preserveAspectRatio="xMidYMid meet" fill="lightskyblue">
 
-<g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)"
+<g transform="translate(0.000000,50.000000) scale(0.100,-0.100)"
 fill="lightskyblue" stroke="lightskyblue">
 <path d="M219 400 c-13 -10 -20 -19 -15 -20 18 0 76 24 76 32 0 15 -38 8 -61
 -12z"/>

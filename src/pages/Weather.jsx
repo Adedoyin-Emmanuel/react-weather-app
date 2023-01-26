@@ -260,7 +260,7 @@ const WeatherApp = () => {
 						</p>
 					</section>
 					<section
-						className="current-weather-icon my-4 mx-4 px-3"
+						className="current-weather-icon my-4 mx-3 px-3"
 						id="main-weather-icon-container">
 						<img
 							src={Day}

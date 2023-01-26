@@ -12,7 +12,9 @@ import FreezingRain from "./../assets/static/freezing-rain.svg";
 import Misty from "./../assets/static/mist.svg";
 import BrokenClouds from "./../assets/static/broken-clouds.svg";
 import OvercastClouds from "./../assets/static/overcast-clouds.svg";
-import ScattereddClouds from "./../assets/static/scattered-clouds.svg"
+import ScattereddClouds from "./../assets/static/scattered-clouds.svg";
+import FewClouds from "./../assets/static/scattered-clouds.svg";
+
 export const closeUtilityComponent = () => {
 	jQuery(($) => {
 		$.noConflict();

@@ -29,6 +29,10 @@ export const scrollToElement = (elementId) => {
 		.scrollIntoView({ behaviour: "smooth" });
 };
 
+export const checkWeatherUnitDeg = () =>{
+	
+}
+
 export const handleWeatherForm = (e, search) => {
 	e.preventDefault();
 

@@ -265,7 +265,7 @@ const WeatherApp = () => {
 						className="current-weather-icon my-4 mx-3 px-3"
 						id="main-weather-icon-container">
 						<img
-							src={Day}
+							src={formHandler.checkWeatherCode(db.get("WEATHER_CODE"))}
 							width={64}
 							height={64}
 							alt="main weather icon"

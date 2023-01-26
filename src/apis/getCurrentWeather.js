@@ -125,6 +125,8 @@ export const checkWeatherCode = (code) => {
 		//weather code doesn't exist
 		weatherSvg = "";
 	}
+
+	return weatherSvg;
 };
 
 export const updateReactDom = (result) => {

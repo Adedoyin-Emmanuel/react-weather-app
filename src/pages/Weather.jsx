@@ -16,7 +16,16 @@ import { db } from "../backend/app_backend";
 import getGeolocation from "../apis/getGeolocation";
 import { getCurrentDate } from "../inc/scripts/utilities";
 import Day from "./../assets/static/day.svg";
-
+import Thunder from "./../assets/static/thunder.svg";
+import Day from "./../assets/static/day.svg";
+import Drizzle from "./../assets/static/rainy-5.svg";
+import Rainy from "./../assets/static/rainy-7.svg";
+import Snowy from "./../assets/static/snowy-6.svg";
+import Cloudy from "./../assets/static/cloudy-day-2.svg";
+import FreezingRain from "./../assets/static/freezing-rain.svg";
+import Misty from "./../assets/static/mist.svg";
+import BrokenClouds from "./..assets/static/broken-clouds.svg";
+import OvercastClouds from "./..assets/static/overcast-clouds.svg";
 const WeatherApp = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");

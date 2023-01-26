@@ -1,7 +1,7 @@
 <?xml version="1.0" standalone="no"?>
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
  width="64" height="64" viewBox="0 0 64.000000 64.000000"
- preserveAspectRatio="xMidYMid meet" fill="lightskyblue">
+ preserveAspectRatio="xMidYMid meet" fill="lightskyblue" transform="scale(0.6)">
 
 <g transform="translate(0.000000,64.000000) scale(0.100000,-0.100000)"
 fill="lightskyblue" stroke="lightskyblue">

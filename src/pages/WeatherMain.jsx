@@ -18,7 +18,6 @@ import ScatteredClouds from "./../assets/static/scattered-clouds.svg";
 import FewClouds from "./../assets/static/few-clouds.svg";
 import Haze from "./../assets/static/haze.svg";
 
-const We
 const WeatherMain = (props) => {
 
 	const navigateHome = () =>{

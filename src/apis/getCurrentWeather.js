@@ -10,7 +10,8 @@ import Snowy from "./../assets/static/snowy-6.svg";
 import Cloudy from "./../assets/static/cloudy-day-2.svg";
 import FreezingRain from "./../assets/static/freezing-rain.svg";
 import Misty from "./../assets/static/mist.svg";
-
+import BrokenClouds from "./..assets/static/broken-clouds.svg";
+import OvercastClouds from "./..assets/static/overcast-clouds.svg";
 export const closeUtilityComponent = () => {
 	jQuery(($) => {
 		$.noConflict();
@@ -18,7 +19,6 @@ export const closeUtilityComponent = () => {
 		$(".utility-component").removeClass("add-utility-component-height");
 	});
 };
-
 export const API_KEY = "cd34f692e856e493bd936095b256b337";
 
 export const WEATHER_UNIT = db.get("WEATHER_UNIT") || "metric";

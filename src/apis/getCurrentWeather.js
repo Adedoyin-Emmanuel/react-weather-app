@@ -108,6 +108,12 @@ export const updateReactDom = (result) => {
 		checkWeatherCode(result.weather[0].id);
 		console.log(weatherSvg);
 		$("#main-weather-icon-container").html(`<img src=${weatherSvg} alt="main-weather-icon" width="64" height="64"/>`);
+
+		//create the database values for offline caching
+		db.create("WEATHER_LOCATION", `${result.name} ${result.sys.country}`);
+		db.create("WEATHER_DEG", result.main.temp);
+		db.create("WEATHER_DESCRIPTION", result.weather[0].description);
+		db.create("WEATHER_CODE", result.weather[0].id);
 	});
 };
 export const getCurrentWeather = (location) => {

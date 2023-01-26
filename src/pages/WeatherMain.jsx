@@ -5,7 +5,20 @@ import humidity from "./../assets/humidity.png";
 import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
 import Spinner from "../components/spinner";
+import Thunder from "./../assets/static/thunder.svg";
+import Day from "./../assets/static/day.svg";
+import Drizzle from "./../assets/static/rainy-5.svg";
+import Rainy from "./../assets/static/rainy-7.svg";
+import Snowy from "./../assets/static/snowy-6.svg";
+import FreezingRain from "./../assets/static/freezing-rain.svg";
+import Misty from "./../assets/static/mist.svg";
+import BrokenClouds from "./../assets/static/broken-clouds.svg";
+import OvercastClouds from "./../assets/static/overcast-clouds.svg";
+import ScatteredClouds from "./../assets/static/scattered-clouds.svg";
+import FewClouds from "./../assets/static/few-clouds.svg";
+import Haze from "./../assets/static/haze.svg";
 
+const We
 const WeatherMain = (props) => {
 
 	const navigateHome = () =>{

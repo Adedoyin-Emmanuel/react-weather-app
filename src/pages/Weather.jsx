@@ -29,6 +29,11 @@ import FewClouds from "./../assets/static/few-clouds.svg";
 import Haze from "./../assets/static/haze.svg";
 
 const WeatherApp = () => {
+
+	//check if the user navigated from the home page
+	// if(!db.get("")){
+	// 	navigate("/");
+	// }
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
 	const [weatherInput, setWeatherInput] = useState();
@@ -250,7 +255,7 @@ const WeatherApp = () => {
 							<h1
 								className="current-weather-value fw-bold brand-large-text"
 								id="currentDeg">
-								{Math.ceil(db.get("WEATHER_DEG"))}
+								{Math.ceil(db.get("WEATHER_DEG")) || 30}
 							</h1>
 
 							<sup className="fw-bold brand-medium-text current-weather-unit">
@@ -258,14 +263,14 @@ const WeatherApp = () => {
 							</sup>
 						</section>
 						<p className="text-muted text-capitalize" id="weatherDes">
-							{db.get("WEATHER_DESCRIPTION")}
+							{db.get("WEATHER_DESCRIPTION") || "clear sky"}
 						</p>
 					</section>
 					<section
 						className="current-weather-icon my-4 mx-3 px-3"
 						id="main-weather-icon-container">
 						<img
-							src={formHandler.checkWeatherCode(db.get("WEATHER_CODE"))}
+							src={formHandler.checkWeatherCode(db.get("WEATHER_CODE")) || Day}
 							width={64}
 							height={64}
 							alt="main weather icon"

@@ -82,10 +82,10 @@ export const checkWeatherCode = (code) => {
 		weatherSvg = Day;
 	}else if(code == 803)
 	{
-		weatherSvg = "Broken clouds";
+		weatherSvg = BrokenClouds;
 	}else if(code == 804)
 	{
-		weatherSvg = "overcast clouds";
+		weatherSvg = OvercastClouds;
 	}
 	else{
 		//weather code doesn't exist

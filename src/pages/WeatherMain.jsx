@@ -29,11 +29,11 @@ const WeatherMain = (props) => {
 					<div className="toggle-btn ">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
-						width={"35px"}
-						height={"35px"}
+						width={"30px"}
+						height={"30x"}
 						viewBox="0 0 24 24"
 						className="d-block"
-						onClick={beginWeatherForecast}>
+						>
 						<path fill="white" d="M0 0h24v24H0V0z" />
 						<path
 							fill="lightskyblue"

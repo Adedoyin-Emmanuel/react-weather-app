@@ -139,9 +139,7 @@ export const updateReactDom = (result) => {
 		$("#currentDeg").html(Math.ceil(result.main.temp));
 		$("#weatherDes").html(result.weather[0].description);
 		$("#currentDate").html(getCurrentDate());
-		console.log(result.weather[0].id);
 		checkWeatherCode(result.weather[0].id);
-		console.log(weatherSvg);
 		$("#main-weather-icon-container").html(
 			`<img src=${weatherSvg} alt="main-weather-icon" width="64" height="64"/>`
 		);

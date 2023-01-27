@@ -1,7 +1,4 @@
 import React from "react";
-import rainIcon from "./../assets/rain (1).png";
-import windIcon from "./../assets/windy.png";
-import humidity from "./../assets/humidity.png";
 import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
 import Spinner from "../components/spinner";
@@ -23,9 +20,9 @@ const WeatherMain = (props) => {
 		navigate("/weather");
 	};
 	const customTextStyle = {
-		"display":"block",
-		"transform":"translateX(-10px)"
-	}
+		display: "block",
+		transform: "translateX(-10px)",
+	};
 	return (
 		<React.Fragment>
 			<Spinner />
@@ -77,37 +74,42 @@ const WeatherMain = (props) => {
 						</sup>
 					</section>
 
-					<p className="text-muted text-start brand-small-text text-capitalize" style={customTextStyle}>
+					<p
+						className="text-muted text-start brand-small-text text-capitalize"
+						style={customTextStyle}>
 						{db.get("WEATHER_DESCRIPTION") || "clear sky"}
 					</p>
 				</section>
-
 				<section
-					className="rounded-3 shadow my-5 py-2 current-weather-assets brand-tertiary-color d-flex align-items-center justify-content-around"
-					>
+					className="mx-2 rounded-3 shadow my-5 py-2 current-weather-assets brand-tertiary-color d-flex align-items-center justify-content-around"
+					onClick={showMoreWeather}>
 					<section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center">
-						<section className="wind-icon">
-							<img src={windIcon} height={"30"} width={"30"} alt="wind-icon" />
+						<section className="wind-icon py-1">
+							<img src={WindIcon} height={"30"} width={"30"} alt="wind-icon" />
 						</section>
-						<p className="wind-value fw-bold text-light text-center py-1 m-0">
-							100%
+						<p
+							className="wind-value fw-bold text-light  brand-small-text text-center py-1 m-0"
+							id="wind-value">
+							{db.get("SUB_WEATHER_WIND_VALUE") || "2.90 m/s"}
 						</p>
 						<p className="m-0 wind-text text-muted text-capitalize brand-small-text-2 weather-text text-center">
-							humidity
+							Wind
 						</p>
 					</section>
 
 					<section className=" current-weather-humidity-degree d-flex flex-column align-items-center ">
-						<section className="humidity-icon">
+						<section className="humidity-icon py-1">
 							<img
-								src={humidity}
+								src={HumidityIcon}
 								height={"30"}
 								width={"30"}
 								alt="humidity-icon"
 							/>
 						</section>
-						<p className="humidity-value fw-bold text-light  text-center py-1 m-0">
-							98%
+						<p
+							className="humidity-value fw-bold text-light  brand-small-text  text-center py-1 m-0"
+							id="humidity-value">
+							{db.get("SUB_WEATHER_HUMIDITY_VALUE") || "98%"}
 						</p>
 						<p className="m-0 humidity-text text-muted text-capitalize text-center brand-small-text-2 weather-text">
 							humidity
@@ -115,18 +117,24 @@ const WeatherMain = (props) => {
 					</section>
 
 					<section className="current-weather-rain-degree d-flex flex-column align-items-center">
-						<section className="rain-icon">
-							<img src={rainIcon} height={"30"} width={"30"} alt="rain-icon" />
+						<section className="rain-icon py-1">
+							<img
+								src={PressureIcon}
+								height={"30"}
+								width={"30"}
+								alt="rain-icon"
+							/>
 						</section>
-						<p className="rain-value fw-bold text-light text-center py-1 m-0">
-							100%
+						<p
+							className="rain-value fw-bold text-light brand-small-text  text-center py-1 m-0"
+							id="pressure-value">
+							{db.get("SUB_WEATHER_PRESSURE_VALUE") || "1000 hPa"}
 						</p>
 						<p className="m-0 rain-text text-muted text-capitalize text-center brand-small-text-2 weather-text">
-							humidity
+							Pressure
 						</p>
 					</section>
 				</section>
-
 				<Footer />
 			</section>
 		</React.Fragment>

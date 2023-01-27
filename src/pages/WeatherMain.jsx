@@ -36,7 +36,7 @@ const WeatherMain = (props) => {
 						
 					</div>
 					<section className="city-locaton">
-						<h5 className="fw-bold fs-5">Lagos, 9ja</h5>
+						<h5 className="fw-bold fs-5">{db.get("WEATHER_LOCATION") || "Lagos, 9ja"}</h5>
 					</section>
 					<div className="toggle-btn ">
 					<svg

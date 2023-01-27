@@ -145,6 +145,7 @@ export const updateReactDom = (result) => {
 		);
 		//sub weather components 
 		$("#wind-value").html(`${result.wind.speed} m/s` );
+		$("#humidity-value").html(`${result.main.humidity} %`);
 		//create the database values for offline caching
 		db.create("WEATHER_LOCATION", `${result.name} ${result.sys.country}`);
 		db.create("WEATHER_DEG", result.main.temp);

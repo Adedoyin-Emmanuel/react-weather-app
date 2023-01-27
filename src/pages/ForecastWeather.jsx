@@ -134,9 +134,13 @@ const navigateToApp = () =>{
 					</svg>
 					</div>
 				</section>
-				<section className="my-1 next-week-component-container d-flex align-items-start justify-content-start flex-column">
-        <h6 className="fw-bold fs-6 my-3 text-start">Weather Now</h6>
-					
+				<section className="my-1 next-week-component-container d-flex  flex-column">
+
+          <section className="d-flex align-items-center justify-content-between">
+        <h6 className="fw-bold fs-6 my-3 text-start text-capitalize mx-1"> Prediction</h6>
+        <h6 className="fw-bold fs-6 my-3 text-start text-capitalize text-muted mx-1">daily</h6>
+
+          </section>
           {uiData}
 				</section>
 				<Footer utilityTags={componentToInsert} />

@@ -22,7 +22,10 @@ const WeatherMain = (props) => {
 	const navigateHome = () => {
 		navigate("/weather");
 	};
-
+	const customTextStyle = {
+		"display":"block",
+		"transform":"translateX(-10px)"
+	}
 	return (
 		<React.Fragment>
 			<Spinner />
@@ -74,7 +77,7 @@ const WeatherMain = (props) => {
 						</sup>
 					</section>
 
-					<p className="text-center text-muted text-start brand-small-text text-capitalize">
+					<p className="text-muted text-start brand-small-text text-capitalize" style={customTextStyle}>
 						{db.get("WEATHER_DESCRIPTION") || "clear sky"}
 					</p>
 				</section>

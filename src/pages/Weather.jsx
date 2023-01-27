@@ -284,7 +284,7 @@ const WeatherApp = () => {
 					className="mx-2 rounded-3 shadow my-5 py-2 current-weather-assets brand-tertiary-color d-flex align-items-center justify-content-around"
 					onClick={showMoreWeather}>
 					<section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center">
-						<section className="wind-icon">
+						<section className="wind-icon py-1">
 							<img src={WindIcon} height={"30"} width={"30"} alt="wind-icon" />
 						</section>
 						<p className="wind-value fw-bold text-light text-center py-1 m-0">
@@ -296,7 +296,7 @@ const WeatherApp = () => {
 					</section>
 
 					<section className=" current-weather-humidity-degree d-flex flex-column align-items-center ">
-						<section className="humidity-icon">
+						<section className="humidity-icon py-1">
 							<img
 								src={HumidityIcon}
 								height={"30"}
@@ -313,7 +313,7 @@ const WeatherApp = () => {
 					</section>
 
 					<section className="current-weather-rain-degree d-flex flex-column align-items-center">
-						<section className="rain-icon">
+						<section className="rain-icon py-1">
 							<img src={PressureIcon} height={"30"} width={"30"} alt="rain-icon" />
 						</section>
 						<p className="rain-value fw-bold text-light text-center py-1 m-0">

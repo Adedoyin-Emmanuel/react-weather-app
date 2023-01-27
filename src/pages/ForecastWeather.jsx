@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import rainIcon from "./../assets/rain (1).png";
 import windIcon from "./../assets/windy.png";
 import humidity from "./../assets/humidity.png";

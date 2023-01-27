@@ -86,7 +86,7 @@ const WeatherMain = (props) => {
 						{db.get("WEATHER_DESCRIPTION") || "clear sky"}
 					</p>
 				</section>
-				<section className="mx-2 rounded-3 shadow my-5 py-2 current-weather-assets brand-tertiary-color d-flex align-items-center justify-content-around">
+				<section className=" rounded-3 shadow my-5 py-2 current-weather-assets brand-tertiary-color d-flex align-items-center justify-content-around">
 					<section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center">
 						<section className="wind-icon py-1">
 							<img src={WindIcon} height={"30"} width={"30"} alt="wind-icon" />

@@ -309,7 +309,7 @@ const WeatherApp = () => {
 						<p
 							className="humidity-value fw-bold text-light  brand-small-text  text-center py-1 m-0"
 							id="humidity-value">
-							98%
+							{db.get("SUB_WEATHER_HUMIDITY_VALUE") || "98%"}
 						</p>
 						<p className="m-0 humidity-text text-muted text-capitalize text-center brand-small-text-2 weather-text">
 							humidity

@@ -27,7 +27,7 @@ const WeatherMain = (props) => {
 	};
 	const customTextStyle = {
 		display: "block",
-		transform: "translateX(-10px)",
+		transform: "translateX(-7px)",
 	};
 	return (
 		<React.Fragment>

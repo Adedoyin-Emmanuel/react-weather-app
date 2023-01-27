@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState } from "react";
 import jQuery from "jquery";
 import Button from "./../components/button";
 import Footer from "../components/footer";
@@ -27,6 +27,9 @@ import OvercastClouds from "./../assets/static/overcast-clouds.svg";
 import ScatteredClouds from "./../assets/static/scattered-clouds.svg";
 import FewClouds from "./../assets/static/few-clouds.svg";
 import Haze from "./../assets/static/haze.svg";
+import HumidityIcon from "./../assets/humidity-icon.svg";
+import WindIcon from "./../assets/wind-icon.svg";
+import PressureIcon from "./../assets/pressure-icon.svg";
 
 const WeatherApp = () => {
 	//check if the user navigated from the home page

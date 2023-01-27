@@ -58,7 +58,7 @@ const WeatherMain = (props) => {
 				<section className="current-weather-value-container d-flex align-items-center justify-content-center flex-column my-4">
 					<section className="d-flex ">
 						<h1 className="current-weather-value fw-bold brand-large-text">
-							25
+							{Math.ceil(db.get("WEATHER_DEG")) || "30"}
 						</h1>
 
 						<sup className="fw-bold brand-medium-text current-weather-unit">

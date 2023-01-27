@@ -10,6 +10,19 @@ import Button from "./../components/button";
 import jQuery from "jquery";
 import { db } from "../backend/app_backend";
 import { getCurrentDate } from "../inc/scripts/utilities";
+import * as formHandler from "./../apis/getCurrentWeather";
+import Thunder from "./../assets/static/thunder.svg";
+import Day from "./../assets/static/day.svg";
+import Drizzle from "./../assets/static/rainy-5.svg";
+import Rainy from "./../assets/static/rainy-7.svg";
+import Snowy from "./../assets/static/snowy-6.svg";
+import FreezingRain from "./../assets/static/freezing-rain.svg";
+import Misty from "./../assets/static/mist.svg";
+import BrokenClouds from "./../assets/static/broken-clouds.svg";
+import OvercastClouds from "./../assets/static/overcast-clouds.svg";
+import ScatteredClouds from "./../assets/static/scattered-clouds.svg";
+import FewClouds from "./../assets/static/few-clouds.svg";
+import Haze from "./../assets/static/haze.svg";
 const ForecastWeather = () => {
   //holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
@@ -58,6 +71,7 @@ const ForecastWeather = () => {
   	//create the main weather component forecast tags
 	const MainWeatherComponent = () => {
 		return (
+      <React.Fragment>
 			<section className="cmp d-flex align-items-center justify-content-center flex-column my-5">
 				<section className="d-flex flex-row align-items-center justify-content-center d-none cmp cmp-1 my-5">
 					{<MainWeatherForecast/>}
@@ -70,6 +84,38 @@ const ForecastWeather = () => {
 					/>
 				</section>
 			</section>
+
+      <section className="current-weather-container d-flex justify-content-between px-2 my-3">
+					<section className="current-weather-value-container">
+						<section className="d-flex ">
+							<h1
+								className="current-weather-value fw-bold brand-large-text"
+								id="currentDeg">
+								{Math.ceil(db.get("WEATHER_DEG")) || 30}
+							</h1>
+
+							<sup className="fw-bold brand-medium-text current-weather-unit">
+								o
+							</sup>
+						</section>
+						<p className="text-muted text-capitalize" id="weatherDes">
+							{db.get("WEATHER_DESCRIPTION") || "clear sky"}
+						</p>
+					</section>
+					<section
+						className="current-weather-icon my-4 mx-3 px-3"
+						id="main-weather-icon-container">
+						<img
+							src={formHandler.checkWeatherCode(db.get("WEATHER_CODE")) || Day}
+							width={64}
+							height={64}
+							alt="main weather icon"
+							id="main-weather-icon"
+						/>
+					</section>
+				</section>
+      </React.Fragment>
+      
 		);
 	};
 

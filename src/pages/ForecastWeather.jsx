@@ -33,6 +33,7 @@ const navigateToApp = () =>{
 				<Button
 					text="current weather forecast"
 					className="shadow brand-btn-2 toggle-width-3 my-5 "
+          onClick={navigateToApp}
 				/>
 			</section>
 		);

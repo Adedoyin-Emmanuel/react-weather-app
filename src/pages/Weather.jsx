@@ -328,7 +328,7 @@ const WeatherApp = () => {
 						<p
 							className="rain-value fw-bold text-light brand-small-text  text-center py-1 m-0"
 							id="pressure-value">
-							100%
+							{db.get("SUB_WEATHER_PRESSURE_VALUE") || "100%"}
 						</p>
 						<p className="m-0 rain-text text-muted text-capitalize text-center brand-small-text-2 weather-text">
 							Pressure

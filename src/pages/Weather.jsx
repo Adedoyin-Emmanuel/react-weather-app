@@ -383,13 +383,7 @@ const WeatherApp = () => {
 					/>
 					<br />
 				</section>
-				{/* <section className="d-flex align-items-center justify-content-center">
-					<Button
-						text="forecast 5 days weather"
-						className="shadow brand-btn toggle-width-3 my-5 "
-						onClick={getWeatherForecast}
-					/>
-				</section> */}
+				
 				<br />
 				<br />
 				<br />

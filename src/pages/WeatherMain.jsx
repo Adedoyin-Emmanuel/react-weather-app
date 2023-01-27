@@ -15,6 +15,9 @@ import ScatteredClouds from "./../assets/static/scattered-clouds.svg";
 import FewClouds from "./../assets/static/few-clouds.svg";
 import Haze from "./../assets/static/haze.svg";
 import { db } from "../backend/app_backend";
+import HumidityIcon from "./../assets/humidity-icon.svg";
+import WindIcon from "./../assets/wind-icon.svg";
+import PressureIcon from "./../assets/pressure-icon.svg";
 const WeatherMain = (props) => {
 	const navigateHome = () => {
 		navigate("/weather");

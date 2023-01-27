@@ -287,7 +287,7 @@ const WeatherApp = () => {
 						<section className="wind-icon py-1">
 							<img src={WindIcon} height={"30"} width={"30"} alt="wind-icon" />
 						</section>
-						<p className="wind-value fw-bold text-light text-center py-1 m-0">
+						<p className="wind-value fw-bold text-light text-center py-1 m-0" id="wind-value">
 							100%
 						</p>
 						<p className="m-0 wind-text text-muted text-capitalize brand-small-text-2 weather-text text-center">
@@ -304,7 +304,7 @@ const WeatherApp = () => {
 								alt="humidity-icon"
 							/>
 						</section>
-						<p className="humidity-value fw-bold text-light  text-center py-1 m-0">
+						<p className="humidity-value fw-bold text-light  text-center py-1 m-0" id="humidity-value">
 							98%
 						</p>
 						<p className="m-0 humidity-text text-muted text-capitalize text-center brand-small-text-2 weather-text">
@@ -316,7 +316,7 @@ const WeatherApp = () => {
 						<section className="rain-icon py-1">
 							<img src={PressureIcon} height={"30"} width={"30"} alt="rain-icon" />
 						</section>
-						<p className="rain-value fw-bold text-light text-center py-1 m-0">
+						<p className="rain-value fw-bold text-light text-center py-1 m-0" id="pressure-value">
 							100%
 						</p>
 						<p className="m-0 rain-text text-muted text-capitalize text-center brand-small-text-2 weather-text">

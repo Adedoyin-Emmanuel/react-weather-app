@@ -19,39 +19,47 @@ import FewClouds from "./../assets/static/few-clouds.svg";
 import Haze from "./../assets/static/haze.svg";
 import { db } from "../backend/app_backend";
 const WeatherMain = (props) => {
-
-	const navigateHome = () =>{
+	const navigateHome = () => {
 		navigate("/weather");
-	}
-    
+	};
+
 	return (
 		<React.Fragment>
-			<Spinner/>
+			<Spinner />
 			<section
 				className="container-fluid d-flex flex-column py-2 "
 				style={{ overflowX: "hidden" }}>
 				<section className="app-header d-flex justify-content-between">
 					<div className="toggle-btn ">
-					<svg height={"30"} id="Layer_1" version="1.1" onClick={navigateHome}viewBox="0 0 512 512" width={"30"} xmlns="http://www.w3.org/2000/svg" ><polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 "/></svg>
-						
+						<svg
+							height={"30"}
+							id="Layer_1"
+							version="1.1"
+							onClick={navigateHome}
+							viewBox="0 0 512 512"
+							width={"30"}
+							xmlns="http://www.w3.org/2000/svg">
+							<polygon points="352,128.4 319.7,96 160,256 160,256 160,256 319.7,416 352,383.6 224.7,256 " />
+						</svg>
 					</div>
 					<section className="city-locaton">
-						<h5 className="fw-bold fs-5">{db.get("WEATHER_LOCATION") || "Lagos, 9ja"}</h5>
+						<h5 className="fw-bold fs-5">
+							{db.get("WEATHER_LOCATION") || "Lagos, 9ja"}
+						</h5>
 					</section>
 					<div className="toggle-btn ">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						width={"30px"}
-						height={"30px"}
-						viewBox="0 0 24 24"
-						className="d-block"
-						>
-						<path fill="white" d="M0 0h24v24H0V0z" />
-						<path
-							fill="lightskyblue"
-							d="M4 13h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1zm0 8h6c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm10 0h6c.55 0 1-.45 1-1v-8c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1zM13 4v4c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1z"
-						/>
-					</svg>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width={"30px"}
+							height={"30px"}
+							viewBox="0 0 24 24"
+							className="d-block">
+							<path fill="white" d="M0 0h24v24H0V0z" />
+							<path
+								fill="lightskyblue"
+								d="M4 13h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1zm0 8h6c.55 0 1-.45 1-1v-4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v4c0 .55.45 1 1 1zm10 0h6c.55 0 1-.45 1-1v-8c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1v8c0 .55.45 1 1 1zM13 4v4c0 .55.45 1 1 1h6c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1h-6c-.55 0-1 .45-1 1z"
+							/>
+						</svg>
 					</div>
 				</section>
 
@@ -66,47 +74,56 @@ const WeatherMain = (props) => {
 						</sup>
 					</section>
 
-					<p className="text-muted text-start brand-small-text text-capitalize">{db.get("WEATHER_DESCRIPTION") || "clear sky"}</p>
+					<p className="text-center text-muted text-start brand-small-text text-capitalize">
+						{db.get("WEATHER_DESCRIPTION") || "clear sky"}
+					</p>
 				</section>
 
-				<section className="my-4 current-weather-assets d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0">
+				<section
+					className="rounded-3 shadow my-5 py-2 current-weather-assets brand-tertiary-color d-flex align-items-center justify-content-around"
+					>
 					<section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center">
 						<section className="wind-icon">
-							<img src={windIcon} height={"30"} width={"30"} />
+							<img src={windIcon} height={"30"} width={"30"} alt="wind-icon" />
 						</section>
-						<p className="wind-value fw-bold text-light text-center py-1">
-							10 m/s
+						<p className="wind-value fw-bold text-light text-center py-1 m-0">
+							100%
 						</p>
-						<p className="wind-text text-muted text-capitalize brand-small-text weather-text text-center">
-							wind
+						<p className="m-0 wind-text text-muted text-capitalize brand-small-text-2 weather-text text-center">
+							humidity
 						</p>
 					</section>
 
-					<section className="current-weather-humidity-degree d-flex flex-column align-items-center">
+					<section className=" current-weather-humidity-degree d-flex flex-column align-items-center ">
 						<section className="humidity-icon">
-							<img src={humidity} height={"30"} width={"30"} />
+							<img
+								src={humidity}
+								height={"30"}
+								width={"30"}
+								alt="humidity-icon"
+							/>
 						</section>
-						<p className="humidity-value fw-bold text-light  text-center py-1">
+						<p className="humidity-value fw-bold text-light  text-center py-1 m-0">
 							98%
 						</p>
-						<p className="humidity-text text-muted text-capitalize text-center brand-small-text weather-text">
+						<p className="m-0 humidity-text text-muted text-capitalize text-center brand-small-text-2 weather-text">
 							humidity
 						</p>
 					</section>
 
 					<section className="current-weather-rain-degree d-flex flex-column align-items-center">
-						<section className="rain-icon d-flex align-items-center justify-content-center">
-							<img src={rainIcon} height={"30"} width={"30"} />
+						<section className="rain-icon">
+							<img src={rainIcon} height={"30"} width={"30"} alt="rain-icon" />
 						</section>
-						<p className="rain-value fw-bold text-light text-center py-1">
+						<p className="rain-value fw-bold text-light text-center py-1 m-0">
 							100%
 						</p>
-						<p className="rain-text text-muted text-capitalize text-center brand-small-text weather-text">
-							rain
+						<p className="m-0 rain-text text-muted text-capitalize text-center brand-small-text-2 weather-text">
+							humidity
 						</p>
 					</section>
 				</section>
-               
+
 				<Footer />
 			</section>
 		</React.Fragment>

@@ -387,6 +387,7 @@ const WeatherApp = () => {
 				<br />
 				<br />
 				<br />
+				{/* @utilityTags - dynamic components to be inserted into the footer component @onClick event - responsible for the search component trigger on the app || weather route*/}
 				<Footer utilityTags={componentToInsert} onClick={testSearch} />
 			</div>
 		</React.Fragment>

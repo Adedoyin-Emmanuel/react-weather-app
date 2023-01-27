@@ -66,7 +66,7 @@ const WeatherMain = (props) => {
 						</sup>
 					</section>
 
-					<p className="text-muted text-start brand-small-text">Thunderstorm</p>
+					<p className="text-muted text-start brand-small-text text-capitalize">{db.get("WEATHER_DESCRIPTION") || "clear sky"}</p>
 				</section>
 
 				<section className="my-4 current-weather-assets d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0">

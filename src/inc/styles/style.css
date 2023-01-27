@@ -164,7 +164,7 @@ section.footer-nav > section {
 /* utility component */
 
 .utility-component {
-	background: var(--brand-primary-color);
+	background: var(--brand-secondary-color);
 	color: white;
 	padding: 20px;
 	position: fixed;

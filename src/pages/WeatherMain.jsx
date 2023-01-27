@@ -17,7 +17,7 @@ import OvercastClouds from "./../assets/static/overcast-clouds.svg";
 import ScatteredClouds from "./../assets/static/scattered-clouds.svg";
 import FewClouds from "./../assets/static/few-clouds.svg";
 import Haze from "./../assets/static/haze.svg";
-
+import { db } from "../backend/app_backend";
 const WeatherMain = (props) => {
 
 	const navigateHome = () =>{
@@ -42,7 +42,7 @@ const WeatherMain = (props) => {
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						width={"30px"}
-						height={"30x"}
+						height={"30px"}
 						viewBox="0 0 24 24"
 						className="d-block"
 						>

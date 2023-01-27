@@ -11,7 +11,9 @@ import jQuery from "jquery";
 import { db } from "../backend/app_backend";
 import { getCurrentDate } from "../inc/scripts/utilities";
 import * as formHandler from "./../apis/getCurrentWeather";
-
+import HumidityIcon from "./../assets/humidity-icon.svg";
+import WindIcon from "./../assets/wind-icon.svg";
+import PressureIcon from "./../assets/pressure-icon.svg";
 const ForecastWeather = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");

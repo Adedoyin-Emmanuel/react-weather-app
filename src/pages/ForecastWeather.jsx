@@ -9,6 +9,7 @@ import Spinner from "../components/spinner";
 import Button from "./../components/button";
 import jQuery from "jquery";
 import { db } from "../backend/app_backend";
+import { getCurrentDate } from "../inc/scripts/utilities";
 const ForecastWeather = () => {
   //holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
@@ -43,7 +44,14 @@ const ForecastWeather = () => {
 	};
   const MainWeatherForecast = () =>{
     return (
-      <h5>hello world</h5>
+      <section className="city-location">
+						<h5 className="fw-bold fs-5" id="weatherLocation">
+							{db.get("WEATHER_LOCATION") || "Lagos 9ja"}
+						</h5>
+						<p className="date-time text-muted brand-small-text text-capitalize">
+							{getCurrentDate()}
+						</p>
+					</section>
     )
   }
 

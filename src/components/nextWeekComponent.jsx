@@ -8,11 +8,11 @@ const NextWeekComponent = (props) => {
 					<p className="text-start fw-bold text-capitalize brand-small-text d-block m-0">{props.day}</p>
 				</section>
 				<section className="d-flex align-items-center justify-content-between">
-						<p className="text-muted brand-small-textd-block px-2 text-light m-0">
+						<p className="text-muted brand-small-textd-block px-2  m-0">
 							{props.firstUnit}<sup>o</sup>
 						</p>
 						<div className="next-week-notch d-block mt-3"></div>
-						<p className="fw-bold brand-small-text d-block px-2 text-light m-0">
+						<p className="fw-bold brand-small-text d-block px-2  m-0 text-muted">
 							{props.secondUnit}<sup>o</sup>
 						</p>
 				</section>

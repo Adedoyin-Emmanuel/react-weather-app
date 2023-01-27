@@ -56,35 +56,35 @@ const navigateToApp = () =>{
 			day: ["today"],
 			firstUnit: 13,
 			secondUnit: 22,
-			icon: rainIcon,
+			icon: HumidityIcon,
 		},
 
 		{
 			day: ["today"],
 			firstUnit: 13,
 			secondUnit: 22,
-			icon: windIcon,
+			icon: WindIcon,
 		},
 
 		{
 			day: ["today"],
 			firstUnit: 13,
 			secondUnit: 22,
-			icon: humidity,
+			icon: PressureIcon,
 		},
 
 		{
 			day: ["today"],
 			firstUnit: 13,
 			secondUnit: 22,
-			icon: rainIcon,
+			icon: WindIcon,
 		},
 
 		{
 			day: ["today"],
 			firstUnit: 13,
 			secondUnit: 22,
-			icon: rainIcon,
+			icon: HumidityIcon,
 		},
 	];
 

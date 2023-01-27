@@ -6,7 +6,70 @@ import NextWeekComponent from "../components/nextWeekComponent";
 import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
 import Spinner from "../components/spinner";
+import Button from "./../components/button";
 const ForecastWeather = () => {
+  //holds the current component to insert into the utility footer component
+	const [componentToInsert, setComponentToInsert] = useState("");
+
+  const addUtilityComponentHeight = () => {
+		//if the component is opened already, then close it
+		// if (db.get("UTILITY_CMP_DISPLAY") == "true") {
+		// 	closeUtilityComponent();
+		// } else {
+		// 	//else open the component
+		jQuery(($) => {
+			$.noConflict();
+			$(".cmp").removeClass("d-none");
+			$(".utility-component").toggleClass("add-utility-component-height");
+			//db.create("UTILITY_CMP_DISPLAY", true);
+		});
+		//}
+	};
+
+	const closeUtilityComponent = () => {
+		//db.update("UTILITY_CMP_DISPLAY", false);
+
+		jQuery(($) => {
+			$.noConflict();
+			$(".cmp").addClass("d-none");
+			$(".utility-component").removeClass("add-utility-component-height");
+			setComponentToInsert("");
+		});
+
+		//update the search component
+		//setWeatherInput("");
+	};
+  const mainWeatherForecast = () =>{
+    return (
+      <h5>hello world!</h5>
+    )
+  }
+
+  	//create the main weather component forecast tags
+	const MainWeatherComponent = () => {
+		return (
+			<section className="cmp d-flex align-items-center justify-content-center flex-column my-5">
+				<section className="d-flex flex-row align-items-center justify-content-center d-none cmp cmp-1 my-5">
+					{mainWeatherForecast}
+				</section>
+				<section className="d-flex align-items-center justify-content-center">
+					<Button
+						text="main weather forecast"
+						className="shadow brand-btn-2 toggle-width-3 my-5 "
+					
+					/>
+				</section>
+			</section>
+		);
+	};
+
+	//function to check if the dashboard icon was clicked
+	const beginWeatherForecast = () => {
+		addUtilityComponentHeight();
+		//change the variable to hold the current component to insert
+		setComponentToInsert(<UtilityForecastTags />);
+	};
+
 
   const navigateHome = ()=>{
     navigate("/weather");

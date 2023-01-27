@@ -152,6 +152,7 @@ export const updateReactDom = (result) => {
 		db.create("WEATHER_DEG", result.main.temp);
 		db.create("WEATHER_DESCRIPTION", result.weather[0].description);
 		db.create("WEATHER_CODE", result.weather[0].id);
+		db.create("SUB_WEATHER_WIND_VALUE", `${result.wind.speed} m/s`);
 	});
 };
 export const getCurrentWeather = (location) => {

@@ -30,7 +30,7 @@ import Haze from "./../assets/static/haze.svg";
 import HumidityIcon from "./../assets/humidity-icon.svg";
 import WindIcon from "./../assets/wind-icon.svg";
 import PressureIcon from "./../assets/pressure-icon.svg";
-import getWeatherForecast from "../apis/getWeatherForecast";
+import { getWeatherForecast } from "../apis/getWeatherForecast";
 const WeatherApp = () => {
 	//check if the user navigated from the home page
 	if (!db.get("HOME_PAGE_SEEN")) {
@@ -383,7 +383,13 @@ const WeatherApp = () => {
 					/>
 					<br />
 				</section>
-
+				<section className="d-flex align-items-center justify-content-center">
+					<Button
+						text="forecast 5 days weather"
+						className="shadow brand-btn toggle-width-3 my-5 "
+						onClick={getWeatherForecast}
+					/>
+				</section>
 				<br />
 				<br />
 				<br />

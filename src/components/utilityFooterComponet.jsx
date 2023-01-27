@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useMemo} from "react";
 import jQuery from "jquery";
 
 const UtilityComponent = (props) => {
@@ -9,10 +9,8 @@ const UtilityComponent = (props) => {
 			$(".utility-component").removeClass("add-utility-component-height");
 		});
 	};
+;
 
-	window.addEventListener("click",(e) =>{
-		console.log(e);
-	})
 
 	return (
 

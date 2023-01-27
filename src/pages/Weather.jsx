@@ -172,7 +172,7 @@ const WeatherApp = () => {
 
 	const SearchComponent = () => {
 		return (
-			<section className="cmp d-flex align-items-center justify-content-center flex-column my-5">
+			<section className="cmp d-flex align-items-center justify-content-center flex-column my-5" >
 				<form
 					id="searchWeatherForm"
 					onSubmit={(e) => {
@@ -226,7 +226,8 @@ const WeatherApp = () => {
 			<div
 				className="container-fluid d-flex flex-column py-2 px-0"
 				style={{ overflowX: "hidden" }}
-				id="weatherContainer">
+				id="weatherContainer"
+				>
 				<section className="app-header d-flex justify-content-between px-2 flex-row-reverse ">
 					<section className="city-location">
 						<h5 className="fw-bold fs-5" id="weatherLocation">

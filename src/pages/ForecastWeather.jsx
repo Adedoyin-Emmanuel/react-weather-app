@@ -151,7 +151,7 @@ const ForecastWeather = () => {
         <section className="my-4 next-week-component-container d-flex align-items-center justify-content-start flex-column">
           {uiData}
         </section>
-        <Footer/>
+        <Footer utilityTags={componentToInsert}/>
         <br/><br/><br/>
       </section>
     </React.Fragment>

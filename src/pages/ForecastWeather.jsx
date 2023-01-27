@@ -7,6 +7,7 @@ import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
 import Spinner from "../components/spinner";
 import Button from "./../components/button";
+import jQuery from "jquery";
 const ForecastWeather = () => {
   //holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");

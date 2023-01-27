@@ -143,7 +143,8 @@ export const updateReactDom = (result) => {
 		$("#main-weather-icon-container").html(
 			`<img src=${weatherSvg} alt="main-weather-icon" width="64" height="64"/>`
 		);
-
+		//sub weather components 
+		$("#wind-value").html(`${result.wind.speed} m/s` );
 		//create the database values for offline caching
 		db.create("WEATHER_LOCATION", `${result.name} ${result.sys.country}`);
 		db.create("WEATHER_DEG", result.main.temp);

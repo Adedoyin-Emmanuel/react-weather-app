@@ -2,6 +2,9 @@ import React from "react";
 import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
 import Spinner from "../components/spinner";
+import rainIcon from "./../assets/rain (1).png";
+import windIcon from "./../assets/windy.png";
+import humidity from "./../assets/humidity.png";
 import Thunder from "./../assets/static/thunder.svg";
 import Day from "./../assets/static/day.svg";
 import Drizzle from "./../assets/static/rainy-5.svg";
@@ -83,9 +86,7 @@ const WeatherMain = (props) => {
 						{db.get("WEATHER_DESCRIPTION") || "clear sky"}
 					</p>
 				</section>
-				<section
-					className="mx-2 rounded-3 shadow my-5 py-2 current-weather-assets brand-tertiary-color d-flex align-items-center justify-content-around"
-					onClick={showMoreWeather}>
+				<section className="mx-2 rounded-3 shadow my-5 py-2 current-weather-assets brand-tertiary-color d-flex align-items-center justify-content-around">
 					<section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center">
 						<section className="wind-icon py-1">
 							<img src={WindIcon} height={"30"} width={"30"} alt="wind-icon" />

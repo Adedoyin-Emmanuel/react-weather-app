@@ -30,7 +30,6 @@ import Haze from "./../assets/static/haze.svg";
 import HumidityIcon from "./../assets/humidity-icon.svg";
 import WindIcon from "./../assets/wind-icon.svg";
 import PressureIcon from "./../assets/pressure-icon.svg";
-
 const WeatherApp = () => {
 	//check if the user navigated from the home page
 	if (!db.get("HOME_PAGE_SEEN")) {
@@ -75,7 +74,7 @@ const WeatherApp = () => {
 	let weatherData = [
 		{
 			time: ["10am"],
-			icon: [windIcon],
+			icon: [HumidityIcon],
 			unit: ["10"],
 		},
 
@@ -286,20 +285,20 @@ const WeatherApp = () => {
 					onClick={showMoreWeather}>
 					<section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center">
 						<section className="wind-icon">
-							<img src={windIcon} height={"30"} width={"30"} alt="wind-icon" />
+							<img src={WindIcon} height={"30"} width={"30"} alt="wind-icon" />
 						</section>
 						<p className="wind-value fw-bold text-light text-center py-1 m-0">
 							100%
 						</p>
 						<p className="m-0 wind-text text-muted text-capitalize brand-small-text-2 weather-text text-center">
-							humidity
+							Wind
 						</p>
 					</section>
 
 					<section className=" current-weather-humidity-degree d-flex flex-column align-items-center ">
 						<section className="humidity-icon">
 							<img
-								src={humidity}
+								src={HumidityIcon}
 								height={"30"}
 								width={"30"}
 								alt="humidity-icon"
@@ -315,13 +314,13 @@ const WeatherApp = () => {
 
 					<section className="current-weather-rain-degree d-flex flex-column align-items-center">
 						<section className="rain-icon">
-							<img src={rainIcon} height={"30"} width={"30"} alt="rain-icon" />
+							<img src={PressureIcon} height={"30"} width={"30"} alt="rain-icon" />
 						</section>
 						<p className="rain-value fw-bold text-light text-center py-1 m-0">
 							100%
 						</p>
 						<p className="m-0 rain-text text-muted text-capitalize text-center brand-small-text-2 weather-text">
-							humidity
+							Pressure
 						</p>
 					</section>
 				</section>

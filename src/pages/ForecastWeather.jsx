@@ -8,6 +8,7 @@ import navigate from "../inc/scripts/utilities";
 import Spinner from "../components/spinner";
 import Button from "./../components/button";
 import jQuery from "jquery";
+import { db } from "../backend/app_backend";
 const ForecastWeather = () => {
   //holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
@@ -40,9 +41,9 @@ const ForecastWeather = () => {
 		//update the search component
 		//setWeatherInput("");
 	};
-  const mainWeatherForecast = () =>{
+  const MainWeatherForecast = () =>{
     return (
-      <h5>hello world!</h5>
+      <h5>hello world</h5>
     )
   }
 
@@ -51,7 +52,7 @@ const ForecastWeather = () => {
 		return (
 			<section className="cmp d-flex align-items-center justify-content-center flex-column my-5">
 				<section className="d-flex flex-row align-items-center justify-content-center d-none cmp cmp-1 my-5">
-					{mainWeatherForecast}
+					{<MainWeatherForecast/>}
 				</section>
 				<section className="d-flex align-items-center justify-content-center">
 					<Button

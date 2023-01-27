@@ -116,7 +116,7 @@ const navigateToApp = () =>{
 						</svg>
 					</div>
 					<section className="city-locaton">
-						<h5 className="fw-bold fs-5 my-3">Lagos, 9ja</h5>
+						<h5 className="fw-bold fs-5 my-3">{`${db.get("WEATHER_LOCATION")}`}</h5>
 					</section>
 					<div className="toggle-btn my-3">
           <svg
@@ -134,8 +134,10 @@ const navigateToApp = () =>{
 					</svg>
 					</div>
 				</section>
-				<section className="my-4 next-week-component-container d-flex align-items-center justify-content-start flex-column">
-					{uiData}
+				<section className="my-1 next-week-component-container d-flex align-items-start justify-content-start flex-column">
+        <h6 className="fw-bold fs-6 my-3 text-start">Weather Now</h6>
+					
+          {uiData}
 				</section>
 				<Footer utilityTags={componentToInsert} />
 				<br />

@@ -26,6 +26,14 @@ const ForecastWeather = () => {
 		jQuery(($) => {
 			$.noConflict();
 			const $API_KEY = "cd34f692e856e493bd936095b256b337";
+			const $user_city = db.get("WEATHER_LOCATION");
+			const $user_latitude = db.get("USER_LATITUDE");
+			const $user_longitude = db.get("USER_LONGITUDE");
+
+			if($user_city == null || $user_latitude == null || $user_longitude == null)
+			{
+				
+			}
 			$.ajax({
 				url: `https://api.openweathermap.org/data/2.5/forecast?q=Nigeria&appid=${$API_KEY}`,
 				success: (result, status, xhr) => {

@@ -70,7 +70,7 @@ const ForecastWeather = () => {
 			});
 		});
 	},[]);
-
+	
 	const addUtilityComponentHeight = () => {
 		jQuery(($) => {
 			$.noConflict();
@@ -78,6 +78,8 @@ const ForecastWeather = () => {
 			$(".utility-component").toggleClass("add-utility-component-height");
 		});
 	};
+
+	const mapFirstDayData = () => {}
 	const navigateToApp = () => {
 		navigate("/weather");
 	};

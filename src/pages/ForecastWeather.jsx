@@ -111,48 +111,56 @@ const ForecastWeather = () => {
 
 	let weatherData = [
 		{
+			ID:1,
 			time: ["12am"],
 			icon: [HumidityIcon],
 			unit: ["10"],
 		},
 
 		{
+			id:2,
 			time: ["3am"],
 			icon: [PressureIcon],
 			unit: ["50"],
 		},
 
 		{
+			id:3,
 			time: ["6pm"],
 			icon: [WindIcon],
 			unit: ["50"],
 		},
 
 		{
+			id:4,
 			time: ["9pm"],
 			icon: [PressureIcon],
 			unit: ["45"],
 		},
 
 		{
+			id:5,
 			time: ["12pm"],
 			icon: [WindIcon],
 			unit: ["80"],
 		},
 
 		{
+			id:6,
 			time: ["3pm"],
 			icon: [WindIcon],
 			unit: ["80"],
 		},
 
 		{
+			id:7,
 			time: ["6pm"],
 			icon: [WindIcon],
 			unit: ["80"],
 		},
 
 		{
+			id:8,
 			time: ["9pm"],
 			icon: [WindIcon],
 			unit: ["80"],

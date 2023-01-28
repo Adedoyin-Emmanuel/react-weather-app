@@ -57,6 +57,7 @@ const ForecastWeather = () => {
 	};
 	const weekData = [
 		{
+			id:1,
 			day: ["mon"],
 			firstUnit: 13,
 			secondUnit: 22,
@@ -64,13 +65,15 @@ const ForecastWeather = () => {
 		},
 
 		{
+			id:2,
 			day: ["tue"],
 			firstUnit: 13,
 			secondUnit: 22,
 			icon: WindIcon,
 		},
 
-		{
+		{	
+			id:3,
 			day: ["wed"],
 			firstUnit: 13,
 			secondUnit: 22,
@@ -78,6 +81,7 @@ const ForecastWeather = () => {
 		},
 
 		{
+			id:4,
 			day: ["thu"],
 			firstUnit: 13,
 			secondUnit: 22,
@@ -85,6 +89,7 @@ const ForecastWeather = () => {
 		},
 
 		{
+			id:5,
 			day: ["fri"],
 			firstUnit: 13,
 			secondUnit: 22,
@@ -95,7 +100,7 @@ const ForecastWeather = () => {
 	const uiData = weekData.map((data, index) => {
 		return (
 			<NextWeekComponent
-				key={index}
+				key={`${data} ${index}`}
 				day={data.day}
 				firstUnit={data.firstUnit}
 				secondUnit={data.secondUnit}

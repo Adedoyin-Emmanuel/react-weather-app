@@ -14,6 +14,7 @@ import * as formHandler from "./../apis/getCurrentWeather";
 import HumidityIcon from "./../assets/humidity-icon.svg";
 import WindIcon from "./../assets/wind-icon.svg";
 import PressureIcon from "./../assets/pressure-icon.svg";
+import FutureWeatherComponent from "./../components/futureWeatherComponent";
 const ForecastWeather = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
@@ -100,41 +101,39 @@ const ForecastWeather = () => {
 		);
 	});
 
-
 	let weatherData = [
 		{
-			time: ["10am"],
+			time: ["12am"],
 			icon: [HumidityIcon],
 			unit: ["10"],
 		},
 
 		{
 			time: ["11am"],
-			icon: [rainIcon],
+			icon: [PressureIcon],
 			unit: ["50"],
 		},
 
 		{
 			time: ["12pm"],
-			icon: [windIcon],
+			icon: [WindIcon],
 			unit: ["50"],
 		},
 
 		{
 			time: ["1pm"],
-			icon: [humidity],
+			icon: [PressureIcon],
 			unit: ["45"],
 		},
 
 		{
 			time: ["2pm"],
-			icon: [rainIcon],
+			icon: [WindIcon],
 			unit: ["80"],
 		},
 	];
 
-
-	const uiData = weatherData.map((data, index) => {
+	const hourlyWeatherData = weatherData.map((data, index) => {
 		return (
 			<FutureWeatherComponent
 				key={data.time}
@@ -144,7 +143,6 @@ const ForecastWeather = () => {
 			/>
 		);
 	});
-
 
 	return (
 		<React.Fragment>
@@ -185,7 +183,7 @@ const ForecastWeather = () => {
 					</div>
 				</section>
 				<section className="my-1 next-week-component-container d-flex flex-column my-1">
-					<section className="d-flex align-items-center justify-content-between mb-2">
+					{/* <section className="d-flex align-items-center justify-content-between mb-2">
 						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize ">
 							{" "}
 							Prediction
@@ -193,10 +191,10 @@ const ForecastWeather = () => {
 						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize text-muted ">
 							daily
 						</h6>
-					</section>
-					{uiData}
+					</section> */}
+					{/* {uiData} */}
 
-					<br/>
+					<br />
 					<section className="d-flex align-items-center justify-content-between mb-2">
 						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize ">
 							{" "}
@@ -208,25 +206,71 @@ const ForecastWeather = () => {
 					</section>
 
 					<section className="future-weather-days d-flex align-items-center justify-content-start">
-					<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
-						<p className="brand-small-text text-capitalize fw-bold">today</p>
-						<div className="future-weather-notch-active"></div>
+						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
+							<p className="brand-small-text text-capitalize fw-bold">Day 1</p>
+							<div className="future-weather-notch-active"></div>
+						</section>
 					</section>
-					<section className="tomorrow-section d-flex mx-2 flex-column align-items-center justify-content-center">
-						<p className="brand-small-text text-capitalize">tomorrow</p>
-						<div className="future-weather-notch"></div>
+					<section
+						className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
+						style={{ overflowX: "scroll" }}>
+						{hourlyWeatherData}
 					</section>
-					<section className="week-section d-flex mx-2 flex-column align-items-center justify-content-center">
-						<p className="brand-small-text text-capitalize">next</p>
-						<div className="future-weather-notch"></div>
+
+					<br/>
+					<section className="future-weather-days d-flex align-items-center justify-content-start">
+						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
+							<p className="brand-small-text text-capitalize fw-bold">Day 2</p>
+							<div className="future-weather-notch-active"></div>
+						</section>		
 					</section>
+					<section
+						className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
+						style={{ overflowX: "scroll" }}>
+						{hourlyWeatherData}
+					</section>
+					
+					<br/>
+					<section className="future-weather-days d-flex align-items-center justify-content-start">
+						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
+							<p className="brand-small-text text-capitalize fw-bold">Day 3</p>
+							<div className="future-weather-notch-active"></div>
+						</section>
+					</section>
+					<section
+						className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
+						style={{ overflowX: "scroll" }}>
+						{hourlyWeatherData}
+					</section>
+					<br/>
+
+					<section className="future-weather-days d-flex align-items-center justify-content-start">
+						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
+							<p className="brand-small-text text-capitalize fw-bold">Day 4</p>
+							<div className="future-weather-notch-active"></div>
+						</section>
+					</section>
+					<section
+						className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
+						style={{ overflowX: "scroll" }}>
+						{hourlyWeatherData}
+					</section>
+					<br/>
+					<section className="future-weather-days d-flex align-items-center justify-content-start">
+						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
+							<p className="brand-small-text text-capitalize fw-bold">Day 5</p>
+							<div className="future-weather-notch-active"></div>
+						</section>
+					</section>
+
+					<section
+						className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
+						style={{ overflowX: "scroll" }}>
+						{hourlyWeatherData}
+					</section>
+
 				</section>
-				<section
-					className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
-					style={{ overflowX: "scroll" }}>
-					{uiData}
-				</section>
-				</section>
+				
 				<Footer utilityTags={componentToInsert} />
 				<br />
 				<br />

@@ -16,7 +16,7 @@ import WindIcon from "./../assets/wind-icon.svg";
 import PressureIcon from "./../assets/pressure-icon.svg";
 import FutureWeatherComponent from "./../components/futureWeatherComponent";
 import { getWeatherForecast } from "../apis/getWeatherForecast";
-
+import Swal from "sweetalert2";
 const ForecastWeather = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
@@ -32,7 +32,7 @@ const ForecastWeather = () => {
 
 			if($user_city == null || $user_latitude == null || $user_longitude == null)
 			{
-				
+
 			}
 			$.ajax({
 				url: `https://api.openweathermap.org/data/2.5/forecast?q=Nigeria&appid=${$API_KEY}`,

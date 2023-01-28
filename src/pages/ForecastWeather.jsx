@@ -17,6 +17,8 @@ import PressureIcon from "./../assets/pressure-icon.svg";
 import FutureWeatherComponent from "./../components/futureWeatherComponent";
 import { getWeatherForecast } from "../apis/getWeatherForecast";
 const ForecastWeather = () => {
+	getWeatherForecast();
+
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
 
@@ -110,25 +112,43 @@ const ForecastWeather = () => {
 		},
 
 		{
-			time: ["11am"],
+			time: ["3am"],
 			icon: [PressureIcon],
 			unit: ["50"],
 		},
 
 		{
-			time: ["12pm"],
+			time: ["6pm"],
 			icon: [WindIcon],
 			unit: ["50"],
 		},
 
 		{
-			time: ["1pm"],
+			time: ["9pm"],
 			icon: [PressureIcon],
 			unit: ["45"],
 		},
 
 		{
-			time: ["2pm"],
+			time: ["12pm"],
+			icon: [WindIcon],
+			unit: ["80"],
+		},
+
+		{
+			time: ["3pm"],
+			icon: [WindIcon],
+			unit: ["80"],
+		},
+
+		{
+			time: ["6pm"],
+			icon: [WindIcon],
+			unit: ["80"],
+		},
+
+		{
+			time: ["9pm"],
 			icon: [WindIcon],
 			unit: ["80"],
 		},
@@ -206,58 +226,58 @@ const ForecastWeather = () => {
 						</h6>
 					</section>
 
-					<section className="future-weather-days d-flex align-items-center justify-content-start">
+					<section className="day-1-container future-weather-days d-flex align-items-center justify-content-start">
 						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
 							<p className="brand-small-text text-capitalize fw-bold">Day 1</p>
 							<div className="future-weather-notch-active"></div>
 						</section>
 					</section>
 					<section
-						className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
+						className="day-1-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
 						{hourlyWeatherData}
 					</section>
 
 					<br/>
-					<section className="future-weather-days d-flex align-items-center justify-content-start">
+					<section className="day-2-container future-weather-days d-flex align-items-center justify-content-start">
 						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
 							<p className="brand-small-text text-capitalize fw-bold">Day 2</p>
 							<div className="future-weather-notch-active"></div>
 						</section>		
 					</section>
 					<section
-						className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
+						className="day-2-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
 						{hourlyWeatherData}
 					</section>
 					
 					<br/>
-					<section className="future-weather-days d-flex align-items-center justify-content-start">
+					<section className="day-3-container future-weather-days d-flex align-items-center justify-content-start">
 						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
 							<p className="brand-small-text text-capitalize fw-bold">Day 3</p>
 							<div className="future-weather-notch-active"></div>
 						</section>
 					</section>
 					<section
-						className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
+						className="day-3-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
 						{hourlyWeatherData}
 					</section>
 					<br/>
 
-					<section className="future-weather-days d-flex align-items-center justify-content-start">
+					<section className="day-4-container future-weather-days d-flex align-items-center justify-content-start">
 						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
 							<p className="brand-small-text text-capitalize fw-bold">Day 4</p>
 							<div className="future-weather-notch-active"></div>
 						</section>
 					</section>
 					<section
-						className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
+						className="day-4-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
 						{hourlyWeatherData}
 					</section>
 					<br/>
-					<section className="future-weather-days d-flex align-items-center justify-content-start">
+					<section className="day-5-container future-weather-days d-flex align-items-center justify-content-start">
 						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
 							<p className="brand-small-text text-capitalize fw-bold">Day 5</p>
 							<div className="future-weather-notch-active"></div>
@@ -265,7 +285,7 @@ const ForecastWeather = () => {
 					</section>
 
 					<section
-						className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
+						className="day-5-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
 						{hourlyWeatherData}
 					</section>

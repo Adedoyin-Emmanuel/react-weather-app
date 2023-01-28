@@ -282,7 +282,7 @@ const ForecastWeather = () => {
 
 	const hourlyWeatherData = weatherData.map((data, index) => {
 		return (
-			<FutureWeatherComponent
+			<ForecastDailyWeatherComponent
 				key={data.id}
 				time={data.time}
 				icon={data.icon}

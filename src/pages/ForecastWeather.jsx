@@ -14,7 +14,7 @@ import * as formHandler from "./../apis/getCurrentWeather";
 import HumidityIcon from "./../assets/humidity-icon.svg";
 import WindIcon from "./../assets/wind-icon.svg";
 import PressureIcon from "./../assets/pressure-icon.svg";
-import FutureWeatherComponent from "./../components/futureWeatherComponent";
+import ForecastDailyWeatherComponent from "./../components/forecastWeatherComponent";
 import { getWeatherForecast } from "../apis/getWeatherForecast";
 import Swal from "sweetalert2";
 const ForecastWeather = () => {

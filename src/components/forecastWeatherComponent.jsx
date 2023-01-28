@@ -1,6 +1,6 @@
 import React from "react";
 
-const FutureWeatherComponent = props =>{
+const ForecastDailyWeatherComponent = props =>{
    
     return (
        <React.Fragment>
@@ -18,4 +18,4 @@ const FutureWeatherComponent = props =>{
 }
 
 
-export default FutureWeatherComponent;
+export default ForecastDailyWeatherComponent;

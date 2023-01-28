@@ -111,7 +111,7 @@ const ForecastWeather = () => {
 
 	let weatherData = [
 		{
-			ID:1,
+			id:1,
 			time: ["12am"],
 			icon: [HumidityIcon],
 			unit: ["10"],
@@ -170,7 +170,7 @@ const ForecastWeather = () => {
 	const hourlyWeatherData = weatherData.map((data, index) => {
 		return (
 			<FutureWeatherComponent
-				key={data.time}
+				key={data.id}
 				time={data.time}
 				icon={data.icon}
 				weatherUnit={data.unit}

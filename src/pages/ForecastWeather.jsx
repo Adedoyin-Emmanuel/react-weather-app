@@ -27,7 +27,7 @@ const ForecastWeather = () => {
 			$.noConflict();
 			const $API_KEY = "cd34f692e856e493bd936095b256b337";
 			const $WEATHER_UNIT = db.get("WEATHER_UNIT") || "metric";
-			const $user_city = db.get("WEATHER_LOCATION");
+			const $user_city = db.get("USER_DEFAULT_LOCATION");
 			const $user_latitude = db.get("USER_LATITUDE");
 			const $user_longitude = db.get("USER_LONGITUDE");
 			let FORECAST_URL;
@@ -45,8 +45,9 @@ const ForecastWeather = () => {
 					return;
 				})
 			}
-			else if($user_city == null && $user_latitude != null || $user_latitude != "" && $user_longitude != null || $user_longitude != "")
+			else if($user_city == null && $user_latitude != null  && $user_longitude != null )
 			{
+				console.log($user_city);
 				FORECAST_URL =  `https://api.openweathermap.org/data/2.5/forecast?lat=${$user_latitude}&lon=${$user_longitude}&appid=${$API_KEY}&units=${$WEATHER_UNIT}`;
 					
 			}
@@ -58,7 +59,7 @@ const ForecastWeather = () => {
 				url:FORECAST_URL,
 				success: (result, status, xhr) => {
 					if (result.cod == 200) {
-						//console.log(result);
+						
 						setForecastData(result);
 					}
 				},

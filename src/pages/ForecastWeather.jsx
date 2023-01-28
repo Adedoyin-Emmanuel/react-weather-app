@@ -53,35 +53,35 @@ const ForecastWeather = () => {
 	};
 	const weekData = [
 		{
-			day: ["today"],
+			day: ["mon"],
 			firstUnit: 13,
 			secondUnit: 22,
 			icon: HumidityIcon,
 		},
 
 		{
-			day: ["today"],
+			day: ["tue"],
 			firstUnit: 13,
 			secondUnit: 22,
 			icon: WindIcon,
 		},
 
 		{
-			day: ["today"],
+			day: ["wed"],
 			firstUnit: 13,
 			secondUnit: 22,
 			icon: PressureIcon,
 		},
 
 		{
-			day: ["today"],
+			day: ["thu"],
 			firstUnit: 13,
 			secondUnit: 22,
 			icon: WindIcon,
 		},
 
 		{
-			day: ["today"],
+			day: ["fri"],
 			firstUnit: 13,
 			secondUnit: 22,
 			icon: HumidityIcon,
@@ -149,6 +149,17 @@ const ForecastWeather = () => {
 						</h6>
 					</section>
 					{uiData}
+
+					<br/>
+					<section className="d-flex align-items-center justify-content-between mb-2">
+						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize ">
+							{" "}
+							Prediction
+						</h6>
+						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize text-muted ">
+							Hourly
+						</h6>
+					</section>
 				</section>
 				<Footer utilityTags={componentToInsert} />
 				<br />

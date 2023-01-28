@@ -26,16 +26,36 @@ const ForecastWeather = () => {
 		jQuery(($) => {
 			$.noConflict();
 			const $API_KEY = "cd34f692e856e493bd936095b256b337";
+			const $WEATHER_UNIT = db.get("WEATHER_UNIT") || "metric";
 			const $user_city = db.get("WEATHER_LOCATION");
 			const $user_latitude = db.get("USER_LATITUDE");
 			const $user_longitude = db.get("USER_LONGITUDE");
-
-			if($user_city == null || $user_latitude == null || $user_longitude == null)
+			let FORECAST_URL;
+			if($user_city == null && $user_latitude == null || $user_longitude == null)
 			{
-
+				Swal.fire({
+					text:"No saved location found!",
+					icon:"error",
+					timer:3000,
+					toast:true,
+					showConfirmButton:false,
+					allowOutsideClick:false,
+					position:"top"
+				}).then((willProceed)=>{
+					return;
+				})
+			}
+			else if($user_city == null && $user_latitude != null || $user_latitude != "" && $user_longitude != null || $user_longitude != "")
+			{
+				FORECAST_URL =  `https://api.openweathermap.org/data/2.5/forecast?lat=${$user_latitude}&lon=${$user_longitude}&appid=${$API_KEY}&units=${$WEATHER_UNIT}`;
+					
+			}
+			else{
+				FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${$user_city}&appid=${$API_KEY}&units=${$WEATHER_UNIT}`;
+		
 			}
 			$.ajax({
-				url: `https://api.openweathermap.org/data/2.5/forecast?q=Nigeria&appid=${$API_KEY}`,
+				url:FORECAST_URL,
 				success: (result, status, xhr) => {
 					if (result.cod == 200) {
 						//console.log(result);

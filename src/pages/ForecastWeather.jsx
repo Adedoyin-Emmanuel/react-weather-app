@@ -100,6 +100,52 @@ const ForecastWeather = () => {
 		);
 	});
 
+
+	let weatherData = [
+		{
+			time: ["10am"],
+			icon: [HumidityIcon],
+			unit: ["10"],
+		},
+
+		{
+			time: ["11am"],
+			icon: [rainIcon],
+			unit: ["50"],
+		},
+
+		{
+			time: ["12pm"],
+			icon: [windIcon],
+			unit: ["50"],
+		},
+
+		{
+			time: ["1pm"],
+			icon: [humidity],
+			unit: ["45"],
+		},
+
+		{
+			time: ["2pm"],
+			icon: [rainIcon],
+			unit: ["80"],
+		},
+	];
+
+
+	const uiData = weatherData.map((data, index) => {
+		return (
+			<FutureWeatherComponent
+				key={data.time}
+				time={data.time}
+				icon={data.icon}
+				weatherUnit={data.unit}
+			/>
+		);
+	});
+
+
 	return (
 		<React.Fragment>
 			<Spinner />
@@ -160,6 +206,26 @@ const ForecastWeather = () => {
 							Hourly
 						</h6>
 					</section>
+
+					<section className="future-weather-days d-flex align-items-center justify-content-start">
+					<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
+						<p className="brand-small-text text-capitalize fw-bold">today</p>
+						<div className="future-weather-notch-active"></div>
+					</section>
+					<section className="tomorrow-section d-flex mx-2 flex-column align-items-center justify-content-center">
+						<p className="brand-small-text text-capitalize">tomorrow</p>
+						<div className="future-weather-notch"></div>
+					</section>
+					<section className="week-section d-flex mx-2 flex-column align-items-center justify-content-center">
+						<p className="brand-small-text text-capitalize">next</p>
+						<div className="future-weather-notch"></div>
+					</section>
+				</section>
+				<section
+					className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
+					style={{ overflowX: "scroll" }}>
+					{uiData}
+				</section>
 				</section>
 				<Footer utilityTags={componentToInsert} />
 				<br />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import rainIcon from "./../assets/rain (1).png";
 import windIcon from "./../assets/windy.png";
 import humidity from "./../assets/humidity.png";
@@ -16,11 +16,31 @@ import WindIcon from "./../assets/wind-icon.svg";
 import PressureIcon from "./../assets/pressure-icon.svg";
 import FutureWeatherComponent from "./../components/futureWeatherComponent";
 import { getWeatherForecast } from "../apis/getWeatherForecast";
-const ForecastWeather = () => {
-	getWeatherForecast();
 
+const ForecastWeather = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
+	const [forecastData, setForecastData] = useState(null);
+
+	useEffect(() => {
+		jQuery(($) => {
+			$.noConflict();
+			const $API_KEY = "cd34f692e856e493bd936095b256b337";
+			$.ajax({
+				url: `https://api.openweathermap.org/data/2.5/forecast?q=Nigeria&appid=${$API_KEY}`,
+				success: (result, status, xhr) => {
+					if (result.cod == 200) {
+						//console.log(result);
+						setForecastData(result);
+					}
+				},
+
+				error: (xhr, status, error) => {
+					console.log(error);
+				},
+			});
+		});
+	},[]);
 
 	const addUtilityComponentHeight = () => {
 		jQuery(($) => {
@@ -55,9 +75,12 @@ const ForecastWeather = () => {
 	const navigateHome = () => {
 		navigate("/weather");
 	};
+
+	//5 days API call
+
 	const weekData = [
 		{
-			id:1,
+			id: 1,
 			day: ["mon"],
 			firstUnit: 13,
 			secondUnit: 22,
@@ -65,15 +88,15 @@ const ForecastWeather = () => {
 		},
 
 		{
-			id:2,
+			id: 2,
 			day: ["tue"],
 			firstUnit: 13,
 			secondUnit: 22,
 			icon: WindIcon,
 		},
 
-		{	
-			id:3,
+		{
+			id: 3,
 			day: ["wed"],
 			firstUnit: 13,
 			secondUnit: 22,
@@ -81,7 +104,7 @@ const ForecastWeather = () => {
 		},
 
 		{
-			id:4,
+			id: 4,
 			day: ["thu"],
 			firstUnit: 13,
 			secondUnit: 22,
@@ -89,7 +112,7 @@ const ForecastWeather = () => {
 		},
 
 		{
-			id:5,
+			id: 5,
 			day: ["fri"],
 			firstUnit: 13,
 			secondUnit: 22,
@@ -111,56 +134,56 @@ const ForecastWeather = () => {
 
 	let weatherData = [
 		{
-			id:1,
+			id: 1,
 			time: ["12am"],
 			icon: [HumidityIcon],
 			unit: ["10"],
 		},
 
 		{
-			id:2,
+			id: 2,
 			time: ["3am"],
 			icon: [PressureIcon],
 			unit: ["50"],
 		},
 
 		{
-			id:3,
+			id: 3,
 			time: ["6pm"],
 			icon: [WindIcon],
 			unit: ["50"],
 		},
 
 		{
-			id:4,
+			id: 4,
 			time: ["9pm"],
 			icon: [PressureIcon],
 			unit: ["45"],
 		},
 
 		{
-			id:5,
+			id: 5,
 			time: ["12pm"],
 			icon: [WindIcon],
 			unit: ["80"],
 		},
 
 		{
-			id:6,
+			id: 6,
 			time: ["3pm"],
 			icon: [WindIcon],
 			unit: ["80"],
 		},
 
 		{
-			id:7,
+			id: 7,
 			time: ["6pm"],
 			icon: [WindIcon],
 			unit: ["80"],
 		},
 
 		{
-			id:8,
+			id: 8,
 			time: ["9pm"],
 			icon: [WindIcon],
 			unit: ["80"],
@@ -228,6 +251,10 @@ const ForecastWeather = () => {
 					</section> */}
 					{/* {uiData} */}
 
+					{forecastData == null
+						? console.log("data is null")
+						: console.log(forecastData)}
+
 					<br />
 					<section className="d-flex align-items-center justify-content-between mb-2">
 						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize ">
@@ -251,20 +278,20 @@ const ForecastWeather = () => {
 						{hourlyWeatherData}
 					</section>
 
-					<br/>
+					<br />
 					<section className="day-2-container future-weather-days d-flex align-items-center justify-content-start">
 						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
 							<p className="brand-small-text text-capitalize fw-bold">Day 2</p>
 							<div className="future-weather-notch-active"></div>
-						</section>		
+						</section>
 					</section>
 					<section
 						className="day-2-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
 						{hourlyWeatherData}
 					</section>
-					
-					<br/>
+
+					<br />
 					<section className="day-3-container future-weather-days d-flex align-items-center justify-content-start">
 						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
 							<p className="brand-small-text text-capitalize fw-bold">Day 3</p>
@@ -276,7 +303,7 @@ const ForecastWeather = () => {
 						style={{ overflowX: "scroll" }}>
 						{hourlyWeatherData}
 					</section>
-					<br/>
+					<br />
 
 					<section className="day-4-container future-weather-days d-flex align-items-center justify-content-start">
 						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
@@ -289,7 +316,7 @@ const ForecastWeather = () => {
 						style={{ overflowX: "scroll" }}>
 						{hourlyWeatherData}
 					</section>
-					<br/>
+					<br />
 					<section className="day-5-container future-weather-days d-flex align-items-center justify-content-start">
 						<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
 							<p className="brand-small-text text-capitalize fw-bold">Day 5</p>
@@ -302,9 +329,8 @@ const ForecastWeather = () => {
 						style={{ overflowX: "scroll" }}>
 						{hourlyWeatherData}
 					</section>
-
 				</section>
-				
+
 				<Footer utilityTags={componentToInsert} />
 				<br />
 				<br />

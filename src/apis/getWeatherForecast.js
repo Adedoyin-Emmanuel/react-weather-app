@@ -1,4 +1,7 @@
 import jQuery from "jquery";
+import {db} from "./../backend/app_backend";
+
+
 
 export const getWeatherForecast = () =>{
     jQuery(($)=>{
@@ -9,11 +12,14 @@ export const getWeatherForecast = () =>{
             success: (result, status, xhr) =>{
                 if(result.cod == 200)
                 {
-                    console.log(result);
+                   //console.log(result);
+                   return result;
                 }
+
+               
             },
     
-            
+
             error: (xhr, status, error) =>{
                 console.log(error);
             }
@@ -21,4 +27,5 @@ export const getWeatherForecast = () =>{
     
     
     })
+    
 }

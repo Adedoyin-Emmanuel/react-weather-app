@@ -26,6 +26,7 @@
 	--brand-weather-value-font-size: 4rem;
 	--brand-medium-font-size: 1.6rem;
 	--brand-tertiary-color: rgb(137, 190, 243);
+	--brand-tertiary-color-2: rgb(164, 204, 245);
     --brand-gradient-color:linear-gradient(240deg, var(var(--brand-primary-color)),var(var(--brand-secondary-color)));
 	--brand-input-border-radius:5px;
 	--brand-button-3-border-radius:5px;
@@ -255,7 +256,9 @@ section.footer-nav > section {
 	cursor:pointer;
 }
 
-
+.brand-gradient{
+	background: linear-gradient(70deg, var(--brand-tertiary-color), var(--brand-tertiary-color-2));
+}
 @media (min-width: 667.98px) {
 	.width-toggle {
 		width: 35%;

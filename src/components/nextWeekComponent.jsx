@@ -3,7 +3,7 @@ import React from "react";
 const NextWeekComponent = (props) => {
 	return (
 		<React.Fragment>
-			<section className="w-100 next-week-component d-flex align-items-start justify-content-between brand-tertiary-color p-4 rounded-3 shadow">
+			<section className="w-100 next-week-component d-flex align-items-start justify-content-between brand-gradient p-4 rounded-3 shadow">
 				<section className="today-section d-flex align-items-start justify-content-start flex-row text-light">
 					<p className="text-start fw-bold text-capitalize brand-small-text d-block m-0">{props.day}</p>
 				</section>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import jQuery from "jquery";
 import Button from "./../components/button";
 import Footer from "../components/footer";
@@ -48,23 +48,9 @@ const WeatherApp = () => {
 			$.noConflict();
 			$(".cmp").removeClass("d-none");
 			$(".utility-component").toggleClass("add-utility-component-height");
-		
+			
+
 		});
-		//}
-	};
-
-	const closeUtilityComponent = () => {
-		//db.update("UTILITY_CMP_DISPLAY", false);
-
-		jQuery(($) => {
-			$.noConflict();
-			$(".cmp").addClass("d-none");
-			$(".utility-component").removeClass("add-utility-component-height");
-			setComponentToInsert("");
-		});
-
-		//update the search component
-		//setWeatherInput("");
 	};
 
 	let weatherData = [
@@ -144,13 +130,18 @@ const WeatherApp = () => {
 	const UtilityForecastTags = () => {
 		return (
 			<section className="cmp d-flex align-items-center justify-content-center flex-column my-5">
-				<section className="d-flex flex-row align-items-center justify-content-center d-none cmp cmp-1 my-5">
+				<br/>
+				<br/>
+				<br/>
+			
+				<section className="d-flex align-items-center justify-content-center my-5">
 					{uiForeCastData}
 				</section>
+				
 				<section className="d-flex align-items-center justify-content-center">
 					<Button
 						text="forecast weather"
-						className="shadow brand-btn-2 toggle-width-3 my-5 "
+						className="shadow brand-btn-2 toggle-width-3"
 						onClick={showForecastWeather}
 					/>
 				</section>
@@ -159,15 +150,17 @@ const WeatherApp = () => {
 	};
 
 	//function to check if the dashboard icon was clicked
+
 	const beginWeatherForecast = () => {
 		addUtilityComponentHeight();
 		//change the variable to hold the current component to insert
 		setComponentToInsert(<UtilityForecastTags />);
+		//formHandler.scrollToElement("ripple-container");
 	};
 
 	const SearchComponent = () => {
 		return (
-			<section className="cmp d-flex align-items-center justify-content-center flex-column my-5" >
+			<section className="cmp d-flex align-items-center justify-content-center flex-column my-5">
 				<form
 					id="searchWeatherForm"
 					onSubmit={(e) => {
@@ -221,8 +214,7 @@ const WeatherApp = () => {
 			<div
 				className="container-fluid d-flex flex-column py-2 px-0"
 				style={{ overflowX: "hidden" }}
-				id="weatherContainer"
-				>
+				id="weatherContainer">
 				<section className="app-header d-flex justify-content-between px-2 flex-row-reverse ">
 					<section className="city-location">
 						<h5 className="fw-bold fs-5" id="weatherLocation">
@@ -239,7 +231,8 @@ const WeatherApp = () => {
 						height={"30px"}
 						viewBox="0 0 24 24"
 						className="d-block"
-						onClick={beginWeatherForecast}>
+						onClick={beginWeatherForecast}
+						id="weatherDashboardIcon">
 						<path fill="white" d="M0 0h24v24H0V0z" />
 						<path
 							fill="lightskyblue"
@@ -361,7 +354,7 @@ const WeatherApp = () => {
 							className="map"
 						/>
 					</section>
-					<section className="ripple-section d-flex align-items-center justify-content-center">
+					<section id="ripple-container" className="ripple-section d-flex align-items-center justify-content-center">
 						<img
 							src={Ripple1}
 							width={"300"}
@@ -379,7 +372,7 @@ const WeatherApp = () => {
 					/>
 					<br />
 				</section>
-				
+
 				<br />
 				<br />
 				<br />

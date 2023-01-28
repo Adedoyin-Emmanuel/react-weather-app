@@ -171,7 +171,6 @@ section.footer-nav > section {
 	bottom: 0;
 	display: flex;
 	align-items: start;
-	height: 300px;
 	flex-direction: column;
 	width: 100%;
 	margin: auto;

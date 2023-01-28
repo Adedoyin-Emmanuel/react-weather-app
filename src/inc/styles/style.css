@@ -236,7 +236,7 @@ section.footer-nav > section {
 .next-week-notch{
     width:40px;
     height:5px;
-    background:var(--brand-primary-color);
+    background:white;
     border-radius: var(--footer-notch-border-radius);
 	transform:translateY(-10px);
 }
@@ -257,7 +257,7 @@ section.footer-nav > section {
 }
 
 .brand-gradient{
-	background: linear-gradient(70deg, var(--brand-tertiary-color), var(--brand-tertiary-color-2));
+	background: var(--brand-tertiary-color-2);
 }
 @media (min-width: 667.98px) {
 	.width-toggle {

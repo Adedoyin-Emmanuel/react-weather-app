@@ -100,7 +100,7 @@ const ForecastWeather = () => {
 	const uiData = weekData.map((data, index) => {
 		return (
 			<NextWeekComponent
-				key={`${data} ${index}`}
+				key={data.id}
 				day={data.day}
 				firstUnit={data.firstUnit}
 				secondUnit={data.secondUnit}

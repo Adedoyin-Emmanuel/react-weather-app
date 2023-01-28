@@ -44,16 +44,11 @@ const WeatherApp = () => {
 	savedLocation = db.get("USER_DEFAULT_LOCATION");
 
 	const addUtilityComponentHeight = () => {
-		//if the component is opened already, then close it
-		// if (db.get("UTILITY_CMP_DISPLAY") == "true") {
-		// 	closeUtilityComponent();
-		// } else {
-		// 	//else open the component
 		jQuery(($) => {
 			$.noConflict();
 			$(".cmp").removeClass("d-none");
 			$(".utility-component").toggleClass("add-utility-component-height");
-			//db.create("UTILITY_CMP_DISPLAY", true);
+		
 		});
 		//}
 	};

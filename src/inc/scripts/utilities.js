@@ -114,4 +114,8 @@ export const getCurrentDate = () => {
 	return result;
 };
 
+
+const convertTo12Hour = time =>{
+	
+}
 export default navigate;

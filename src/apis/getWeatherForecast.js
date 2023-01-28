@@ -13,6 +13,7 @@ export const getWeatherForecast = () =>{
                 }
             },
     
+            
             error: (xhr, status, error) =>{
                 console.log(error);
             }

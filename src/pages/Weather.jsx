@@ -30,8 +30,10 @@ import Haze from "./../assets/static/haze.svg";
 import HumidityIcon from "./../assets/humidity-icon.svg";
 import WindIcon from "./../assets/wind-icon.svg";
 import PressureIcon from "./../assets/pressure-icon.svg";
-import { getWeatherForecast } from "../apis/getWeatherForecast";
+
 const WeatherApp = () => {
+	getWeatherForecast();
+
 	//check if the user navigated from the home page
 	if (!db.get("HOME_PAGE_SEEN")) {
 		navigate("/");

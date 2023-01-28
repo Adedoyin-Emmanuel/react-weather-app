@@ -15,6 +15,7 @@ import HumidityIcon from "./../assets/humidity-icon.svg";
 import WindIcon from "./../assets/wind-icon.svg";
 import PressureIcon from "./../assets/pressure-icon.svg";
 import FutureWeatherComponent from "./../components/futureWeatherComponent";
+import { getWeatherForecast } from "../apis/getWeatherForecast";
 const ForecastWeather = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");

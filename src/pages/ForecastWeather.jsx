@@ -13,6 +13,18 @@ import WindIcon from "./../assets/wind-icon.svg";
 import PressureIcon from "./../assets/pressure-icon.svg";
 import ForecastDailyWeatherComponent from "./../components/forecastWeatherComponent";
 import Swal from "sweetalert2";
+import Thunder from "./../assets/static/thunder.svg";
+import Day from "./../assets/static/day.svg";
+import Drizzle from "./../assets/static/rainy-5.svg";
+import Rainy from "./../assets/static/rainy-7.svg";
+import Snowy from "./../assets/static/snowy-6.svg";
+import FreezingRain from "./../assets/static/freezing-rain.svg";
+import Misty from "./../assets/static/mist.svg";
+import BrokenClouds from "./../assets/static/broken-clouds.svg";
+import OvercastClouds from "./../assets/static/overcast-clouds.svg";
+import ScatteredClouds from "./../assets/static/scattered-clouds.svg";
+import FewClouds from "./../assets/static/few-clouds.svg";
+import Haze from "./../assets/static/haze.svg";
 const ForecastWeather = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");

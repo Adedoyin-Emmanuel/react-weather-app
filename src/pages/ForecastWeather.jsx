@@ -60,7 +60,7 @@ const ForecastWeather = () => {
 				$user_latitude != null &&
 				$user_longitude != null
 			) {
-				console.log($user_city);
+				
 				FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${$user_latitude}&lon=${$user_longitude}&appid=${$API_KEY}&units=${$WEATHER_UNIT}`;
 			} else {
 				FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${$user_city}&appid=${$API_KEY}&units=${$WEATHER_UNIT}`;
@@ -405,21 +405,6 @@ const ForecastWeather = () => {
 					</div>
 				</section>
 				<section className="my-1 next-week-component-container d-flex flex-column my-1">
-					{/* <section className="d-flex align-items-center justify-content-between mb-2">
-						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize ">
-							{" "}
-							Prediction
-						</h6>
-						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize text-muted ">
-							daily
-						</h6>
-					</section> */}
-					{/* {uiData} */}
-
-					{forecastData == null
-						? console.log("data is null")
-						: console.log(forecastData)}
-
 					<br />
 					<section className="d-flex align-items-center justify-content-between mb-2 flex-row-reverse">
 						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize text-muted">

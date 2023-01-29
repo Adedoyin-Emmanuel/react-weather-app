@@ -20,7 +20,7 @@ const Settings = () => {
   return (
     <React.Fragment>
       <Spinner />
-      <section className="container-fluid">
+      <section className="container-fluid width-toggle-5 m-auto">
         <section className="app-header d-flex justify-content-between my-3">
           <div className="toggle-btn ">
             <svg

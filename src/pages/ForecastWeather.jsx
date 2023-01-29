@@ -88,11 +88,12 @@ const ForecastWeather = () => {
 		});
 	};
 	class WeatherTemplate {
-		constructor(id, time, icon, unit) {
+		constructor(id, time, icon, unit, title) {
 			this.id = id;
 			this.time = time;
 			this.icon = icon;
 			this.unit = unit;
+			this.title= title;
 		}
 	}
 

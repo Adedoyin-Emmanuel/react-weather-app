@@ -1,13 +1,10 @@
 import React from "react";
-import "./../inc/styles/overScrollStyles.css";
-const ForecastWeatherItems = props =>{
-   const customStyles = {
 
-    "::WebkitScrollbar":{"width":"0", "height":"0"}
-   }
+const ForecastWeatherItems = props =>{
+ 
     return (
        <React.Fragment>
-            <section style={customStyles}className="future-weather-container d-flex align-items-center justify-content-between flex-column brand-bg-white px-4  rounded-3 shadow mx-4">
+            <section className="future-weather-container d-flex align-items-center justify-content-between flex-column brand-bg-white px-4  rounded-3 shadow mx-4">
                 <section className="weather-wrapper d-flex flex-column align-items-center justify-content-between">
                     <p className="brand-small-text-2 text-dark py-1 text-center m-0">{props.name}</p>
                     <section className="weather-icon-section py-1">

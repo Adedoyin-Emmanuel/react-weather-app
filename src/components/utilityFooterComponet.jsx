@@ -16,7 +16,7 @@ const UtilityComponent = (props) => {
 
     <React.Fragment>
 			<section
-				className="utility-component align-items-center justify-content-around m-auto width-toggle-2"
+				className="utility-component align-items-center justify-content-around m-auto width-toggle-3"
 				id="utilityComponent">
 				<div
 					className="utility-notch my-2"

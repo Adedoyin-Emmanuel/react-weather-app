@@ -51,6 +51,9 @@ const WeatherApp = () => {
 		});
 	};
 
+	const navigateToForecast = () =>{
+		navigate("/forecast");
+	}
 	class MappedSavedDataTemplate {
 		constructor(id, time, icon, unit) {
 			this.id = id;
@@ -334,11 +337,11 @@ const WeatherApp = () => {
 						<p className="brand-small-text text-capitalize fw-bold">today</p>
 						<div className="future-weather-notch-active"></div>
 					</section>
-					<section className="tomorrow-section d-flex mx-2 flex-column align-items-center justify-content-center">
+					<section className="tomorrow-section d-flex mx-2 flex-column align-items-center justify-content-center" onClick={navigateToForecast}>
 						<p className="brand-small-text text-capitalize">tomorrow</p>
 						<div className="future-weather-notch"></div>
 					</section>
-					<section className="week-section d-flex mx-2 flex-column align-items-center justify-content-center">
+					<section className="week-section d-flex mx-2 flex-column align-items-center justify-content-center" onClick={navigateToForecast}>
 						<p className="brand-small-text text-capitalize">next</p>
 						<div className="future-weather-notch"></div>
 					</section>

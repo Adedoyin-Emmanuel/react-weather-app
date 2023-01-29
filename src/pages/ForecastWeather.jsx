@@ -96,6 +96,8 @@ const ForecastWeather = () => {
 		}
 	}
 
+
+	//first day weather mapping 
 	const mapFirstDayData = (result) => {
 		//first day data is from array 0-8
 		let outputArray = [];
@@ -127,6 +129,46 @@ const ForecastWeather = () => {
 
 		return firstWeatherDataForecast;
 	};
+
+
+	//second data mapping
+	const mapSecondDayData = (result) => {
+		//first day data is from array 8-13
+		let outputArray = [];
+
+		for (let i = 8; i < 13; i++) {
+			outputArray.push(
+				new WeatherTemplate(
+					i,
+					utilis.getTimeFromDateString(result.list[i].dt_txt),
+					currentWeather.checkWeatherCode(
+						result.list[i].weather[0].id,
+						Math.ceil(result.list[i].main.temp)
+					)
+				)
+			);
+		}
+
+		//map each of the individual objects into single component!
+		const secondWeatherDataForecast = outputArray.map((data, index) => {
+			return (
+				<ForecastDailyWeatherComponent
+					key={data.id}
+					time={data.time}
+					icon={data.icon}
+					weatherUnit={data.unit}
+				/>
+			);
+		});
+
+		return secondWeatherDataForecast;
+	};
+
+
+
+
+
+
 	const navigateToApp = () => {
 		navigate("/weather");
 	};

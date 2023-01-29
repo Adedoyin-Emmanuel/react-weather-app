@@ -144,19 +144,19 @@ const ForecastWeather = () => {
 
 			//save the first values into the database for reference @ the home screen
 			db.create(
-				"WEATHER_FORECAST_TIME",
-				`${i}${utilis.convertTo12Hour(
+				`WEATHER_FORECAST_TIME${i}`,
+				`${utilis.convertTo12Hour(
 					utilis.getTimeFromDateString(result.list[i].dt_txt)
 				)}`
 			);
-			db.create("WEATHER_FORECAST_ICON", `${i}${result.list[i].weather[0].id}`);
+			db.create(`WEATHER_FORECAST_ICON${i}`, `${result.list[i].weather[0].id}`);
 			db.create(
-				"WEATHER_FORECAST_UNIT",
-				`${i}${Math.ceil(result.list[i].main.temp)}`
+				`WEATHER_FORECAST_UNIT${i}`,
+				`${Math.ceil(result.list[i].main.temp)}`
 			);
 			db.create(
-				"WEATHER_FORECAST_TITLE",
-				`${i}${result.list[i].weather[0].description}`
+				`WEATHER_FORECAST_TITLE${i}`,
+				`${result.list[i].weather[0].description}`
 			);
 		}
 

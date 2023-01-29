@@ -54,6 +54,18 @@ const WeatherApp = () => {
 		});
 	};
 
+	const mapDbSavedData = () =>{
+		const count =  9;
+
+		for(let i = 0; i < count; i++)
+		{
+
+			const FORECAST_TIME= db.get(`WEATHER_FORECAST_TIME${i}`);
+			const FORECAST_ICON = db.get(`WEATTHER_FORECAST_ICON${i}`);
+			const FOREAST_UNIT = db.get(`WEATHER_FORECAST_UNIT${i}`);
+		}
+	}
+
 	let weatherData = [
 		{
 			time: ["10am"],

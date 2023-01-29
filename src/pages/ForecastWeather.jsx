@@ -26,6 +26,7 @@ import ScatteredClouds from "./../assets/static/scattered-clouds.svg";
 import FewClouds from "./../assets/static/few-clouds.svg";
 import Haze from "./../assets/static/haze.svg";
 import * as utilis from "./../inc/scripts/utilities";
+import Spinner from "../components/spinner";
 const ForecastWeather = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");

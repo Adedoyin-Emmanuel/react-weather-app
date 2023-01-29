@@ -102,13 +102,13 @@ const WeatherApp = () => {
 	let forecastData = [
 		{
 			name: ["Keketu"],
-			icon: [windIcon],
+			icon: [WindIcon],
 			unit: ["10"],
 		},
 
 		{
 			name: ["Sango"],
-			icon: [rainIcon],
+			icon: [HumidityIcon],
 			unit: ["50"],
 		},
 	];

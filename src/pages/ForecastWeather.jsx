@@ -150,7 +150,7 @@ const ForecastWeather = () => {
 		//first day data is from array 8-16
 		let outputArray = [];
 
-		for (let i = 8; i < 13; i++) {
+		for (let i = 8; i < 16; i++) {
 			outputArray.push(
 				new WeatherTemplate(
 					i,

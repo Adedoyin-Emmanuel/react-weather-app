@@ -185,6 +185,7 @@ const ForecastWeather = () => {
 					time={data.time}
 					icon={data.icon}
 					weatherUnit={data.unit}
+					onClick={giveMoreDetails}
 				/>
 			);
 		});
@@ -232,6 +233,7 @@ const ForecastWeather = () => {
 					time={data.time}
 					icon={data.icon}
 					weatherUnit={data.unit}
+					onClick={giveMoreDetails}
 				/>
 			);
 		});
@@ -280,6 +282,7 @@ const ForecastWeather = () => {
 					time={data.time}
 					icon={data.icon}
 					weatherUnit={data.unit}
+					onClick={giveMoreDetails}
 				/>
 			);
 		});
@@ -327,6 +330,7 @@ const ForecastWeather = () => {
 					time={data.time}
 					icon={data.icon}
 					weatherUnit={data.unit}
+					onClick={giveMoreDetails}
 				/>
 			);
 		});

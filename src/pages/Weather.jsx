@@ -67,14 +67,15 @@ const WeatherApp = () => {
 
 		for (let i = 0; i < count; i++) {
 			const FORECAST_TIME = db.get(`WEATHER_FORECAST_TIME_${i}`);
-			const FORECAST_ICON = db.get(`WEATTHER_FORECAST_ICON_${i}`);
+			const FORECAST_ICON = db.get(`WEATHER_FORECAST_ICON_${i}`);
 			const FORECAST_UNIT = db.get(`WEATHER_FORECAST_UNIT_${i}`);
 
+			console.log(typeof parseInt(formHandler.checkWeatherCode(FORECAST_ICON)));
 			weatherData.push(
 				new MappedSavedDataTemplate(
 					i,
 					FORECAST_TIME,
-					parseInt(formHandler.checkWeatherCode(FORECAST_ICON)),
+					formHandler.checkWeatherCode(parseInt(FORECAST_ICON)),
 					FORECAST_UNIT
 				)
 			);
@@ -94,7 +95,6 @@ const WeatherApp = () => {
 		return uiData;
 	};
 
-	
 	let forecastData = [
 		{
 			name: ["Keketu"],
@@ -108,8 +108,6 @@ const WeatherApp = () => {
 			unit: ["50"],
 		},
 	];
-
-	
 
 	const showMoreWeather = () => {
 		navigate("weathermain");

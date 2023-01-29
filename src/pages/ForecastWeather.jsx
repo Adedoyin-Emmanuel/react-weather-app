@@ -69,7 +69,7 @@ const ForecastWeather = () => {
 				url: FORECAST_URL,
 				success: (result, status, xhr) => {
 					if (result.cod == 200) {
-						//setForecastData(result);
+						setForecastData(result);
 					}
 				},
 
@@ -490,12 +490,12 @@ const ForecastWeather = () => {
 						: console.log(forecastData)}
 
 					<br />
-					<section className="d-flex align-items-center justify-content-between mb-2">
-						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize ">
+					<section className="d-flex align-items-center justify-content-between mb-2 flex-row-reverse">
+						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize text-muted">
 							{" "}
 							Prediction
 						</h6>
-						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize text-muted ">
+						<h6 className="fw-bold fs-6 my-3 text-start text-capitalize ">
 							Hourly
 						</h6>
 					</section>

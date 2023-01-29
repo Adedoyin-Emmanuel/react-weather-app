@@ -44,16 +44,16 @@ const ForecastWeather = () => {
 			const $user_longitude = db.get("USER_LONGITUDE");
 			let FORECAST_URL;
 			if (
-				($user_city == null && $user_latitude == null) ||
+				$user_city == null && $user_latitude == null &&
 				$user_longitude == null
 			) {
+				console.log(typeof $user_city);
 				Swal.fire({
 					text: "No saved location found!",
 					icon: "error",
 					timer: 3000,
 					toast: true,
 					showConfirmButton: false,
-					allowOutsideClick: false,
 					position: "top",
 				}).then((willProceed) => {
 					return;
@@ -405,7 +405,7 @@ const ForecastWeather = () => {
 
 	return (
 		<React.Fragment>
-			<Spinner />
+			
 			<section className="container-fluid" id="forecastPage">
 				<section className="app-header d-flex justify-content-between">
 					<div className="toggle-btn my-3">
@@ -465,7 +465,7 @@ const ForecastWeather = () => {
 						{!(forecastData == null) ? (
 							mapFirstDayData(forecastData)
 						) : (
-							<Spinner />
+							"loading.."
 						)}
 					</section>
 
@@ -482,7 +482,7 @@ const ForecastWeather = () => {
 						{!(forecastData == null) ? (
 							mapSecondDayData(forecastData)
 						) : (
-							<Spinner />
+							"loading.."
 						)}
 					</section>
 
@@ -499,7 +499,7 @@ const ForecastWeather = () => {
 						{!(forecastData == null) ? (
 							mapThirdDayData(forecastData)
 						) : (
-							<Spinner />
+							"loading.."
 						)}
 					</section>
 					<br />
@@ -516,7 +516,7 @@ const ForecastWeather = () => {
 						{!(forecastData == null) ? (
 							mapFourthDayData(forecastData)
 						) : (
-							<Spinner />
+							"loading.."
 						)}
 					</section>
 					<br />
@@ -533,7 +533,7 @@ const ForecastWeather = () => {
 						{!(forecastData == null) ? (
 							mapFifthDayData(forecastData)
 						) : (
-							<Spinner />
+							"loading.."
 						)}
 					</section>
 				</section>

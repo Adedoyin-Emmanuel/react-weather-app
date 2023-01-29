@@ -102,13 +102,13 @@ const WeatherApp = () => {
 	let forecastData = [
 		{
 			name: ["Keketu"],
-			icon: [WindIcon],
+			icon: [Day],
 			unit: ["10"],
 		},
 
 		{
 			name: ["Sango"],
-			icon: [HumidityIcon],
+			icon: [Thunder],
 			unit: ["50"],
 		},
 	];
@@ -159,7 +159,7 @@ const WeatherApp = () => {
 		addUtilityComponentHeight();
 		//change the variable to hold the current component to insert
 		setComponentToInsert(<UtilityForecastTags />);
-		//formHandler.scrollToElement("ripple-container");
+		
 	};
 
 	const SearchComponent = () => {

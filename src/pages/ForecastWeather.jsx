@@ -107,9 +107,10 @@ const ForecastWeather = () => {
 					i,
 					utilis.getTimeFromDateString(result.list[i].dt_txt),
 					currentWeather.checkWeatherCode(
-						result.list[i].weather[0].id,
-						Math.ceil(result.list[i].main.temp)
-					)
+						result.list[i].weather[0].id
+						
+					),
+					Math.ceil(result.list[i].main.temp)
 				)
 			);
 		}
@@ -140,9 +141,10 @@ const ForecastWeather = () => {
 					i,
 					utilis.getTimeFromDateString(result.list[i].dt_txt),
 					currentWeather.checkWeatherCode(
-						result.list[i].weather[0].id,
-						Math.ceil(result.list[i].main.temp)
-					)
+						result.list[i].weather[0].id
+					),
+					Math.ceil(result.list[i].main.temp)
+
 				)
 			);
 		}
@@ -173,9 +175,10 @@ const ForecastWeather = () => {
 					i,
 					utilis.getTimeFromDateString(result.list[i].dt_txt),
 					currentWeather.checkWeatherCode(
-						result.list[i].weather[0].id,
-						Math.ceil(result.list[i].main.temp)
-					)
+						result.list[i].weather[0].id
+					),
+					Math.ceil(result.list[i].main.temp)
+
 				)
 			);
 		}
@@ -207,9 +210,10 @@ const ForecastWeather = () => {
 					i,
 					utilis.getTimeFromDateString(result.list[i].dt_txt),
 					currentWeather.checkWeatherCode(
-						result.list[i].weather[0].id,
-						Math.ceil(result.list[i].main.temp)
-					)
+						result.list[i].weather[0].id
+					),
+					Math.ceil(result.list[i].main.temp)
+
 				)
 			);
 		}
@@ -240,9 +244,10 @@ const ForecastWeather = () => {
 					i,
 					utilis.getTimeFromDateString(result.list[i].dt_txt),
 					currentWeather.checkWeatherCode(
-						result.list[i].weather[0].id,
-						Math.ceil(result.list[i].main.temp)
-					)
+						result.list[i].weather[0].id
+					),
+					Math.ceil(result.list[i].main.temp)
+
 				)
 			);
 		}
@@ -489,7 +494,9 @@ const ForecastWeather = () => {
 					<section
 						className="day-1-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
-						{hourlyWeatherData}
+						{
+							!(forecastData == null ) ? mapFirstDayData(forecastData) : " "
+						}
 					</section>
 
 					<br />

@@ -580,7 +580,9 @@ const ForecastWeather = () => {
 					<section
 						className="day-2-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
-						{hourlyWeatherData}
+						{
+							!(forecastData == null ) ? mapSecondDayData(forecastData) : <Spinner/>
+						}
 					</section>
 
 					<br />
@@ -593,7 +595,9 @@ const ForecastWeather = () => {
 					<section
 						className="day-3-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
-						{hourlyWeatherData}
+						{
+							!(forecastData == null ) ? mapThirdDayData(forecastData) : <Spinner/>
+						}
 					</section>
 					<br />
 
@@ -606,7 +610,9 @@ const ForecastWeather = () => {
 					<section
 						className="day-4-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
-						{hourlyWeatherData}
+						{
+							!(forecastData == null ) ? mapFourthDayData(forecastData) : <Spinner/>
+						}
 					</section>
 					<br />
 					<section className="day-5-container future-weather-days d-flex align-items-center justify-content-start">
@@ -619,7 +625,9 @@ const ForecastWeather = () => {
 					<section
 						className="day-5-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
-						{hourlyWeatherData}
+						{
+							!(forecastData == null ) ? mapFifthDayData(forecastData) : <Spinner/>
+						}
 					</section>
 				</section>
 

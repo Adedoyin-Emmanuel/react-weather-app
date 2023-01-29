@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import NextWeekComponent from "../components/nextWeekComponent";
 import Footer from "../components/footer";
 import navigate from "../inc/scripts/utilities";
 import Spinner from "../components/spinner";

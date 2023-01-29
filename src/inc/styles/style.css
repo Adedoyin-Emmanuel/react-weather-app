@@ -233,7 +233,7 @@ section.footer-nav > section {
 	transform: translateY(-15px);
 }
 
-::-webkit-scroll-bar
+::-webkit-scrollbar
 {
 	height:0;
 	width:0;

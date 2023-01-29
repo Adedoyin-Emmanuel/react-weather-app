@@ -54,6 +54,15 @@ const WeatherApp = () => {
 		});
 	};
 
+	class MapedSavedDataTemplate {
+		constructor(time, icon, unit)
+		{
+			this.time = time;
+			this.icon = icon;
+			this.unit = unit;
+		}
+	}
+
 	const mapDbSavedData = () =>{
 		const count =  9;
 
@@ -68,10 +77,13 @@ const WeatherApp = () => {
 
 			weatherData.push(
 				FORECAST_TIME,
-				FORECAST_ICON,
+				formHandler.checkWeatherCode(FORECAST_ICON),
 				FORECAST_UNIT
-			)
+			);
+
 		}
+
+		return weatherData;
 	}
 
 	let weatherData = [
@@ -119,7 +131,7 @@ const WeatherApp = () => {
 		},
 	];
 
-	const uiData = weatherData.map((data, index) => {
+	const uiData = mapDbSavedData().map((data, index) => {
 		return (
 			<FutureWeatherComponent
 				key={data.time}

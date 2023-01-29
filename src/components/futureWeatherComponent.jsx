@@ -4,7 +4,7 @@ const FutureWeatherComponent = props =>{
    
     return (
        <React.Fragment>
-            <section className="future-weather-container d-flex align-items-center justify-content-center flex-column brand-tertiary-color px-4  rounded-3 shadow mx-2">
+            <section className="future-weather-container d-flex align-items-center justify-content-center flex-column brand-bg-white px-4  rounded-3 shadow-sm mx-2">
                 <section className="weather-wrapper d-flex flex-column align-items-center justify-content-center">
                     <p className="brand-small-text-2 text-light py-1 text-center m-0">{props.time}</p>
                     <section className="weather-icon-section py-1">

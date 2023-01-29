@@ -25,6 +25,7 @@ import OvercastClouds from "./../assets/static/overcast-clouds.svg";
 import ScatteredClouds from "./../assets/static/scattered-clouds.svg";
 import FewClouds from "./../assets/static/few-clouds.svg";
 import Haze from "./../assets/static/haze.svg";
+import * as utilis from "./../inc/scripts/utilities";
 const ForecastWeather = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");

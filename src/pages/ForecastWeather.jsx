@@ -7,7 +7,7 @@ import Button from "./../components/button";
 import jQuery from "jquery";
 import { db } from "../backend/app_backend";
 import { getCurrentDate } from "../inc/scripts/utilities";
-import * as formHandler from "./../apis/getCurrentWeather";
+import * as currentWeather from "./../apis/getCurrentWeather";
 import HumidityIcon from "./../assets/humidity-icon.svg";
 import WindIcon from "./../assets/wind-icon.svg";
 import PressureIcon from "./../assets/pressure-icon.svg";
@@ -70,8 +70,6 @@ const ForecastWeather = () => {
 				success: (result, status, xhr) => {
 					if (result.cod == 200) {
 						setForecastData(result);
-					
-					
 					}
 				},
 
@@ -89,69 +87,45 @@ const ForecastWeather = () => {
 			$(".utility-component").toggleClass("add-utility-component-height");
 		});
 	};
+	class WeatherTemplate {
+		constructor(id, time, icon, unit) {
+			this.id = id;
+			this.time = time;
+			this.icon = icon;
+			this.unit = unit;
+		}
+	}
 
 	const mapFirstDayData = (result) => {
 		//first day data is from array 0-8
-		let legit_time = result.list[0].dt_txt.split(" ")[0];
-		let legit_time2 = utilis.getTimeFromDateString(result.list[0].dt_txt);
+		let outputArray = [];
 
-		let firstDayData = [
-			{
-				id: 1,
-				time: ["12am"],
-				icon: [HumidityIcon],
-				unit: ["10"],
-			},
+		for (let i = 0; i < 8; i++) {
+			outputArray.push(
+				new WeatherTemplate(
+					i,
+					utilis.getTimeFromDateString(result.list[i].dt_txt),
+					currentWeather.checkWeatherCode(
+						result.list[i].weather[0].id,
+						Math.ceil(result.list[i].main.temp)
+					)
+				)
+			);
+		}
 
-			{
-				id: 2,
-				time: ["3am"],
-				icon: [PressureIcon],
-				unit: ["50"],
-			},
+		//map each of the individual objects into single component!
+		const firstWeatherDataForecast = outputArray.map((data, index) => {
+			return (
+				<ForecastDailyWeatherComponent
+					key={data.id}
+					time={data.time}
+					icon={data.icon}
+					weatherUnit={data.unit}
+				/>
+			);
+		});
 
-			{
-				id: 3,
-				time: ["6pm"],
-				icon: [WindIcon],
-				unit: ["50"],
-			},
-
-			{
-				id: 4,
-				time: ["9pm"],
-				icon: [PressureIcon],
-				unit: ["45"],
-			},
-
-			{
-				id: 5,
-				time: ["12pm"],
-				icon: [WindIcon],
-				unit: ["80"],
-			},
-
-			{
-				id: 6,
-				time: ["3pm"],
-				icon: [WindIcon],
-				unit: ["80"],
-			},
-
-			{
-				id: 7,
-				time: ["6pm"],
-				icon: [WindIcon],
-				unit: ["80"],
-			},
-
-			{
-				id: 8,
-				time: ["9pm"],
-				icon: [WindIcon],
-				unit: ["80"],
-			},
-		];
+		return firstWeatherDataForecast;
 	};
 	const navigateToApp = () => {
 		navigate("/weather");

@@ -32,7 +32,6 @@ import WindIcon from "./../assets/wind-icon.svg";
 import PressureIcon from "./../assets/pressure-icon.svg";
 
 const WeatherApp = () => {
-
 	//check if the user navigated from the home page
 	if (!db.get("HOME_PAGE_SEEN")) {
 		navigate("/");
@@ -49,42 +48,38 @@ const WeatherApp = () => {
 			$.noConflict();
 			$(".cmp").removeClass("d-none");
 			$(".utility-component").toggleClass("add-utility-component-height");
-			
-
 		});
 	};
 
-	class MapedSavedDataTemplate {
-		constructor(time, icon, unit)
-		{
+	class MappedSavedDataTemplate {
+		constructor(time, icon, unit) {
 			this.time = time;
 			this.icon = icon;
 			this.unit = unit;
 		}
 	}
 
-	const mapDbSavedData = () =>{
-		const count =  9;
+	const mapDbSavedData = () => {
+		const count = 9;
 
 		let weatherData = [];
 
-		for(let i = 0; i < count; i++)
-		{
-
-			const FORECAST_TIME= db.get(`WEATHER_FORECAST_TIME${i}`);
+		for (let i = 0; i < count; i++) {
+			const FORECAST_TIME = db.get(`WEATHER_FORECAST_TIME${i}`);
 			const FORECAST_ICON = db.get(`WEATTHER_FORECAST_ICON${i}`);
 			const FORECAST_UNIT = db.get(`WEATHER_FORECAST_UNIT${i}`);
 
 			weatherData.push(
-				FORECAST_TIME,
-				formHandler.checkWeatherCode(FORECAST_ICON),
-				FORECAST_UNIT
+				new MappedSavedDataTemplate(
+					FORECAST_TIME,
+					formHandler.checkWeatherCode(FORECAST_ICON),
+					FORECAST_UNIT
+				)
 			);
-
 		}
 
 		return weatherData;
-	}
+	};
 
 	let weatherData = [
 		{
@@ -163,14 +158,14 @@ const WeatherApp = () => {
 	const UtilityForecastTags = () => {
 		return (
 			<section className="cmp d-flex align-items-center justify-content-center flex-column my-5">
-				<br/>
-				<br/>
-				<br/>
-			
+				<br />
+				<br />
+				<br />
+
 				<section className="d-flex align-items-center justify-content-center my-5">
 					{uiForeCastData}
 				</section>
-				
+
 				<section className="d-flex align-items-center justify-content-center">
 					<Button
 						text="forecast weather"
@@ -387,7 +382,9 @@ const WeatherApp = () => {
 							className="map"
 						/>
 					</section>
-					<section id="ripple-container" className="ripple-section d-flex align-items-center justify-content-center">
+					<section
+						id="ripple-container"
+						className="ripple-section d-flex align-items-center justify-content-center">
 						<img
 							src={Ripple1}
 							width={"300"}

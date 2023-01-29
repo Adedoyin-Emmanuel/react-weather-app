@@ -70,12 +70,8 @@ const ForecastWeather = () => {
 				success: (result, status, xhr) => {
 					if (result.cod == 200) {
 						setForecastData(result);
-						let legit_time2 = utilis.getTimeFromDateString(
-							result.list[0].dt_txt
-						);
-						let legit_time = result.list[0].dt_txt.split(" ")[1];
-						console.log(legit_time);
-						console.log(legit_time2);
+					
+					
 					}
 				},
 

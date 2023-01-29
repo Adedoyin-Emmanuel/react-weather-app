@@ -17,7 +17,7 @@ const NextWeekComponent = (props) => {
 						</p>
 				</section>
 					<section className="next-week-weather-x align-items-center justify-content-between icon">
-							<img src={props.icon} height={"20"} width = {"20"} alt={"weather-icons"}/>
+							<img src={"sub-weather-icon"} height={"20"} width = {"20"} alt={"weather-icons"}/>
 					</section>
 				
 			</section>

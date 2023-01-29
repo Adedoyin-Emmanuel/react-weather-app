@@ -126,4 +126,9 @@ export const convertTo12Hour = (time) => {
 	hours = hours ? hours : 12; // the hour '0' should be '12'
 	return hours + minutes + ampm;
 };
+
+export function getTimeFromDateString(datetime) {
+	// takes a format of YYYY/MM/DD HH:MM:SS and returns HH:MM:SS
+	return datetime.substr(11);
+}
 export default navigate;

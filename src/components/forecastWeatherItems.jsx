@@ -3,7 +3,7 @@ import React from "react";
 const ForecastWeatherItems = props =>{
    const customStyles = {
 
-    "::-webkit-scrollbar":{"width":"0", "height":"0"}
+    "::WebkitScrollbar":{"width":"0", "height":"0"}
    }
     return (
        <React.Fragment>

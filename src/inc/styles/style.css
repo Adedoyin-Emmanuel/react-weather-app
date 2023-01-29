@@ -39,10 +39,12 @@
 	width: 100%;
 	position: fixed;
 	top: 0;
-	z-index: 100;
+	right:0;
+	z-index: 10000;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	
 }
 
 /* utility classes */

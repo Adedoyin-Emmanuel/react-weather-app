@@ -26,7 +26,6 @@ import ScatteredClouds from "./../assets/static/scattered-clouds.svg";
 import FewClouds from "./../assets/static/few-clouds.svg";
 import Haze from "./../assets/static/haze.svg";
 import * as utilis from "./../inc/scripts/utilities";
-import Spinner from "../components/spinner";
 const ForecastWeather = () => {
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
@@ -70,7 +69,7 @@ const ForecastWeather = () => {
 				url: FORECAST_URL,
 				success: (result, status, xhr) => {
 					if (result.cod == 200) {
-						setForecastData(result);
+						//setForecastData(result);
 					}
 				},
 
@@ -511,7 +510,7 @@ const ForecastWeather = () => {
 						className="day-1-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
 						{
-							!(forecastData == null ) ? mapFirstDayData(forecastData) : " "
+							!(forecastData == null ) ? mapFirstDayData(forecastData) : <Spinner/>
 						}
 					</section>
 

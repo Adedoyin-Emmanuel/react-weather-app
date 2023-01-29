@@ -11,7 +11,7 @@ const ForecastDailyWeatherComponent = props =>{
                 <section className="weather-wrapper d-flex flex-column align-items-center justify-content-center">
                     <p className="brand-small-text-2  py-1 text-center m-0">{props.time}</p>
                     <section className="weather-icon-section py-1">
-                            <img src ={"sub-weather-icon"} height={"40"} width={"50"} />
+                            <img src ={props.icon} height={"40"} width={"50"} alt={"sub-weather-icon"} />
                     </section>
                     <p className="brand-small-text fw-bold text-center m-0"> {props.weatherUnit}<sup>o</sup></p>
                 </section>

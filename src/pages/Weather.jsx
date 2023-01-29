@@ -73,7 +73,6 @@ const WeatherApp = () => {
 			const FORECAST_ICON = db.get(`WEATHER_FORECAST_ICON_${i}`) || "800";
 			const FORECAST_UNIT = db.get(`WEATHER_FORECAST_UNIT_${i}`) || "26";
 
-			console.log(typeof parseInt(formHandler.checkWeatherCode(FORECAST_ICON)));
 			weatherData.push(
 				new MappedSavedDataTemplate(
 					i,
@@ -188,6 +187,7 @@ const WeatherApp = () => {
 							setWeatherInput(e.target.value);
 						}}
 						autoComplete="off"
+						autoFocus={true}
 					/>
 					<p
 						className="error-holder text-danger py-3 fs-6 brand-small-text text-center d-none"

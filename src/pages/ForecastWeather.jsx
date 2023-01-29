@@ -133,7 +133,7 @@ const ForecastWeather = () => {
 
 	//second data mapping
 	const mapSecondDayData = (result) => {
-		//first day data is from array 8-13
+		//first day data is from array 8-16
 		let outputArray = [];
 
 		for (let i = 8; i < 13; i++) {

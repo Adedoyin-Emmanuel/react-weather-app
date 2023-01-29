@@ -52,7 +52,8 @@ const WeatherApp = () => {
 	};
 
 	class MappedSavedDataTemplate {
-		constructor(time, icon, unit) {
+		constructor(id, time, icon, unit) {
+			this.id = id;
 			this.time = time;
 			this.icon = icon;
 			this.unit = unit;
@@ -60,58 +61,40 @@ const WeatherApp = () => {
 	}
 
 	const mapDbSavedData = () => {
-		const count = 9;
+		const count = 8;
 
 		let weatherData = [];
 
 		for (let i = 0; i < count; i++) {
-			const FORECAST_TIME = db.get(`WEATHER_FORECAST_TIME${i}`);
-			const FORECAST_ICON = db.get(`WEATTHER_FORECAST_ICON${i}`);
-			const FORECAST_UNIT = db.get(`WEATHER_FORECAST_UNIT${i}`);
+			const FORECAST_TIME = db.get(`WEATHER_FORECAST_TIME_${i}`);
+			const FORECAST_ICON = db.get(`WEATTHER_FORECAST_ICON_${i}`);
+			const FORECAST_UNIT = db.get(`WEATHER_FORECAST_UNIT_${i}`);
 
 			weatherData.push(
 				new MappedSavedDataTemplate(
+					i,
 					FORECAST_TIME,
-					formHandler.checkWeatherCode(FORECAST_ICON),
+					parseInt(formHandler.checkWeatherCode(FORECAST_ICON)),
 					FORECAST_UNIT
 				)
 			);
 		}
 
-		return weatherData;
+		const uiData = weatherData.map((data, index) => {
+			return (
+				<FutureWeatherComponent
+					key={data.id}
+					time={data.time}
+					icon={data.icon}
+					weatherUnit={data.unit}
+				/>
+			);
+		});
+
+		return uiData;
 	};
 
-	let weatherData = [
-		{
-			time: ["10am"],
-			icon: [HumidityIcon],
-			unit: ["10"],
-		},
-
-		{
-			time: ["11am"],
-			icon: [rainIcon],
-			unit: ["50"],
-		},
-
-		{
-			time: ["12pm"],
-			icon: [windIcon],
-			unit: ["50"],
-		},
-
-		{
-			time: ["1pm"],
-			icon: [humidity],
-			unit: ["45"],
-		},
-
-		{
-			time: ["2pm"],
-			icon: [rainIcon],
-			unit: ["80"],
-		},
-	];
+	
 	let forecastData = [
 		{
 			name: ["Keketu"],
@@ -126,16 +109,7 @@ const WeatherApp = () => {
 		},
 	];
 
-	const uiData = mapDbSavedData().map((data, index) => {
-		return (
-			<FutureWeatherComponent
-				key={data.time}
-				time={data.time}
-				icon={data.icon}
-				weatherUnit={data.unit}
-			/>
-		);
-	});
+	
 
 	const showMoreWeather = () => {
 		navigate("weathermain");
@@ -370,7 +344,7 @@ const WeatherApp = () => {
 				<section
 					className="future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 					style={{ overflowX: "scroll" }}>
-					{uiData}
+					{mapDbSavedData()}
 				</section>
 				<section className="ripple-container d-flex align-items-center justify-content-center">
 					<section className="map-container d-flex align-items-center justify-content-center">

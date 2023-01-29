@@ -234,56 +234,56 @@ const ForecastWeather = () => {
 		{
 			id: 1,
 			time: ["12am"],
-			icon: [HumidityIcon],
+			icon: [Day],
 			unit: ["10"],
 		},
 
 		{
 			id: 2,
 			time: ["3am"],
-			icon: [PressureIcon],
+			icon: [Thunder],
 			unit: ["50"],
 		},
 
 		{
 			id: 3,
 			time: ["6pm"],
-			icon: [WindIcon],
+			icon: [Haze],
 			unit: ["50"],
 		},
 
 		{
 			id: 4,
 			time: ["9pm"],
-			icon: [PressureIcon],
+			icon: [Misty],
 			unit: ["45"],
 		},
 
 		{
 			id: 5,
 			time: ["12pm"],
-			icon: [WindIcon],
+			icon: [OvercastClouds],
 			unit: ["80"],
 		},
 
 		{
 			id: 6,
 			time: ["3pm"],
-			icon: [WindIcon],
+			icon: [BrokenClouds],
 			unit: ["80"],
 		},
 
 		{
 			id: 7,
 			time: ["6pm"],
-			icon: [WindIcon],
+			icon: [FewClouds],
 			unit: ["80"],
 		},
 
 		{
 			id: 8,
 			time: ["9pm"],
-			icon: [WindIcon],
+			icon: [ScatteredClouds],
 			unit: ["80"],
 		},
 	];

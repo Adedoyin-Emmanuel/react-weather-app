@@ -406,7 +406,7 @@ const ForecastWeather = () => {
 	return (
 		<React.Fragment>
 			
-			<section className="container-fluid" id="forecastPage">
+			<section className="container-fluid width-toggle-5 m-auto" id="forecastPage">
 				<section className="app-header d-flex justify-content-between">
 					<div className="toggle-btn my-3">
 						<svg

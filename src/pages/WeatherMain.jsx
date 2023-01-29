@@ -33,7 +33,7 @@ const WeatherMain = (props) => {
 		<React.Fragment>
 			<Spinner />
 			<section
-				className="container-fluid d-flex flex-column py-2 "
+				className="container-fluid d-flex flex-column py-2 width-toggle-5 m-auto"
 				style={{ overflowX: "hidden" }}>
 				<section className="app-header d-flex justify-content-between">
 					<div className="toggle-btn ">

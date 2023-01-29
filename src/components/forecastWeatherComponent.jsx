@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./../inc/styles/overScrollStyles.css";
 const ForecastDailyWeatherComponent = props =>{
     const customStyles = {
 

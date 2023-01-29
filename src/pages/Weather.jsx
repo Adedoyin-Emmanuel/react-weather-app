@@ -219,7 +219,7 @@ const WeatherApp = () => {
 		<React.Fragment>
 			<Spinner />
 			<div
-				className="container-fluid d-flex flex-column py-2 px-0 width-toggle-2 m-auto"
+				className="container-fluid d-flex flex-column py-2 px-0 width-toggle-5 m-auto"
 				style={{ overflowX: "hidden" }}
 				id="weatherContainer">
 				<section className="app-header d-flex justify-content-between px-2 flex-row-reverse ">

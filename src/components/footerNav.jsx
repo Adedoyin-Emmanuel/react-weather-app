@@ -16,7 +16,7 @@ const FooterNav = (props) => {
 
   return (
     <React.Fragment>
-      <section className="footer-nav d-flex flex-row align-items-center justify-content-around">
+      <section className="footer-nav d-flex flex-row align-items-center justify-content-around ">
         <section
           className="footer-app-section brand-text-mute text-center "
           onClick={appNavigation}

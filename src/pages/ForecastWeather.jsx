@@ -163,7 +163,6 @@ const ForecastWeather = () => {
 	};
 
 	//third data mapping
-	//second data mapping
 	const mapThirdDayData = (result) => {
 		//first day data is from array 16-24
 		let outputArray = [];
@@ -195,6 +194,74 @@ const ForecastWeather = () => {
 
 		return thirdWeatherDataForecast;
 	};
+
+
+	//fourth data mapping
+	const mapFourthDayData = (result) => {
+		//first day data is from array 24-32
+		let outputArray = [];
+
+		for (let i = 24; i < 32; i++) {
+			outputArray.push(
+				new WeatherTemplate(
+					i,
+					utilis.getTimeFromDateString(result.list[i].dt_txt),
+					currentWeather.checkWeatherCode(
+						result.list[i].weather[0].id,
+						Math.ceil(result.list[i].main.temp)
+					)
+				)
+			);
+		}
+
+		//map each of the individual objects into single component!
+		const forthWeatherDataForecast = outputArray.map((data, index) => {
+			return (
+				<ForecastDailyWeatherComponent
+					key={data.id}
+					time={data.time}
+					icon={data.icon}
+					weatherUnit={data.unit}
+				/>
+			);
+		});
+
+		return forthWeatherDataForecast;
+	};
+
+	//fifth data mapping 
+	const mapFifthDayData = (result) => {
+		//first day data is from array 32-40
+		let outputArray = [];
+
+		for (let i = 32; i < 40; i++) {
+			outputArray.push(
+				new WeatherTemplate(
+					i,
+					utilis.getTimeFromDateString(result.list[i].dt_txt),
+					currentWeather.checkWeatherCode(
+						result.list[i].weather[0].id,
+						Math.ceil(result.list[i].main.temp)
+					)
+				)
+			);
+		}
+
+		//map each of the individual objects into single component!
+		const fifthWeatherDataForecast = outputArray.map((data, index) => {
+			return (
+				<ForecastDailyWeatherComponent
+					key={data.id}
+					time={data.time}
+					icon={data.icon}
+					weatherUnit={data.unit}
+				/>
+			);
+		});
+
+		return fifthWeatherDataForecast;
+	};
+
 
 	const navigateToApp = () => {
 		navigate("/weather");

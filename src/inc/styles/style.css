@@ -47,6 +47,11 @@
 	
 }
 
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
 /* utility classes */
 .brand-btn {
 	border-radius: 30px;

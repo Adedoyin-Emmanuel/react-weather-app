@@ -82,12 +82,16 @@ const WeatherApp = () => {
 		}
 
 		const uiData = weatherData.map((data, index) => {
+			const handleElementClick = () =>{
+				navigate("/forecast");
+			}
 			return (
 				<FutureWeatherComponent
 					key={data.id}
 					time={data.time}
 					icon={data.icon}
 					weatherUnit={data.unit}
+					onClick={handleElementClick}
 				/>
 			);
 		});

@@ -166,6 +166,18 @@ const ForecastWeather = () => {
 
 		//map each of the individual objects into single component!
 		const secondWeatherDataForecast = outputArray.map((data, index) => {
+			const giveMoreDetails = () =>{
+				Swal.fire({
+					text:data.title,
+					toast:true,
+					position:"top",
+					timer:3000,
+					showConfirmButton:false,
+					icon:"info"
+				}).then((willProceed)=>{
+					return;
+				})
+			}
 			return (
 				<ForecastDailyWeatherComponent
 					key={data.id}
@@ -200,6 +212,18 @@ const ForecastWeather = () => {
 
 		//map each of the individual objects into single component!
 		const thirdWeatherDataForecast = outputArray.map((data, index) => {
+			const giveMoreDetails = () =>{
+				Swal.fire({
+					text:data.title,
+					toast:true,
+					position:"top",
+					timer:3000,
+					showConfirmButton:false,
+					icon:"info"
+				}).then((willProceed)=>{
+					return;
+				})
+			}
 			return (
 				<ForecastDailyWeatherComponent
 					key={data.id}
@@ -235,6 +259,18 @@ const ForecastWeather = () => {
 
 		//map each of the individual objects into single component!
 		const forthWeatherDataForecast = outputArray.map((data, index) => {
+			const giveMoreDetails = () =>{
+				Swal.fire({
+					text:data.title,
+					toast:true,
+					position:"top",
+					timer:3000,
+					showConfirmButton:false,
+					icon:"info"
+				}).then((willProceed)=>{
+					return;
+				})
+			}
 			return (
 				<ForecastDailyWeatherComponent
 					key={data.id}
@@ -269,6 +305,18 @@ const ForecastWeather = () => {
 
 		//map each of the individual objects into single component!
 		const fifthWeatherDataForecast = outputArray.map((data, index) => {
+			const giveMoreDetails = () =>{
+				Swal.fire({
+					text:data.title,
+					toast:true,
+					position:"top",
+					timer:3000,
+					showConfirmButton:false,
+					icon:"info"
+				}).then((willProceed)=>{
+					return;
+				})
+			}
 			return (
 				<ForecastDailyWeatherComponent
 					key={data.id}

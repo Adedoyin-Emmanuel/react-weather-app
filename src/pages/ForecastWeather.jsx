@@ -158,7 +158,8 @@ const ForecastWeather = () => {
 					currentWeather.checkWeatherCode(
 						result.list[i].weather[0].id
 					),
-					Math.ceil(result.list[i].main.temp)
+					Math.ceil(result.list[i].main.temp),
+					result.list[i].weather[0].description
 
 				)
 			);
@@ -204,7 +205,8 @@ const ForecastWeather = () => {
 					currentWeather.checkWeatherCode(
 						result.list[i].weather[0].id
 					),
-					Math.ceil(result.list[i].main.temp)
+					Math.ceil(result.list[i].main.temp),
+					result.list[i].weather[0].description
 
 				)
 			);
@@ -251,7 +253,8 @@ const ForecastWeather = () => {
 					currentWeather.checkWeatherCode(
 						result.list[i].weather[0].id
 					),
-					Math.ceil(result.list[i].main.temp)
+					Math.ceil(result.list[i].main.temp),
+					result.list[i].weather[0].description
 
 				)
 			);
@@ -297,7 +300,8 @@ const ForecastWeather = () => {
 					currentWeather.checkWeatherCode(
 						result.list[i].weather[0].id
 					),
-					Math.ceil(result.list[i].main.temp)
+					Math.ceil(result.list[i].main.temp),
+					result.list[i].weather[0].description
 
 				)
 			);

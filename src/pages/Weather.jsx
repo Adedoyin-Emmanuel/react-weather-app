@@ -278,7 +278,7 @@ const WeatherApp = () => {
 				</section>
 				{/* d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0" */}
 				<section
-					className="mx-2 rounded-3 shadow my-5 py-2 current-weather-assets brand-tertiary-color d-flex align-items-center justify-content-around"
+					className="mx-2 rounded-3 shadow my-5 py-2 current-weather-assets brand-tertiary-color d-flex align-items-center justify-content-around text-center  "
 					onClick={showMoreWeather}>
 					<section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center">
 						<section className="wind-icon py-1">

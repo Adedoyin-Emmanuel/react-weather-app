@@ -8,7 +8,7 @@ const Footer = (props) => {
   };
   return (
     <div
-      className="m-auto d-flex align-items-center justify-content-center d-md-none"
+      className="m-auto d-flex align-items-center justify-content-center "
       style={customFooterStyle}
     >
       <UtilityComponent tags={props.utilityTags}/>

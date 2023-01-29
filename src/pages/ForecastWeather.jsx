@@ -119,13 +119,25 @@ const ForecastWeather = () => {
 
 		//map each of the individual objects into single component!
 		const firstWeatherDataForecast = outputArray.map((data, index) => {
+			const giveMoreDetails = () =>{
+				Swal.fire({
+					title:data.title,
+					toast:true,
+					position:"top",
+					timer:3000,
+					showConfirmButton:false,
+					icon:"info"
+				}).then((willProceed)=>{
+					return;
+				})
+			}
 			return (
 				<ForecastDailyWeatherComponent
 					key={data.id}
 					time={data.time}
 					icon={data.icon}
 					weatherUnit={data.unit}
-					title = {data.title}
+					onClick={giveMoreDetails}
 				/>
 			);
 		});

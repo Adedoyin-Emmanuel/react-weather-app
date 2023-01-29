@@ -27,6 +27,10 @@ import FewClouds from "./../assets/static/few-clouds.svg";
 import Haze from "./../assets/static/haze.svg";
 import * as utilis from "./../inc/scripts/utilities";
 const ForecastWeather = () => {
+	//check if the user navigated from the home page
+	if (!db.get("HOME_PAGE_SEEN")) {
+		navigate("/");
+	}
 	//holds the current component to insert into the utility footer component
 	const [componentToInsert, setComponentToInsert] = useState("");
 	const [forecastData, setForecastData] = useState(null);
@@ -60,7 +64,6 @@ const ForecastWeather = () => {
 				$user_latitude != null &&
 				$user_longitude != null
 			) {
-				
 				FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${$user_latitude}&lon=${$user_longitude}&appid=${$API_KEY}&units=${$WEATHER_UNIT}`;
 			} else {
 				FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${$user_city}&appid=${$API_KEY}&units=${$WEATHER_UNIT}`;
@@ -74,7 +77,32 @@ const ForecastWeather = () => {
 				},
 
 				error: (xhr, status, error) => {
-					console.log(error);
+					//check if the error is empty
+					if (error == "") {
+						Swal.fire({
+							toast: true,
+							text: "Network Error!",
+							icon: "info",
+							timer: 1000,
+							position: "top",
+							showConfirmButton: false,
+						}).then((willProceed) => {
+							//scroll to top when the promise is resolved!
+							currentWeather.scrollToElement("forecastPage");
+						});
+					} else {
+						Swal.fire({
+							toast: true,
+							text: error,
+							icon: "warning",
+							timer: 1000,
+							position: "top",
+							showConfirmButton: false,
+						}).then((willProceed) => {
+							//scroll to top when the promise is resolved!
+							currentWeather.scrollToElement("forecastPage");
+						});
+					}
 				},
 			});
 		});
@@ -93,7 +121,7 @@ const ForecastWeather = () => {
 			this.time = time;
 			this.icon = icon;
 			this.unit = unit;
-			this.title= title;
+			this.title = title;
 		}
 	}
 
@@ -106,11 +134,10 @@ const ForecastWeather = () => {
 			outputArray.push(
 				new WeatherTemplate(
 					i,
-					utilis.convertTo12Hour(utilis.getTimeFromDateString(result.list[i].dt_txt)),
-					currentWeather.checkWeatherCode(
-						result.list[i].weather[0].id
-						
+					utilis.convertTo12Hour(
+						utilis.getTimeFromDateString(result.list[i].dt_txt)
 					),
+					currentWeather.checkWeatherCode(result.list[i].weather[0].id),
 					Math.ceil(result.list[i].main.temp),
 					result.list[i].weather[0].description
 				)
@@ -119,18 +146,18 @@ const ForecastWeather = () => {
 
 		//map each of the individual objects into single component!
 		const firstWeatherDataForecast = outputArray.map((data, index) => {
-			const giveMoreDetails = () =>{
+			const giveMoreDetails = () => {
 				Swal.fire({
-					text:data.title,
-					toast:true,
-					position:"top",
-					timer:3000,
-					showConfirmButton:false,
-					icon:"info"
-				}).then((willProceed)=>{
+					text: data.title,
+					toast: true,
+					position: "top",
+					timer: 3000,
+					showConfirmButton: false,
+					icon: "info",
+				}).then((willProceed) => {
 					return;
-				})
-			}
+				});
+			};
 			return (
 				<ForecastDailyWeatherComponent
 					key={data.id}
@@ -154,31 +181,30 @@ const ForecastWeather = () => {
 			outputArray.push(
 				new WeatherTemplate(
 					i,
-					utilis.convertTo12Hour(utilis.getTimeFromDateString(result.list[i].dt_txt)),
-					currentWeather.checkWeatherCode(
-						result.list[i].weather[0].id
+					utilis.convertTo12Hour(
+						utilis.getTimeFromDateString(result.list[i].dt_txt)
 					),
+					currentWeather.checkWeatherCode(result.list[i].weather[0].id),
 					Math.ceil(result.list[i].main.temp),
 					result.list[i].weather[0].description
-
 				)
 			);
 		}
 
 		//map each of the individual objects into single component!
 		const secondWeatherDataForecast = outputArray.map((data, index) => {
-			const giveMoreDetails = () =>{
+			const giveMoreDetails = () => {
 				Swal.fire({
-					text:data.title,
-					toast:true,
-					position:"top",
-					timer:3000,
-					showConfirmButton:false,
-					icon:"info"
-				}).then((willProceed)=>{
+					text: data.title,
+					toast: true,
+					position: "top",
+					timer: 3000,
+					showConfirmButton: false,
+					icon: "info",
+				}).then((willProceed) => {
 					return;
-				})
-			}
+				});
+			};
 			return (
 				<ForecastDailyWeatherComponent
 					key={data.id}
@@ -202,31 +228,30 @@ const ForecastWeather = () => {
 			outputArray.push(
 				new WeatherTemplate(
 					i,
-					utilis.convertTo12Hour(utilis.getTimeFromDateString(result.list[i].dt_txt)),
-					currentWeather.checkWeatherCode(
-						result.list[i].weather[0].id
+					utilis.convertTo12Hour(
+						utilis.getTimeFromDateString(result.list[i].dt_txt)
 					),
+					currentWeather.checkWeatherCode(result.list[i].weather[0].id),
 					Math.ceil(result.list[i].main.temp),
 					result.list[i].weather[0].description
-
 				)
 			);
 		}
 
 		//map each of the individual objects into single component!
 		const thirdWeatherDataForecast = outputArray.map((data, index) => {
-			const giveMoreDetails = () =>{
+			const giveMoreDetails = () => {
 				Swal.fire({
-					text:data.title,
-					toast:true,
-					position:"top",
-					timer:3000,
-					showConfirmButton:false,
-					icon:"info"
-				}).then((willProceed)=>{
+					text: data.title,
+					toast: true,
+					position: "top",
+					timer: 3000,
+					showConfirmButton: false,
+					icon: "info",
+				}).then((willProceed) => {
 					return;
-				})
-			}
+				});
+			};
 			return (
 				<ForecastDailyWeatherComponent
 					key={data.id}
@@ -241,7 +266,6 @@ const ForecastWeather = () => {
 		return thirdWeatherDataForecast;
 	};
 
-
 	//fourth data mapping
 	const mapFourthDayData = (result) => {
 		//first day data is from array 24-32
@@ -251,31 +275,30 @@ const ForecastWeather = () => {
 			outputArray.push(
 				new WeatherTemplate(
 					i,
-					utilis.convertTo12Hour(utilis.getTimeFromDateString(result.list[i].dt_txt)),
-					currentWeather.checkWeatherCode(
-						result.list[i].weather[0].id
+					utilis.convertTo12Hour(
+						utilis.getTimeFromDateString(result.list[i].dt_txt)
 					),
+					currentWeather.checkWeatherCode(result.list[i].weather[0].id),
 					Math.ceil(result.list[i].main.temp),
 					result.list[i].weather[0].description
-
 				)
 			);
 		}
 
 		//map each of the individual objects into single component!
 		const forthWeatherDataForecast = outputArray.map((data, index) => {
-			const giveMoreDetails = () =>{
+			const giveMoreDetails = () => {
 				Swal.fire({
-					text:data.title,
-					toast:true,
-					position:"top",
-					timer:3000,
-					showConfirmButton:false,
-					icon:"info"
-				}).then((willProceed)=>{
+					text: data.title,
+					toast: true,
+					position: "top",
+					timer: 3000,
+					showConfirmButton: false,
+					icon: "info",
+				}).then((willProceed) => {
 					return;
-				})
-			}
+				});
+			};
 			return (
 				<ForecastDailyWeatherComponent
 					key={data.id}
@@ -290,7 +313,7 @@ const ForecastWeather = () => {
 		return forthWeatherDataForecast;
 	};
 
-	//fifth data mapping 
+	//fifth data mapping
 	const mapFifthDayData = (result) => {
 		//first day data is from array 32-40
 		let outputArray = [];
@@ -299,31 +322,30 @@ const ForecastWeather = () => {
 			outputArray.push(
 				new WeatherTemplate(
 					i,
-					utilis.convertTo12Hour(utilis.getTimeFromDateString(result.list[i].dt_txt)),
-					currentWeather.checkWeatherCode(
-						result.list[i].weather[0].id
+					utilis.convertTo12Hour(
+						utilis.getTimeFromDateString(result.list[i].dt_txt)
 					),
+					currentWeather.checkWeatherCode(result.list[i].weather[0].id),
 					Math.ceil(result.list[i].main.temp),
 					result.list[i].weather[0].description
-
 				)
 			);
 		}
 
 		//map each of the individual objects into single component!
 		const fifthWeatherDataForecast = outputArray.map((data, index) => {
-			const giveMoreDetails = () =>{
+			const giveMoreDetails = () => {
 				Swal.fire({
-					text:data.title,
-					toast:true,
-					position:"top",
-					timer:3000,
-					showConfirmButton:false,
-					icon:"info"
-				}).then((willProceed)=>{
+					text: data.title,
+					toast: true,
+					position: "top",
+					timer: 3000,
+					showConfirmButton: false,
+					icon: "info",
+				}).then((willProceed) => {
 					return;
-				})
-			}
+				});
+			};
 			return (
 				<ForecastDailyWeatherComponent
 					key={data.id}
@@ -337,7 +359,6 @@ const ForecastWeather = () => {
 
 		return fifthWeatherDataForecast;
 	};
-
 
 	const navigateToApp = () => {
 		navigate("/weather");
@@ -369,7 +390,7 @@ const ForecastWeather = () => {
 	return (
 		<React.Fragment>
 			<Spinner />
-			<section className="container-fluid">
+			<section className="container-fluid" id="forecastPage">
 				<section className="app-header d-flex justify-content-between">
 					<div className="toggle-btn my-3">
 						<svg
@@ -425,9 +446,11 @@ const ForecastWeather = () => {
 					<section
 						className="day-1-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
-						{
-							!(forecastData == null ) ? mapFirstDayData(forecastData) : <Spinner/>
-						}
+						{!(forecastData == null) ? (
+							mapFirstDayData(forecastData)
+						) : (
+							<Spinner />
+						)}
 					</section>
 
 					<br />
@@ -440,9 +463,11 @@ const ForecastWeather = () => {
 					<section
 						className="day-2-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
-						{
-							!(forecastData == null ) ? mapSecondDayData(forecastData) : <Spinner/>
-						}
+						{!(forecastData == null) ? (
+							mapSecondDayData(forecastData)
+						) : (
+							<Spinner />
+						)}
 					</section>
 
 					<br />
@@ -455,9 +480,11 @@ const ForecastWeather = () => {
 					<section
 						className="day-3-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
-						{
-							!(forecastData == null ) ? mapThirdDayData(forecastData) : <Spinner/>
-						}
+						{!(forecastData == null) ? (
+							mapThirdDayData(forecastData)
+						) : (
+							<Spinner />
+						)}
 					</section>
 					<br />
 
@@ -470,9 +497,11 @@ const ForecastWeather = () => {
 					<section
 						className="day-4-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
-						{
-							!(forecastData == null ) ? mapFourthDayData(forecastData) : <Spinner/>
-						}
+						{!(forecastData == null) ? (
+							mapFourthDayData(forecastData)
+						) : (
+							<Spinner />
+						)}
 					</section>
 					<br />
 					<section className="day-5-container future-weather-days d-flex align-items-center justify-content-start">
@@ -485,9 +514,11 @@ const ForecastWeather = () => {
 					<section
 						className="day-5-weather future-weather-forecast my-4 d-flex align-items-center justify-content-between "
 						style={{ overflowX: "scroll" }}>
-						{
-							!(forecastData == null ) ? mapFifthDayData(forecastData) : <Spinner/>
-						}
+						{!(forecastData == null) ? (
+							mapFifthDayData(forecastData)
+						) : (
+							<Spinner />
+						)}
 					</section>
 				</section>
 

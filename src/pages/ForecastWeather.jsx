@@ -154,7 +154,7 @@ const ForecastWeather = () => {
 			outputArray.push(
 				new WeatherTemplate(
 					i,
-					utilis.getTimeFromDateString(result.list[i].dt_txt),
+					utilis.convertTo12Hour(utilis.getTimeFromDateString(result.list[i].dt_txt)),
 					currentWeather.checkWeatherCode(
 						result.list[i].weather[0].id
 					),
@@ -188,7 +188,7 @@ const ForecastWeather = () => {
 			outputArray.push(
 				new WeatherTemplate(
 					i,
-					utilis.getTimeFromDateString(result.list[i].dt_txt),
+					utilis.convertTo12Hour(utilis.getTimeFromDateString(result.list[i].dt_txt)),
 					currentWeather.checkWeatherCode(
 						result.list[i].weather[0].id
 					),
@@ -223,7 +223,7 @@ const ForecastWeather = () => {
 			outputArray.push(
 				new WeatherTemplate(
 					i,
-					utilis.getTimeFromDateString(result.list[i].dt_txt),
+					utilis.convertTo12Hour(utilis.getTimeFromDateString(result.list[i].dt_txt)),
 					currentWeather.checkWeatherCode(
 						result.list[i].weather[0].id
 					),
@@ -257,7 +257,7 @@ const ForecastWeather = () => {
 			outputArray.push(
 				new WeatherTemplate(
 					i,
-					utilis.getTimeFromDateString(result.list[i].dt_txt),
+					utilis.convertTo12Hour(utilis.getTimeFromDateString(result.list[i].dt_txt)),
 					currentWeather.checkWeatherCode(
 						result.list[i].weather[0].id
 					),

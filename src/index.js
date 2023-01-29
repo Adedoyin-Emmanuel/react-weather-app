@@ -11,8 +11,21 @@ root.render(
   </React.StrictMode>
 );
 
+const config = {
+  scope: "/",
+  registerOptions: {
+    updateViaCache: "none"
+  },
+  onSuccess: (registration) => {
+    console.log("Service worker registration successful:", registration);
+  },
+  onUpdate: (registration) => {
+    console.log("Service worker update available:", registration);
+  },
+};
 
-serviceWorkerRegistration.register();
+
+serviceWorkerRegistration.register(config);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

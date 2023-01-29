@@ -179,7 +179,7 @@ export const getCurrentWeather = (location) => {
 				} else {
 					//check if the API returned a legit response
 					if (result.cod === 200) {
-						console.log(result);
+						
 						updateReactDom(result);
 					}
 				}

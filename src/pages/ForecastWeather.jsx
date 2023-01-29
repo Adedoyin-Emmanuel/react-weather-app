@@ -111,7 +111,8 @@ const ForecastWeather = () => {
 						result.list[i].weather[0].id
 						
 					),
-					Math.ceil(result.list[i].main.temp)
+					Math.ceil(result.list[i].main.temp),
+					result.list[i].weather[0].description
 				)
 			);
 		}
@@ -124,6 +125,7 @@ const ForecastWeather = () => {
 					time={data.time}
 					icon={data.icon}
 					weatherUnit={data.unit}
+					title = {data.title}
 				/>
 			);
 		});

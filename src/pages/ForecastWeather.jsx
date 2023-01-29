@@ -40,36 +40,42 @@ const ForecastWeather = () => {
 			const $user_latitude = db.get("USER_LATITUDE");
 			const $user_longitude = db.get("USER_LONGITUDE");
 			let FORECAST_URL;
-			if($user_city == null && $user_latitude == null || $user_longitude == null)
-			{
+			if (
+				($user_city == null && $user_latitude == null) ||
+				$user_longitude == null
+			) {
 				Swal.fire({
-					text:"No saved location found!",
-					icon:"error",
-					timer:3000,
-					toast:true,
-					showConfirmButton:false,
-					allowOutsideClick:false,
-					position:"top"
-				}).then((willProceed)=>{
+					text: "No saved location found!",
+					icon: "error",
+					timer: 3000,
+					toast: true,
+					showConfirmButton: false,
+					allowOutsideClick: false,
+					position: "top",
+				}).then((willProceed) => {
 					return;
-				})
-			}
-			else if($user_city == null && $user_latitude != null  && $user_longitude != null )
-			{
+				});
+			} else if (
+				$user_city == null &&
+				$user_latitude != null &&
+				$user_longitude != null
+			) {
 				console.log($user_city);
-				FORECAST_URL =  `https://api.openweathermap.org/data/2.5/forecast?lat=${$user_latitude}&lon=${$user_longitude}&appid=${$API_KEY}&units=${$WEATHER_UNIT}`;
-					
-			}
-			else{
+				FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${$user_latitude}&lon=${$user_longitude}&appid=${$API_KEY}&units=${$WEATHER_UNIT}`;
+			} else {
 				FORECAST_URL = `https://api.openweathermap.org/data/2.5/forecast?q=${$user_city}&appid=${$API_KEY}&units=${$WEATHER_UNIT}`;
-		
 			}
 			$.ajax({
-				url:FORECAST_URL,
+				url: FORECAST_URL,
 				success: (result, status, xhr) => {
 					if (result.cod == 200) {
-						
 						setForecastData(result);
+						let legit_time2 = utilis.getTimeFromDateString(
+							result.list[0].dt_txt
+						);
+						let legit_time = result.list[0].dt_txt.split(" ")[1];
+						console.log(legit_time);
+						console.log(legit_time2);
 					}
 				},
 
@@ -78,8 +84,8 @@ const ForecastWeather = () => {
 				},
 			});
 		});
-	},[]);
-	
+	}, []);
+
 	const addUtilityComponentHeight = () => {
 		jQuery(($) => {
 			$.noConflict();
@@ -89,7 +95,10 @@ const ForecastWeather = () => {
 	};
 
 	const mapFirstDayData = (result) => {
-		//first day data is from array 0-8 
+		//first day data is from array 0-8
+		let legit_time = result.list[0].dt_txt.split(" ")[0];
+		let legit_time2 = utilis.getTimeFromDateString(result.list[0].dt_txt);
+
 		let firstDayData = [
 			{
 				id: 1,
@@ -97,49 +106,49 @@ const ForecastWeather = () => {
 				icon: [HumidityIcon],
 				unit: ["10"],
 			},
-	
+
 			{
 				id: 2,
 				time: ["3am"],
 				icon: [PressureIcon],
 				unit: ["50"],
 			},
-	
+
 			{
 				id: 3,
 				time: ["6pm"],
 				icon: [WindIcon],
 				unit: ["50"],
 			},
-	
+
 			{
 				id: 4,
 				time: ["9pm"],
 				icon: [PressureIcon],
 				unit: ["45"],
 			},
-	
+
 			{
 				id: 5,
 				time: ["12pm"],
 				icon: [WindIcon],
 				unit: ["80"],
 			},
-	
+
 			{
 				id: 6,
 				time: ["3pm"],
 				icon: [WindIcon],
 				unit: ["80"],
 			},
-	
+
 			{
 				id: 7,
 				time: ["6pm"],
 				icon: [WindIcon],
 				unit: ["80"],
 			},
-	
+
 			{
 				id: 8,
 				time: ["9pm"],
@@ -147,7 +156,7 @@ const ForecastWeather = () => {
 				unit: ["80"],
 			},
 		];
-	}
+	};
 	const navigateToApp = () => {
 		navigate("/weather");
 	};

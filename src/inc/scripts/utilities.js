@@ -93,29 +93,37 @@ export const getCurrentDate = () => {
 	let dateLength = date.toString().length;
 	if (
 		(dateLength == 1 && date == 1) ||
-		(dateLength == 2 && date.toString().indexOf	("1") == 1)
+		(dateLength == 2 && date.toString().indexOf("1") == 1)
 	) {
 		dateExtension = "st";
 	} else if (
 		(dateLength == 1 && date == 2) ||
-		(dateLength == 2 && date.toString()[0] > 1 && date.toString().lastIndexOf("2") == 1)
+		(dateLength == 2 &&
+			date.toString()[0] > 1 &&
+			date.toString().lastIndexOf("2") == 1)
 	) {
 		dateExtension = "nd";
 	} else if (
 		(dateLength == 1 && date == 3) ||
-		(dateLength == 2 && date.toString()[0] > 1 && date.toString().indexOf("3") == 1)
+		(dateLength == 2 &&
+			date.toString()[0] > 1 &&
+			date.toString().indexOf("3") == 1)
 	) {
 		dateExtension = "rd";
 	} else {
 		dateExtension = "th";
 	}
 
-	result = `${day}, ${date}${dateExtension} of ${month}`;	
+	result = `${day}, ${date}${dateExtension} of ${month}`;
 	return result;
 };
 
-
-const convertTo12Hour = time =>{
-	
-}
+export const convertTo12Hour = (time) => {
+	var hours = parseInt(time.substr(0, 2));
+	var minutes = time.substr(3);
+	var ampm = hours >= 12 ? "pm" : "am";
+	hours = hours % 12;
+	hours = hours ? hours : 12; // the hour '0' should be '12'
+	return hours + minutes + ampm;
+};
 export default navigate;

@@ -13,6 +13,7 @@ function App() {
   let homePageSeen = db.get("HOME_PAGE_SEEN");
   let DEFAULT_ROUTE_PAGE;
   homePageSeen
+    //Bea Donor
     ? (DEFAULT_ROUTE_PAGE = <WeatherApp />)
     : (DEFAULT_ROUTE_PAGE = <Home />);
 

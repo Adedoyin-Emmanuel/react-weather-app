@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  react-app:
+    build: 
+      context: .
+      dockerfile: Dockerfile.prod
+    ports:
+      - "8081:80"
+
+    
+    

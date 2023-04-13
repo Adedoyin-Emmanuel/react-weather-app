@@ -291,3 +291,7 @@ section.footer-nav > section {
 		width:25%;
 	}
 }
+
+.toggle-btn{
+	cursor: pointer;
+}

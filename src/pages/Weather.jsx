@@ -278,6 +278,7 @@ const WeatherApp = () => {
 				</section>
 				{/* d-flex align-items-center justify-content-between brand-tertiary-color rounded-3 shadow p-3 m-0" */}
 				<section
+					role="button"
 					className="mx-2 rounded-3 shadow my-5 py-2 current-weather-assets brand-tertiary-color d-flex align-items-center justify-content-around text-center  "
 					onClick={showMoreWeather}>
 					<section className="current-weather-wind-speed d-flex flex-column align-items-center justify-content-center">
@@ -333,15 +334,15 @@ const WeatherApp = () => {
 					</section>
 				</section>
 				<section className="future-weather-days d-flex align-items-center justify-content-start">
-					<section className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
+					<section role="button" className="today-section d-flex mx-2 flex-column align-items-center justify-content-center">
 						<p className="brand-small-text text-capitalize fw-bold">today</p>
 						<div className="future-weather-notch-active"></div>
 					</section>
-					<section className="tomorrow-section d-flex mx-2 flex-column align-items-center justify-content-center" onClick={navigateToForecast}>
+					<section role="button" className="tomorrow-section d-flex mx-2 flex-column align-items-center justify-content-center" onClick={navigateToForecast}>
 						<p className="brand-small-text text-capitalize">tomorrow</p>
 						<div className="future-weather-notch"></div>
 					</section>
-					<section className="week-section d-flex mx-2 flex-column align-items-center justify-content-center" onClick={navigateToForecast}>
+					<section role="button" className="week-section d-flex mx-2 flex-column align-items-center justify-content-center" onClick={navigateToForecast}>
 						<p className="brand-small-text text-capitalize">next</p>
 						<div className="future-weather-notch"></div>
 					</section>

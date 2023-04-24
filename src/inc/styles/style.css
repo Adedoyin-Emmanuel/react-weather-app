@@ -58,7 +58,7 @@
 	text-transform: capitalize;
 	border: none;
 	outline: none;
-	width: 75%;
+	width: 75vw;
 	color: var(--brand-white-color);
 }
 
@@ -270,24 +270,24 @@ section.footer-nav > section {
 }
 @media (min-width: 667.98px) {
 	.width-toggle {
-		width: 35%;
+		width: 35vw;
 	}
 	.width-toggle-2 {
-		width: 75%;
+		width: 75vw;
 		
 	}
 
 	.width-toggle-5{
-		width:90%;
+		width:90vw;
 	}
 
 	.width-toggle-3 {
-		width: 50%;
+		width: 50vw;
 	}
 	.width-toggle-4{
-		width:35%;
+		width:35vw;
 	}
 	.width-toggle-6{
-		width:25%;
+		width:25vw;
 	}
 }

@@ -18,6 +18,7 @@ const FooterNav = (props) => {
     <React.Fragment>
       <section className="footer-nav d-flex flex-row align-items-center justify-content-around ">
         <section
+          role="button"
           className="footer-app-section brand-text-mute text-center "
           onClick={appNavigation}
         >
@@ -36,6 +37,7 @@ const FooterNav = (props) => {
           App
         </section>
         <section
+          role="button"
           className="footer-settings-section  brand-text-mute"
           onClick={props.onClick}
         >
@@ -55,6 +57,7 @@ const FooterNav = (props) => {
         </section>
 
         <section
+          role="button"
           className="footer-settings-section  brand-text-mute"
           onClick={settingsNavigation}
         >
@@ -73,6 +76,7 @@ const FooterNav = (props) => {
           Settings
         </section>
         <section
+          role="button"
           className="footer-support-section brand-text-mute mx-1"
           onClick={supportNavigation}
         >

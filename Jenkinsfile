@@ -7,12 +7,16 @@ pipeline {
             }
     stages{
         stage("Test"){
-            dir("scripts"){
-                sh 'test.sh'
+            steps{
+                dir("scripts"){
+                    sh 'test.sh'
+                }
             }
         }
         stage("Build"){
-            sh 'npm install'
+            steps{
+                sh 'npm install'
+            }
         }
     }
 }

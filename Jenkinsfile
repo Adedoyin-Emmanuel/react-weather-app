@@ -29,6 +29,9 @@ pipeline {
             when {
                 branch "production"
             }
+            steps {
+                sh './scripts/deploy-for-production.sh'
+            }
         }
     }
 }

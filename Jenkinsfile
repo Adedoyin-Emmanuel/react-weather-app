@@ -14,8 +14,20 @@ pipeline {
         }
         stage("Build"){
             steps{
-                // sh 'npm install'
-                echo ''
+                sh 'npm install'
+            }
+        }
+        stage("Deliver for Development"){
+            when {
+                branch "development"
+            }
+            steps{
+                sh './scripts/deliver-for-development.sh'
+            }
+        }
+        stage("Deploy for Production"){
+            when {
+                branch "production"
             }
         }
     }

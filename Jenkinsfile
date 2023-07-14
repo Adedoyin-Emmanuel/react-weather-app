@@ -10,12 +10,14 @@ pipeline {
             steps{
                 dir("scripts"){
                     sh 'pwd'
+                    sh 'ls'
                 }
             }
         }
         stage("Build"){
             steps{
-                sh 'npm install'
+                // sh 'npm install'
+                echo ''
             }
         }
     }

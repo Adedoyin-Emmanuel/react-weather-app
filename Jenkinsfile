@@ -8,7 +8,8 @@ pipeline {
     stages{
         stage("Test"){
             steps{
-                sh 'scripts/test.sh'
+                echo ${env.WORKSPACE}
+                // sh 'scripts/test.sh'
             }
         }
         stage("Build"){

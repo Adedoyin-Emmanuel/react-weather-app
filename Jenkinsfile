@@ -9,7 +9,7 @@ pipeline {
         stage("Test"){
             steps{
                 dir("scripts"){
-                    sh 'test.sh'
+                    sh 'pwd'
                 }
             }
         }

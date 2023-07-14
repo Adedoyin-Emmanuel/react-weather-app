@@ -2,7 +2,7 @@ pipeline {
     agent {
             docker {
                 image 'node:lts-alpine'
-                args '-p 3000:3000 -p 5000:5000'
+                args '-p 3000:3000 -p 5000:5000 -u root:root'
             }
             }
     stages{
@@ -14,7 +14,7 @@ pipeline {
         }
         stage("Build"){
             steps{
-                sh "npm install --cache=/home/node/app/.npm"
+                sh "npm install"
             }
         }
         stage("Deliver for Development"){

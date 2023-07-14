@@ -14,7 +14,7 @@ pipeline {
         }
         stage("Build"){
             steps{
-                sh 'npm install --cache=/home/node/app/.npm'
+                sh "npm install --cache=/home/node/app/.npm"
             }
         }
         stage("Deliver for Development"){

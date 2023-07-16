@@ -22,8 +22,9 @@ pipeline {
                 branch "development"
             }
             steps{
-                sh './scripts/deliver-for-development.sh'
-                // input message: 'Finished using the web site? (Click "Proceed" to continue)'
+                sh 'npm run build'
+                sh 'rm -rf /var/www/jenkins-weather-app'
+                sh "cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app"
                 // sh './scripts/kill.sh'
             }
         }

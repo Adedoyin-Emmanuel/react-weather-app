@@ -2,4 +2,5 @@
 
 npm run build
 
-ls
+sudo ls /var/www/
+# cp -r build /var/www/jenkins-weather-app

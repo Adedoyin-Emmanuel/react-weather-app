@@ -15,6 +15,7 @@ pipeline {
         stage("Build"){
             steps{
                 sh "npm install"
+                sh 'npm run build'
             }
         }
         stage("Deliver for Development"){
@@ -22,7 +23,7 @@ pipeline {
                 branch "development"
             }
             steps{
-                sh 'npm run build'
+                sh 'ls -ld ${env.WORKSPACE}/build'
                 // sh 'rm -rf /var/www/jenkins-weather-app'
                 // sh "cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app"
                 // sh './scripts/kill.sh'

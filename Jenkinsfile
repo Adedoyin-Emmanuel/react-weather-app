@@ -15,7 +15,7 @@ pipeline {
         stage("Build"){
             steps{
                 sh "npm install"
-                sh "npm run build"
+                sh "./scripts/deliver-for-development.sh"
             }
         }
         stage("Deliver for Development"){

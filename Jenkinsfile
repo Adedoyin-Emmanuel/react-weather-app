@@ -25,6 +25,7 @@ pipeline {
             steps{
                 sh "ls -ld ${env.WORKSPACE}/build"
                 sh 'rm -rf /var/www/jenkins-weather-app'
+                sh 'mkdir /var/www/jenkins-weather-app'
                 sh "cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app"
                 // sh './scripts/kill.sh'
             }

@@ -24,11 +24,10 @@ pipeline {
                 branch "development"
             }
             steps{
-                sh "ls -ld ${env.WORKSPACE}/build"
-                sh "touch /home/vagrant/peter.txt"
-                // sh 'rm -rf /var/www/jenkins-weather-app'
+               
+                sh 'rm -rf /var/www/jenkins-weather-app'
                 // sh 'mkdir -p /var/www/jenkins-weather-app'
-                // sh "cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app"
+                sh "cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app"
                 // sh './scripts/kill.sh'
             }
         }

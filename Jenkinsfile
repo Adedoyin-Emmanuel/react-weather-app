@@ -34,8 +34,8 @@ pipeline {
             }
             steps{
                 sh 'sudo rm -rf /var/www/jenkins-weather-app'
-                sh "cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app"
-                sh "ls /var/www/jenkins-weather-app"
+                sh "sudo cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app"
+                sh "sudo ls /var/www/jenkins-weather-app"
                 // sh './scripts/kill.sh'
             }
         }

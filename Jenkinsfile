@@ -23,8 +23,8 @@ pipeline {
             }
             steps{
                 println(">>>>>>>><<<<<<<<<")
-                // sh "npm install"
-                // sh "./scripts/deliver-for-development.sh"
+                sh "npm install"
+                sh "./scripts/deliver-for-development.sh"
             }
         }
         stage("Deliver for Development"){

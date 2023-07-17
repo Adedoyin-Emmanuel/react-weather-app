@@ -26,7 +26,7 @@ pipeline {
                 branch "development"
             }
             steps{
-               sh 'touch /home/vagrant/me.txt'
+               sh 'touch /var/www/jenkins-weather-app//me.txt'
                 // sh 'rm -rf /var/www/jenkins-weather-app'
                 // sh 'mkdir -p /var/www/jenkins-weather-app'
                 // sh "cp -r ${env.WORKSPACE}/build/* /var/www/jenkins-weather-app"

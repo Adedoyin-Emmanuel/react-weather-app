@@ -20,15 +20,16 @@ pipeline {
             }
         }
         stage("Deliver for Development"){
+            agent any
             when {
                 branch "development"
             }
             steps{
-               
-                sh 'rm -rf /var/www/jenkins-weather-app'
-                sh 'mkdir -p /var/www/jenkins-weather-app'
-                sh "cp -r ${env.WORKSPACE}/build/* /var/www/jenkins-weather-app"
-                sh "ls /var/www/jenkins-weather-app"
+               sh 'touch /home/vagrant/me.txt'
+                // sh 'rm -rf /var/www/jenkins-weather-app'
+                // sh 'mkdir -p /var/www/jenkins-weather-app'
+                // sh "cp -r ${env.WORKSPACE}/build/* /var/www/jenkins-weather-app"
+                // sh "ls /var/www/jenkins-weather-app"
                 // sh './scripts/kill.sh'
             }
         }

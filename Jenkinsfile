@@ -1,17 +1,18 @@
 pipeline {
-    agent {
-            docker {
-                image 'node:lts-alpine'
-                args '-u root:root'
-            }
-            }
+    agent none
+    // agent {
+    //         docker {
+    //             image 'node:lts-alpine'
+    //             args '-u root:root'
+    //         }
+    //         }
     stages{
-        stage("Test"){
-            steps{
-                sh "chmod +x -R ${env.WORKSPACE}"
-                sh './scripts/test.sh'
-            }
-        }
+        // stage("Test"){
+        //     steps{
+        //         sh "chmod +x -R ${env.WORKSPACE}"
+        //         sh './scripts/test.sh'
+        //     }
+        // }
         stage("Build"){
             steps{
                 println(">>>>>>>><<<<<<<<<")

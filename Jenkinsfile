@@ -1,19 +1,26 @@
 pipeline {
     agent none
-    // agent {
-    //         docker {
-    //             image 'node:lts-alpine'
-    //             args '-u root:root'
-    //         }
-    //         }
+
     stages{
-        // stage("Test"){
-        //     steps{
-        //         sh "chmod +x -R ${env.WORKSPACE}"
-        //         sh './scripts/test.sh'
-        //     }
-        // }
+        stage("Test"){
+            agent {
+                docker {
+                    image 'node:lts-alpine'
+                    args '-u root:root'
+                }
+            }
+            steps{
+                sh "chmod +x -R ${env.WORKSPACE}"
+                sh './scripts/test.sh'
+            }
+        }
         stage("Build"){
+            agent {
+                docker {
+                    image 'node:lts-alpine'
+                    args '-u root:root'
+                }
+            }
             steps{
                 println(">>>>>>>><<<<<<<<<")
                 // sh "npm install"
@@ -26,11 +33,9 @@ pipeline {
                 branch "development"
             }
             steps{
-               sh 'touch /var/www/jenkins-weather-app//me.txt'
-                // sh 'rm -rf /var/www/jenkins-weather-app'
-                // sh 'mkdir -p /var/www/jenkins-weather-app'
-                // sh "cp -r ${env.WORKSPACE}/build/* /var/www/jenkins-weather-app"
-                // sh "ls /var/www/jenkins-weather-app"
+                sh 'rm -rf /var/www/jenkins-weather-app'
+                sh "cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app"
+                sh "ls /var/www/jenkins-weather-app"
                 // sh './scripts/kill.sh'
             }
         }

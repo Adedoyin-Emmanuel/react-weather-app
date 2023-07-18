@@ -33,10 +33,9 @@ pipeline {
                 branch "development"
             }
             steps{
-                sh 'rm -rf /var/www/jenkins-weather-app'
-                sh "cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app"
-                sh "ls /var/www/jenkins-weather-app"
-                // sh './scripts/kill.sh'
+                sh 'rm -rf /var/www/jenkins-weather-app-dev'
+                sh "cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app-dev"
+                sh "ls /var/www/jenkins-weather-app-dev"
             }
         }
         stage("Deploy for Production"){
@@ -44,9 +43,9 @@ pipeline {
                 branch "production"
             }
             steps {
-                sh './scripts/deploy-for-production.sh'
-                input message: 'Finished using the web site? (Click "Proceed" to continue)'
-                sh './scripts/kill.sh'
+                sh 'rm -rf /var/www/jenkins-weather-app-dev'
+                sh "cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app-dev"
+                sh "ls /var/www/jenkins-weather-app-dev"
             }
         }
     }

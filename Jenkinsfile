@@ -43,9 +43,9 @@ pipeline {
                 branch "production"
             }
             steps {
-                sh 'rm -rf /var/www/jenkins-weather-app-dev'
-                sh "cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app-dev"
-                sh "ls /var/www/jenkins-weather-app-dev"
+                sh 'rm -rf /var/www/jenkins-weather-app-prod'
+                sh "cp -r ${env.WORKSPACE}/build /var/www/jenkins-weather-app-prod"
+                sh "ls /var/www/jenkins-weather-app-prod"
             }
         }
     }

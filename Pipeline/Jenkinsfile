@@ -11,7 +11,7 @@ pipeline {
             }
             steps{
                 sh "chmod +x -R ${env.WORKSPACE}"
-                sh './scripts/test.sh'
+                sh './app/scripts/test.sh'
             }
         }
         stage("Build"){
@@ -24,7 +24,7 @@ pipeline {
             steps{
                 sh "chmod +x -R ${env.WORKSPACE}"
                 sh "npm install"
-                sh "./scripts/deliver-for-development.sh"
+                sh "./app/scripts/deliver-for-development.sh"
             }
         }
         stage("Deliver for Development"){

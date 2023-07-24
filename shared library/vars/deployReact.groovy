@@ -1,4 +1,4 @@
-def call(environment){
+def call(String environment){
 
     sh "echo ${env.WORKSPACE}/build /var/www/jenkins-weather-app-${environment}"
     // sh "rm -rf /var/www/jenkins-weather-app-${environment}"

@@ -50,5 +50,5 @@ pipeline {
                 deployReact("prod")
             }
         }
-    }
+   }
 }

@@ -23,12 +23,12 @@ pipeline {
                 }
             }
             steps{
-                // dir('../app'){
+                // dir('~/react-weather-app/app'){
                 //     // sh "chmod +x -R ${env.WORKSPACE}"
                 //     sh 'echo "Build"'
                 //     sh "ls"
                 // }
-                sh 'echo "Build"'
+                sh 'pwd'
                 // sh "npm install"
                 // sh "./app/scripts/deliver-for-development.sh"
             }

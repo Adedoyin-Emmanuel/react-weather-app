@@ -40,7 +40,7 @@ pipeline {
             }
             steps{
                 // deployReact("dev")
-                sh "ls ${env.WORKSPACE}/build"
+                sh "ls ${env.WORKSPACE}/build/**"
             }
         }
         // stage("Deploy for Production"){

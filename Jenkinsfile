@@ -26,7 +26,8 @@ pipeline {
                 dir('./app'){
                     sh "chmod +x -R ${env.WORKSPACE}"
                     sh "npm install"
-                    sh "./scripts/deliver-for-development.sh"
+                    // sh "./scripts/deliver-for-development.sh"
+                    sh "npm run build"
                     archiveArtifacts artifacts: "build/**"
                 }
                 
@@ -40,7 +41,7 @@ pipeline {
             }
             steps{
                 // deployReact("dev")
-                sh "ls ${env.WORKSPACE}/build/**"
+                sh "ls ${WORKSPACE}/build/"
             }
         }
         // stage("Deploy for Production"){

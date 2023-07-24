@@ -28,7 +28,7 @@ pipeline {
                     sh "npm install"
                     sh "./scripts/deliver-for-development.sh"
                 
-                    archiveArtifacts artifacts: "build/**/*"
+                    archiveArtifacts artifacts: "build/**/*", fingerprint: true
                 }
                 
             }

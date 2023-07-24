@@ -23,7 +23,7 @@ pipeline {
                 }
             }
             steps{
-                dir('~app'){
+                dir('/app'){
                     // sh "chmod +x -R ${env.WORKSPACE}"
                     // sh 'echo "Build"'
                     sh 'pwd'

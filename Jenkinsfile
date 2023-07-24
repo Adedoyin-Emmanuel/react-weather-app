@@ -33,15 +33,15 @@ pipeline {
             }
         }
 
-        // stage("Deliver for Development"){
-        //     agent any
-        //     when {
-        //         branch "development"
-        //     }
-        //     steps{
-        //         deployReact("dev")
-        //     }
-        // }
+        stage("Deliver for Development"){
+            agent any
+            when {
+                branch "development"
+            }
+            steps{
+                deployReact("dev")
+            }
+        }
         // stage("Deploy for Production"){
         //     when {
         //         branch "production"

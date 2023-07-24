@@ -25,7 +25,7 @@ pipeline {
             steps{
                 dir('../app')
                 sh "chmod +x -R ${env.WORKSPACE}"
-                sh "pwd"
+                sh 'echo "Build"'
                 sh "ls"
                 // sh "npm install"
                 // sh "./app/scripts/deliver-for-development.sh"

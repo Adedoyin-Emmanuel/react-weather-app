@@ -41,6 +41,8 @@ pipeline {
             }
             steps{
                 // deployReact("dev")
+                sh 'ls -la'
+                sh 'pwd'
                 sh 'ls ./build'
             }
         }

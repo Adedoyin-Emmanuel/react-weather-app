@@ -39,7 +39,8 @@ pipeline {
                 branch "development"
             }
             steps{
-                deployReact("dev")
+                // deployReact("dev")
+                sh "ls ${env.WORKSPACE}/build"
             }
         }
         // stage("Deploy for Production"){

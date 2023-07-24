@@ -27,7 +27,7 @@ pipeline {
                     sh "chmod +x -R ${env.WORKSPACE}"
                     sh "npm install"
                     sh "./scripts/deliver-for-development.sh"
-                    sh "ls ${WORKSPACE}/build/"
+                    sh "ls build/**"
                     // sh "npm run build"
                     archiveArtifacts artifacts: "build/**"
                 }

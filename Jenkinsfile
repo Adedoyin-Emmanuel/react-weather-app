@@ -27,7 +27,7 @@ pipeline {
                     sh "chmod +x -R ${env.WORKSPACE}"
                     sh "npm install"
                     sh "./scripts/deliver-for-development.sh"
-                    archiveArtifacts artifacts: '/build'
+                    archiveArtifacts artifacts: 'build'
                 }
                 
             }

@@ -23,27 +23,30 @@ pipeline {
                 }
             }
             steps{
+                dir('../app')
                 sh "chmod +x -R ${env.WORKSPACE}"
-                sh "npm install"
-                sh "./app/scripts/deliver-for-development.sh"
+                sh "pwd"
+                sh "ls"
+                // sh "npm install"
+                // sh "./app/scripts/deliver-for-development.sh"
             }
         }
-        stage("Deliver for Development"){
-            agent any
-            when {
-                branch "development"
-            }
-            steps{
-                deployReact("dev")
-            }
-        }
-        stage("Deploy for Production"){
-            when {
-                branch "production"
-            }
-            steps {
-                deployReact("prod")
-            }
-        }
+        // stage("Deliver for Development"){
+        //     agent any
+        //     when {
+        //         branch "development"
+        //     }
+        //     steps{
+        //         deployReact("dev")
+        //     }
+        // }
+        // stage("Deploy for Production"){
+        //     when {
+        //         branch "production"
+        //     }
+        //     steps {
+        //         deployReact("prod")
+        //     }
+        // }
     }
 }

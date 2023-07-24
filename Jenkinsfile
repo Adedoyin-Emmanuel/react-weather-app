@@ -24,14 +24,11 @@ pipeline {
             }
             steps{
                 dir('./app'){
-                    // sh "chmod +x -R ${env.WORKSPACE}"
-                    // sh 'echo "Build"'
-                    sh 'pwd'
-                    sh 'ls'
+                    sh "chmod +x -R ${env.WORKSPACE}"
+                    sh "npm install"
+                    sh "./scripts/deliver-for-development.sh"
                 }
-                // sh 'pwd'
-                // sh "npm install"
-                // sh "./app/scripts/deliver-for-development.sh"
+                
             }
         }
         // stage("Deliver for Development"){

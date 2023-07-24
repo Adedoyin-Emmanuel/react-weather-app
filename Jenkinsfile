@@ -27,28 +27,28 @@ pipeline {
                     sh "chmod +x -R ${env.WORKSPACE}"
                     sh "npm install"
                     sh "./scripts/deliver-for-development.sh"
-                    archiveArtifacts artifacts: /build
+                    archiveArtifacts artifacts: '/build'
                 }
                 
             }
         }
 
-        stage("Deliver for Development"){
-            agent any
-            when {
-                branch "development"
-            }
-            steps{
-                deployReact("dev")
-            }
-        }
-        stage("Deploy for Production"){
-            when {
-                branch "production"
-            }
-            steps {
-                deployReact("prod")
-            }
-        }
+        // stage("Deliver for Development"){
+        //     agent any
+        //     when {
+        //         branch "development"
+        //     }
+        //     steps{
+        //         deployReact("dev")
+        //     }
+        // }
+        // stage("Deploy for Production"){
+        //     when {
+        //         branch "production"
+        //     }
+        //     steps {
+        //         deployReact("prod")
+        //     }
+        // }
    }
 }

@@ -44,7 +44,7 @@ pipeline {
             }
             steps{
                 // deployReact("dev")
-                // copyArtifacts filter: 'build/**', fingerprintArtifacts: true, projectName: '${JOB_BASE_NAME}', selector: specific ('${BUILD_NUMBER}') 
+                copyArtifacts filter: 'build/**', fingerprintArtifacts: true, projectName: '${JOB_BASE_NAME}', selector: specific ('${BUILD_NUMBER}') 
                 sh 'ls -la'
                 sh 'pwd'
                 sh 'ls build'

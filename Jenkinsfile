@@ -1,6 +1,6 @@
 @Library('shared-library') _
 pipeline {
-    agent none
+    agent any
 
     stages{
         stage("Test"){
@@ -20,7 +20,9 @@ pipeline {
                 docker {
                     image 'node:lts-alpine'
                     args '-u root:root'
+                    reuseNode true
                 }
+                
             }
             steps{
                 dir('./app'){

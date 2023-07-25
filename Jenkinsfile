@@ -8,6 +8,7 @@ pipeline {
                 docker {
                     image 'node:lts-alpine'
                     args '-u root:root'
+                    reuseNode true
                 }
             }
             steps{

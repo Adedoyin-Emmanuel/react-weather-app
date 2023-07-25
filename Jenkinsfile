@@ -44,17 +44,15 @@ pipeline {
             }
             steps{
                 deployReact("dev")
-                // copyArtifacts filter: 'build/**', fingerprintArtifacts: true, projectName: '${JOB_BASE_NAME}', selector: specific ('${BUILD_NUMBER}') 
-                // sh "ls build"
             }
         }
-        // stage("Deploy for Production"){
-        //     when {
-        //         branch "production"
-        //     }
-        //     steps {
-        //         deployReact("prod")
-        //     }
-        // }
+        stage("Deploy for Production"){
+            when {
+                branch "production"
+            }
+            steps {
+                deployReact("prod")
+            }
+        }
    }
 }

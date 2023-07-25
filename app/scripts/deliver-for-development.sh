@@ -1,4 +1,5 @@
-#!/usr/bin/env sh
-set -x
+#!/bin/sh
+
+# set -x
 npm run build
-set +x
+# set +x

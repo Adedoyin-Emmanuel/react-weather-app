@@ -44,8 +44,8 @@ pipeline {
             }
             steps{
                 deployReact("dev")
-                copyArtifacts filter: 'build/**', fingerprintArtifacts: true, projectName: '${JOB_BASE_NAME}', selector: specific ('${BUILD_NUMBER}') 
-                sh "ls build"
+                // copyArtifacts filter: 'build/**', fingerprintArtifacts: true, projectName: '${JOB_BASE_NAME}', selector: specific ('${BUILD_NUMBER}') 
+                // sh "ls build"
             }
         }
         // stage("Deploy for Production"){

@@ -71,7 +71,7 @@ const Settings = () => {
             </section>
           </section>
 
-          <section className="support-project text-muted text-start">
+          <section className="support-project text-muted text-start w-100">
             <section className="icon-section d-flex p-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

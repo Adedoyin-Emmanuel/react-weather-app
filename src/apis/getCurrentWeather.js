@@ -86,6 +86,82 @@ export const handleWeatherForm = (e, search) => {
 	});
 };
 
+export const findCity = (searchTerm,updateDataArray)=> {
+	if (db.get("TRACK_SAVED_LOCATION_WEATHER") == "false") {
+		Swal.fire({
+			text: "Changes settings to track default location",
+			icon: "info",
+			timer: 1500,
+			toast: true,
+			showConfirmButton: false,
+			position: "top",
+		}).then((willProceed) => {
+			scrollToElement("weatherContainer");
+		});
+	}
+	const XAPIKEY = "lNhOELJHDMrwCwm40hFvwA==teZv2EboEGJfonOC";
+	jQuery(($)=>{
+		console.log("Ajax sent")
+		$.ajax({
+			url: `https://api.api-ninjas.com/v1/city?name=${searchTerm}&limit=4`,
+			processData: false,
+
+			headers: {
+				'X-Api-Key':XAPIKEY
+			},
+			success: (result, status, xhr) => {
+				if (xhr.status != 200) {
+					Swal.fire({
+						toast: true,
+						position: "top",
+						text: "Something went wrong!",
+						icon: "info",
+						showConfirmButton: false,
+						timer: 1000,
+					});
+				} else {
+					//check if the API returned a legit response
+					console.log(result)
+					updateDataArray(result)
+				}
+			},
+			error: (xhr, status, error) => {
+				$("#searchWeather").val(" ");
+				closeUtilityComponent();
+				console.log("Error")
+
+				//check if the error is empty
+				if (error == "") {
+					Swal.fire({
+						toast: true,
+						text: "Network Error!",
+						icon: "info",
+						timer: 1000,
+						position: "top",
+						showConfirmButton: false,
+					}).then((willProceed) => {
+						//scroll to top when the promise is resolved!
+						scrollToElement("weatherContainer");
+					});
+				} else {
+					Swal.fire({
+						toast: true,
+						text: error,
+						icon: "warning",
+						timer: 1000,
+						position: "top",
+						showConfirmButton: false,
+					}).then((willProceed) => {
+						//scroll to top when the promise is resolved!
+						scrollToElement("weatherContainer");
+					});
+				}
+			},
+		})
+
+	})
+}
+
 //function to determine custom icon packs to use
 export let weatherSvg;
 export const checkWeatherCode = (code) => {

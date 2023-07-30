@@ -229,9 +229,9 @@ const WeatherApp = () => {
 		}
 
 		return (
-			<section className="cmp d-flex align-items-center justify-content-center bg-white mt-2 rounded">
+			<section className="cmp d-flex align-items-center justify-content-start bg-white px-2 mt-2 rounded">
 				<ul className="m-0 p-0">
-					{dataArray.map((data,ind)=> <li key={ind} onClick={clickHandler} style={{cursor:"pointer"}}><p className="text-dark m-0">{data.name}</p></li>)}
+					{dataArray.map((data,ind)=> <li key={ind} onClick={clickHandler} style={{cursor:"pointer"}}><p className="text-dark text-left m-0" style={{fontSize:"14px"}}>{data.name}</p></li>)}
 				</ul>
 			</section>		
 		)

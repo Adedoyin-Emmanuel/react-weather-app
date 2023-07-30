@@ -295,3 +295,7 @@ section.footer-nav > section {
 .toggle-btn{
 	cursor: pointer;
 }
+
+ul{
+	list-style: none;
+}

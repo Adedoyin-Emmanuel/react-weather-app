@@ -16,4 +16,5 @@ jobs:
 
         - name: Install dependencies
           run: |
-            ls
+            npm i
+            npm run build

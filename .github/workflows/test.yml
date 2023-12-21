@@ -8,7 +8,7 @@ on:
 
 jobs:
     build:
-      runs-on: testing
+      runs-on: self-hosted
       steps:
       
         - name: Checkout code
@@ -16,4 +16,4 @@ jobs:
 
         - name: Install dependencies
           run: |
-            npm install
+            ls

@@ -16,4 +16,4 @@ jobs:
 
         - name: Install dependencies
           run: |
-           npm -v
+           C:\Users\Administrator\AppData\Roaming\npm -v

@@ -1,0 +1,19 @@
+name: Logistics Pipeline
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main  # Change this to your main branch name if different
+
+jobs:
+    build:
+      runs-on: testing
+      steps:
+      
+        - name: Checkout code
+          uses: actions/checkout@v2
+
+        - name: Install dependencies
+          run: |
+            npm install

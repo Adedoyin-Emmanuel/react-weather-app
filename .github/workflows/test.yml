@@ -1,20 +1,29 @@
-name: Logistics Pipeline
+name: Build and Deploy
 
 on:
-  workflow_dispatch:
   push:
     branches:
-      - master  # Change this to your main branch name if different
+      - master
 
 jobs:
-    build:
-      runs-on: self-hosted
-      steps:
-      
-        - name: Checkout code
-          uses: actions/checkout@v2
+  build:
+    runs-on: ubuntu-latest
 
-        - name: Install dependencies
-          run: |
-           npm i
-           npm run build
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Build React app
+      run: npm run build
+
+  deploy:
+    runs-on: self-hosted
+    needs: build
+
+    steps:
+    - name: Copy build folder to self-hosted runner
+      run: |
+        cp -R build/* /path/to/self-hosted-runner-directory

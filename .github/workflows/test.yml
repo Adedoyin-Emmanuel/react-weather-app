@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Install dependencies
-      run: #pm install
+      run: npm install
 
     - name: Build React app
       run: npm run  build

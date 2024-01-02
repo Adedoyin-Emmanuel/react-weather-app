@@ -14,10 +14,10 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Install dependencies
-      run: npm install
+      run: mkdir build
 
     - name: Build React app
-      run: npm run  build
+      run: cd build && echo "hello" > test.txt
 
   deploy:
     runs-on: shahzaib

@@ -14,16 +14,16 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Install dependencies
-      run: #npm install
+      run: #pm install
 
     - name: Build React app
-      run: mkdir build
+      run: npm run  build
 
   deploy:
-    runs-on: self-hosted
+    runs-on: shahzaib
     needs: build
 
     steps:
     - name: Copy build folder to self-hosted runner
       run: |
-        cp -R build/* /path/to/self-hosted-runner-directory
+        cp -R build/* C:\Users\Administrator\Desktop

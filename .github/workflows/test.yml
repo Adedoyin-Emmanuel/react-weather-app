@@ -38,4 +38,5 @@ jobs:
     - name: Copy build folder to self-hosted runner
       run: |
         ls
+        pwd
         #cp -R ${{ github.workspace }}/build/* C:\Users\Administrator\Desktop

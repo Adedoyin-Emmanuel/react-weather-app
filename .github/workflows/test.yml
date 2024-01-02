@@ -19,11 +19,22 @@ jobs:
     - name: Build React app
       run: cd build && echo "hello" > test.txt
 
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-artifacts
+        path: build
+
   deploy:
-    runs-on: shahzaib
+    runs-on: ubuntu-latest
     needs: build
 
     steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: build-artifacts
+
     - name: Copy build folder to self-hosted runner
       run: |
-        cp -R build/* C:\Users\Administrator\Desktop
+        cp -R ${{ github.workspace }}/build/* C:\Users\Administrator\Desktop

@@ -26,7 +26,7 @@ jobs:
         path: build
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: shahzaib
     needs: build
 
     steps:

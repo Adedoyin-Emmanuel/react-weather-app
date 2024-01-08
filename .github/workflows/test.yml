@@ -11,19 +11,39 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     - name: Install dependencies
-      run: mkdir build
+      run: mkdir build1
 
     - name: Build React app
-      run: cd build && echo "hello" > test.txt
+      run: cd build1 && echo "hello" > test.txt
 
     - name: Upload build artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
-        name: build-artifacts
-        path: build
+        name: build-artifacts-1
+        path: build1
+  config:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: build-artifacts-1
+
+    - name: Install dependencies
+      run: mkdir build2
+
+    - name: Build React app
+      run: cd build2 && echo "hello" > test1.txt
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-artifacts-2
+        path: build2
 
   deploy:
     runs-on: shahzaib
@@ -31,9 +51,9 @@ jobs:
 
     steps:
     - name: Download build artifacts
-      uses: actions/download-artifact@v2
+      uses: actions/download-artifact@v5
       with:
-        name: build-artifacts
+        name: build-artifacts-2
 
     - name: Copy build folder to self-hosted runner
       run: |

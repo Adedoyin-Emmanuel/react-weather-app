@@ -6,7 +6,7 @@ pipeline {
             agent {
                 docker {
                     image 'node:lts-alpine'
-                    args '-u root:root'
+                    args '-u root:root'sasasdsa
                 }
             }
             steps{

@@ -44,7 +44,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: build-artifacts
-        path: /
+        path: *
   config1:
     runs-on: ubuntu-latest
     needs: config

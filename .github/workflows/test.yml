@@ -22,7 +22,7 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: build-artifacts-1
+        name: build-artifacts
         path: build1
   config:
     runs-on: ubuntu-latest
@@ -32,7 +32,7 @@ jobs:
     - name: Download build artifacts
       uses: actions/download-artifact@v4
       with:
-        name: build-artifacts-1
+        name: build-artifacts
 
     - name: Install dependencies
       run: mkdir build2
@@ -43,7 +43,7 @@ jobs:
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: build-artifacts-2
+        name: build-artifacts
         path: build2
 
   deploy:
@@ -54,7 +54,7 @@ jobs:
     - name: Download build artifacts
       uses: actions/download-artifact@v5
       with:
-        name: build-artifacts-2
+        name: build-artifacts
 
     - name: Copy build folder to self-hosted runner
       run: |

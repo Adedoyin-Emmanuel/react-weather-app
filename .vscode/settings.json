@@ -3,5 +3,8 @@
     "prettier.configPath": "",
     "prettier.useTabs": true,
     "prettier.withNodeModules": true,
-    "prettier.vueIndentScriptAndStyle": false
+    "prettier.vueIndentScriptAndStyle": false,
+    "githubPullRequests.ignoredPullRequestBranches": [
+        "master"
+    ]
 }

@@ -26,6 +26,7 @@ jobs:
         path: build1
   config:
     runs-on: ubuntu-latest
+    needs: build
 
     steps:
     - name: Download build artifacts
@@ -46,8 +47,8 @@ jobs:
         path: build2
 
   deploy:
-    runs-on: shahzaib
-    needs: build
+    runs-on: ubuntu-latest
+    needs: config
 
     steps:
     - name: Download build artifacts

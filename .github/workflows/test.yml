@@ -44,7 +44,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: build-artifacts
-        path: *
+        path: build1
   config1:
     runs-on: ubuntu-latest
     needs: config
@@ -56,5 +56,5 @@ jobs:
         name: build-artifacts
 
     - name: Install dependencies
-      run: mkdir build3
+      run: ls
 

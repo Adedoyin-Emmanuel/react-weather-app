@@ -46,19 +46,19 @@ jobs:
         name: build-artifacts
         path: /
 
-  config:
-    runs-on: ubuntu-latest
-    needs: build
+    config:
+      runs-on: ubuntu-latest
+      needs: build
 
-    steps:
-    - name: Download build artifacts
-      uses: actions/download-artifact@v3
-      with:
-        name: build-artifacts
+      steps:
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifacts
 
-    - name: Install dependencies
-      run: mkdir build2
+      - name: Install dependencies
+        run: mkdir build2
 
-    - name: Build React app
-      run: cd build2 && echo "hello" > test1.txt
+      - name: Build React app
+        run: cd build2 && echo "hello" > test1.txt
 

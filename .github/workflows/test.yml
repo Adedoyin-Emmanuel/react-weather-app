@@ -13,17 +13,19 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Install dependencies
-      run: mkdir build1
+    - name: Use Node.js 18
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
 
     - name: Build React app
-      run: cd build1 && echo "hello" > test.txt
+      run: npm i
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v2
       with:
         name: build-artifacts
-        path: build1
+        path: ./
 
   config:
     runs-on: ubuntu-latest

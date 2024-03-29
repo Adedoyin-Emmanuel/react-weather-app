@@ -1,0 +1,30 @@
+version: 0.2
+env:
+  parameter-store:
+    DOCKER_USER: /react/docker-user
+    DOCKER_PASS: /react/docker-pass
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+  pre_build:
+    commands:
+      - echo installing npm dependency
+      - echo Installing React-scripts...
+      - npm install react-scripts@latest -g
+      - echo Building the React app...
+      - npm run build
+  build:
+    commands:
+      - echo logging in the Docker hub
+      - echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+      - echo building docker image
+      - docker build -t $DOCKER_USER/react-weather-app:latest .
+  post_build:
+    commands:
+      - echo pushing the image to docker hub
+      - docker push docker.io/$DOCKER_USER/react-weather-app:latest
+artifacts:
+  files:
+    - '**/*'
+      

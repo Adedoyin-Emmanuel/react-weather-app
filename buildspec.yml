@@ -12,8 +12,6 @@ phases:
       - echo installing npm dependency
       - echo Installing React-scripts...
       - npm install react-scripts@latest -g
-      - echo Building the React app...
-      - npm run build
   build:
     commands:
       - echo logging in the Docker hub

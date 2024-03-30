@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: react-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: react-weather-app
   ports:

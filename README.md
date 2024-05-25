@@ -4,8 +4,6 @@
 
 ## A react application built with modern technologies
 
-
-
 ### Application Features.
 
 1. Can track the atmospheric condition of any country or city.
@@ -33,3 +31,4 @@ https://zedd-weather.vercel.app
 ### Please Support By Starring This Project. Follow Me For More Cool Open Source Projects.
 
 https://github.com/adedoyin-emmanuel/
+

@@ -19,7 +19,7 @@
     "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
     "react-swipeable": "^7.0.1",
-    "sweetalert2": "^11.10.8",
+    "sweetalert2": "^11.11.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
-    "bootstrap": "^5.3.3",
+    "bootstrap": "^5.3.5",
     "bootstrap5": "^1.1.9",
     "framer-motion": "^8.5.5",
     "grunt": "^1.6.1",

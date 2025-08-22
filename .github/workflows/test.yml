@@ -1,0 +1,42 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: mkdir build
+
+    - name: Build React app
+      run: cd build && echo "hello" > test.txt
+
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-artifacts
+        path: build
+
+  deploy:
+    runs-on: shahzaib
+    needs: build
+
+    steps:
+    - name: Download build artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: build-artifacts
+
+    - name: Copy build folder to self-hosted runner
+      run: |
+        ls
+        pwd
+        #cp -R ${{ github.workspace }}/build/* C:\Users\Administrator\Desktop

@@ -6,7 +6,7 @@ pipeline {
             agent {
                 docker {
                     image 'node:lts-alpine'
-                    args '-u root:root'
+                    args '-u root:root'sasasdsa
                 }
             }
             steps{
@@ -47,6 +47,7 @@ pipeline {
                 sh './scripts/deploy-for-production.sh'
                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
                 sh './scripts/kill.sh'
+                sh 'ls'
             }
         }
     }
